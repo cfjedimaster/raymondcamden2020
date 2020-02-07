@@ -217,8 +217,8 @@ All that's really left are the views. Here is the first view - and keep in mind 
 		&lt;th&gt;&nbsp;&lt;/th&gt;
 	&lt;/tr&gt;
 	&lt;tr ng:repeat="note in notes.$filter(query).$orderBy(orderProp)"&gt;
-		&lt;td&gt;&lt;a href="#/notes/{% raw %}{{note.id}{% endraw %}}"&gt;{% raw %}{{note.title}{% endraw %}}&lt;/a&gt;&lt;/td&gt;
-		&lt;td&gt;{% raw %}{{note.updated |{% endraw %} date:'MM/dd/yyyy @ h:mma'}}&lt;/td&gt;
+		&lt;td&gt;&lt;a href="#/notes/{% raw %}{{note.id}}{% endraw %}"&gt;{% raw %}{{note.title}}{% endraw %}&lt;/a&gt;&lt;/td&gt;
+		&lt;td&gt;{% raw %}{{note.updated | date:'MM/dd/yyyy @ h:mma'}}{% endraw %}&lt;/td&gt;
 		&lt;td&gt;&lt;a href="" ng:click="edit(note.id)" title="Edit"&gt;&lt;img src="images/page_edit.png"&gt;&lt;/a&gt; &lt;a href="" ng:click="delete(note.id)" title="Delete"&gt;&lt;img src="images/page_delete.png"&gt;&lt;/a&gt;&lt;/td&gt;
 	&lt;/tr&gt;
 &lt;/table&gt;
@@ -237,12 +237,12 @@ Take note of the ng:repeat and the embedded tokens wrapped in {}. Also note how 
 <p>
 
 <code>
-&lt;h1&gt;{% raw %}{{note.title}{% endraw %}}&lt;/h1&gt;
+&lt;h1&gt;{% raw %}{{note.title}}{% endraw %}&lt;/h1&gt;
 &lt;p&gt;
-&lt;b&gt;Last Updated:&lt;/b&gt; {% raw %}{{note.updated |{% endraw %} date:'MM/dd/yyyy @ h:mma'}}
+&lt;b&gt;Last Updated:&lt;/b&gt; {% raw %}{{note.updated | date:'MM/dd/yyyy @ h:mma'}}{% endraw %}
 &lt;/p&gt;
 
-{% raw %}{{note.body}{% endraw %}}
+{% raw %}{{note.body}}{% endraw %}
 </code>
 
 <p>
