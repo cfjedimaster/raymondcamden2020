@@ -1,0 +1,5 @@
+<h1>Posts</h1>
+
+{% for post in posts limit:10 %}
+	{{ post.data.title }} - foo <br/>
+{% endfor %}
