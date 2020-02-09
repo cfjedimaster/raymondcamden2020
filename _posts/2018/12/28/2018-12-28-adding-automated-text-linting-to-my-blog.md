@@ -17,7 +17,7 @@ I went through the list and added what I thought would make sense. Each rule als
 * no-start-duplicated-conjunction: I'm still confused by what this actually does, but it seems to prevent multiple sentences starting with words like "But", "So", etc. 
 * no-dead-link: This one is very cool - it checks your links to ensure they actually resolve.
 * terminology: Looks for things like "Javascript" instead of "JavaScript" and "NPM" instead of "npm"
-* no-unmatched-pair: Basically using a ( and forgetting the ).
+* no-unmatched-pair: Basically using &lt;a&gt; ( and forgetting the &lt;/a&gt;).
 * alex: This one is really fascinating - it looks for text that can be offensive or not inclusive. So as a simple example, using "mailman" instead of "mailperson" or "postal worker". Obviously this is the kind of thing you may not care about, but it definitely appealed to me.
 * spellchecker: I use a spellchecker in Visual Studio Code, but sometimes I just miss the warnings. Unfortunately this rule is broken for me now and not flagging any issues, but I've got an issue open on their repository.
 
