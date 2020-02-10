@@ -1,5 +1,6 @@
 <h1>Posts</h1>
 
-{% for post in collections.posts limit:10 %}
-	{{ post.data.title }} - foo <br/>
+{% assign mostRecent = collections.posts | reverse %}
+{% for post in mostRecent limit:10  %}
+	<a href="{{post.url}}">{{ post.data.title }} - {{ post.date }}</a> <br/>
 {% endfor %}
