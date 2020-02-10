@@ -97,8 +97,8 @@ The real changes were at the view level. I removed all calls to Ratchet's CSS an
 		&lt;div class=&quot;list list-inset&quot;&gt;
 		&lt;ion-list class=&quot;list list-inset&quot;&gt;
 
-			&lt;ion-item ng-repeat=&quot;service in services&quot; href=&quot;#&#x2F;service&#x2F;{% raw %}{{service.id}{% endraw %}}&quot;&gt;
-				{% raw %}{{service.label}{% endraw %}}
+			&lt;ion-item ng-repeat=&quot;service in services&quot; href=&quot;#&#x2F;service&#x2F;{% raw %}{{service.id}}{% endraw %}&quot;&gt;
+				{% raw %}{{service.label}}{% endraw %}
 			&lt;&#x2F;ion-item&gt;
 
 		&lt;&#x2F;ion-list&gt;
@@ -151,7 +151,7 @@ How difficult was that part? Check out the code below.
 &lt;ion-slide-box show-pager=&quot;true&quot;&gt;
 
     &lt;ion-slide ng-repeat=&quot;photo in place.photos&quot;&gt;
-        &lt;img ng-src=&quot;{% raw %}{{photo.url}{% endraw %}}&quot;&gt;
+        &lt;img ng-src=&quot;{% raw %}{{photo.url}}{% endraw %}&quot;&gt;
     &lt;&#x2F;ion-slide&gt;
 
 &lt;&#x2F;ion-slide-box&gt;	

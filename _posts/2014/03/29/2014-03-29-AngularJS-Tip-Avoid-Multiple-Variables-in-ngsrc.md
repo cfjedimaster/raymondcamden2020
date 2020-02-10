@@ -21,7 +21,7 @@ In the application I'm building, I've got a detail page that displays an image. 
 To make things simpler, I used a partial that looked like this.
 </p>
 
-<pre><code class="language-markup">&lt;img ng-src="{% raw %}{{imageroot}{% endraw %}}/{% raw %}{{product.image}{% endraw %}}"&gt;
+<pre><code class="language-markup">&lt;img ng-src="{% raw %}{{imageroot}}{% endraw %}/{% raw %}{{product.image}}{% endraw %}"&gt;
 </code></pre>
 
 <p>
@@ -36,7 +36,7 @@ I thought this was working fine, but I then noticed something odd in my network 
 To fix this, I simply edited the template to use one variable and I set that value properly in my controller. 
 </p>
 
-<pre><code class="language-markup">&lt;img ng-src="{% raw %}{{image}{% endraw %}}"&gt;
+<pre><code class="language-markup">&lt;img ng-src="{% raw %}{{image}}{% endraw %}"&gt;
 </code></pre>
 
 <p>
