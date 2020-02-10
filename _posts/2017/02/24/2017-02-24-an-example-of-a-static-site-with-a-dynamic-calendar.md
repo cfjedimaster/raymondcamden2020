@@ -53,19 +53,19 @@ permalink: /calendar-data/
 ---
 
 [
-{% raw %}{% for event in site.events %{% endraw %}}
+{% raw %}{% for event in site.events %}
 	{
-		"title":"{% raw %}{{event.title}}{% endraw %}",
-		"start": "{% raw %}{{event.event_date}}{% endraw %}",
+		"title":"{{event.title}}",
+		"start": "{{event.event_date}}",
 		"allDay":true,
-		"url":"{% raw %}{{event.url}}{% endraw %}"
+		"url":"{{event.url}}"
 	}
-	{% raw %}{%unless forloop.last %{% endraw %}},{% raw %}{%endunless%{% endraw %}}
-{% raw %}{% endfor %{% endraw %}}
+	{%unless forloop.last %},{%end unless%}
+{% endfor %}{% endraw %}
 ]
 </code></pre>
 
-I've specified no layout and title. This keeps the output clean and the "page" invisible from the top header. I then output over my collection data which Jekyll makes available via `site.events`. The only kind weird part is the `{% raw %}{%unless}{% endraw %}` block. That's how I handle including a comma between each event item and *not* after the last one. The end result was a JSON feed available at `/calendar-data/` that looked like this:
+I've specified no layout and title. This keeps the output clean and the "page" invisible from the top header. I then output over my collection data which Jekyll makes available via `site.events`. The only kind weird part is the `{% raw %}{% unless %}{% endraw %}` block. That's how I handle including a comma between each event item and *not* after the last one. The end result was a JSON feed available at `/calendar-data/` that looked like this:
 
 <pre><code class="language-javascript">[
 

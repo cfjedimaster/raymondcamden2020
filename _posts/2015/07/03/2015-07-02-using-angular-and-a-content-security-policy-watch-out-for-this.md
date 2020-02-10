@@ -19,12 +19,12 @@ I've been working on a Cordova app that uses AngularJS. It has been working fine
 
 All of a sudden, the button began showing up in all cases, even when the variable was false. I began to debug. I double checked to ensure my variable wasn't being set true when it shouldn't be. That wasn't the problem. I then added some simple tests to my view. 
 
-<pre><code class="language-markup">
+<pre><code class="language-markup">{% raw %}
 first test, &lt;span ng-show=&quot;!barcodeAllowed.status&quot;&gt;DONT SHOW&lt;/span&gt;&lt;br/&gt;
 second test, &lt;span ng-show=&quot;barcodeAllowed.status == false&quot;&gt;DONT SHOW&lt;/span&gt;&lt;br/&gt;
-test -{% raw %}{{barcodeAllowed.status}}{% endraw %}-end -{% raw %}{{!barcodeAllowed.status}}{% endraw %}- -{% raw %}{{barcodeAllowed |{% endraw %} json}}-&lt;br/&gt;
+test -{{barcodeAllowed.status}}-end -{{!barcodeAllowed.status}}- -{{barcodeAllowed | json}}-&lt;br/&gt;
 test if &lt;span ng-if=&quot;barcodeAllowed.status&quot;&gt; if was true&lt;/span&gt;&lt;br/&gt;
-test opp if &lt;span ng-if=&quot;!barcodeAllowed.status&quot;&gt; will see it&lt;/span&gt;
+test opp if &lt;span ng-if=&quot;!barcodeAllowed.status&quot;&gt; will see it&lt;/span&gt;{% endraw %}
 </code></pre>
 
 As you can see, I checked both the negation of the variable an the variable itself. I also output it, and the negation, as well as the JSON version of the variable. Finally I did two tests using ng-if.

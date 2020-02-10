@@ -41,11 +41,11 @@ import &#x27;rxjs&#x2F;add&#x2F;operator&#x2F;map&#x27;;
 export class CatProvider {
 
  public cats:Array&lt;Object&gt; = [
-   {% raw %}{name:&#x27;Luna&#x27;, lastRating:new Date(2016, 12, 2 ,9, 30), numRatings:338324, avgRating:3.142}{% endraw %},
-   {% raw %}{name:&#x27;Pig&#x27;, lastRating:new Date(2016, 12, 12, 16,57), numRatings:9128271, avgRating:4.842}{% endraw %},
-   {% raw %}{name:&#x27;Cracker&#x27;, lastRating:new Date(2016, 11, 29, 13, 1), numRatings:190129, avgRating:2.734}{% endraw %},
-   {% raw %}{name:&#x27;Robin&#x27;, lastRating:new Date(2016, 12, 19, 5, 42), numRatings:642850, avgRating:4.1}{% endraw %},
-   {% raw %}{name:&#x27;Simba&#x27;, lastRating:new Date(2016, 12, 18, 18, 18), numRatings:80213, avgRating:1.9999}{% endraw %}
+   {name:&#x27;Luna&#x27;, lastRating:new Date(2016, 12, 2 ,9, 30), numRatings:338324, avgRating:3.142},
+   {name:&#x27;Pig&#x27;, lastRating:new Date(2016, 12, 12, 16,57), numRatings:9128271, avgRating:4.842},
+   {name:&#x27;Cracker&#x27;, lastRating:new Date(2016, 11, 29, 13, 1), numRatings:190129, avgRating:2.734},
+   {name:&#x27;Robin&#x27;, lastRating:new Date(2016, 12, 19, 5, 42), numRatings:642850, avgRating:4.1},
+   {name:&#x27;Simba&#x27;, lastRating:new Date(2016, 12, 18, 18, 18), numRatings:80213, avgRating:1.9999}
    ];
 
 
@@ -107,7 +107,7 @@ export class HomePage {
   }
 
   loadCat(cat) {
-    this.navCtrl.push(DetailPage, {% raw %}{selectedCat:cat}{% endraw %});
+    this.navCtrl.push(DetailPage, {selectedCat:cat});
   }
 
 }
@@ -179,15 +179,15 @@ Round One
 The first change (found in src_v2) I did was to employ Angular's built in pipes for date and number formatting. In the home view, I used this:
 
 <pre><code class="language-markup">
-&lt;ion-note item-right&gt;Last rated: {% raw %}{{cat.lastRating |{% endraw %} date:&#x27;shortDate&#x27;}}&lt;&#x2F;ion-note&gt;
+&lt;ion-note item-right&gt;Last rated: {% raw %}{{cat.lastRating | date:&#x27;shortDate&#x27;}}{% endraw %}&lt;&#x2F;ion-note&gt;
 </code></pre>
 
 And in the detail I used this:
 
 <pre><code class="language-markup">
 &lt;ion-card-content&gt;
-	The cat {% raw %}{{cat.name}}{% endraw %} has gotten {% raw %}{{cat.numRatings |{% endraw %} number}} ratings with an 
-	average of {% raw %}{{cat.avgRating |{% endraw %} number:&#x27;1.0-2&#x27;}}.
+	The cat {% raw %}{{cat.name}}{% endraw %} has gotten {% raw %}{{cat.numRatings | number}}{% endraw %} ratings with an 
+	average of {% raw %}{{cat.avgRating | number:&#x27;1.0-2&#x27;}}{% endraw %}.
 &lt;&#x2F;ion-card-content&gt;
 </code></pre>
 
@@ -215,7 +215,7 @@ export class HomePage {
 
   dtFormat(d) {
     if(Intl) {
-      return new Intl.DateTimeFormat().format(d) + &#x27; &#x27; + new Intl.DateTimeFormat(navigator.language, {% raw %}{hour:&#x27;numeric&#x27;,minute:&#x27;2-digit&#x27;}{% endraw %}).format(d);
+      return new Intl.DateTimeFormat().format(d) + &#x27; &#x27; + new Intl.DateTimeFormat(navigator.language, {hour:&#x27;numeric&#x27;,minute:&#x27;2-digit&#x27;}).format(d);
     } else {
       return d;
     }
@@ -295,7 +295,7 @@ export class dtFormatPipe implements PipeTransform {
   transform(value: Date): string {
 
     if(Intl) {
-      return new Intl.DateTimeFormat().format(value) + &#x27; &#x27; + new Intl.DateTimeFormat(navigator.language, {% raw %}{hour:&#x27;numeric&#x27;,minute:&#x27;2-digit&#x27;}{% endraw %}).format(value);
+      return new Intl.DateTimeFormat().format(value) + &#x27; &#x27; + new Intl.DateTimeFormat(navigator.language, {hour:&#x27;numeric&#x27;,minute:&#x27;2-digit&#x27;}).format(value);
     } else {
       return value.toString();
     }
@@ -309,12 +309,12 @@ And here is my number pipe:
 <pre><code class="language-javascript">
 import {% raw %}{ Pipe, PipeTransform }{% endraw %} from &#x27;@angular&#x2F;core&#x27;;
 
-@Pipe({% raw %}{name: &#x27;numberFormat&#x27;}{% endraw %})
+@Pipe({name: &#x27;numberFormat&#x27;})
 export class numberFormatPipe implements PipeTransform {
   transform(value: string): string {
 
     if(Intl) {
-	  return new Intl.NumberFormat(navigator.language, {% raw %}{maximumFractionDigits:2}{% endraw %}).format(Number(value));
+	  return new Intl.NumberFormat(navigator.language, {maximumFractionDigits:2}).format(Number(value));
     } else {
 	  return value;
     }
@@ -328,15 +328,15 @@ Notice the addition of `maximumFractionDigits`. This will cut off decimals to 2 
 First the home page:
 
 <pre><code class="language-markup">
-&lt;ion-note item-right&gt;Last rated: {% raw %}{{cat.lastRating |{% endraw %} dtFormat}}&lt;&#x2F;ion-note&gt;
+&lt;ion-note item-right&gt;Last rated: {% raw %}{{cat.lastRating | dtFormat}}{% endraw %}&lt;&#x2F;ion-note&gt;
 </code></pre>
 
 Then the detail:
 
 <pre><code class="language-markup">
 &lt;ion-card-content&gt;
-	The cat {% raw %}{{cat.name}}{% endraw %} has gotten {% raw %}{{cat.numRatings |{% endraw %} numberFormat }} ratings with an 
-	average of {% raw %}{{cat.avgRating |{% endraw %} numberFormat}}.
+	The cat {% raw %}{{cat.name}}{% endraw %} has gotten {% raw %}{{cat.numRatings | numberFormat }}{% endraw %} ratings with an 
+	average of {% raw %}{{cat.avgRating | numberFormat}}{% endraw %}.
 &lt;&#x2F;ion-card-content&gt;
 </code></pre>
 

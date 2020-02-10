@@ -59,7 +59,7 @@ Let's look at the code behind this. First, the HTML. Since this application is s
 					&lt;div class=&quot;item item-text-wrap&quot;&gt;
 						{% raw %}{{ event.description }}{% endraw %}
 						&lt;p/&gt;
-						&lt;strong&gt;When: {% raw %}{{ event.date |{% endraw %} date:'short' }}&lt;/strong&gt;
+						&lt;strong&gt;When: {% raw %}{{ event.date | date:'short' }}{% endraw %}&lt;/strong&gt;
 					&lt;/div&gt;
 				&lt;/div&gt;
 				

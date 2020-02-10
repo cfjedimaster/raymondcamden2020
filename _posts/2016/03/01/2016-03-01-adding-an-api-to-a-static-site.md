@@ -56,7 +56,7 @@ This is the standard way by which you can provide generic data for a Jekyll site
 &lt;ul class=&quot;post-list&quot;&gt;
 	{% raw %}{% for p in site.data.products %{% endraw %}}
 	&lt;li&gt;{% raw %}{{ p.name }}{% endraw %} at {% raw %}{{p.price}}{% endraw %}&lt;&#x2F;li&gt;
-	{% raw %}{% endfor %{% endraw %}}	  
+	{% raw %}{% endfor %}{% endraw %}	  
 &lt;&#x2F;ul&gt;
 </code></pre>
 
@@ -73,7 +73,7 @@ So let's create a JSON version of our products. Technically, we already have the
 layout: null
 ---
 
-{% raw %}{{ site.data.products |{% endraw %} jsonify }}
+{% raw %}{{ site.data.products | jsonify }}{% endraw %}
 </code></pre>
 
 Yeah, that's it. So a few things. In order to have anything dynamic in a random page in Jekyll, you must use front matter. For me that was just fine as I wanted to ensure no layout was used for the file anyway. Jekyll also supports a `jsonify` filter that turns data into JSON. So basically I went from JSON to real data to JSON again, and it outputs just fine in my browser:
@@ -88,13 +88,29 @@ Cool! But what about sorting, filtering, etc? Well, we could do it manually. For
 ---
 layout: null
 ---
-{% raw %}{{ site.data.products |{% endraw %} sort: "qty" {% raw %}| reverse |{% endraw %} jsonify }}
+{% raw %}{{ site.data.products | sort: "qty" | reverse | jsonify }}{% endraw %}
 </code></pre>
 
 This resulted in this JSON:
 
 <pre><code class="language-javascript">
-[{% raw %}{"name":"Apple","description":"This is the Apple product.","price":9.99,"qty":13409}{% endraw %},{% raw %}{"name":"Banana","description":"This is the Banana product.","price":4.99,"qty":1409}{% endraw %},{% raw %}{"name":"Donut","description":"This is the Donut product.","price":19.99,"qty":923}{% endraw %},{% raw %}{"name":"Cherry","description":"This is the Cherry product.","price":9.99,"qty":0}{% endraw %}]
+[
+	{"name":"Apple",
+	"description":"This is the Apple product.",
+	"price":9.99,
+	"qty":13409
+	},
+	{"name":"Banana",
+	"description":"This is the Banana product.",
+	"price":4.99,"qty":1409
+	},
+	{"name":"Donut",
+	"description":"This is the Donut product.",
+	"price":19.99,
+	"qty":923
+	},
+	{"name":"Cherry","description":"This is the Cherry product.","price":9.99,"qty":0}
+]
 </code></pre>
 
 I could do similar sorts for price or name. How about filtering? I built a new file, `products.instock.json`, to represent products that have a `qty` value over zero. I had hoped to do this in one line like in the example above, and Liquid (the template language behind Jekyll) does support a where filter, but from what I could see, it did not support a where filter based on a "greater than" or "not equal" status. I could be wrong. I just used the tip from the Jekyll snippet above.
@@ -104,57 +120,42 @@ I could do similar sorts for price or name. How about filtering? I built a new f
 layout: null
 ---
 [
-{% raw %}{% for p in site.data.products %{% endraw %}}	
-	{% raw %}{% if p.qty &gt; 0 %{% endraw %}}
+{% raw %}{% for p in site.data.products %}	
+	{% if p.qty &gt; 0 %}
 	{
-		"name":"{% raw %}{{p.name}}{% endraw %}",
-		"description":"{% raw %}{{p.description |{% endraw %} escape}}",
-		"price":{% raw %}{{p.price}}{% endraw %},
-		"qty":{% raw %}{{p.qty}}{% endraw %},
+		"name":"{{p.name}}",
+		"description":"{{p.description | escape}}",
+		"price":{{p.price}},
+		"qty":{{p.qty}},
 			
 	}
-	{% raw %}{% endif %{% endraw %}}
-{% raw %}{% endfor %{% endraw %}}
+	{% endif %}
+{% endfor %}{% endraw %}
 ]
 </code></pre>
 
 And the result. Note the white space is a bit fatter. I could fix that by manipulating my source code a bit.
 
 <pre><code class="language-javascript">
-[
-	
-	
+[	
 	{
 		"name":"Apple",
 		"description":"This is the Apple product.",
 		"price":9.99,
-		"qty":13409,
-			
+		"qty":13409,			
 	}
-	
-	
-	
 	{
 		"name":"Banana",
 		"description":"This is the Banana product.",
 		"price":4.99,
 		"qty":1409,
-			
 	}
-	
-	
-	
-	
-	
 	{
 		"name":"Donut",
 		"description":"This is the Donut product.",
 		"price":19.99,
-		"qty":923,
-			
+		"qty":923,			
 	}
-	
-
 ]
 </code></pre>
 

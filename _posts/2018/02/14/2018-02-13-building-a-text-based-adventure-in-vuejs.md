@@ -81,9 +81,9 @@ Each room has a unique ID. This is used to allow one room to 'target' another fo
 					</p>
 
 					<p v-if="room.exits.length > 1">
-						You see exits to the {% raw %}{{ room.exits |{% endraw %} exitDesc}}.
+						You see exits to the {% raw %}{{ room.exits | exitDesc}}{% endraw %}.
 					</p><p v-else>
-						You see an exit to the {% raw %}{{ room.exits |{% endraw %} exitDesc }}.
+						You see an exit to the {% raw %}{{ room.exits | exitDesc }}{% endraw %}.
 					</p>
 				</div>
 				<div id="cli">
