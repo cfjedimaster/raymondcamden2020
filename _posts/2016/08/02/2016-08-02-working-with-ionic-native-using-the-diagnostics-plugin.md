@@ -43,7 +43,7 @@ I created a super simple Ionic V2 application to work with the camera and photo 
 &lt;ion-content padding&gt;
 
 
-  &lt;img src=&quot;{% raw %}{{img}{% endraw %}}&quot; *ngIf=&quot;img !== ''&quot;&gt;
+  &lt;img src=&quot;{% raw %}{{img}}{% endraw %}&quot; *ngIf=&quot;img !== ''&quot;&gt;
 
   &lt;button block primary (click)=&quot;getPic('take')&quot;&gt;Take Picture&lt;/button&gt;
   &lt;button block primary (click)=&quot;getPic('select')&quot;&gt;Select Picture&lt;/button&gt;

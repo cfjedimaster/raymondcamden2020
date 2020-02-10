@@ -26,10 +26,10 @@ I began with a Vue app that loaded in data via an Ajax call and rendered a table
     </thead>
     <tbody>
       <tr v-for="cat in cats">
-        <td>{% raw %}{{cat.name}{% endraw %}}</td>
-        <td>{% raw %}{{cat.age}{% endraw %}}</td>
-        <td>{% raw %}{{cat.breed}{% endraw %}}</td>
-        <td>{% raw %}{{cat.gender}{% endraw %}}</td>
+        <td>{% raw %}{{cat.name}}{% endraw %}</td>
+        <td>{% raw %}{{cat.age}}{% endraw %}</td>
+        <td>{% raw %}{{cat.breed}}{% endraw %}</td>
+        <td>{% raw %}{{cat.gender}}{% endraw %}</td>
       </tr>
     </tbody>
   </table>
@@ -76,15 +76,15 @@ Alright, so for the first update, I decided to add sorting. I made two changes t
     </thead>
     <tbody>
       <tr v-for="cat in sortedCats">
-        <td>{% raw %}{{cat.name}{% endraw %}}</td>
-        <td>{% raw %}{{cat.age}{% endraw %}}</td>
-        <td>{% raw %}{{cat.breed}{% endraw %}}</td>
-        <td>{% raw %}{{cat.gender}{% endraw %}}</td>
+        <td>{% raw %}{{cat.name}}{% endraw %}</td>
+        <td>{% raw %}{{cat.age}}{% endraw %}</td>
+        <td>{% raw %}{{cat.breed}}{% endraw %}</td>
+        <td>{% raw %}{{cat.gender}}{% endraw %}</td>
       </tr>
     </tbody>
   </table>
   
-  debug: sort={% raw %}{{currentSort}{% endraw %}}, dir={% raw %}{{currentSortDir}{% endraw %}}
+  debug: sort={% raw %}{{currentSort}}{% endraw %}, dir={% raw %}{{currentSortDir}}{% endraw %}
 </div>
 ```
 

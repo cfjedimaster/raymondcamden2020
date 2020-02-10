@@ -22,7 +22,7 @@ All of a sudden, the button began showing up in all cases, even when the variabl
 <pre><code class="language-markup">
 first test, &lt;span ng-show=&quot;!barcodeAllowed.status&quot;&gt;DONT SHOW&lt;/span&gt;&lt;br/&gt;
 second test, &lt;span ng-show=&quot;barcodeAllowed.status == false&quot;&gt;DONT SHOW&lt;/span&gt;&lt;br/&gt;
-test -{% raw %}{{barcodeAllowed.status}{% endraw %}}-end -{% raw %}{{!barcodeAllowed.status}{% endraw %}}- -{% raw %}{{barcodeAllowed |{% endraw %} json}}-&lt;br/&gt;
+test -{% raw %}{{barcodeAllowed.status}}{% endraw %}-end -{% raw %}{{!barcodeAllowed.status}}{% endraw %}- -{% raw %}{{barcodeAllowed |{% endraw %} json}}-&lt;br/&gt;
 test if &lt;span ng-if=&quot;barcodeAllowed.status&quot;&gt; if was true&lt;/span&gt;&lt;br/&gt;
 test opp if &lt;span ng-if=&quot;!barcodeAllowed.status&quot;&gt; will see it&lt;/span&gt;
 </code></pre>

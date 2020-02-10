@@ -64,7 +64,7 @@ Here is the template portion of the component:
         &lt;div v-if=&quot;!loading &amp;&amp; !error&quot;&gt;
             &lt;b-list-group&gt;
                 &lt;b-list-group-item v-for=&quot;service in serviceTypes&quot; :key=&quot;service.id&quot;&gt;
-                    &lt;router-link :to=&quot;{% raw %}{name:&#x27;typeList&#x27;, params:{type:service.id, name:service.label, lat:lat, lng:lng}{% endraw %} }&quot;&gt;{% raw %}{{service.label}{% endraw %}}&lt;&#x2F;router-link&gt;
+                    &lt;router-link :to=&quot;{% raw %}{name:&#x27;typeList&#x27;, params:{type:service.id, name:service.label, lat:lat, lng:lng}{% endraw %} }&quot;&gt;{% raw %}{{service.label}}{% endraw %}&lt;&#x2F;router-link&gt;
                 &lt;&#x2F;b-list-group-item&gt;
             &lt;&#x2F;b-list-group&gt;
         &lt;&#x2F;div&gt;
@@ -84,7 +84,7 @@ Here's that template:
 <pre><code class="language-markup">&lt;template&gt;
     &lt;div&gt;
 
-        &lt;h1&gt;{% raw %}{{name}{% endraw %}}&lt;&#x2F;h1&gt;
+        &lt;h1&gt;{% raw %}{{name}}{% endraw %}&lt;&#x2F;h1&gt;
 
         &lt;div v-if=&quot;loading&quot;&gt;
         Looking up data...
@@ -93,7 +93,7 @@ Here's that template:
         &lt;div v-if=&quot;!loading&quot;&gt;
             &lt;b-list-group&gt;
                 &lt;b-list-group-item v-for=&quot;result in results&quot; :key=&quot;result.id&quot;&gt;
-                &lt;router-link :to=&quot;{% raw %}{name:&#x27;detail&#x27;, params:{placeid:result.place_id}{% endraw %} }&quot;&gt;{% raw %}{{result.name}{% endraw %}}&lt;&#x2F;router-link&gt;
+                &lt;router-link :to=&quot;{% raw %}{name:&#x27;detail&#x27;, params:{placeid:result.place_id}{% endraw %} }&quot;&gt;{% raw %}{{result.name}}{% endraw %}&lt;&#x2F;router-link&gt;
                 &lt;&#x2F;b-list-group-item&gt;
             &lt;&#x2F;b-list-group&gt;
 
@@ -138,9 +138,9 @@ Here's the display code:
                         &lt;span v-if=&quot;detail.opening_hours.open_now&quot;&gt;open.&lt;&#x2F;span&gt;&lt;span v-else&gt;closed.&lt;&#x2F;span&gt;
                     &lt;&#x2F;span&gt;
                     &lt;br&#x2F;&gt;
-                    Phone: {% raw %}{{detail.formatted_phone_number}{% endraw %}}&lt;br&#x2F;&gt;
-                    Website: &lt;a :href=&quot;detail.website&quot; target=&quot;_new&quot;&gt;{% raw %}{{detail.website}{% endraw %}}&lt;&#x2F;a&gt;&lt;br&#x2F;&gt;
-                    &lt;span v-if=&quot;detail.price&quot;&gt;Items here are generally priced &quot;{% raw %}{{detail.price}{% endraw %}}&quot;.&lt;&#x2F;span&gt;
+                    Phone: {% raw %}{{detail.formatted_phone_number}}{% endraw %}&lt;br&#x2F;&gt;
+                    Website: &lt;a :href=&quot;detail.website&quot; target=&quot;_new&quot;&gt;{% raw %}{{detail.website}}{% endraw %}&lt;&#x2F;a&gt;&lt;br&#x2F;&gt;
+                    &lt;span v-if=&quot;detail.price&quot;&gt;Items here are generally priced &quot;{% raw %}{{detail.price}}{% endraw %}&quot;.&lt;&#x2F;span&gt;
                 &lt;&#x2F;p&gt;
 
                 &lt;p&gt;

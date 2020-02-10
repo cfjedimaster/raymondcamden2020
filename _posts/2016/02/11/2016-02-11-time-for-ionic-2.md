@@ -53,7 +53,7 @@ Home
 
 &lt;ion-content&gt;
 &lt;ion-list inset&gt;
-&lt;ion-item *ngFor=&quot;#entry of entries&quot; (click)=&quot;openPage(entry)&quot;&gt;{% raw %}{{entry.title}{% endraw %}}&lt;&#x2F;ion-item&gt;
+&lt;ion-item *ngFor=&quot;#entry of entries&quot; (click)=&quot;openPage(entry)&quot;&gt;{% raw %}{{entry.title}}{% endraw %}&lt;&#x2F;ion-item&gt;
 &lt;&#x2F;ion-list&gt;
 &lt;&#x2F;ion-content&gt;
 </code></pre>
@@ -159,7 +159,7 @@ The detail page is pretty trivial as well. Here is the view:
 
 <pre><code class="language-markup">
 &lt;ion-navbar *navbar&gt;
-  &lt;ion-title&gt;{% raw %}{{entry.title}{% endraw %}}&lt;/ion-title&gt;
+  &lt;ion-title&gt;{% raw %}{{entry.title}}{% endraw %}&lt;/ion-title&gt;
 &lt;/ion-navbar&gt;
 
 &lt;ion-content padding class=&quot;detail-page&quot;&gt;

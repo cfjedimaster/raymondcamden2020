@@ -31,7 +31,7 @@ Ok, so to handle partials, you have to pass a flag, -p:
 
 <pre><code>handlebars mypartial.handlebars -p -f partials.js</code></pre>
 
-As before, the name of the file dictates how you would use it. If I had used the file name from the code snippet above, I could include a partial like so: {% raw %}{{> mypartial}{% endraw %}}. As before, ensure you use the handlebars file extension. I had used .partial to help keep things organized and ran into the issue with the name being mypartial.partial instead of just mypartial.
+As before, the name of the file dictates how you would use it. If I had used the file name from the code snippet above, I could include a partial like so: {% raw %}{{> mypartial}}{% endraw %}. As before, ensure you use the handlebars file extension. I had used .partial to help keep things organized and ran into the issue with the name being mypartial.partial instead of just mypartial.
 
 Ok, so finally, the tip. As far as I know, there is no way to compile 'regular' templates and partials in one call. So to create my compiled templates and partials and store them in one file, I've ended up doing this:
 

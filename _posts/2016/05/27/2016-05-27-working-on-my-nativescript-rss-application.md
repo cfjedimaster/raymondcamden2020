@@ -119,11 +119,11 @@ Woot! Ok, now for the next change. Some RSS feeds only provide a snippet of text
 &lt;Page xmlns=&quot;http://schemas.nativescript.org/tns.xsd&quot; navigatingTo=&quot;loaded&quot;&gt;
 
 	&lt;Page.actionBar&gt;
-		&lt;ActionBar title=&quot;{% raw %}{{ title }{% endraw %}}&quot; /&gt;
+		&lt;ActionBar title=&quot;{% raw %}{{ title }}{% endraw %}&quot; /&gt;
 	&lt;/Page.actionBar&gt;
 	&lt;GridLayout rows=&quot;*,auto&quot;&gt;
 		&lt;ScrollView&gt;
-			&lt;HtmlView html=&quot;{% raw %}{{ text }{% endraw %}}&quot; /&gt;
+			&lt;HtmlView html=&quot;{% raw %}{{ text }}{% endraw %}&quot; /&gt;
 		&lt;/ScrollView&gt;
 		&lt;Button text=&quot;Open in Browser&quot; class=&quot;openButton&quot; row=&quot;1&quot; tap=&quot;openURL&quot; /&gt;
 	&lt;/GridLayout&gt;

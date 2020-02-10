@@ -76,7 +76,7 @@ Last week I wrote up a demo explaining how to [build a simple quiz](https://www.
   </div>
   </form>
 
-  <br/><br/>Debug: {% raw %}{{registration}{% endraw %}}
+  <br/><br/>Debug: {% raw %}{{registration}}{% endraw %}
 </div>
 ```
 
@@ -189,7 +189,7 @@ You may be curious - what if you didn't want to use AJAX for the form submission
 	&lt;&#x2F;div&gt;
 	&lt;&#x2F;form&gt;
 
-	&lt;br&#x2F;&gt;&lt;br&#x2F;&gt;Debug: {% raw %}{{registration}{% endraw %}}
+	&lt;br&#x2F;&gt;&lt;br&#x2F;&gt;Debug: {% raw %}{{registration}}{% endraw %}
 &lt;&#x2F;div&gt;
 </code></pre>
 

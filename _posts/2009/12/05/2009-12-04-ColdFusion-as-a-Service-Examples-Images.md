@@ -163,9 +163,9 @@ Pretty trivial, right? The second example is a bit more full featured. Along wit
 	private function doBatch():void {
 		//Note to audience - bug with Flip via batchoperation requires us to pass transpose
 		var attributes:Array = [
-		{% raw %}{GrayScale:{}{% endraw %}},
-		{% raw %}{Blur:{}{% endraw %}},
-		{% raw %}{Flip:{transpose:"180"}{% endraw %}}
+		{% raw %}{GrayScale:{}}{% endraw %},
+		{% raw %}{Blur:{}}{% endraw %},
+		{% raw %}{Flip:{transpose:"180"}}{% endraw %}
 		]
 		batchImageService.attributes = attributes
 		batchImageService.execute()

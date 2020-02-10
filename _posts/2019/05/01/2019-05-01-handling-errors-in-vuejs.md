@@ -17,7 +17,7 @@ In order to test out the various error handling techniques, I decided to use thr
 
 ```html
 <div id="app" v-cloak>
-  Hello, {% raw %}{{name}{% endraw %}}
+  Hello, {% raw %}{{name}}{% endraw %}
 </div>
 ```
 
@@ -38,7 +38,7 @@ For a second example, I tried a variable bound to a computed property that would
 
 ```html
 <div id="app" v-cloak>
-  Hello, {% raw %}{{name2}{% endraw %}}
+  Hello, {% raw %}{{name2}}{% endraw %}
 </div>
 
 <script>
@@ -263,7 +263,7 @@ Vue.component('cat', {
 });
 
 Vue.component('kitten', {
-  template:'<div><h1>Kitten: {% raw %}{{ dontexist() }{% endraw %}}</h1></div>',
+  template:'<div><h1>Kitten: {% raw %}{{ dontexist() }}{% endraw %}</h1></div>',
   props:{
     name:{
       required:true,

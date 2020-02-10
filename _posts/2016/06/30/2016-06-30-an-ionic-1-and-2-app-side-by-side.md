@@ -86,8 +86,8 @@ Now let's compare the first view. In V1, this is driven by a few different files
 
 		&lt;ion-list class=&quot;list list-inset&quot;&gt;
 
-			&lt;ion-item ng-repeat=&quot;cat in cats&quot; href=&quot;#/cat/{% raw %}{{cat.id}{% endraw %}}&quot;&gt;
-				{% raw %}{{cat.name}{% endraw %}}
+			&lt;ion-item ng-repeat=&quot;cat in cats&quot; href=&quot;#/cat/{% raw %}{{cat.id}}{% endraw %}&quot;&gt;
+				{% raw %}{{cat.name}}{% endraw %}
 			&lt;/ion-item&gt;
 
 		&lt;/ion-list&gt;
@@ -124,7 +124,7 @@ We're going to skip the service until later in the post. Now let's compare this 
 
   &lt;ion-list inset&gt;
     &lt;ion-item *ngFor=&quot;let cat of cats&quot; (click)=&quot;selectCat(cat)&quot;&gt;
-      {% raw %}{{cat.name}{% endraw %}}
+      {% raw %}{{cat.name}}{% endraw %}
     &lt;/ion-item&gt;
   &lt;/ion-list&gt;
 &lt;/ion-content&gt;
@@ -168,21 +168,21 @@ Ok, let's move on the detail view. Here is the view in V1:
 <pre><code class="language-javascript">
 &lt;ion-view&gt;
 
-	&lt;ion-nav-title&gt;Cat: {% raw %}{{cat.name}{% endraw %}}&lt;/ion-nav-title&gt;
+	&lt;ion-nav-title&gt;Cat: {% raw %}{{cat.name}}{% endraw %}&lt;/ion-nav-title&gt;
 
 	&lt;ion-content class=&quot;padding&quot;&gt;
 
 		&lt;div class=&quot;card&quot;&gt;
 			&lt;div class=&quot;item item-divider&quot;&gt;
-			{% raw %}{{cat.name}{% endraw %}}
+			{% raw %}{{cat.name}}{% endraw %}
 			&lt;/div&gt;
 			&lt;div class=&quot;item item-text-wrap&quot;&gt;
 				&lt;p&gt;
-				{% raw %}{{cat.name}{% endraw %}} is {% raw %}{{cat.age}{% endraw %}} years old with a {% raw %}{{cat.color}{% endraw %}} color and is 
+				{% raw %}{{cat.name}}{% endraw %} is {% raw %}{{cat.age}}{% endraw %} years old with a {% raw %}{{cat.color}}{% endraw %} color and is 
 				&lt;span ng-if=&quot;!cat.friendly&quot;&gt;not&lt;/span&gt; friendly.
 				&lt;/p&gt;
 
-				&lt;img ng-src=&quot;{% raw %}{{cat.image}{% endraw %}}&quot;&gt;
+				&lt;img ng-src=&quot;{% raw %}{{cat.image}}{% endraw %}&quot;&gt;
 
 			&lt;/div&gt;
 		&lt;/div&gt;
@@ -210,7 +210,7 @@ Alright, now let's look at V2. First the view:
 &lt;ion-header&gt;
 
   &lt;ion-navbar&gt;
-    &lt;ion-title&gt;Cat: {% raw %}{{cat.name}{% endraw %}}&lt;/ion-title&gt;
+    &lt;ion-title&gt;Cat: {% raw %}{{cat.name}}{% endraw %}&lt;/ion-title&gt;
   &lt;/ion-navbar&gt;
 
 &lt;/ion-header&gt;
@@ -218,10 +218,10 @@ Alright, now let's look at V2. First the view:
 &lt;ion-content padding&gt;
 
   &lt;ion-card&gt;
-    &lt;ion-card-header&gt;{% raw %}{{cat.name}{% endraw %}}&lt;/ion-card-header&gt;
+    &lt;ion-card-header&gt;{% raw %}{{cat.name}}{% endraw %}&lt;/ion-card-header&gt;
     &lt;ion-card-content&gt;
 				&lt;p&gt;
-				{% raw %}{{cat.name}{% endraw %}} is {% raw %}{{cat.age}{% endraw %}} years old with a {% raw %}{{cat.color}{% endraw %}} color and is 
+				{% raw %}{{cat.name}}{% endraw %} is {% raw %}{{cat.age}}{% endraw %} years old with a {% raw %}{{cat.color}}{% endraw %} color and is 
 				&lt;span *ngIf=&quot;!cat.friendly&quot;&gt;not&lt;/span&gt; friendly.
 				&lt;/p&gt;
 

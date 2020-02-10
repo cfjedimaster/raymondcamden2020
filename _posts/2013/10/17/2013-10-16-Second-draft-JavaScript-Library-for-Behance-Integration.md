@@ -43,11 +43,11 @@ With that in mind, I've added a new method to the API: renderProjects. Given a u
 		
 		&lt;script id=&quot;projectTemplate&quot; type=&quot;text&#x2F;x-behance-template&quot;&gt;
 		&lt;div class=&quot;project&quot;&gt;
-		&lt;h2&gt;&lt;a href=&quot;{% raw %}{{url}{% endraw %}}&quot;&gt;{% raw %}{{name}{% endraw %}}&lt;&#x2F;a&gt;&lt;&#x2F;h2&gt;
-		&lt;i&gt;Created: {% raw %}{{created}{% endraw %}}&lt;&#x2F;i&gt;&lt;br&#x2F;&gt;
-		&lt;i&gt;Fields: {% raw %}{{fields}{% endraw %}}&lt;&#x2F;i&gt;&lt;br&#x2F;&gt;
-		&lt;i&gt;Stats: Appreciations={% raw %}{{appreciations}{% endraw %}}, Comments={% raw %}{{comments}{% endraw %}}, Views={% raw %}{{views}{% endraw %}}&lt;&#x2F;i&gt;&lt;br&#x2F;&gt;
-		&lt;img src=&quot;{% raw %}{{covers_230}{% endraw %}}&quot;&gt;
+		&lt;h2&gt;&lt;a href=&quot;{% raw %}{{url}}{% endraw %}&quot;&gt;{% raw %}{{name}}{% endraw %}&lt;&#x2F;a&gt;&lt;&#x2F;h2&gt;
+		&lt;i&gt;Created: {% raw %}{{created}}{% endraw %}&lt;&#x2F;i&gt;&lt;br&#x2F;&gt;
+		&lt;i&gt;Fields: {% raw %}{{fields}}{% endraw %}&lt;&#x2F;i&gt;&lt;br&#x2F;&gt;
+		&lt;i&gt;Stats: Appreciations={% raw %}{{appreciations}}{% endraw %}, Comments={% raw %}{{comments}}{% endraw %}, Views={% raw %}{{views}}{% endraw %}&lt;&#x2F;i&gt;&lt;br&#x2F;&gt;
+		&lt;img src=&quot;{% raw %}{{covers_230}}{% endraw %}&quot;&gt;
 		&lt;&#x2F;div&gt;
 		&lt;&#x2F;script&gt;
 
@@ -91,24 +91,24 @@ var behanceAPI = function() {
 	function _renderTemplate(p, template) {
 		var result = template;
 		//console.dir(p);
-		result = result.replace(/{% raw %}{{name}{% endraw %}}/gi, p.name);
-		result = result.replace(/{% raw %}{{url}{% endraw %}}/gi, p.url);
-		if(p.covers[115]) result = result.replace(/{% raw %}{{covers_115}{% endraw %}}/gi, p.covers[115]);
-		if(p.covers[202]) result = result.replace(/{% raw %}{{covers_202}{% endraw %}}/gi, p.covers[202]);
-		if(p.covers[230]) result = result.replace(/{% raw %}{{covers_230}{% endraw %}}/gi, p.covers[230]);
-		if(p.covers[404]) result = result.replace(/{% raw %}{{covers_404}{% endraw %}}/gi, p.covers[404]);
+		result = result.replace(/{% raw %}{{name}}{% endraw %}/gi, p.name);
+		result = result.replace(/{% raw %}{{url}}{% endraw %}/gi, p.url);
+		if(p.covers[115]) result = result.replace(/{% raw %}{{covers_115}}{% endraw %}/gi, p.covers[115]);
+		if(p.covers[202]) result = result.replace(/{% raw %}{{covers_202}}{% endraw %}/gi, p.covers[202]);
+		if(p.covers[230]) result = result.replace(/{% raw %}{{covers_230}}{% endraw %}/gi, p.covers[230]);
+		if(p.covers[404]) result = result.replace(/{% raw %}{{covers_404}}{% endraw %}/gi, p.covers[404]);
 		
 		var created = _toDateStr(p.created_on);
-		result = result.replace(/{% raw %}{{created}{% endraw %}}/gi, created);
+		result = result.replace(/{% raw %}{{created}}{% endraw %}/gi, created);
 
 		var modified = _toDateStr(p.modified_on);
-		result = result.replace(/{% raw %}{{modified}{% endraw %}}/gi, modified);
+		result = result.replace(/{% raw %}{{modified}}{% endraw %}/gi, modified);
 
-		result = result.replace(/{% raw %}{{fields}{% endraw %}}/gi, p.fields.join(", "));
+		result = result.replace(/{% raw %}{{fields}}{% endraw %}/gi, p.fields.join(", "));
 
-		result = result.replace(/{% raw %}{{appreciations}{% endraw %}}/gi, p.stats.appreciations);
-		result = result.replace(/{% raw %}{{comments}{% endraw %}}/gi, p.stats.comments);
-		result = result.replace(/{% raw %}{{views}{% endraw %}}/gi, p.stats.views);
+		result = result.replace(/{% raw %}{{appreciations}}{% endraw %}/gi, p.stats.appreciations);
+		result = result.replace(/{% raw %}{{comments}}{% endraw %}/gi, p.stats.comments);
+		result = result.replace(/{% raw %}{{views}}{% endraw %}/gi, p.stats.views);
 		
 		return result;
 	}

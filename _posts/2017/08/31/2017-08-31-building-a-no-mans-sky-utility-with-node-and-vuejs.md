@@ -39,7 +39,7 @@ Notice the HTML is removed and it's a "data-ish" format suitable for parsing. Wh
 
 ```
 ==Crafting==
-{% raw %}{{Craft|{% endraw %}Carite Sheet,1;Platinum,15;Zinc,10{% raw %}|blueprint=yes}{% endraw %}}
+{% raw %}{{Craft|{% endraw %}Carite Sheet,1;Platinum,15;Zinc,10{% raw %}|blueprint=yes}}{% endraw %}
 {% raw %}{{Repair|{% endraw %}Carite Sheet,1;Platinum,8;Zinc,5}}
 {% raw %}{{Dismantle|{% endraw %}Carite Sheet,0;Platinum,7;Zinc,5}}
 ```
@@ -179,7 +179,7 @@ Given raw wiki text, look for:
 {% raw %}{{Craft|{% endraw %}Name,Qty;Name2,Qty; (there is also blueprint=yes&#x2F;no I may care aboyt later
 *&#x2F;
 function getParts(s,name) {
-	let re = &#x2F;{% raw %}{{Craft\|{% endraw %}(.*?)[\{% raw %}||}{% endraw %}}]+&#x2F;;
+	let re = &#x2F;{% raw %}{{Craft\|{% endraw %}(.*?)[\{% raw %}||}}{% endraw %}]+&#x2F;;
 	let found = s.match(re);
 	if(!found || found.length !== 2) {
 		console.log(s);
@@ -327,7 +327,7 @@ So on to the front end. This is the second app I've built with Vue, and I still 
 			&lt;input type=&quot;search&quot; placeholder=&quot;Filter&quot; v-model=&quot;filter&quot;&gt;
 
 			&lt;ul class=&quot;blueprint&quot;&gt;
-				&lt;li v-for=&quot;blueprint in filteredBlueprints&quot; @click=&quot;addToCart(blueprint.name)&quot;&gt;{% raw %}{{ blueprint.name }{% endraw %}}&lt;&#x2F;li&gt;
+				&lt;li v-for=&quot;blueprint in filteredBlueprints&quot; @click=&quot;addToCart(blueprint.name)&quot;&gt;{% raw %}{{ blueprint.name }}{% endraw %}&lt;&#x2F;li&gt;
 			&lt;&#x2F;ul&gt;
 			&lt;&#x2F;div&gt;
 			
@@ -343,8 +343,8 @@ So on to the front end. This is the second app I've built with Vue, and I still 
 				&lt;&#x2F;thead&gt;
 				&lt;tbody&gt;
 				&lt;tr v-for=&quot;item in items&quot;&gt;
-					&lt;td&gt;{% raw %}{{item.name}{% endraw %}}&lt;&#x2F;td&gt;
-					&lt;td&gt;{% raw %}{{item.qty}{% endraw %}}&lt;&#x2F;td&gt;
+					&lt;td&gt;{% raw %}{{item.name}}{% endraw %}&lt;&#x2F;td&gt;
+					&lt;td&gt;{% raw %}{{item.qty}}{% endraw %}&lt;&#x2F;td&gt;
 					&lt;td @click=&quot;removeFromCart(item.name)&quot; class=&quot;remove&quot;&gt;Remove&lt;&#x2F;td&gt;
 				&lt;&#x2F;tr&gt;
 				&lt;&#x2F;tbody&gt;
@@ -362,8 +362,8 @@ So on to the front end. This is the second app I've built with Vue, and I still 
 				&lt;&#x2F;thead&gt;
 				&lt;tbody&gt;
 				&lt;tr v-for=&quot;res in neededResources&quot;&gt;
-					&lt;td&gt;{% raw %}{{res.name}{% endraw %}}&lt;&#x2F;td&gt;
-					&lt;td&gt;{% raw %}{{res.qty}{% endraw %}}&lt;&#x2F;td&gt;
+					&lt;td&gt;{% raw %}{{res.name}}{% endraw %}&lt;&#x2F;td&gt;
+					&lt;td&gt;{% raw %}{{res.qty}}{% endraw %}&lt;&#x2F;td&gt;
 				&lt;&#x2F;tr&gt;
 				&lt;&#x2F;tbody&gt;
 			&lt;&#x2F;table&gt;

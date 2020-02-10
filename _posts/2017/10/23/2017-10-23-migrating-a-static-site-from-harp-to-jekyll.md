@@ -183,29 +183,29 @@ For comparison's sake, here's the layout using Jekyll's templating language, Liq
 layout: default
 ---
 
-&lt;h2&gt;{% raw %}{{ page.title }{% endraw %}}({% raw %}{{ page.argString }{% endraw %}}) &lt;&#x2F;h2&gt;
-&lt;h5 class=&quot;lastUpdated&quot;&gt;Last updated {% raw %}{{ page.date |{% endraw %} date: &quot;{% raw %}%B %{% endraw %}d, {% raw %}%Y&quot; }{% endraw %}}&lt;&#x2F;h5&gt;
+&lt;h2&gt;{% raw %}{{ page.title }}{% endraw %}({% raw %}{{ page.argString }}{% endraw %}) &lt;&#x2F;h2&gt;
+&lt;h5 class=&quot;lastUpdated&quot;&gt;Last updated {% raw %}{{ page.date |{% endraw %} date: &quot;{% raw %}%B %{% endraw %}d, {% raw %}%Y&quot; }}{% endraw %}&lt;&#x2F;h5&gt;
 
 &lt;div class=&quot;author&quot;&gt;
 	&lt;h3&gt;&lt;span&gt;author&lt;&#x2F;span&gt;&lt;&#x2F;h3&gt;
 	&lt;p&gt;
-	&lt;img src=&quot;{% raw %}{{ page.authorEmail |{% endraw %} to_gravatar }}?s=43&quot; title=&quot;{% raw %}{{ page.author }{% endraw %}}&quot; class=&quot;img-left gravatar&quot; &#x2F;&gt;
-	&lt;span class=&quot;name&quot;&gt;{% raw %}{{ page.author }{% endraw %}}&lt;&#x2F;span&gt; &lt;br&#x2F;&gt;
+	&lt;img src=&quot;{% raw %}{{ page.authorEmail |{% endraw %} to_gravatar }}?s=43&quot; title=&quot;{% raw %}{{ page.author }}{% endraw %}&quot; class=&quot;img-left gravatar&quot; &#x2F;&gt;
+	&lt;span class=&quot;name&quot;&gt;{% raw %}{{ page.author }}{% endraw %}&lt;&#x2F;span&gt; &lt;br&#x2F;&gt;
 	&lt;&#x2F;p&gt;	
 &lt;&#x2F;div&gt;
 &lt;p class=&quot;description&quot;&gt;
-	&lt;strong&gt;Version:&lt;&#x2F;strong&gt; {% raw %}{{ page.version }{% endraw %}} |  
-	&lt;strong&gt;Requires:&lt;&#x2F;strong&gt; {% raw %}{{ page.cfVersion }{% endraw %}} | 
-	&lt;strong&gt;Library:&lt;&#x2F;strong&gt; &lt;a href=&quot;&#x2F;library&#x2F;{% raw %}{{ page.library }{% endraw %}}&quot;&gt;{% raw %}{{ page.library}{% endraw %}}&lt;&#x2F;a&gt;
+	&lt;strong&gt;Version:&lt;&#x2F;strong&gt; {% raw %}{{ page.version }}{% endraw %} |  
+	&lt;strong&gt;Requires:&lt;&#x2F;strong&gt; {% raw %}{{ page.cfVersion }}{% endraw %} | 
+	&lt;strong&gt;Library:&lt;&#x2F;strong&gt; &lt;a href=&quot;&#x2F;library&#x2F;{% raw %}{{ page.library }}{% endraw %}&quot;&gt;{% raw %}{{ page.library}}{% endraw %}&lt;&#x2F;a&gt;
 &lt;&#x2F;p&gt;
 &lt;div class=&quot;udfDetails&quot;&gt;	
 &lt;p&gt;
 	&lt;strong&gt;Description:&lt;&#x2F;strong&gt; &lt;br&#x2F;&gt;
-	{% raw %}{{ page.description }{% endraw %}}
+	{% raw %}{{ page.description }}{% endraw %}
 &lt;&#x2F;p&gt;
 &lt;p&gt;
 	&lt;strong&gt;Return Values:&lt;&#x2F;strong&gt; &lt;br&#x2F;&gt;
-	{% raw %}{{ page.returnValue }{% endraw %}}
+	{% raw %}{{ page.returnValue }}{% endraw %}
 &lt;&#x2F;p&gt;
 
 &lt;a name=&quot;examples&quot;&gt;&lt;&#x2F;a&gt;&lt;p&gt;&lt;strong&gt;Example:&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
@@ -224,8 +224,8 @@ layout: default
         &lt;&#x2F;tr&gt;
         {% raw %}{% for arg in page.args %{% endraw %}}
 			&lt;tr&gt;
-				&lt;td&gt;{% raw %}{{ arg.name }{% endraw %}}&lt;&#x2F;td&gt;
-				&lt;td&gt;{% raw %}{{ arg.desc }{% endraw %}}&lt;&#x2F;td&gt;
+				&lt;td&gt;{% raw %}{{ arg.name }}{% endraw %}&lt;&#x2F;td&gt;
+				&lt;td&gt;{% raw %}{{ arg.desc }}{% endraw %}&lt;&#x2F;td&gt;
 				&lt;td&gt;
                     {% raw %}{% if arg.req %{% endraw %}}
                     Yes

@@ -101,7 +101,7 @@ We'll begin by removing two of the ion-items and making the third dynamic.
 &lt;ion-view title=&quot;Star Wars Films&quot;&gt;
     &lt;ion-content overflow-scroll=&quot;true&quot; padding=&quot;true&quot; class=&quot;has-header&quot;&gt;
         &lt;ion-list&gt;
-			&lt;ion-item ng-repeat=&quot;film in films&quot; ui-sref=&quot;filmTitle({% raw %}{id:film.id}{% endraw %})&quot;&gt;{% raw %}{{film.title}{% endraw %}}&lt;/ion-item&gt;
+			&lt;ion-item ng-repeat=&quot;film in films&quot; ui-sref=&quot;filmTitle({% raw %}{id:film.id}{% endraw %})&quot;&gt;{% raw %}{{film.title}}{% endraw %}&lt;/ion-item&gt;
         &lt;/ion-list&gt;
     &lt;/ion-content&gt;
 &lt;/ion-view&gt;
@@ -140,10 +140,10 @@ We need to make the title and text dynamic. Here is the updated version:
 
 <pre><code class="language-markup">
 &lt;ion-view&gt;
-	&lt;ion-nav-title&gt;{% raw %}{{film.title}{% endraw %}}&lt;/ion-nav-title&gt;
+	&lt;ion-nav-title&gt;{% raw %}{{film.title}}{% endraw %}&lt;/ion-nav-title&gt;
     &lt;ion-content overflow-scroll=&quot;true&quot; padding=&quot;true&quot; class=&quot;has-header&quot;&gt;
         &lt;div&gt;
-            &lt;p&gt;{% raw %}{{film.crawl}{% endraw %}}&lt;/p&gt;
+            &lt;p&gt;{% raw %}{{film.crawl}}{% endraw %}&lt;/p&gt;
         &lt;/div&gt;
     &lt;/ion-content&gt;
 &lt;/ion-view&gt;

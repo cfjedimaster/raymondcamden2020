@@ -72,7 +72,7 @@ Now let's look at the Home page. First, let's consider the view.
 			&lt;ion-avatar item-left&gt;
 				&lt;ion-img [src]=&quot;person.picture&quot; width=&quot;48&quot; height=&quot;48&quot;&gt;&lt;&#x2F;ion-img&gt;
 			&lt;&#x2F;ion-avatar&gt;
-			&lt;h2&gt;{% raw %}{{person.name}{% endraw %}}&lt;&#x2F;h2&gt;
+			&lt;h2&gt;{% raw %}{{person.name}}{% endraw %}&lt;&#x2F;h2&gt;
 		&lt;&#x2F;ion-item&gt;
 	&lt;&#x2F;ion-list&gt;
 

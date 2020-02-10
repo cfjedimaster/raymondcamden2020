@@ -18,7 +18,7 @@ Well first off, VuePress provides access to the entire site via a - wait for it 
 ### Recent Cool Crap
 
 <ul>
-<li v-for="page in $site.pages">{% raw %}{{ page.title }{% endraw %}}</li>
+<li v-for="page in $site.pages">{% raw %}{{ page.title }}{% endraw %}</li>
 </ul>
 ```
 
@@ -39,7 +39,7 @@ Now let's look at the component.
 <div>
 	<ul>
 		<li v-for="post in recentFiles">
-			<a :href="post.path">{% raw %}{{post.title}{% endraw %}}</a>
+			<a :href="post.path">{% raw %}{{post.title}}{% endraw %}</a>
 		</li>
 	</ul>
 </div>

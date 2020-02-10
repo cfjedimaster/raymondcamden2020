@@ -102,7 +102,7 @@ Ok - so at this point - you can test on a device (this may be obvious, but I swe
 
 You want to copy out that device token because testing, currently, is done via CLI. Ionic will be adding a proper dashboard soon, but at the moment, sending a push notification requires using curl:
 
-<pre><code>curl -u 3ec834b08thisisecretf53: -H "Content-Type: application/json" -H "X-Ionic-Application-Id: myappid" https://push.ionic.io/api/v1/push -d '{% raw %}{"tokens":["devicetoken"],"notification":{"alert":"MOAR KITTENS!"}{% endraw %}}'</code></pre>
+<pre><code>curl -u 3ec834b08thisisecretf53: -H "Content-Type: application/json" -H "X-Ionic-Application-Id: myappid" https://push.ionic.io/api/v1/push -d '{% raw %}{"tokens":["devicetoken"],"notification":{"alert":"MOAR KITTENS!"}}{% endraw %}'</code></pre>
 
 <a href="http://www.raymondcamden.com/wp-content/uploads/2015/03/i6.png"><img src="https://static.raymondcamden.com/images/wp-content/uploads/2015/03/i6.png" alt="i6" width="450" height="800" class="alignnone size-full wp-image-5923" /></a>
 

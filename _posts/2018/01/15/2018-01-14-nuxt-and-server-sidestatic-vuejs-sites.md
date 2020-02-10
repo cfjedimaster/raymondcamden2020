@@ -27,13 +27,13 @@ I also like using .vue files, or as Vue calls them, [single file components](htt
   <section class="container">
     <div>
       <h1 class="title">
-        nuxt1 {% raw %}{{name}{% endraw %}}
+        nuxt1 {% raw %}{{name}}{% endraw %}
       </h1>
       <h2 class="subtitle">
          <a href="/about">About</a>
       </h2>
       <ul>
-        <li v-for="cat in cats"><a :href="'/cats/'+cat">{% raw %}{{cat}{% endraw %}}</a></li>
+        <li v-for="cat in cats"><a :href="'/cats/'+cat">{% raw %}{{cat}}{% endraw %}</a></li>
       </ul>
     </div>
   </section>

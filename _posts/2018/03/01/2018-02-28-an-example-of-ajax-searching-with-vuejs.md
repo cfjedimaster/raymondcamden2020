@@ -36,8 +36,8 @@ For my demo, I used the [iTunes API](https://affiliate.itunes.apple.com/resource
 
 			<div v-for="result in results" class="result">
 				<img :src="result.artworkUrl100">
-				<b>Artist:</b> {% raw %}{{result.artistName}{% endraw %}}<br/>
-				<b>Track:</b> {% raw %}{{result.trackName}{% endraw %}}<br/>
+				<b>Artist:</b> {% raw %}{{result.artistName}}{% endraw %}<br/>
+				<b>Track:</b> {% raw %}{{result.trackName}}{% endraw %}<br/>
 				<b>Released:</b> {% raw %}{{result.releaseDate |{% endraw %} formatDate}}
 				<br clear="left">
 			</div>

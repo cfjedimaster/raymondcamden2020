@@ -53,66 +53,66 @@ Let's start by quickly discussing the "old" version. I've got old in quotes ther
 	&lt;&#x2F;p&gt;
 
 	&lt;h3&gt;Crops&lt;&#x2F;h3&gt;
-	{% raw %}{{#if crops}{% endraw %}}
+	{% raw %}{{#if crops}}{% endraw %}
 		&lt;ol&gt;
-		{% raw %}{{#each crops}{% endraw %}}
+		{% raw %}{{#each crops}}{% endraw %}
 		&lt;li&gt;
 			&lt;ul&gt;
-			{% raw %}{{#each this}{% endraw %}}
-			&lt;li&gt;{% raw %}{{this.x}{% endraw %}},{% raw %}{{y}{% endraw %}}&lt;&#x2F;li&gt;
-			{% raw %}{{&#x2F;each}{% endraw %}}
+			{% raw %}{{#each this}}{% endraw %}
+			&lt;li&gt;{% raw %}{{this.x}}{% endraw %},{% raw %}{{y}}{% endraw %}&lt;&#x2F;li&gt;
+			{% raw %}{{&#x2F;each}}{% endraw %}
 			&lt;&#x2F;ul&gt;
 		&lt;&#x2F;li&gt;
-		{% raw %}{{&#x2F;each}{% endraw %}}
+		{% raw %}{{&#x2F;each}}{% endraw %}
 		&lt;&#x2F;ol&gt;
-	{% raw %}{{else}{% endraw %}}
+	{% raw %}{{else}}{% endraw %}
 	&lt;p&gt;No crops.&lt;&#x2F;p&gt;
-	{% raw %}{{&#x2F;if}{% endraw %}}
+	{% raw %}{{&#x2F;if}}{% endraw %}
 
 	&lt;h3&gt;Faces&lt;&#x2F;h3&gt;
-	{% raw %}{{#if faces}{% endraw %}}
+	{% raw %}{{#if faces}}{% endraw %}
 		&lt;p&gt;
 			&lt;i&gt;Note, this report is not showing: angles, bounds, and features.&lt;&#x2F;i&gt;
 		&lt;&#x2F;p&gt;
-		{% raw %}{{#each faces}{% endraw %}}
+		{% raw %}{{#each faces}}{% endraw %}
 		&lt;p&gt;
 			Basic Details:&lt;br&#x2F;&gt;
-			Anger: {% raw %}{{this.anger}{% endraw %}} (likelihood: {% raw %}{{this.angerLikelihood}{% endraw %}})&lt;br&#x2F;&gt;
-			Blurred: {% raw %}{{this.blurred}{% endraw %}}&lt;br&#x2F;&gt;
-			Confidence: {% raw %}{{this.confidence}{% endraw %}}&lt;br&#x2F;&gt;
-			Headware: {% raw %}{{this.headwear}{% endraw %}} (likelihood: {% raw %}{{this.headwearLikelihood}{% endraw %}})&lt;br&#x2F;&gt;
-			Joy: {% raw %}{{this.joy}{% endraw %}} (likelihood: {% raw %}{{this.joyLikelihood}{% endraw %}})&lt;br&#x2F;&gt;
-			Sorrow: {% raw %}{{this.sorrow}{% endraw %}} (likelihood: {% raw %}{{this.sorrowLikelihood}{% endraw %}})&lt;br&#x2F;&gt;
-			Surprise: {% raw %}{{this.surprise}{% endraw %}} (likelihood: {% raw %}{{this.surpriseLikelihood}{% endraw %}})&lt;br&#x2F;&gt;
-			Underexposed: {% raw %}{{this.underExposed}{% endraw %}} (likelihood: {% raw %}{{this.underExposedLikelihood}{% endraw %}})&lt;br&#x2F;&gt;
+			Anger: {% raw %}{{this.anger}}{% endraw %} (likelihood: {% raw %}{{this.angerLikelihood}}{% endraw %})&lt;br&#x2F;&gt;
+			Blurred: {% raw %}{{this.blurred}}{% endraw %}&lt;br&#x2F;&gt;
+			Confidence: {% raw %}{{this.confidence}}{% endraw %}&lt;br&#x2F;&gt;
+			Headware: {% raw %}{{this.headwear}}{% endraw %} (likelihood: {% raw %}{{this.headwearLikelihood}}{% endraw %})&lt;br&#x2F;&gt;
+			Joy: {% raw %}{{this.joy}}{% endraw %} (likelihood: {% raw %}{{this.joyLikelihood}}{% endraw %})&lt;br&#x2F;&gt;
+			Sorrow: {% raw %}{{this.sorrow}}{% endraw %} (likelihood: {% raw %}{{this.sorrowLikelihood}}{% endraw %})&lt;br&#x2F;&gt;
+			Surprise: {% raw %}{{this.surprise}}{% endraw %} (likelihood: {% raw %}{{this.surpriseLikelihood}}{% endraw %})&lt;br&#x2F;&gt;
+			Underexposed: {% raw %}{{this.underExposed}}{% endraw %} (likelihood: {% raw %}{{this.underExposedLikelihood}}{% endraw %})&lt;br&#x2F;&gt;
 		&lt;&#x2F;p&gt;
-		{% raw %}{{&#x2F;each}{% endraw %}}
-	{% raw %}{{else}{% endraw %}}
+		{% raw %}{{&#x2F;each}}{% endraw %}
+	{% raw %}{{else}}{% endraw %}
 	&lt;p&gt;No faces.&lt;&#x2F;p&gt;
-	{% raw %}{{&#x2F;if}{% endraw %}}
+	{% raw %}{{&#x2F;if}}{% endraw %}
 	
 	&lt;h3&gt;Labels&lt;&#x2F;h3&gt;
-	{% raw %}{{#if labels}{% endraw %}}
+	{% raw %}{{#if labels}}{% endraw %}
 		&lt;ul&gt;
-		{% raw %}{{#each labels}{% endraw %}}
-		&lt;li&gt;{% raw %}{{this}{% endraw %}}&lt;&#x2F;li&gt;
-		{% raw %}{{&#x2F;each}{% endraw %}}
+		{% raw %}{{#each labels}}{% endraw %}
+		&lt;li&gt;{% raw %}{{this}}{% endraw %}&lt;&#x2F;li&gt;
+		{% raw %}{{&#x2F;each}}{% endraw %}
 		&lt;&#x2F;ul&gt;
-	{% raw %}{{else}{% endraw %}}
+	{% raw %}{{else}}{% endraw %}
 	&lt;p&gt;No labels.&lt;&#x2F;p&gt;
-	{% raw %}{{&#x2F;if}{% endraw %}}
+	{% raw %}{{&#x2F;if}}{% endraw %}
 
 	&lt;h3&gt;Landmarks&lt;&#x2F;h3&gt;
-	{% raw %}{{#if landmarks}{% endraw %}}
+	{% raw %}{{#if landmarks}}{% endraw %}
 		&lt;p&gt;&lt;i&gt;This is the &lt;b&gt;non&lt;&#x2F;b&gt; verbose response. Verbose version will include location GPS values.&lt;&#x2F;i&gt;&lt;&#x2F;p&gt;
 		&lt;ul&gt;
-		{% raw %}{{#each landmarks}{% endraw %}}
-			&lt;li&gt;{% raw %}{{this}{% endraw %}}&lt;&#x2F;li&gt;
-		{% raw %}{{&#x2F;each}{% endraw %}}
+		{% raw %}{{#each landmarks}}{% endraw %}
+			&lt;li&gt;{% raw %}{{this}}{% endraw %}&lt;&#x2F;li&gt;
+		{% raw %}{{&#x2F;each}}{% endraw %}
 		&lt;&#x2F;ul&gt;
-	{% raw %}{{else}{% endraw %}}
+	{% raw %}{{else}}{% endraw %}
 	&lt;p&gt;No landmarks.&lt;&#x2F;p&gt;
-	{% raw %}{{&#x2F;if}{% endraw %}}
+	{% raw %}{{&#x2F;if}}{% endraw %}
 
 	&lt;&#x2F;script&gt;
 
@@ -417,7 +417,7 @@ The front end HTML now has the templates "inside" the body as Vue is going to ma
 				&lt;ol&gt;
 				&lt;li v-for=&quot;cropset in google.crops&quot;&gt;
 					&lt;ul&gt;
-					&lt;li v-for=&quot;crop in cropset&quot;&gt;{% raw %}{{crop.x}{% endraw %}},{% raw %}{{crop.y}{% endraw %}}&lt;&#x2F;li&gt;
+					&lt;li v-for=&quot;crop in cropset&quot;&gt;{% raw %}{{crop.x}}{% endraw %},{% raw %}{{crop.y}}{% endraw %}&lt;&#x2F;li&gt;
 					&lt;&#x2F;ul&gt;
 				&lt;&#x2F;li&gt;
 				&lt;&#x2F;ol&gt;
@@ -433,14 +433,14 @@ The front end HTML now has the templates "inside" the body as Vue is going to ma
 
 				&lt;p v-for=&quot;face in google.faces&quot;&gt;
 					Basic Details:&lt;br&#x2F;&gt;
-					Anger: {% raw %}{{face.anger}{% endraw %}} (likelihood: {% raw %}{{face.angerLikelihood}{% endraw %}})&lt;br&#x2F;&gt;
-					Blurred: {% raw %}{{face.blurred}{% endraw %}}&lt;br&#x2F;&gt;
-					Confidence: {% raw %}{{face.confidence}{% endraw %}}&lt;br&#x2F;&gt;
-					Headware: {% raw %}{{face.headwear}{% endraw %}} (likelihood: {% raw %}{{face.headwearLikelihood}{% endraw %}})&lt;br&#x2F;&gt;
-					Joy: {% raw %}{{face.joy}{% endraw %}} (likelihood: {% raw %}{{face.joyLikelihood}{% endraw %}})&lt;br&#x2F;&gt;
-					Sorrow: {% raw %}{{face.sorrow}{% endraw %}} (likelihood: {% raw %}{{face.sorrowLikelihood}{% endraw %}})&lt;br&#x2F;&gt;
-					Surprise: {% raw %}{{face.surprise}{% endraw %}} (likelihood: {% raw %}{{face.surpriseLikelihood}{% endraw %}})&lt;br&#x2F;&gt;
-					Underexposed: {% raw %}{{face.underExposed}{% endraw %}} (likelihood: {% raw %}{{face.underExposedLikelihood}{% endraw %}})&lt;br&#x2F;&gt;
+					Anger: {% raw %}{{face.anger}}{% endraw %} (likelihood: {% raw %}{{face.angerLikelihood}}{% endraw %})&lt;br&#x2F;&gt;
+					Blurred: {% raw %}{{face.blurred}}{% endraw %}&lt;br&#x2F;&gt;
+					Confidence: {% raw %}{{face.confidence}}{% endraw %}&lt;br&#x2F;&gt;
+					Headware: {% raw %}{{face.headwear}}{% endraw %} (likelihood: {% raw %}{{face.headwearLikelihood}}{% endraw %})&lt;br&#x2F;&gt;
+					Joy: {% raw %}{{face.joy}}{% endraw %} (likelihood: {% raw %}{{face.joyLikelihood}}{% endraw %})&lt;br&#x2F;&gt;
+					Sorrow: {% raw %}{{face.sorrow}}{% endraw %} (likelihood: {% raw %}{{face.sorrowLikelihood}}{% endraw %})&lt;br&#x2F;&gt;
+					Surprise: {% raw %}{{face.surprise}}{% endraw %} (likelihood: {% raw %}{{face.surpriseLikelihood}}{% endraw %})&lt;br&#x2F;&gt;
+					Underexposed: {% raw %}{{face.underExposed}}{% endraw %} (likelihood: {% raw %}{{face.underExposedLikelihood}}{% endraw %})&lt;br&#x2F;&gt;
 				&lt;&#x2F;p&gt;
 			&lt;&#x2F;div&gt;&lt;div v-else&gt;
 				&lt;p&gt;No faces.&lt;&#x2F;p&gt;
@@ -449,7 +449,7 @@ The front end HTML now has the templates "inside" the body as Vue is going to ma
 			&lt;h3&gt;Labels&lt;&#x2F;h3&gt;
 			&lt;div v-if=&quot;google.labels.length&quot;&gt;
 				&lt;ul&gt;
-				&lt;li v-for=&quot;label in google.labels&quot;&gt;{% raw %}{{label}{% endraw %}}&lt;&#x2F;li&gt;
+				&lt;li v-for=&quot;label in google.labels&quot;&gt;{% raw %}{{label}}{% endraw %}&lt;&#x2F;li&gt;
 				&lt;&#x2F;ul&gt;
 			&lt;&#x2F;div&gt;&lt;div v-else&gt;
 				&lt;p&gt;No labels.&lt;&#x2F;p&gt;
@@ -459,7 +459,7 @@ The front end HTML now has the templates "inside" the body as Vue is going to ma
 			&lt;div v-if=&quot;google.landmarks.length&quot;&gt;
 				&lt;p&gt;&lt;i&gt;This is the &lt;b&gt;non&lt;&#x2F;b&gt; verbose response. Verbose version will include location GPS values.&lt;&#x2F;i&gt;&lt;&#x2F;p&gt;
 				&lt;ul&gt;
-					&lt;li v-for=&quot;landmark in google.landmarks&quot;&gt;{% raw %}{{landmark}{% endraw %}}&lt;&#x2F;li&gt;
+					&lt;li v-for=&quot;landmark in google.landmarks&quot;&gt;{% raw %}{{landmark}}{% endraw %}&lt;&#x2F;li&gt;
 				&lt;&#x2F;ul&gt;
 			&lt;&#x2F;div&gt;&lt;div v-else&gt;
 				&lt;p&gt;No landmarks.&lt;&#x2F;p&gt;
@@ -481,13 +481,13 @@ For the most part, the conversion from Handlebars to Vue was straight forward. I
 
 <pre><code class="language-markup">&lt;ul&gt;
 	&lt;li v-for=&quot;color in google.properties.colors&quot; 
-	v-bind:style=&quot;{% raw %}{ backgroundColor:&#x27;#&#x27;+color }{% endraw %}&quot;&gt;{% raw %}{{color}{% endraw %}}&lt;&#x2F;li&gt;
+	v-bind:style=&quot;{% raw %}{ backgroundColor:&#x27;#&#x27;+color }{% endraw %}&quot;&gt;{% raw %}{{color}}{% endraw %}&lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
 </code></pre>
 
 It took me a bit to figure out that my CSS property had to go from background-color to backgroundColor. The error message told me I had invalid syntax, but I just couldn't figure out what was wrong with it. 
 
-All in all - I much prefer `v-for` over `{% raw %}{{#each something}{% endraw %}}`. On the other hand, this form really wigs me out a bit:
+All in all - I much prefer `v-for` over `{% raw %}{{#each something}}{% endraw %}`. On the other hand, this form really wigs me out a bit:
 
 <pre><code class="language-markup">&lt;div v-if="newMoonOnSunday"&gt;
 stuff

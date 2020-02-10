@@ -92,7 +92,7 @@ Ok, so let's look at the code. First, the view, even though it's rather simple.
 
   &lt;ion-list&gt;
     &lt;ion-item *ngFor=&quot;let chat of chats&quot;&gt;
-      &lt;h2&gt;{% raw %}{{chat.text}{% endraw %}}&lt;&#x2F;h2&gt;
+      &lt;h2&gt;{% raw %}{{chat.text}}{% endraw %}&lt;&#x2F;h2&gt;
       &lt;p&gt;Posted {% raw %}{{chat.created |{% endraw %} date}} at {% raw %}{{ chat.created |{% endraw %} date:&#x27;shortTime&#x27; }}&lt;&#x2F;p&gt;
     &lt;&#x2F;ion-item&gt;
   &lt;&#x2F;ion-list&gt;

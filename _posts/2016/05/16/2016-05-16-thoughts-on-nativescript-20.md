@@ -40,15 +40,15 @@ So what's the code like? Let's start with one of the XML files for the view. I'm
 		&lt;/ActionBar&gt;
 	&lt;/Page.actionBar&gt;
     &lt;GridLayout rows=&quot;auto,*&quot; columns=&quot;2*,*&quot;&gt;
-		&lt;TextField id=&quot;grocery&quot; text=&quot;{% raw %}{{ grocery }{% endraw %}}&quot; hint=&quot;Enter a grocery item&quot; row=&quot;0&quot; col=&quot;0&quot; /&gt;
+		&lt;TextField id=&quot;grocery&quot; text=&quot;{% raw %}{{ grocery }}{% endraw %}&quot; hint=&quot;Enter a grocery item&quot; row=&quot;0&quot; col=&quot;0&quot; /&gt;
 		&lt;Button text=&quot;Add&quot; tap=&quot;add&quot; row=&quot;0&quot; col=&quot;1&quot; /&gt;
 
-        &lt;ListView items=&quot;{% raw %}{{ groceryList }{% endraw %}}&quot; id=&quot;groceryList&quot; row=&quot;1&quot; colspan=&quot;2&quot;&gt;
+        &lt;ListView items=&quot;{% raw %}{{ groceryList }}{% endraw %}&quot; id=&quot;groceryList&quot; row=&quot;1&quot; colspan=&quot;2&quot;&gt;
             &lt;ListView.itemTemplate&gt;
-                &lt;Label text=&quot;{% raw %}{{ name }{% endraw %}}&quot; horizontalAlignment=&quot;left&quot; verticalAlignment=&quot;center&quot;/&gt;
+                &lt;Label text=&quot;{% raw %}{{ name }}{% endraw %}&quot; horizontalAlignment=&quot;left&quot; verticalAlignment=&quot;center&quot;/&gt;
             &lt;/ListView.itemTemplate&gt;
         &lt;/ListView&gt;
-		&lt;ActivityIndicator busy=&quot;{% raw %}{{ isLoading }{% endraw %}}&quot; rowSpan=&quot;2&quot; colSpan=&quot;2&quot; /&gt;
+		&lt;ActivityIndicator busy=&quot;{% raw %}{{ isLoading }}{% endraw %}&quot; rowSpan=&quot;2&quot; colSpan=&quot;2&quot; /&gt;
     &lt;/GridLayout&gt;
 &lt;/Page&gt;
 </code></pre>

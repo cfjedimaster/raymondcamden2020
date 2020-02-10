@@ -195,8 +195,8 @@ The fancy star widget there came from <a href="https://github.com/fraserxu/ionic
 	&lt;ion-content class=&quot;padding&quot;&gt;
 	
 		&lt;div ng-if=&quot;existingSauce&quot;&gt;
-			Sauce: {% raw %}{{sauce.name}{% endraw %}}&lt;br/&gt;
-			Company: {% raw %}{{sauce.company}{% endraw %}}
+			Sauce: {% raw %}{{sauce.name}}{% endraw %}&lt;br/&gt;
+			Company: {% raw %}{{sauce.company}}{% endraw %}
 		&lt;/div&gt;
 		
 		&lt;!-- your text --&gt;

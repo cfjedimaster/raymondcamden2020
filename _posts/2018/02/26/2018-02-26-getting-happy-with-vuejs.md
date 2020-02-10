@@ -79,7 +79,7 @@ Alright, so with that said, let me share the code I wrote. First, the front end:
 
 	<div id="app" v-cloak>
 		<transition name="fade" mode="out-in">
-			<p :key="text" v-bind:style="{% raw %}{fontStyle:loading}{% endraw %}">{% raw %}{{text}{% endraw %}}</p>
+			<p :key="text" v-bind:style="{% raw %}{fontStyle:loading}{% endraw %}">{% raw %}{{text}}{% endraw %}</p>
 		</transition>
 	</div>
 

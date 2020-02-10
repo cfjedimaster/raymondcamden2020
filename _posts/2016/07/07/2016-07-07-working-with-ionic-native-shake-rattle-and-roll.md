@@ -101,7 +101,7 @@ Again - I'm kinda assuming this is all relatively simple, but just let me know i
 
 &lt;ion-content class=&quot;home&quot; padding&gt;
   &lt;ion-list inset&gt;
-    &lt;ion-item *ngFor=&quot;let cat of cats&quot;&gt; {% raw %}{{ cat.name }{% endraw %}} &lt;/ion-item&gt;
+    &lt;ion-item *ngFor=&quot;let cat of cats&quot;&gt; {% raw %}{{ cat.name }}{% endraw %} &lt;/ion-item&gt;
   &lt;/ion-list&gt;
 
   &lt;button danger (click)=&quot;loadMore()&quot;&gt;Load More&lt;/button&gt;

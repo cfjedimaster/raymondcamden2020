@@ -28,8 +28,8 @@ I won't share all the code behind this as you can see it for yourself if you cre
 <pre><code class="language-markup">&lt;ion-view title=&quot;Friends&quot;&gt;
   &lt;ion-content class=&quot;has-header&quot;&gt;
     &lt;ion-list&gt;
-      &lt;ion-item ng-repeat=&quot;friend in friends&quot; type=&quot;item-text-wrap&quot; href=&quot;#&#x2F;tab&#x2F;friend&#x2F;{% raw %}{{friend.id}{% endraw %}}&quot;&gt;
-        {% raw %}{{friend.name}{% endraw %}}
+      &lt;ion-item ng-repeat=&quot;friend in friends&quot; type=&quot;item-text-wrap&quot; href=&quot;#&#x2F;tab&#x2F;friend&#x2F;{% raw %}{{friend.id}}{% endraw %}&quot;&gt;
+        {% raw %}{{friend.name}}{% endraw %}
       &lt;&#x2F;ion-item&gt;
     &lt;&#x2F;ion-list&gt;
   &lt;&#x2F;ion-content&gt;
@@ -53,7 +53,7 @@ It isn't just a simple code change. If you read the <a href="http://ionicframewo
       &lt;ion-item collection-repeat=&quot;friend in friends&quot;
       			collection-item-width=&quot;&#x27;100%&#x27;&quot;
       			collection-item-height=&quot;80&quot;&gt;
-      			{% raw %}{{friend.name}{% endraw %}}
+      			{% raw %}{{friend.name}}{% endraw %}
       &lt;&#x2F;ion-item&gt;
     &lt;&#x2F;ion-list&gt;
   &lt;&#x2F;ion-content&gt;&lt;&#x2F;ion-view&gt;</code></pre>

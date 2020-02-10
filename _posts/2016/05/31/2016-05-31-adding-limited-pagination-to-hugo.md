@@ -17,22 +17,22 @@ To me - the solution was simple. Just get rid of the pagination. Frankly, I rare
 First, I edited the main pagination partial. My copy was blank as I didn't want pagination at all, so I copied the version from my theme and added a bit of logic. 
 
 <pre><code class="language-javascript">
-{% raw %}{{ if lt .Paginator.PageNumber 5 }{% endraw %}}
+{% raw %}{{ if lt .Paginator.PageNumber 5 }}{% endraw %}
 	&lt;nav id=&quot;page-nav&quot;&gt;
-	{% raw %}{{ if or (.Paginator.HasPrev) (.Paginator.HasNext) }{% endraw %}}
-		{% raw %}{{ if .Paginator.HasPrev }{% endraw %}}
-			&lt;a class=&quot;extend prev&quot; rel=&quot;prev&quot; href=&quot;{% raw %}{{.Paginator.Prev.URL}{% endraw %}}&quot;&gt;
-				&#x00ab; {% raw %}{{with .Site.Data.l10n.pagination.previous}{% endraw %}}{% raw %}{{.}{% endraw %}}{% raw %}{{end}{% endraw %}}
+	{% raw %}{{ if or (.Paginator.HasPrev) (.Paginator.HasNext) }}{% endraw %}
+		{% raw %}{{ if .Paginator.HasPrev }}{% endraw %}
+			&lt;a class=&quot;extend prev&quot; rel=&quot;prev&quot; href=&quot;{% raw %}{{.Paginator.Prev.URL}}{% endraw %}&quot;&gt;
+				&#x00ab; {% raw %}{{with .Site.Data.l10n.pagination.previous}}{% endraw %}{% raw %}{{.}}{% endraw %}{% raw %}{{end}}{% endraw %}
 			&lt;/a&gt;
-		{% raw %}{{ end }{% endraw %}}
-		{% raw %}{{ if .Paginator.HasNext }{% endraw %}}
-			&lt;a class=&quot;extend next&quot; rel=&quot;next&quot; href=&quot;{% raw %}{{.Paginator.Next.URL}{% endraw %}}&quot;&gt;
-				{% raw %}{{with .Site.Data.l10n.pagination.next}{% endraw %}}{% raw %}{{.}{% endraw %}}{% raw %}{{end}{% endraw %}} &#x00bb;
+		{% raw %}{{ end }}{% endraw %}
+		{% raw %}{{ if .Paginator.HasNext }}{% endraw %}
+			&lt;a class=&quot;extend next&quot; rel=&quot;next&quot; href=&quot;{% raw %}{{.Paginator.Next.URL}}{% endraw %}&quot;&gt;
+				{% raw %}{{with .Site.Data.l10n.pagination.next}}{% endraw %}{% raw %}{{.}}{% endraw %}{% raw %}{{end}}{% endraw %} &#x00bb;
 			&lt;/a&gt;
-		{% raw %}{{ end }{% endraw %}}
-	{% raw %}{{ end }{% endraw %}}
+		{% raw %}{{ end }}{% endraw %}
+	{% raw %}{{ end }}{% endraw %}
 	&lt;/nav&gt;
-{% raw %}{{ end }{% endraw %}}
+{% raw %}{{ end }}{% endraw %}
 </code></pre> 
 
 Even if you've never seen Go templates and Hugo before, you can probably figure out what's going on here. My change was literally just the IF condition wrapping the logic. I chose 5 as the total number of pages but you could use any number here. 
@@ -40,21 +40,21 @@ Even if you've never seen Go templates and Hugo before, you can probably figure 
 The next change was in the article_list partial. My code was initially this:
 
 <pre><code class="language-javascript">
-{% raw %}{{ range first 10 (where .Site.Pages "Type" "post") }{% endraw %}}
+{% raw %}{{ range first 10 (where .Site.Pages "Type" "post") }}{% endraw %}
 </code></pre>
 
 Again - I assume if you've never seen Go/Hugo before you can guess as to the logic here. The default code uses pagination and had looked like this before I removed it:
 
 <pre><code class="language-javascript">
-{% raw %}{{ $paginator := .Paginate (where .Site.Pages "Type" "post") }{% endraw %}}
-{% raw %}{{ range $paginator.Pages }{% endraw %}}
+{% raw %}{{ $paginator := .Paginate (where .Site.Pages "Type" "post") }}{% endraw %}
+{% raw %}{{ range $paginator.Pages }}{% endraw %}
 </code></pre>
 
 So my goal was to bring pagination back, but to limit it to the subset of posts that would be covered by the 5 pages of content I wanted to support. Here is what I came up with:
 
 <pre><code class="language-javascript">
-{% raw %}{{ $paginator := .Paginate ((first 50 (where .Site.Pages "Type" "post"))) }{% endraw %}}
-{% raw %}{{ range $paginator.Pages }{% endraw %}}
+{% raw %}{{ $paginator := .Paginate ((first 50 (where .Site.Pages "Type" "post"))) }}{% endraw %}
+{% raw %}{{ range $paginator.Pages }}{% endraw %}
 </code></pre>
 
 Obviously that's a bit of a hack. In theory I could use a site-wide variable and handle both parts dynamically, but for now, this is what worked for me. 

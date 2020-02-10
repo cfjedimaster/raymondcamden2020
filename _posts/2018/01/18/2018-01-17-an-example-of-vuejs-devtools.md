@@ -29,7 +29,7 @@ Let's begin with a super simple Vue app. Here is the entire thing:
 <div id="app">
 	<input type="text" v-model="name">
 	<ul>
-		<li v-for="cat in cats">{% raw %}{{cat.name}{% endraw %}}</li>
+		<li v-for="cat in cats">{% raw %}{{cat.name}}{% endraw %}</li>
 	</ul>
 </div>
 
@@ -80,7 +80,7 @@ The extension will also handle computed properties. Consider this version:
 <div id="app">
 	<input type="text" v-model="name">
 	<ul>
-		<li v-for="cat in oldcats">{% raw %}{{cat.name}{% endraw %}}</li>
+		<li v-for="cat in oldcats">{% raw %}{{cat.name}}{% endraw %}</li>
 	</ul>
 </div>
 
@@ -127,7 +127,7 @@ Ok, so seeing data that I've got in my own file may not be terribly exciting. Bu
 ```html
 <div id="app">
 	<ul>
-		<li v-for="film in films">{% raw %}{{film.title}{% endraw %}}</li>
+		<li v-for="film in films">{% raw %}{{film.title}}{% endraw %}</li>
 	</ul>
 </div>
 
@@ -170,7 +170,7 @@ So what about custom components? Here is a script where I've defined a cat compo
 <script>
 
 Vue.component('cat', {
-	template:'<p @click="alertCat(cat)"><strong>{% raw %}{{ cat.name }{% endraw %}} is {% raw %}{{ cat.age }{% endraw %}} years old.</strong></p>',
+	template:'<p @click="alertCat(cat)"><strong>{% raw %}{{ cat.name }}{% endraw %} is {% raw %}{{ cat.age }}{% endraw %} years old.</strong></p>',
 	props:['cat'],
 	methods:{
 		alertCat:function(c) {
@@ -204,7 +204,7 @@ Notice how it also picked up on the properties sent to it. Now I'm going to skip
 
 ```js
 Vue.component('cat', {
-	template:'<p @click="alertCat(cat)"><strong>{% raw %}{{ cat.name }{% endraw %}} is {% raw %}{{ cat.age }{% endraw %}} years old.</strong></p>',
+	template:'<p @click="alertCat(cat)"><strong>{% raw %}{{ cat.name }}{% endraw %} is {% raw %}{{ cat.age }}{% endraw %} years old.</strong></p>',
 	props:['cat'],
 	methods:{
 		alertCat:function(c) {

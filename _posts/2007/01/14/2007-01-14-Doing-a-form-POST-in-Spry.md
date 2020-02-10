@@ -14,7 +14,7 @@ I <a href="http://ray.camdenfamily.com/index.cfm/2006/7/12/Sending-Data-with-Spr
 The basic syntax to do a POST with Spry works like so:
 
 <code>
-Spry.Utils.loadURL('POST', url, true, resFunc, {% raw %}{postData: formData, headers: {"Content-Type": "application/x-www-form-urlencoded; charset=UTF-8"}{% endraw %}});
+Spry.Utils.loadURL('POST', url, true, resFunc, {% raw %}{postData: formData, headers: {"Content-Type": "application/x-www-form-urlencoded; charset=UTF-8"}}{% endraw %});
 </code>
 
 The first argument simply specifies that we are using a POST instead of a GET operation. The second argument is the URL to load. The third argument specifies if the operation should be asynchronous or not. The next argument is the function to run when the HTTP operation is finished. The next set of arguments are options to pass along to the HTTP operation. The headers should be used as is, and formData in this example points to a string that contains your form information. Here is an example:

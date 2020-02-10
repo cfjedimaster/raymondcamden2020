@@ -60,7 +60,7 @@ This copied the value (a JSON string) into my clipboard. I pasted it into notepa
 <p>
 
 <code>
-{% raw %}{"hasAlreadyPlayed":true,"player":{"name":"Romana","weapon":"goldensword","armor":"goldenarmor","image":"data:image/png;base64,deleted"}{% endraw %},"achievements":{% raw %}{"unlocked":[2,5,11,6],"ratCount":3,"skeletonCount":1,"totalKills":5,"totalDmg":11,"totalRevives":0}{% endraw %}}
+{% raw %}{"hasAlreadyPlayed":true,"player":{"name":"Romana","weapon":"goldensword","armor":"goldenarmor","image":"data:image/png;base64,deleted"}{% endraw %},"achievements":{% raw %}{"unlocked":[2,5,11,6],"ratCount":3,"skeletonCount":1,"totalKills":5,"totalDmg":11,"totalRevives":0}}{% endraw %}
 </code>
 
 <p>

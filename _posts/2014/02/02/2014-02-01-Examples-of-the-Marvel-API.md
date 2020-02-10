@@ -51,15 +51,15 @@ For my first demo I thought it would be interesting to do a date comparison. I w
 	&lt;div id=&quot;status&quot;&gt;&lt;&#x2F;div&gt;
 
 	&lt;script id=&quot;reportTemplate&quot; type=&quot;text&#x2F;x-handlebars-template&quot;&gt;
-		&lt;h1&gt;{% raw %}{{year}{% endraw %}}&lt;&#x2F;h1&gt;
+		&lt;h1&gt;{% raw %}{{year}}{% endraw %}&lt;&#x2F;h1&gt;
 		&lt;p&gt;
-		Average Price: ${% raw %}{{avgPrice}{% endraw %}}&lt;br&#x2F;&gt;
-		Low&#x2F;High Price: ${% raw %}{{minPrice}{% endraw %}} &#x2F; ${% raw %}{{maxPrice}{% endraw %}}&lt;br&#x2F;&gt;
-		Average Page Count: {% raw %}{{avgPageCount}{% endraw %}}&lt;br&#x2F;&gt;
+		Average Price: ${% raw %}{{avgPrice}}{% endraw %}&lt;br&#x2F;&gt;
+		Low&#x2F;High Price: ${% raw %}{{minPrice}}{% endraw %} &#x2F; ${% raw %}{{maxPrice}}{% endraw %}&lt;br&#x2F;&gt;
+		Average Page Count: {% raw %}{{avgPageCount}}{% endraw %}&lt;br&#x2F;&gt;
 		&lt;&#x2F;p&gt;
-		{% raw %}{{#each thumbs}{% endraw %}}
-		&lt;img src=&quot;{% raw %}{{this}{% endraw %}}&quot; class=&quot;thumb&quot;&gt;
-		{% raw %}{{&#x2F;each}{% endraw %}}
+		{% raw %}{{#each thumbs}}{% endraw %}
+		&lt;img src=&quot;{% raw %}{{this}}{% endraw %}&quot; class=&quot;thumb&quot;&gt;
+		{% raw %}{{&#x2F;each}}{% endraw %}
 		&lt;br clear=&quot;left&quot;&gt;
 		&lt;p&#x2F;&gt;
 	&lt;&#x2F;script&gt;

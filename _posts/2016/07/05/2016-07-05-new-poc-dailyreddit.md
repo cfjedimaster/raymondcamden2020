@@ -231,28 +231,28 @@ So with those basic rules in place, I began building a template to handle my rep
 
 &lt;p&gt;Here are the most recent updates for your subscribed subreddits:&lt;/p&gt;
 
-{% raw %}{{#each subs}{% endraw %}}
-	&lt;h2&gt;{% raw %}{{name}{% endraw %}}&lt;/h2&gt;
+{% raw %}{{#each subs}}{% endraw %}
+	&lt;h2&gt;{% raw %}{{name}}{% endraw %}&lt;/h2&gt;
 
-	{% raw %}{{#each posts}{% endraw %}}
+	{% raw %}{{#each posts}}{% endraw %}
 	&lt;p style=&quot;margin-bottom:30px&quot;&gt;
-	{% raw %}{{#if thumbnail}{% endraw %}}
-	&lt;img src=&quot;{% raw %}{{thumbnail}{% endraw %}}&quot; align=&quot;left&quot; style=&quot;margin-right:10px&quot;&gt;
-	{% raw %}{{/if}{% endraw %}}
-	&lt;b&gt;Title:&lt;/b&gt; {% raw %}{{title}{% endraw %}}&lt;br/&gt;
-	&lt;b&gt;URL:&lt;/b&gt; &lt;a href=&quot;{% raw %}{{url}{% endraw %}}&quot;&gt;{% raw %}{{url}{% endraw %}}&lt;/a&gt;&lt;br/&gt;
-	&lt;b&gt;Reddit URL:&lt;/b&gt; &lt;a href=&quot;https://www.reddit.com{% raw %}{{permalink}{% endraw %}}&quot;&gt;https://www.reddit.com{% raw %}{{permalink}{% endraw %}}&lt;/a&gt; ({% raw %}{{ num_comments}{% endraw %}} comments)&lt;br/&gt;
-	&lt;b&gt;Author:&lt;/b&gt; {% raw %}{{ author.name }{% endraw %}}&lt;br/&gt;
+	{% raw %}{{#if thumbnail}}{% endraw %}
+	&lt;img src=&quot;{% raw %}{{thumbnail}}{% endraw %}&quot; align=&quot;left&quot; style=&quot;margin-right:10px&quot;&gt;
+	{% raw %}{{/if}}{% endraw %}
+	&lt;b&gt;Title:&lt;/b&gt; {% raw %}{{title}}{% endraw %}&lt;br/&gt;
+	&lt;b&gt;URL:&lt;/b&gt; &lt;a href=&quot;{% raw %}{{url}}{% endraw %}&quot;&gt;{% raw %}{{url}}{% endraw %}&lt;/a&gt;&lt;br/&gt;
+	&lt;b&gt;Reddit URL:&lt;/b&gt; &lt;a href=&quot;https://www.reddit.com{% raw %}{{permalink}}{% endraw %}&quot;&gt;https://www.reddit.com{% raw %}{{permalink}}{% endraw %}&lt;/a&gt; ({% raw %}{{ num_comments}}{% endraw %} comments)&lt;br/&gt;
+	&lt;b&gt;Author:&lt;/b&gt; {% raw %}{{ author.name }}{% endraw %}&lt;br/&gt;
 	&lt;br clear=&quot;left&quot;&gt;
-	{% raw %}{{#if is_self}{% endraw %}}
-	{% raw %}{{left selftext}{% endraw %}}
-	{% raw %}{{/if}{% endraw %}}
+	{% raw %}{{#if is_self}}{% endraw %}
+	{% raw %}{{left selftext}}{% endraw %}
+	{% raw %}{{/if}}{% endraw %}
 	&lt;/p&gt;	
-	{% raw %}{{/each}{% endraw %}}
+	{% raw %}{{/each}}{% endraw %}
 
 	&lt;hr/&gt;
 
-{% raw %}{{/each}{% endraw %}}
+{% raw %}{{/each}}{% endraw %}
 </code></pre>
 
 And here is it renders. It isn't great, but it gives you an idea of what I'm going for:

@@ -256,14 +256,14 @@ Next - the controllers file. This is all pretty standard I think - nothing speci
 So that's pretty much it. I have a few templates, but only the entry list is that interesting. Here it is.
 </p>
 
-<pre><code class="language-markup">&lt;ion-view title=&quot;{% raw %}{{TITLE}{% endraw %}}&quot;&gt;
+<pre><code class="language-markup">&lt;ion-view title=&quot;{% raw %}{{TITLE}}{% endraw %}&quot;&gt;
 
 	&lt;ion-content class=&quot;padding&quot;&gt;
 
 		&lt;ion-list class=&quot;list list-inset&quot;&gt;
 
-			&lt;ion-item ng-repeat=&quot;entry in entries&quot; href=&quot;#&#x2F;entry&#x2F;{% raw %}{{$index}{% endraw %}}&quot;&gt;
-				{% raw %}{{entry.title}{% endraw %}}
+			&lt;ion-item ng-repeat=&quot;entry in entries&quot; href=&quot;#&#x2F;entry&#x2F;{% raw %}{{$index}}{% endraw %}&quot;&gt;
+				{% raw %}{{entry.title}}{% endraw %}
 			&lt;&#x2F;ion-item&gt;
 
 		&lt;&#x2F;ion-list&gt;

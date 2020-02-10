@@ -67,7 +67,7 @@ I also want to point out two important settings. First, you probably want <code>
 
 Cool - so almost there. I then create a Push notification via Curl that included the state info. The Tags application includes a state called tags.chat, so I decided to use that as my 'target':
 
-<code>curl -u appkeyThingy: -H "Content-Type: application/json" -H "X-Ionic-Application-Id: 6aef0d7b" https://push.ionic.io/api/v1/push -d '{% raw %}{"tokens": ["a device token"],"notification":{"alert":"ray","ios":{"payload":{"$state":"tab.chats"}{% endraw %}}}}'</code>
+<code>curl -u appkeyThingy: -H "Content-Type: application/json" -H "X-Ionic-Application-Id: 6aef0d7b" https://push.ionic.io/api/v1/push -d '{% raw %}{"tokens": ["a device token"],"notification":{"alert":"ray","ios":{"payload":{"$state":"tab.chats"}}{% endraw %}}}'</code>
 
 You want to be careful when crafting the JSON of your notification. The server is pretty good about noticing mistakes, but on more than one occasion I screwed that part up. Note that you include the state information in the payload section. Also note that I didn't bother sending state params either.
 

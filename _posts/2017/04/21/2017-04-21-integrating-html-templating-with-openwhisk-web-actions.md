@@ -58,22 +58,22 @@ The template is rather simple:
 &lt;html&gt;
 	&lt;head&gt;
 		&lt;meta charset=&quot;utf-8&quot;&gt;
-		&lt;title&gt;{% raw %}{{title}{% endraw %}}&lt;&#x2F;title&gt;
+		&lt;title&gt;{% raw %}{{title}}{% endraw %}&lt;&#x2F;title&gt;
 		&lt;meta name=&quot;description&quot; content=&quot;&quot;&gt;
 		&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width&quot;&gt;
 	&lt;&#x2F;head&gt;
 	&lt;body&gt;
 
-		&lt;h2&gt;{% raw %}{{title}{% endraw %}}&lt;&#x2F;h2&gt;
+		&lt;h2&gt;{% raw %}{{title}}{% endraw %}&lt;&#x2F;h2&gt;
 		
 		&lt;p&gt;
 			I&#x27;d like to thank the following cats for making everything possible:
 		&lt;&#x2F;p&gt;
 
 		&lt;ul&gt;
-			{% raw %}{{#each cats}{% endraw %}}
-			&lt;li&gt;{% raw %}{{.}{% endraw %}}&lt;&#x2F;li&gt;
-			{% raw %}{{&#x2F;each}{% endraw %}}
+			{% raw %}{{#each cats}}{% endraw %}
+			&lt;li&gt;{% raw %}{{.}}{% endraw %}&lt;&#x2F;li&gt;
+			{% raw %}{{&#x2F;each}}{% endraw %}
 		&lt;&#x2F;ul&gt;
 	&lt;&#x2F;body&gt;
 &lt;&#x2F;html&gt;

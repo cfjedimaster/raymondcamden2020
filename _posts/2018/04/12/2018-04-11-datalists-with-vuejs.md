@@ -31,7 +31,7 @@ Basically - you create a `<datalist>` element and supply options. You then take 
 <div id="app">
   <input type="text" v-model="film" list="films">
   <datalist id="films">
-    <option v-for="film in films">{% raw %}{{film}{% endraw %}}</option>
+    <option v-for="film in films">{% raw %}{{film}}{% endraw %}</option>
   </datalist>
 </div>
 ```

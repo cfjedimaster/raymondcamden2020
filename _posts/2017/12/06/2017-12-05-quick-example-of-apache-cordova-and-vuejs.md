@@ -26,7 +26,7 @@ I create a new Cordova project and then removed most of the code to start off a 
     &lt;&#x2F;head&gt;
     &lt;body&gt;
         &lt;div id=&quot;app&quot;&gt;
-            App status: {% raw %}{{ status }{% endraw %}}
+            App status: {% raw %}{{ status }}{% endraw %}
         &lt;&#x2F;div&gt;
         &lt;script type=&quot;text&#x2F;javascript&quot; src=&quot;cordova.js&quot;&gt;&lt;&#x2F;script&gt;
         &lt;script type=&quot;text&#x2F;javascript&quot; src=&quot;js&#x2F;vue.min.js&quot;&gt;&lt;&#x2F;script&gt;

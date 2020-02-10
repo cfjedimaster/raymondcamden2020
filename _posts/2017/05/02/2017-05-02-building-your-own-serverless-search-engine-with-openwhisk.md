@@ -89,7 +89,7 @@ To make this work, I made a new action to sit between them. I touched on this in
 	let bulk = [];
 
 	entries.forEach( (e) =&gt; {
-		let action = {% raw %}{&quot;index&quot;:{&quot;_type&quot;:&quot;entry&quot;, &quot;_id&quot;:e.url}{% endraw %}};
+		let action = {% raw %}{&quot;index&quot;:{&quot;_type&quot;:&quot;entry&quot;, &quot;_id&quot;:e.url}}{% endraw %};
 		let document = e;
 		bulk.push(action);
 		bulk.push(document);

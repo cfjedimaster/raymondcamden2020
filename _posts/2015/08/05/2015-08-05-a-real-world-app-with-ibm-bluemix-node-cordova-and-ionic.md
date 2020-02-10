@@ -333,11 +333,11 @@ In theory, you'll be able to test the app right away, but let's take a quick loo
 				&lt;button class=&quot;button button-energized button-block&quot; ng-click=&quot;selectPicture()&quot; ng-disabled=&quot;!cordovaReady&quot;&gt;Select Picture&lt;/button&gt;
 				
 				&lt;p&gt;
-				&lt;img ng-src=&quot;{% raw %}{{pic}{% endraw %}}&quot; class=&quot;selPicture&quot;&gt;
+				&lt;img ng-src=&quot;{% raw %}{{pic}}{% endraw %}&quot; class=&quot;selPicture&quot;&gt;
 				&lt;/p&gt;
 				
 				&lt;ion-list class=&quot;list-inset&quot;&gt;
-					&lt;ion-item ng-repeat=&quot;result in results&quot;&gt;{% raw %}{{result}{% endraw %}}&lt;/ion-item&gt;
+					&lt;ion-item ng-repeat=&quot;result in results&quot;&gt;{% raw %}{{result}}{% endraw %}&lt;/ion-item&gt;
 				&lt;/ion-list&gt;
 				
       &lt;/ion-content&gt;

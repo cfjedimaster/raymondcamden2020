@@ -29,13 +29,13 @@ First off, the home page view, which is really just a list.
 &lt;Page xmlns=&quot;http:&#x2F;&#x2F;schemas.nativescript.org&#x2F;tns.xsd&quot; navigatingTo=&quot;loaded&quot;&gt;
 
 	&lt;Page.actionBar&gt;
-		&lt;ActionBar title=&quot;{% raw %}{{ title }{% endraw %}}&quot; &#x2F;&gt;
+		&lt;ActionBar title=&quot;{% raw %}{{ title }}{% endraw %}&quot; &#x2F;&gt;
 	&lt;&#x2F;Page.actionBar&gt;
 
 	&lt;StackLayout orientation=&quot;vertical&quot;&gt;
-		&lt;ListView items=&quot;{% raw %}{{ rssList.feedItems }{% endraw %}}&quot; itemTap=&quot;loadItem&quot;&gt;
+		&lt;ListView items=&quot;{% raw %}{{ rssList.feedItems }}{% endraw %}&quot; itemTap=&quot;loadItem&quot;&gt;
 			&lt;ListView.itemTemplate&gt;
-				&lt;Label text=&quot;{% raw %}{{ title }{% endraw %}}&quot; horizontalAlignment=&quot;left&quot; verticalAlignment=&quot;center&quot; &#x2F;&gt;
+				&lt;Label text=&quot;{% raw %}{{ title }}{% endraw %}&quot; horizontalAlignment=&quot;left&quot; verticalAlignment=&quot;center&quot; &#x2F;&gt;
 			&lt;&#x2F;ListView.itemTemplate&gt;
 		&lt;&#x2F;ListView&gt;
 	&lt;&#x2F;StackLayout&gt;
@@ -88,12 +88,12 @@ Now let's look at the detail page.
 &lt;Page xmlns=&quot;http:&#x2F;&#x2F;schemas.nativescript.org&#x2F;tns.xsd&quot; navigatingTo=&quot;loaded&quot;&gt;
 
 	&lt;Page.actionBar&gt;
-		&lt;ActionBar title=&quot;{% raw %}{{ title }{% endraw %}}&quot; &#x2F;&gt;
+		&lt;ActionBar title=&quot;{% raw %}{{ title }}{% endraw %}&quot; &#x2F;&gt;
 	&lt;&#x2F;Page.actionBar&gt;
 
 	&lt;StackLayout orientation=&quot;vertical&quot;&gt;
 		&lt;ScrollView&gt;
-			&lt;HtmlView html=&quot;{% raw %}{{ text }{% endraw %}}&quot; &#x2F;&gt;
+			&lt;HtmlView html=&quot;{% raw %}{{ text }}{% endraw %}&quot; &#x2F;&gt;
 		&lt;&#x2F;ScrollView&gt;
 	&lt;&#x2F;StackLayout&gt;
 &lt;&#x2F;Page&gt;

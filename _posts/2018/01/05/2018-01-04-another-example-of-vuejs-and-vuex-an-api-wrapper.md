@@ -34,15 +34,15 @@ I began by creating the demo without Vuex at all. Let's begin by looking at the 
       <p><i>Click the cover to find similar books...</i></p>
       <div v-for="book in books" class="bookResult">
         <img :src="book.image_url" class="bookResult" @click="findSimilar(book)">
-        {% raw %}{{book.title}{% endraw %}}
+        {% raw %}{{book.title}}{% endraw %}
       </div>
     </div>
 
     <div v-if="relatedBooks.length">
-      <h2>Books Related to {% raw %}{{ selectedBook.title }{% endraw %}}</h2>
+      <h2>Books Related to {% raw %}{{ selectedBook.title }}{% endraw %}</h2>
       <div v-for="book in relatedBooks" class="bookResult">
         <img :src="book.image_url" class="bookResult" @click="findSimilar(book)">
-        {% raw %}{{book.title}{% endraw %}}
+        {% raw %}{{book.title}}{% endraw %}
       </div>
     </div>
 

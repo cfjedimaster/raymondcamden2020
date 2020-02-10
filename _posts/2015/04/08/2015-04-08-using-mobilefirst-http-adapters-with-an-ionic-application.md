@@ -137,24 +137,24 @@ For fun, let's add a footer bar to the detail view with a button to load the ful
 Here's the updated view code for that:
 
 <pre><code class="language-markup">&lt;ion-view&gt;
-	&lt;ion-nav-title&gt;{% raw %}{{detail.title}{% endraw %}}&lt;/ion-nav-title&gt;
+	&lt;ion-nav-title&gt;{% raw %}{{detail.title}}{% endraw %}&lt;/ion-nav-title&gt;
 
 	&lt;ion-content class=&quot;padding&quot;&gt;
 
 		&lt;div class=&quot;card&quot;&gt;
 
 		  &lt;div class=&quot;item item-divider&quot;&gt;
-		    {% raw %}{{detail.title}{% endraw %}}
+		    {% raw %}{{detail.title}}{% endraw %}
 		  &lt;/div&gt;
 
 		  &lt;div class=&quot;item item-text-wrap&quot;&gt;
 		    &lt;p&gt;
-				{% raw %}{{detail.description}{% endraw %}}
+				{% raw %}{{detail.description}}{% endraw %}
 		    &lt;/p&gt;
 		  &lt;/div&gt;
 
 		  &lt;div class=&quot;item item-divider&quot;&gt;
-		    {% raw %}{{detail.pubDate}{% endraw %}}
+		    {% raw %}{{detail.pubDate}}{% endraw %}
 		  &lt;/div&gt;
 
 		&lt;/div&gt;

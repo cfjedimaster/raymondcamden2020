@@ -33,7 +33,7 @@ His <a href="http://www.raymondcamden.com/2015/06/10/quick-example-of-the-google
 
 &lt;script&gt;
 (function(w,d,s,g,js,fjs){
-  g=w.gapi{% raw %}||(w.gapi={}{% endraw %});g.analytics={% raw %}{q:[],ready:function(cb){this.q.push(cb)}{% endraw %}};
+  g=w.gapi{% raw %}||(w.gapi={}{% endraw %});g.analytics={% raw %}{q:[],ready:function(cb){this.q.push(cb)}}{% endraw %};
   js=d.createElement(s);fjs=d.getElementsByTagName(s)[0];
   js.src='https://apis.google.com/js/platform.js';
   fjs.parentNode.insertBefore(js,fjs);js.onload=function(){% raw %}{g.load('analytics')}{% endraw %};
@@ -114,7 +114,7 @@ Nice, but what if you wanted more control over the rendering? Specifically, the 
 
 &lt;script&gt;
 (function(w,d,s,g,js,fjs){
-  g=w.gapi{% raw %}||(w.gapi={}{% endraw %});g.analytics={% raw %}{q:[],ready:function(cb){this.q.push(cb)}{% endraw %}};
+  g=w.gapi{% raw %}||(w.gapi={}{% endraw %});g.analytics={% raw %}{q:[],ready:function(cb){this.q.push(cb)}}{% endraw %};
   js=d.createElement(s);fjs=d.getElementsByTagName(s)[0];
   js.src='https://apis.google.com/js/platform.js';
   fjs.parentNode.insertBefore(js,fjs);js.onload=function(){% raw %}{g.load('analytics')}{% endraw %};

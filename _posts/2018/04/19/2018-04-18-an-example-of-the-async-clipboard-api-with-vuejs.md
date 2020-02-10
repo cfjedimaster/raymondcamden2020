@@ -44,7 +44,7 @@ So - want to see an example using Vue.js? Of course you do! Imagine a scenario w
   Your cool code:
   <input v-model="code">
   <button v-if="supportsCB" @click="copy">Copy</button>
-  <div v-if="message">{% raw %}{{message}{% endraw %}}</div>
+  <div v-if="message">{% raw %}{{message}}{% endraw %}</div>
 </div>
 ```
 

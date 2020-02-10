@@ -284,7 +284,7 @@ Here's the HTML:
 &lt;&#x2F;ion-header&gt;
 
 &lt;ion-content padding&gt;
-    &lt;h2&gt;Welcome back, {% raw %}{{ user.details.name }{% endraw %}}&lt;&#x2F;h2&gt;
+    &lt;h2&gt;Welcome back, {% raw %}{{ user.details.name }}{% endraw %}&lt;&#x2F;h2&gt;
 &lt;&#x2F;ion-content&gt;
 </code></pre>
 

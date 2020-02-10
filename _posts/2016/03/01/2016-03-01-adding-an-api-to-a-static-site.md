@@ -55,7 +55,7 @@ This is the standard way by which you can provide generic data for a Jekyll site
 &lt;h1 class=&quot;page-heading&quot;&gt;Products&lt;&#x2F;h1&gt;
 &lt;ul class=&quot;post-list&quot;&gt;
 	{% raw %}{% for p in site.data.products %{% endraw %}}
-	&lt;li&gt;{% raw %}{{ p.name }{% endraw %}} at {% raw %}{{p.price}{% endraw %}}&lt;&#x2F;li&gt;
+	&lt;li&gt;{% raw %}{{ p.name }}{% endraw %} at {% raw %}{{p.price}}{% endraw %}&lt;&#x2F;li&gt;
 	{% raw %}{% endfor %{% endraw %}}	  
 &lt;&#x2F;ul&gt;
 </code></pre>
@@ -107,10 +107,10 @@ layout: null
 {% raw %}{% for p in site.data.products %{% endraw %}}	
 	{% raw %}{% if p.qty &gt; 0 %{% endraw %}}
 	{
-		"name":"{% raw %}{{p.name}{% endraw %}}",
+		"name":"{% raw %}{{p.name}}{% endraw %}",
 		"description":"{% raw %}{{p.description |{% endraw %} escape}}",
-		"price":{% raw %}{{p.price}{% endraw %}},
-		"qty":{% raw %}{{p.qty}{% endraw %}},
+		"price":{% raw %}{{p.price}}{% endraw %},
+		"qty":{% raw %}{{p.qty}}{% endraw %},
 			
 	}
 	{% raw %}{% endif %{% endraw %}}

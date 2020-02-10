@@ -34,7 +34,7 @@ To see how you could do this, let's start with a demo that lets you pick a prope
 
 &lt;script&gt;
 (function(w,d,s,g,js,fjs){
-  g=w.gapi{% raw %}||(w.gapi={}{% endraw %});g.analytics={% raw %}{q:[],ready:function(cb){this.q.push(cb)}{% endraw %}};
+  g=w.gapi{% raw %}||(w.gapi={}{% endraw %});g.analytics={% raw %}{q:[],ready:function(cb){this.q.push(cb)}}{% endraw %};
   js=d.createElement(s);fjs=d.getElementsByTagName(s)[0];
   js.src='https://apis.google.com/js/platform.js';
   fjs.parentNode.insertBefore(js,fjs);js.onload=function(){% raw %}{g.load('analytics')}{% endraw %};
@@ -118,7 +118,7 @@ In order to make these changes, we just need to do a few things. Here's the upda
 
 &lt;script&gt;
 (function(w,d,s,g,js,fjs){
-  g=w.gapi{% raw %}||(w.gapi={}{% endraw %});g.analytics={% raw %}{q:[],ready:function(cb){this.q.push(cb)}{% endraw %}};
+  g=w.gapi{% raw %}||(w.gapi={}{% endraw %});g.analytics={% raw %}{q:[],ready:function(cb){this.q.push(cb)}}{% endraw %};
   js=d.createElement(s);fjs=d.getElementsByTagName(s)[0];
   js.src='https://apis.google.com/js/platform.js';
   fjs.parentNode.insertBefore(js,fjs);js.onload=function(){% raw %}{g.load('analytics')}{% endraw %};

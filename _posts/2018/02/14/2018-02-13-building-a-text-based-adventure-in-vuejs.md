@@ -77,7 +77,7 @@ Each room has a unique ID. This is used to allow one room to 'target' another fo
 			</div><div v-else>
 				<div id="roomDesc" v-if="room">
 					<p>
-					{% raw %}{{roomDesc}{% endraw %}}
+					{% raw %}{{roomDesc}}{% endraw %}
 					</p>
 
 					<p v-if="room.exits.length > 1">

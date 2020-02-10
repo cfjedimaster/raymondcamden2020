@@ -52,7 +52,7 @@ That feels lame - I mean modifying the list - but I'm doing it in my controller 
 
 <pre><code class="language-markup">&lt;ion-list type=&quot;list-inset&quot;&gt;
       &lt;ion-item ng-repeat=&quot;person in list&quot; ng-class=&quot;person.letter? &#x27;item-divider&#x27;:&#x27;&#x27;&quot;&gt;
-        {% raw %}{{person.name}{% endraw %}}
+        {% raw %}{{person.name}}{% endraw %}
       &lt;&#x2F;ion-item&gt;
     &lt;&#x2F;ion-list&gt;</code></pre>
 

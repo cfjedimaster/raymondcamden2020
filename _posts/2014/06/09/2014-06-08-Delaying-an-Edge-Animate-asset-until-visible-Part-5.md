@@ -29,13 +29,13 @@ This weekend I worked with a client who asked me to simply add my "Don't start u
 I was able to find the code I needed to change, but I urge people to consider carefully before they follow this advice. I'm not confident that <i>how</i> the Edge code is minified in the future won't change. This worked for me this weekend, but I'd suggest against modifying the code this way unless you really have to. With the warning in mind, if you find the foo_edge.js file (where foo is the name of your project), look for "Default Time" in the code. You should see something like this:
 </p>
 
-<pre><code class="language-javascript">tl:{% raw %}{"Default Timeline":{fS:a,tS:"",d:3000,a:y,tt:[]}{% endraw %}}</code></pre>
+<pre><code class="language-javascript">tl:{% raw %}{"Default Timeline":{fS:a,tS:"",d:3000,a:y,tt:[]}}{% endraw %}</code></pre>
 
 <p>
 In the block above, the a key represents autoplay. Setting it to n will disable it. 
 </p>
 
-<pre><code class="language-javascript">tl:{% raw %}{"Default Timeline":{fS:a,tS:"",d:3000,a:n,tt:[]}{% endraw %}}</code></pre>
+<pre><code class="language-javascript">tl:{% raw %}{"Default Timeline":{fS:a,tS:"",d:3000,a:n,tt:[]}}{% endraw %}</code></pre>
 
 <p>
 Ok, so that ended up being the easy issue. What I found next was that my code <i>always</i> thought it was visible, even when it wasn't. Turns out, the client was using an object tag to embed the EA asset. I've seen other people do this as well. It is a way to embed an EA asset into an already designed page. Here's the issue though. My code looks at the value of window to see how far scrolled the user is and how it compares to the position of the asset.

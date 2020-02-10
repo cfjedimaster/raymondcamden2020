@@ -54,7 +54,7 @@ First, here is the form.
 				<p>
 					<b>Please correct these errors:</b>
 					<ul>
-						<li v-for="error in errors">{% raw %}{{error}{% endraw %}}</li>
+						<li v-for="error in errors">{% raw %}{{error}}{% endraw %}</li>
 					</ul>
 				</p>
 			</div>
@@ -194,7 +194,7 @@ By itself, this will create a hidden form field and when the user checks the cap
 		<p>
 			<b>Please correct these errors:</b>
 			<ul>
-				<li v-for="error in errors">{% raw %}{{error}{% endraw %}}</li>
+				<li v-for="error in errors">{% raw %}{{error}}{% endraw %}</li>
 			</ul>
 		</p>
 	</div>

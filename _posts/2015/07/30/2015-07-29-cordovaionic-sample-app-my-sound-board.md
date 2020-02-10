@@ -95,7 +95,7 @@ Ok, let's look at the view.
     &lt;div ng-if=&quot;sounds.length &gt; 0&quot;&gt;
 			&lt;ion-list show-delete=&quot;false&quot; can-swipe=&quot;true&quot;&gt;
 				&lt;ion-item ng-repeat=&quot;sound in sounds&quot; ng-click=&quot;play($index)&quot;&gt;
-					{% raw %}{{sound.name}{% endraw %}}
+					{% raw %}{{sound.name}}{% endraw %}
 					
 					&lt;ion-option-button class=&quot;button-assertive&quot; ng-click=&quot;delete($index)&quot;&gt;
 					Delete

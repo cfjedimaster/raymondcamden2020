@@ -20,7 +20,7 @@ For my first example, I wanted something as simple as possible. Given a form of 
   &lt;p v-if=&quot;errors.length&quot;&gt;
     &lt;b&gt;Please correct the following error(s):&lt;/b&gt;
     &lt;ul&gt;
-      &lt;li v-for=&quot;error in errors&quot;&gt;{% raw %}{{ error }{% endraw %}}&lt;/li&gt;
+      &lt;li v-for=&quot;error in errors&quot;&gt;{% raw %}{{ error }}{% endraw %}&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/p&gt;
   
@@ -91,7 +91,7 @@ For the second example, I switched the second text field (age) to email and deci
   &lt;p v-if=&quot;errors.length&quot;&gt;
     &lt;b&gt;Please correct the following error(s):&lt;/b&gt;
     &lt;ul&gt;
-      &lt;li v-for=&quot;error in errors&quot;&gt;{% raw %}{{ error }{% endraw %}}&lt;/li&gt;
+      &lt;li v-for=&quot;error in errors&quot;&gt;{% raw %}{{ error }}{% endraw %}&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/p&gt;
   
@@ -168,7 +168,7 @@ For the third example, I built something you've probably seen in survey apps. I'
   &lt;p v-if=&quot;errors.length&quot;&gt;
     &lt;b&gt;Please correct the following error(s):&lt;/b&gt;
     &lt;ul&gt;
-      &lt;li v-for=&quot;error in errors&quot;&gt;{% raw %}{{ error }{% endraw %}}&lt;/li&gt;
+      &lt;li v-for=&quot;error in errors&quot;&gt;{% raw %}{{ error }}{% endraw %}&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/p&gt;
 
@@ -187,7 +187,7 @@ For the third example, I built something you've probably seen in survey apps. I'
   &lt;/p&gt;
 
   &lt;p&gt;
-    Current Total: {% raw %}{{total}{% endraw %}}
+    Current Total: {% raw %}{{total}}{% endraw %}
   &lt;/p&gt;
 
   &lt;p&gt;
@@ -260,7 +260,7 @@ Basically any name but "vista", "empire", and "mbp" are acceptable. Ok, so let's
   &lt;p v-if=&quot;errors.length&quot;&gt;
     &lt;b&gt;Please correct the following error(s):&lt;/b&gt;
     &lt;ul&gt;
-      &lt;li v-for=&quot;error in errors&quot;&gt;{% raw %}{{ error }{% endraw %}}&lt;/li&gt;
+      &lt;li v-for=&quot;error in errors&quot;&gt;{% raw %}{{ error }}{% endraw %}&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/p&gt;
 

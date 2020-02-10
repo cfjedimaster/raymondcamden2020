@@ -123,7 +123,7 @@ Using a sync file read since it is read one time.
 var responseVXML = fs.readFileSync('./response.vxml').toString();
 app.get('/response', function(req, res) {
 	var saveURL = app.get('domain') + '/save';
-	var toSend = responseVXML.replace('{% raw %}{{saveURL}{% endraw %}}',saveURL);
+	var toSend = responseVXML.replace('{% raw %}{{saveURL}}{% endraw %}',saveURL);
 	res.send(toSend);
 });
 </code></pre>
@@ -141,7 +141,7 @@ The comments in the handler mostly explain what I'm doing. I wrote my VoiceXML r
 			&lt;prompt&gt;
 				Your recording was saved. Thank you.
 			&lt;/prompt&gt;
-			&lt;submit next=&quot;{% raw %}{{saveURL}{% endraw %}}&quot; method=&quot;post&quot; namelist=&quot;recording&quot; enctype=&quot;multipart/form-data&quot;/&gt;
+			&lt;submit next=&quot;{% raw %}{{saveURL}}{% endraw %}&quot; method=&quot;post&quot; namelist=&quot;recording&quot; enctype=&quot;multipart/form-data&quot;/&gt;
 		&lt;/filled&gt;
 	&lt;/record&gt;
     &lt;/form&gt;

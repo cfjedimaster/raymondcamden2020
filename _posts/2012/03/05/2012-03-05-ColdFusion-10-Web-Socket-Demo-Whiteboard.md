@@ -94,7 +94,7 @@ $(document).ready(function() {
 		if(oldX && oldY) {
 			canvas.lineTo(oldX,oldY);
 			canvas.stroke();
-			whiteboardWS.publish("whiteboard", {% raw %}{type:"draw",origin:userid, from:{x:pointX,y:pointY}{% endraw %},to:{% raw %}{x:oldX,y:oldY}{% endraw %}});
+			whiteboardWS.publish("whiteboard", {% raw %}{type:"draw",origin:userid, from:{x:pointX,y:pointY}{% endraw %},to:{% raw %}{x:oldX,y:oldY}}{% endraw %});
 		}
 		oldX=pointX, oldY=pointY;
 	});
@@ -109,7 +109,7 @@ The code consists of two main parts. I've got a canvas that supports mousedown e
 <p>
 
 <code>
-whiteboardWS.publish("whiteboard", {% raw %}{type:"draw",origin:userid, from:{x:pointX,y:pointY}{% endraw %},to:{% raw %}{x:oldX,y:oldY}{% endraw %}});
+whiteboardWS.publish("whiteboard", {% raw %}{type:"draw",origin:userid, from:{x:pointX,y:pointY}{% endraw %},to:{% raw %}{x:oldX,y:oldY}}{% endraw %});
 </code>
 
 <p>
@@ -170,7 +170,7 @@ $(document).ready(function() {
 		if(oldX && oldY) {
 			canvas.lineTo(oldX,oldY);
 			canvas.stroke();
-			whiteboardWS.publish("whiteboard", {% raw %}{type:"draw",origin:userid, from:{x:pointX,y:pointY}{% endraw %},to:{% raw %}{x:oldX,y:oldY}{% endraw %}});
+			whiteboardWS.publish("whiteboard", {% raw %}{type:"draw",origin:userid, from:{x:pointX,y:pointY}{% endraw %},to:{% raw %}{x:oldX,y:oldY}}{% endraw %});
 		}
 		oldX=pointX, oldY=pointY;
 	});

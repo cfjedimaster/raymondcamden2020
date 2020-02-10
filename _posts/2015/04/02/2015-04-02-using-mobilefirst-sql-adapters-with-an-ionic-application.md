@@ -237,8 +237,8 @@ Pretty simple, right? The result data is simply an array of plain JavaScript obj
 
 		&lt;ion-list class=&quot;list list-inset&quot;&gt;
 
-			&lt;ion-item ng-repeat=&quot;item in content&quot; href=&quot;#&#x2F;item&#x2F;{% raw %}{{item.id}{% endraw %}}&quot;&gt;
-				{% raw %}{{item.title}{% endraw %}}
+			&lt;ion-item ng-repeat=&quot;item in content&quot; href=&quot;#&#x2F;item&#x2F;{% raw %}{{item.id}}{% endraw %}&quot;&gt;
+				{% raw %}{{item.title}}{% endraw %}
 			&lt;&#x2F;ion-item&gt;
 
 		&lt;&#x2F;ion-list&gt;
@@ -254,17 +254,17 @@ And the detail view:
 		&lt;div class=&quot;card&quot;&gt;
 
 		  &lt;div class=&quot;item item-divider&quot;&gt;
-		    {% raw %}{{detail.title}{% endraw %}}
+		    {% raw %}{{detail.title}}{% endraw %}
 		  &lt;&#x2F;div&gt;
 
 		  &lt;div class=&quot;item item-text-wrap&quot;&gt;
 		    &lt;p&gt;
-				{% raw %}{{detail.body}{% endraw %}}
+				{% raw %}{{detail.body}}{% endraw %}
 		    &lt;&#x2F;p&gt;
 		  &lt;&#x2F;div&gt;
 
 		  &lt;div class=&quot;item item-divider&quot;&gt;
-		    {% raw %}{{detail.created}{% endraw %}}
+		    {% raw %}{{detail.created}}{% endraw %}
 		  &lt;&#x2F;div&gt;
 
 		&lt;&#x2F;div&gt;

@@ -13,7 +13,7 @@ guid: 5331
 Just a random tip for folks who may run into this in the future. I'm working on a mobile app for a client and I'm using both Cordova and AngularJS. The application allows people to select a photo from their gallery or take a new picture. It then renders a thumbnail to the web page. It supports any number of selections so my view simply loops over an array.
 </p>
 <!--more-->
-<pre><code class="language-markup">&lt;img ng-repeat=&quot;pic in groupPics[group.part]&quot; ng-src=&quot;{% raw %}{{pic}{% endraw %}}&quot; ng-click=&quot;removePicture(group.part,pic)&quot; class=&quot;img-thumbnail&quot; style=&quot;width:120px; height: 120px&quot;&gt;</code></pre>
+<pre><code class="language-markup">&lt;img ng-repeat=&quot;pic in groupPics[group.part]&quot; ng-src=&quot;{% raw %}{{pic}}{% endraw %}&quot; ng-click=&quot;removePicture(group.part,pic)&quot; class=&quot;img-thumbnail&quot; style=&quot;width:120px; height: 120px&quot;&gt;</code></pre>
 
 <p>
 Pretty simple, right? In my testing I always used the simulator as it doesn't have a real camera, and I typically tested on iOS only since they were testing Android. Also, the camera is pretty simple to use so it just plain works most of the time.

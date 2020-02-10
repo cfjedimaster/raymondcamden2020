@@ -65,7 +65,7 @@ Next I encode any values in the string, like spaces or other special characters:
 So the last thing we do is run the Spry code that will handle the form post. I talked about this more in the <a href="http://ray.camdenfamily.com/index.cfm/2007/1/14/Doing-a-form-POST-in-Spry">last post</a> so I won't spend a lot of time on it.
 
 <code>
-	Spry.Utils.loadURL('POST', url, true, resFunc, {% raw %}{postData: formData, headers: {"Content-Type": "application/x-www-form-urlencoded; charset=UTF-8"}{% endraw %}});
+	Spry.Utils.loadURL('POST', url, true, resFunc, {% raw %}{postData: formData, headers: {"Content-Type": "application/x-www-form-urlencoded; charset=UTF-8"}}{% endraw %});
 </code>
 
 The first argument defines the type of request (GET or POST). The second argument is the URL value I defined earlier. The third argument defines if the call is asynchronous or not. The fourth argument defines a function to run with the result of the HTTP call. Lastly there is a structure of arguments that define the request. Again I have to thank Keith for figuring this out.
@@ -79,7 +79,7 @@ function doAddPost() {
 	var two = $("two").value;	
 	var formData = 'one='+one+'&two='+two;
 	formData = encodeURI(formData);
-	Spry.Utils.loadURL('POST', url, true, resFunc, {% raw %}{postData: formData, headers: {"Content-Type": "application/x-www-form-urlencoded; charset=UTF-8"}{% endraw %}});
+	Spry.Utils.loadURL('POST', url, true, resFunc, {% raw %}{postData: formData, headers: {"Content-Type": "application/x-www-form-urlencoded; charset=UTF-8"}}{% endraw %});
 }
 </code>
 
@@ -122,7 +122,7 @@ function doFormPost(url,formlist,resfunc) {
 		formdata+=fValue;
 	}
 	formData = encodeURI(formdata);
-	Spry.Utils.loadURL('POST', url, true, resfunc, {% raw %}{postData: formdata, headers: {"Content-Type": "application/x-www-form-urlencoded; charset=UTF-8"}{% endraw %}});
+	Spry.Utils.loadURL('POST', url, true, resfunc, {% raw %}{postData: formdata, headers: {"Content-Type": "application/x-www-form-urlencoded; charset=UTF-8"}}{% endraw %});
 }
 </code>
 

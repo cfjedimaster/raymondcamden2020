@@ -55,10 +55,10 @@ permalink: /calendar-data/
 [
 {% raw %}{% for event in site.events %{% endraw %}}
 	{
-		"title":"{% raw %}{{event.title}{% endraw %}}",
-		"start": "{% raw %}{{event.event_date}{% endraw %}}",
+		"title":"{% raw %}{{event.title}}{% endraw %}",
+		"start": "{% raw %}{{event.event_date}}{% endraw %}",
 		"allDay":true,
-		"url":"{% raw %}{{event.url}{% endraw %}}"
+		"url":"{% raw %}{{event.url}}{% endraw %}"
 	}
 	{% raw %}{%unless forloop.last %{% endraw %}},{% raw %}{%endunless%{% endraw %}}
 {% raw %}{% endfor %{% endraw %}}

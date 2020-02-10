@@ -79,7 +79,7 @@ Notice the little gray balls at the bottom - they provide a way for you to know 
 
 				&lt;ion-slide-box&gt;
 					&lt;ion-slide ng-repeat=&quot;image in images&quot;&gt;
-						&lt;img ng-src=&quot;{% raw %}{{image.MediaUrl}{% endraw %}}&quot; style=&quot;width:300px;height:300px;margin:auto;display:block&quot; &gt;
+						&lt;img ng-src=&quot;{% raw %}{{image.MediaUrl}}{% endraw %}&quot; style=&quot;width:300px;height:300px;margin:auto;display:block&quot; &gt;
 					&lt;/ion-slide&gt;
 				&lt;/ion-slide-box&gt;
 				

@@ -47,11 +47,11 @@ For the first iteration of the code, I focused on getting the weather and render
 			<h1>Loading...</h1>
 		</div>
 		<div id="content" v-else>
-			<h1>{% raw %}{{location}{% endraw %}}</h1>
+			<h1>{% raw %}{{location}}{% endraw %}</h1>
 			<p>
-				<span class="temp">{% raw %}{{temp}{% endraw %}}&deg;</span><br/>
-				Low: {% raw %}{{temp_low}{% endraw %}}&deg; High: {% raw %}{{temp_high}{% endraw %}}&deg;<br/>
-				{% raw %}{{desc}{% endraw %}}
+				<span class="temp">{% raw %}{{temp}}{% endraw %}&deg;</span><br/>
+				Low: {% raw %}{{temp_low}}{% endraw %}&deg; High: {% raw %}{{temp_high}}{% endraw %}&deg;<br/>
+				{% raw %}{{desc}}{% endraw %}
 			</p>
 		</div>
 	</div>

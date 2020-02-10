@@ -149,7 +149,7 @@ $(document).ready(function() {
 	$.jqplot('chartdiv',  #serializedData#, 
 		{ 
 			title:'Sales by Month',
-			series:[ {% raw %}{renderer:$.jqplot.BarRenderer, rendererOptions:{barPadding: 0, barMargin: 3}{% endraw %}} ],
+			series:[ {% raw %}{renderer:$.jqplot.BarRenderer, rendererOptions:{barPadding: 0, barMargin: 3}}{% endraw %} ],
 			axes:{
         		xaxis:{% raw %}{renderer:$.jqplot.CategoryAxisRenderer}{% endraw %}, 
 		        yaxis:{% raw %}{min:0}{% endraw %}
@@ -205,7 +205,7 @@ function getData() {
 
 		var options = { 
 			title:'Sales by Month',
-			series:[ {% raw %}{renderer:$.jqplot.BarRenderer, rendererOptions:{barPadding: 0, barMargin: 3}{% endraw %}} ],
+			series:[ {% raw %}{renderer:$.jqplot.BarRenderer, rendererOptions:{barPadding: 0, barMargin: 3}}{% endraw %} ],
 			axes:{
         		xaxis:{% raw %}{renderer:$.jqplot.CategoryAxisRenderer}{% endraw %}, 
 		        yaxis:{% raw %}{min:0}{% endraw %}

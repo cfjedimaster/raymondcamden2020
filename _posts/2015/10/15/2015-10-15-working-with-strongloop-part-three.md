@@ -41,7 +41,7 @@ I then modified the code to do a real look up. I haven't really seen yet the CRU
 
 <pre><code class="language-javascript">Cat.byName = function(name,cb) {
 	console.log('find by name '+name);
-	Cat.findOne({% raw %}{where:{name:name}{% endraw %}}, function(err, cat) {
+	Cat.findOne({% raw %}{where:{name:name}}{% endraw %}, function(err, cat) {
 		cb(null,cat);
 	});
 };

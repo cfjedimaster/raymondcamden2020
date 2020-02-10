@@ -85,7 +85,7 @@ component {
 	include &quot;fake.cfm&quot;;
 
 	remote query function getCities(required numeric state) {
-		return queryExecute(&quot;select city from cities where state = :state&quot;, {% raw %}{state={value:arguments.state, cfsqltype:'cf_sql_integer'}{% endraw %}}, {% raw %}{dbtype:'query'}{% endraw %});
+		return queryExecute(&quot;select city from cities where state = :state&quot;, {% raw %}{state={value:arguments.state, cfsqltype:'cf_sql_integer'}}{% endraw %}, {% raw %}{dbtype:'query'}{% endraw %});
 	}
 
 }</code></pre>
@@ -155,7 +155,7 @@ So - the only real difference here is handling the fact that jQuery will return 
 	include &quot;fake.cfm&quot;;
 
 	remote query function getCities(required string state) {
-		return queryExecute(&quot;select city from cities where state in (:state)&quot;, {% raw %}{state={value:arguments.state, cfsqltype:'cf_sql_integer', list:true}{% endraw %}}, {% raw %}{dbtype:'query'}{% endraw %});
+		return queryExecute(&quot;select city from cities where state in (:state)&quot;, {% raw %}{state={value:arguments.state, cfsqltype:'cf_sql_integer', list:true}}{% endraw %}, {% raw %}{dbtype:'query'}{% endraw %});
 	}
 
 }</code></pre>

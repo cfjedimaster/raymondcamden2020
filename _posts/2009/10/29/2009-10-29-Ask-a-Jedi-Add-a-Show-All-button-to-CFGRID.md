@@ -32,7 +32,7 @@ function showall() {
 	console.log('hello')
 	var theGrid = ColdFusion.Grid.getGridObject('entries')
 	var ds = theGrid.getDataSource()
-	ds.reload({% raw %}{params:{start:0,limit:ds.totalLength}{% endraw %}})
+	ds.reload({% raw %}{params:{start:0,limit:ds.totalLength}}{% endraw %})
 	theGrid.getView().refresh()
 }
 &lt;/script&gt;

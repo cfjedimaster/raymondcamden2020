@@ -27,7 +27,7 @@ I began by modifying my previous demo such that the list of cats actually linked
 So I simply created a new page (don't forget, the Ionic CLI has a cool ["generate"](http://ionicframework.com/docs/v2/cli/generate/) feature to make that easy!) and then linked my cats to the detail. So first I added a click event to my list item:
 
 <pre><code class="language-javascript">
-&lt;ion-item *ngFor="let cat of cats" (click)="loadCat(cat)"&gt; {% raw %}{{ cat.name }{% endraw %}} &lt;/ion-item&gt;
+&lt;ion-item *ngFor="let cat of cats" (click)="loadCat(cat)"&gt; {% raw %}{{ cat.name }}{% endraw %} &lt;/ion-item&gt;
 </code></pre>
 
 And then added a handler for it:

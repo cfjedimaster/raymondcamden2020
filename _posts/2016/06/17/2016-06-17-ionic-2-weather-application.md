@@ -62,21 +62,21 @@ First, the main (and only) view, home.html:
 
 	&lt;ion-slides #mySlides (ionDidChange)=&quot;onSlideChanged()&quot;&gt;
 		&lt;ion-slide *ngFor=&quot;let location of locations;let i = index&quot;&gt;
-			&lt;h2&gt;{% raw %}{{location.name}{% endraw %}}&lt;/h2&gt;
+			&lt;h2&gt;{% raw %}{{location.name}}{% endraw %}&lt;/h2&gt;
 
 			&lt;div *ngIf=&quot;weatherData[i]&quot;&gt;
 				&lt;p&gt;
-				{% raw %}{{ weatherData[i].summary }{% endraw %}}
+				{% raw %}{{ weatherData[i].summary }}{% endraw %}
 				&lt;/p&gt;
 				&lt;p style=&quot;text-align:justify&quot;&gt;
 				It is currently {% raw %}{{ weatherData[i].temperature |{% endraw %} number:'2.0-0' }} &amp;deg;F
 				and there is {% raw %}{{weatherData[i].precipProbability |{% endraw %} percent}} chance of rain.
-				Tomorrow will be {% raw %}{{weatherData[i].tomorrow.summary}{% endraw %}} with the
+				Tomorrow will be {% raw %}{{weatherData[i].tomorrow.summary}}{% endraw %} with the
 				low being {% raw %}{{ weatherData[i].tomorrow.temperatureMin |{% endraw %} number:'2.0-0' }} &amp;deg;F
 				and a high of {% raw %}{{ weatherData[i].tomorrow.temperatureMax |{% endraw %} number:'2.0-0' }} &amp;deg;F.
 				&lt;/p&gt;
 				&lt;p style=&quot;text-align:justify&quot;&gt;
-				The nearest storm to you is {% raw %}{{weatherData[i].nearestStormDistance}{% endraw %}} miles away.
+				The nearest storm to you is {% raw %}{{weatherData[i].nearestStormDistance}}{% endraw %} miles away.
 				&lt;/p&gt;
 			&lt;/div&gt;
 		&lt;/ion-slide&gt;

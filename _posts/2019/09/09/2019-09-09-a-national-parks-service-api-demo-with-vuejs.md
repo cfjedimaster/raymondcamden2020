@@ -45,7 +45,7 @@ It's the state view where things get interesting. First, the main view component
 <template>
 
   <v-container>
-      <h3>National Parks for {% raw %}{{state}{% endraw %}}</h3>
+      <h3>National Parks for {% raw %}{{state}}{% endraw %}</h3>
 
       <i v-if="loading">Please stand by - loading data.</i>
 

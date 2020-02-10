@@ -29,7 +29,7 @@ So how do you fix it? Switch to using <code>&lt;ion-nav-title&gt;</code>.
 
 <pre><code class="language-markup">
 &lt;ion-view&gt;
-    &lt;ion-nav-title&gt;{% raw %}{{film.title}{% endraw %}}&lt;/ion-nav-title&gt;
+    &lt;ion-nav-title&gt;{% raw %}{{film.title}}{% endraw %}&lt;/ion-nav-title&gt;
     &lt;ion-content overflow-scroll=&quot;true&quot; padding=&quot;true&quot; class=&quot;has-header&quot;&gt;
         &lt;div&gt;
             &lt;p&gt;The opening crawl would go here.&lt;/p&gt;
@@ -42,6 +42,6 @@ As I said - this is documented. Kinda. The <a href="http://ionicframework.com/do
 
 "A text-only title to display on the parent ionNavBar. For an HTML title, such as an image, see ionNavTitle instead."
 
-But in my mind, {% raw %}{{film.title}{% endraw %}} resolves to "Foo" which is text only, so it should work. I looked at the <a href="http://ionicframework.com/docs/api/directive/ionNavTitle/">docs for ionNavTitle</a> too and nothing there really seems to make it obvious. Maybe the ionView docs should have a callout/note/etc about this situation? Like I said - I swear I hit this once a month - but admittedly my memory is crap and I tend to repeat mistakes all the time.
+But in my mind, {% raw %}{{film.title}}{% endraw %} resolves to "Foo" which is text only, so it should work. I looked at the <a href="http://ionicframework.com/docs/api/directive/ionNavTitle/">docs for ionNavTitle</a> too and nothing there really seems to make it obvious. Maybe the ionView docs should have a callout/note/etc about this situation? Like I said - I swear I hit this once a month - but admittedly my memory is crap and I tend to repeat mistakes all the time.
 
 Thoughts?

@@ -107,8 +107,8 @@ Ok, so now let's get to the front end. As I said, I'm using Vue and Vuetify. Let
 						<h2>Activations</h2>
 						<v-alert v-for="activation in activations" :key="activation.id"
 						:color="activation.success?'success':'error'" value="true" transition="fade-transition" @click="loadActivation(activation)">
-						{% raw %}{{activation.name}{% endraw %}} ran at {% raw %}{{ activation.ts |{% endraw %} formatDate }} in
-						{% raw %}{{activation.duration}{% endraw %}} ms
+						{% raw %}{{activation.name}}{% endraw %} ran at {% raw %}{{ activation.ts |{% endraw %} formatDate }} in
+						{% raw %}{{activation.duration}}{% endraw %} ms
 						</v-alert>
 					</v-flex>
 
@@ -116,7 +116,7 @@ Ok, so now let's get to the front end. As I said, I'm using Vue and Vuetify. Let
 						<h2>Activation</h2>
 						<div v-if="activation">
 
-							<h3>{% raw %}{{activation.name}{% endraw %}} ({% raw %}{{activation.duration}{% endraw %}}ms)</h3>
+							<h3>{% raw %}{{activation.name}}{% endraw %} ({% raw %}{{activation.duration}}{% endraw %}ms)</h3>
 
 							<v-expansion-panel expand>
 								<!-- THANK YOU @zaken in the vuetify discord -->
@@ -124,7 +124,7 @@ Ok, so now let's get to the front end. As I said, I'm using Vue and Vuetify. Let
 								<div slot="header">Response</div>
 								<v-card>
 									<v-card-text>
-										<pre>{% raw %}{{activation.response}{% endraw %}}</pre>
+										<pre>{% raw %}{{activation.response}}{% endraw %}</pre>
 									</v-card-text>
 								</v-card>
 								</v-expansion-panel-content>
@@ -132,7 +132,7 @@ Ok, so now let's get to the front end. As I said, I'm using Vue and Vuetify. Let
 								<div slot="header">Logs</div>
 								<v-card>
 									<v-card-text>
-										<pre>{% raw %}{{activation.logs}{% endraw %}}</pre>
+										<pre>{% raw %}{{activation.logs}}{% endraw %}</pre>
 									</v-card-text>
 								</v-card>
 								</v-expansion-panel-content>
@@ -140,7 +140,7 @@ Ok, so now let's get to the front end. As I said, I'm using Vue and Vuetify. Let
 								<div slot="header">Annotations</div>
 								<v-card>
 									<v-card-text>
-										<pre>{% raw %}{{activation.annotations}{% endraw %}}</pre>
+										<pre>{% raw %}{{activation.annotations}}{% endraw %}</pre>
 									</v-card-text>
 								</v-card>
 								</v-expansion-panel-content>

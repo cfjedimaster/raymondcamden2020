@@ -186,44 +186,44 @@ Ok, perhaps "exciting" is a bit much. Honestly, it is just a HTTP hit and a JSON
 The rest was just presenting the results. The folks at Bluemix created a <a href="https://watson-pi-demo.mybluemix.net/">cool demo</a> with charts and stuff, but I decided to keep it simple and just render the values - sorted. I used Handlebars to make it a bit nicer, which ended up being a bit confusing to me. It never occurred to me to consider what would happen when I used a Handlebars template for the client side in a view that was being run by a Node.js app using Handlebars on the client as well. As you can guess, it didn't work well at first. If you look back at that first code listing you'll see a helper called raw-helper. I needed to add this so I could use Handlebar's syntax in my view and have the server ignore it. This is how it looks in index.html:
 
 <pre><code class="language-markup">&lt;script id=&quot;reportTemplate&quot; type=&quot;text&#x2F;x-handlebars-template&quot;&gt;
-	{% raw %}{{{{raw-helper}{% endraw %}}}}
+	{% raw %}{{{{raw-helper}}{% endraw %}}}
 	&lt;div class=&quot;row&quot;&gt;
 		&lt;div class=&quot;col-md-4&quot;&gt;
 			&lt;h2&gt;Values&lt;&#x2F;h2&gt;
-			{% raw %}{{#each values}{% endraw %}}
+			{% raw %}{{#each values}}{% endraw %}
 			&lt;div class=&quot;row&quot;&gt;
-				&lt;div class=&quot;col-md-6&quot;&gt;&lt;strong&gt;{% raw %}{{name}{% endraw %}}&lt;&#x2F;strong&gt;&lt;&#x2F;div&gt;
-				&lt;div class=&quot;col-md-6&quot;&gt;{% raw %}{{perc percentage}{% endraw %}}&lt;&#x2F;div&gt;
+				&lt;div class=&quot;col-md-6&quot;&gt;&lt;strong&gt;{% raw %}{{name}}{% endraw %}&lt;&#x2F;strong&gt;&lt;&#x2F;div&gt;
+				&lt;div class=&quot;col-md-6&quot;&gt;{% raw %}{{perc percentage}}{% endraw %}&lt;&#x2F;div&gt;
 			&lt;&#x2F;div&gt;
-			{% raw %}{{&#x2F;each}{% endraw %}}			
+			{% raw %}{{&#x2F;each}}{% endraw %}			
 		&lt;&#x2F;div&gt;
 		&lt;div class=&quot;col-md-4&quot;&gt;
 			&lt;h2&gt;Needs&lt;&#x2F;h2&gt;
-			{% raw %}{{#each needs}{% endraw %}}
+			{% raw %}{{#each needs}}{% endraw %}
 			&lt;div class=&quot;row&quot;&gt;
-				&lt;div class=&quot;col-md-6&quot;&gt;&lt;strong&gt;{% raw %}{{name}{% endraw %}}&lt;&#x2F;strong&gt;&lt;&#x2F;div&gt;
-				&lt;div class=&quot;col-md-6&quot;&gt;{% raw %}{{perc percentage}{% endraw %}}&lt;&#x2F;div&gt;
+				&lt;div class=&quot;col-md-6&quot;&gt;&lt;strong&gt;{% raw %}{{name}}{% endraw %}&lt;&#x2F;strong&gt;&lt;&#x2F;div&gt;
+				&lt;div class=&quot;col-md-6&quot;&gt;{% raw %}{{perc percentage}}{% endraw %}&lt;&#x2F;div&gt;
 			&lt;&#x2F;div&gt;
-			{% raw %}{{&#x2F;each}{% endraw %}}
+			{% raw %}{{&#x2F;each}}{% endraw %}
 		&lt;&#x2F;div&gt;
 		&lt;div class=&quot;col-md-4&quot;&gt;
 			&lt;h2&gt;The Big 5&lt;&#x2F;h2&gt;
-			{% raw %}{{#each big5}{% endraw %}}
+			{% raw %}{{#each big5}}{% endraw %}
 			&lt;div class=&quot;row&quot;&gt;
-				&lt;div class=&quot;col-md-6&quot;&gt;&lt;strong&gt;{% raw %}{{name}{% endraw %}}&lt;&#x2F;strong&gt;&lt;&#x2F;div&gt;
-				&lt;div class=&quot;col-md-6&quot;&gt;{% raw %}{{perc percentage}{% endraw %}}&lt;&#x2F;div&gt;
+				&lt;div class=&quot;col-md-6&quot;&gt;&lt;strong&gt;{% raw %}{{name}}{% endraw %}&lt;&#x2F;strong&gt;&lt;&#x2F;div&gt;
+				&lt;div class=&quot;col-md-6&quot;&gt;{% raw %}{{perc percentage}}{% endraw %}&lt;&#x2F;div&gt;
 			&lt;&#x2F;div&gt;
-				{% raw %}{{#each children}{% endraw %}}
+				{% raw %}{{#each children}}{% endraw %}
 					&lt;div class=&quot;row&quot;&gt;
-						&lt;div class=&quot;col-md-offset12 col-md-5 text-muted&quot;&gt;{% raw %}{{name}{% endraw %}}&lt;&#x2F;div&gt;
-						&lt;div class=&quot;col-md-6 text-muted&quot;&gt;{% raw %}{{perc percentage}{% endraw %}}&lt;&#x2F;div&gt;
+						&lt;div class=&quot;col-md-offset12 col-md-5 text-muted&quot;&gt;{% raw %}{{name}}{% endraw %}&lt;&#x2F;div&gt;
+						&lt;div class=&quot;col-md-6 text-muted&quot;&gt;{% raw %}{{perc percentage}}{% endraw %}&lt;&#x2F;div&gt;
 					&lt;&#x2F;div&gt;
-				{% raw %}{{&#x2F;each}{% endraw %}}
+				{% raw %}{{&#x2F;each}}{% endraw %}
 
-			{% raw %}{{&#x2F;each}{% endraw %}}
+			{% raw %}{{&#x2F;each}}{% endraw %}
 		&lt;&#x2F;div&gt;
 	&lt;&#x2F;div&gt;
-	{% raw %}{{{{&#x2F;raw-helper}{% endraw %}}}}
+	{% raw %}{{{{&#x2F;raw-helper}}{% endraw %}}}
 &lt;&#x2F;script&gt;</code></pre>
 
 Once I got this working, I was mostly OK, but then I did stupid crap like adding a helper in the Node.js app.js when I really needed it in the client-side app.js. I probably shouldn't have named those files the same. So what do the results look like? I'm going to link to the demo of course, but here are some examples. First, my own blog:

@@ -93,7 +93,7 @@ template:`
 &lt;div&gt;
 	&lt;ul&gt;
 		&lt;li v-for=&quot;film in films&quot; :key=&quot;film.episode_id&quot;&gt;
-		&lt;router-link :to=&quot;{% raw %}{ name:'film', params:{id:film.id}{% endraw %} }&quot;&gt;{% raw %}{{ film.title }{% endraw %}}&lt;/router-link&gt;
+		&lt;router-link :to=&quot;{% raw %}{ name:'film', params:{id:film.id}{% endraw %} }&quot;&gt;{% raw %}{{ film.title }}{% endraw %}&lt;/router-link&gt;
 		&lt;/li&gt;
 	&lt;/ul&gt;
 &lt;/div&gt;
@@ -122,14 +122,14 @@ template:`
 const Detail = Vue.component('Detail', {
 	template:`
 &lt;div&gt;
-&lt;h2&gt;{% raw %}{{film.title}{% endraw %}}&lt;/h2&gt;
+&lt;h2&gt;{% raw %}{{film.title}}{% endraw %}&lt;/h2&gt;
 &lt;p v-if=&quot;film.director&quot;&gt;
-Director: {% raw %}{{film.director}{% endraw %}}&lt;br/&gt;
-Released: {% raw %}{{film.release_date}{% endraw %}}&lt;br/&gt;
+Director: {% raw %}{{film.director}}{% endraw %}&lt;br/&gt;
+Released: {% raw %}{{film.release_date}}{% endraw %}&lt;br/&gt;
 &lt;/p&gt;
 
 &lt;p&gt;
-{% raw %}{{film.opening_crawl}{% endraw %}}
+{% raw %}{{film.opening_crawl}}{% endraw %}
 &lt;/p&gt;
 
 &lt;router-link to=&quot;/&quot;&gt;Back&lt;/router-link&gt;

@@ -69,7 +69,7 @@ Finally, how about an email report? You can imagine a scheduled task that, once 
 <pre>
 where = {
   "createdAt":
-    {% raw %}{"$gte":{"__type":"Date","iso":"2013-02-01T00:00:00.000Z"}{% endraw %}}
+    {% raw %}{"$gte":{"__type":"Date","iso":"2013-02-01T00:00:00.000Z"}}{% endraw %}
 }
 </pre>
 

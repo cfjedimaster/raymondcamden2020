@@ -65,7 +65,7 @@ The top portion of the screen represents the stocks. You see the current prices 
 							<b-list-group-item v-for="stock in stocks" :key="stock.name">
 								<b-container>
 									<b-row>
-										<b-col>{% raw %}{{ stock.name }{% endraw %}}</b-col>
+										<b-col>{% raw %}{{ stock.name }}{% endraw %}</b-col>
 										<b-col class="text-right">{% raw %}{{ stock.price |{% endraw %} money}}</b-col>
 									</b-row>
 								</b-container>
@@ -79,8 +79,8 @@ The top portion of the screen represents the stocks. You see the current prices 
 							<b-list-group-item v-for="stock in stocks" :key="stock.name">
 								<b-container>
 									<b-row>
-										<b-col>{% raw %}{{ stock.name }{% endraw %}}</b-col>
-										<b-col class="text-right">{% raw %}{{ stock.held}{% endraw %}}</b-col>
+										<b-col>{% raw %}{{ stock.name }}{% endraw %}</b-col>
+										<b-col class="text-right">{% raw %}{{ stock.held}}{% endraw %}</b-col>
 									</b-row>
 								</b-container>
 							</b-list-group-item>
@@ -98,7 +98,7 @@ The top portion of the screen represents the stocks. You see the current prices 
 				<p class="card-text">
 					Buy <b-form-input v-model.number="buy" type="number" style="width:100px;display:inline"></b-form-input> shares of 
 					<b-form-select style="width:120px;display:inline" v-model="buyStock">
-						<option v-for="stock in stocks" :key="stock.name">{% raw %}{{ stock.name }{% endraw %}}</option>
+						<option v-for="stock in stocks" :key="stock.name">{% raw %}{{ stock.name }}{% endraw %}</option>
 					</b-form-select>
 					<b-button :variant="'success'" @click="buyStocks" class="customBtn">Purchase</b-button>
 					<span v-if="buyError">Not enough cash.</span>
@@ -106,7 +106,7 @@ The top portion of the screen represents the stocks. You see the current prices 
 				<p class="card-text">
 					Sell <b-form-input v-model.number="sell" type="number" style="width:100px;display:inline"></b-form-input> shares of 
 					<b-form-select style="width:120px;display:inline" v-model="sellStock">
-						<option v-for="stock in stocks" :key="stock.name">{% raw %}{{ stock.name }{% endraw %}}</option>
+						<option v-for="stock in stocks" :key="stock.name">{% raw %}{{ stock.name }}{% endraw %}</option>
 					</b-form-select>
 					<b-button :variant="'success'" @click="sellStocks" class="customBtn">Sell</b-button>
 					<span v-if="sellError">Not enough on hand.</span>

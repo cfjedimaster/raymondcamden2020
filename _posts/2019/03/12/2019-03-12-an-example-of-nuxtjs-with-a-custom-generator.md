@@ -37,7 +37,7 @@ Bummer. However, Nuxt supports the ability to use a function to return routes in
 
 		<b-list-group>
 			<b-list-group-item v-for="film in films" :key="film.episode_id" 
-			:to="'film/'+film.properId">{% raw %}{{film.title}{% endraw %}}</b-list-group-item>
+			:to="'film/'+film.properId">{% raw %}{{film.title}}{% endraw %}</b-list-group-item>
 		</b-list-group>
 
     </div>
@@ -73,11 +73,11 @@ I then created `film\_id.vue` to handle displaying the detail:
 <template>
 	<div>
 	
-		<h1>{% raw %}{{film.title}{% endraw %}}</h1>
+		<h1>{% raw %}{{film.title}}{% endraw %}</h1>
 
 		<p>
 			<pre>
-{% raw %}{{film.opening_crawl}{% endraw %}}
+{% raw %}{{film.opening_crawl}}{% endraw %}
 			</pre>
 		</p>
 

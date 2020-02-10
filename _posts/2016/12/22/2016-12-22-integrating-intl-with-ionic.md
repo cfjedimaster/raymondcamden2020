@@ -75,8 +75,8 @@ Now let's look at the view for the home page:
 
   &lt;ion-list inset&gt;
     &lt;ion-item *ngFor=&quot;let cat of cats&quot; (click)=&quot;loadCat(cat)&quot; detail-push&gt;
-      {% raw %}{{cat.name}{% endraw %}} 
-      &lt;ion-note item-right&gt;Last rated: {% raw %}{{cat.lastRating}{% endraw %}}&lt;&#x2F;ion-note&gt;
+      {% raw %}{{cat.name}}{% endraw %} 
+      &lt;ion-note item-right&gt;Last rated: {% raw %}{{cat.lastRating}}{% endraw %}&lt;&#x2F;ion-note&gt;
     &lt;&#x2F;ion-item&gt;
   &lt;&#x2F;ion-list&gt;
 
@@ -119,7 +119,7 @@ Next up is the detail view:
 &lt;ion-header&gt;
 
   &lt;ion-navbar&gt;
-    &lt;ion-title&gt;{% raw %}{{cat.name}{% endraw %}}&lt;&#x2F;ion-title&gt;
+    &lt;ion-title&gt;{% raw %}{{cat.name}}{% endraw %}&lt;&#x2F;ion-title&gt;
   &lt;&#x2F;ion-navbar&gt;
 
 &lt;&#x2F;ion-header&gt;
@@ -133,8 +133,8 @@ Next up is the detail view:
     &lt;&#x2F;ion-card-header&gt;
 
     &lt;ion-card-content&gt;
-      The cat {% raw %}{{cat.name}{% endraw %}} has gotten {% raw %}{{cat.numRatings}{% endraw %}} ratings with an 
-      average of {% raw %}{{cat.avgRating}{% endraw %}}.
+      The cat {% raw %}{{cat.name}}{% endraw %} has gotten {% raw %}{{cat.numRatings}}{% endraw %} ratings with an 
+      average of {% raw %}{{cat.avgRating}}{% endraw %}.
     &lt;&#x2F;ion-card-content&gt;
 
   &lt;&#x2F;ion-card&gt;
@@ -186,7 +186,7 @@ And in the detail I used this:
 
 <pre><code class="language-markup">
 &lt;ion-card-content&gt;
-	The cat {% raw %}{{cat.name}{% endraw %}} has gotten {% raw %}{{cat.numRatings |{% endraw %} number}} ratings with an 
+	The cat {% raw %}{{cat.name}}{% endraw %} has gotten {% raw %}{{cat.numRatings |{% endraw %} number}} ratings with an 
 	average of {% raw %}{{cat.avgRating |{% endraw %} number:&#x27;1.0-2&#x27;}}.
 &lt;&#x2F;ion-card-content&gt;
 </code></pre>
@@ -335,7 +335,7 @@ Then the detail:
 
 <pre><code class="language-markup">
 &lt;ion-card-content&gt;
-	The cat {% raw %}{{cat.name}{% endraw %}} has gotten {% raw %}{{cat.numRatings |{% endraw %} numberFormat }} ratings with an 
+	The cat {% raw %}{{cat.name}}{% endraw %} has gotten {% raw %}{{cat.numRatings |{% endraw %} numberFormat }} ratings with an 
 	average of {% raw %}{{cat.avgRating |{% endraw %} numberFormat}}.
 &lt;&#x2F;ion-card-content&gt;
 </code></pre>

@@ -25,9 +25,9 @@ To be fair to EJS, I also added a helper function "bloglink" to simplify the cre
 
 Obviously that isn't a full template, but it gives you a basic idea. Two things I want to call out here. Three things actually.
 
-First, note the use of {% raw %}{{{body}{% endraw %}}}. This is where the previously rendered view will be inserted.
+First, note the use of {% raw %}{{{body}}{% endraw %}}. This is where the previously rendered view will be inserted.
 
-Second, note the use of {% raw %}{{title}{% endraw %}} on top. As long as I set a title value when rendering my view, this will be picked up and used, so for example, check out the code that renders a blog entry:
+Second, note the use of {% raw %}{{title}}{% endraw %} on top. As long as I set a title value when rendering my view, this will be picked up and used, so for example, check out the code that renders a blog entry:
 
 <script src="https://gist.github.com/3686719.js?file=gistfile1.js"></script>
 

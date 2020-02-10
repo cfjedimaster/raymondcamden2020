@@ -96,7 +96,7 @@ Ok, now let's look at the Vue version (and once again, I'm not saying this is th
 			&lt;&#x2F;p&gt;
 		
 			&lt;ul&gt;
-				&lt;li v-for=&quot;name in names&quot;&gt;{% raw %}{{ name }{% endraw %}}&lt;&#x2F;li&gt;
+				&lt;li v-for=&quot;name in names&quot;&gt;{% raw %}{{ name }}{% endraw %}&lt;&#x2F;li&gt;
 			&lt;&#x2F;ul&gt;
 	    &lt;&#x2F;div&gt;
 			

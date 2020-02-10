@@ -24,9 +24,9 @@ I thought it would be interesting to recreate what I built with the Marvel API u
 
 Here is the root URL to fetch all characters, I say "all", but it is paged:
 
-https://www.comicvine.com/api/characters?api_key={% raw %}{{key}{% endraw %}}&format=json
+https://www.comicvine.com/api/characters?api_key={% raw %}{{key}}{% endraw %}&format=json
 
-The {% raw %}{{key}{% endraw %}} part is dynamic of course. Calling this gives you one page of results in no particular order, but the important part is the metadata:
+The {% raw %}{{key}}{% endraw %} part is dynamic of course. Calling this gives you one page of results in no particular order, but the important part is the metadata:
 
 <pre><code class="language-javascript">{
     "error": "OK",

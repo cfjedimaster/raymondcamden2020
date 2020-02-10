@@ -161,7 +161,7 @@ Enter a message: &lt;input type="text" name="text" size="200"&gt;&lt;br/&gt;
 
 &lt;cfif structKeyExists(form, "send") and len(trim(form.severity)) and len(trim(form.text))&gt;
 
-	&lt;cfset clientMsg = {% raw %}{destination="ColdFusionGateway", body = {severity=form.severity, text=form.text}{% endraw %}}&gt;
+	&lt;cfset clientMsg = {% raw %}{destination="ColdFusionGateway", body = {severity=form.severity, text=form.text}}{% endraw %}&gt;
 	&lt;cfset ret = sendGatewayMessage('Alert System', clientMsg)&gt;
 	&lt;p/&gt;Message sent. &lt;cfoutput&gt;#ret#&lt;/cfoutput&gt;
 &lt;/cfif&gt;

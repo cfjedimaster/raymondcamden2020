@@ -54,10 +54,10 @@ Let's look at the code behind this. First, the HTML. Since this application is s
 				
 				&lt;div class=&quot;card&quot; ng-repeat=&quot;event in events&quot;&gt;
 					&lt;div class=&quot;item item-divider&quot;&gt;
-						{% raw %}{{event.title}{% endraw %}}
+						{% raw %}{{event.title}}{% endraw %}
 					&lt;/div&gt;					
 					&lt;div class=&quot;item item-text-wrap&quot;&gt;
-						{% raw %}{{ event.description }{% endraw %}}
+						{% raw %}{{ event.description }}{% endraw %}
 						&lt;p/&gt;
 						&lt;strong&gt;When: {% raw %}{{ event.date |{% endraw %} date:'short' }}&lt;/strong&gt;
 					&lt;/div&gt;

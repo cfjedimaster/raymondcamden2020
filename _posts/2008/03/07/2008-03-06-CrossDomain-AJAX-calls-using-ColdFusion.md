@@ -68,7 +68,7 @@ I then simply perform a CFHTTP. Note that if my request was POST, I loop over th
 In case your curious, you can do posts via Spry of course:
 
 <code>
-Spry.Utils.loadURL("POST","proxy.cfm?urltarget="+escape('http://localhost/test3.cfm'),true,handleResult, {% raw %}{postData:"x=2&y=3",headers:{ "Content-Type":"application/x-www-form-urlencoded"}{% endraw %}});
+Spry.Utils.loadURL("POST","proxy.cfm?urltarget="+escape('http://localhost/test3.cfm'),true,handleResult, {% raw %}{postData:"x=2&y=3",headers:{ "Content-Type":"application/x-www-form-urlencoded"}}{% endraw %});
 </code>
 
 This does a POST with form.x and form.y as my values. Lastly, as is noted on the <a href="http://www.phpfour.com/blog/2008/03/06/cross-domain-ajax-using-php/">php article</a>, you probably want to look at caching the results to help performance. I'll post a followup later today with an example of this. It's an interesting issue as you have to cache based both on request type and request data. Although you may want to skip caching for form posts altogether.

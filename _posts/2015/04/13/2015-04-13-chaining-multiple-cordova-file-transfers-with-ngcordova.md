@@ -105,7 +105,7 @@ Finally, I use Angular's all method for their $q library to simply say, "Do this
       &lt;/ion-header-bar&gt;
       &lt;ion-content ng-controller=&quot;Main&quot;&gt;
         &lt;div ng-repeat=&quot;img in images&quot;&gt;
-          &lt;img ng-src=&quot;{% raw %}{{img}{% endraw %}}&quot;&gt;
+          &lt;img ng-src=&quot;{% raw %}{{img}}{% endraw %}&quot;&gt;
         &lt;/div&gt;
       &lt;/ion-content&gt;
     &lt;/ion-pane&gt;

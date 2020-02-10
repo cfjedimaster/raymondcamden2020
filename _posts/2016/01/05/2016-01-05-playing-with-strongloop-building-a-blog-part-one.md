@@ -87,13 +87,13 @@ For the most part this is boilerplate Express, but note how I can use Loopback's
 <pre><code class="language-markup">
 &lt;h2&gt;Entries&lt;/h2&gt;
 
-{% raw %}{{#each entries}{% endraw %}}
+{% raw %}{{#each entries}}{% endraw %}
 	&lt;p&gt;
-	&lt;a href=&quot;{% raw %}{{url}{% endraw %}}&quot;&gt;{% raw %}{{title}{% endraw %}}&lt;/a&gt;&lt;br/&gt;
-	Published: {% raw %}{{moment published format=&quot;MMMM D, YYYY h:mm A&quot;}{% endraw %}}
+	&lt;a href=&quot;{% raw %}{{url}}{% endraw %}&quot;&gt;{% raw %}{{title}}{% endraw %}&lt;/a&gt;&lt;br/&gt;
+	Published: {% raw %}{{moment published format=&quot;MMMM D, YYYY h:mm A&quot;}}{% endraw %}
 	&lt;/p&gt;
 	
-{% raw %}{{/each}{% endraw %}}
+{% raw %}{{/each}}{% endraw %}
 </code></pre>
 
 Nothing special about that, right? Do note though that I'm using a URL property. That didn't exist in the model. How did I do that? I built an observer in my entry.js file to recognize load events:

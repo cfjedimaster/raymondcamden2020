@@ -149,7 +149,7 @@ In order to test this out, I whipped up a quick Vue.js front end. I built it all
                     <input type="submit" @click="helloWorld" value="Test">
                 </p>
 
-                <p v-if="nameResult"><b>Result: {% raw %}{{nameResult}{% endraw %}}</b></p>
+                <p v-if="nameResult"><b>Result: {% raw %}{{nameResult}}{% endraw %}</b></p>
         </div>
     </div>
 

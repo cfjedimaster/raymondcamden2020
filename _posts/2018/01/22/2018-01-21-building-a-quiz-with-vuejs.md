@@ -70,7 +70,7 @@ Ok, so how did I solve this with Vue? First, let's look at the HTML.
 <div id="quiz">
   
   <div v-if="introStage">
-    <h1>Welcome to the Quiz: {% raw %}{{title}{% endraw %}}</h1>
+    <h1>Welcome to the Quiz: {% raw %}{{title}}{% endraw %}</h1>
     <p>
       Some kind of text here. Blah blah.
     </p>
@@ -87,7 +87,7 @@ Ok, so how did I solve this with Vue? First, let's look at the HTML.
   </div>
   
   <div v-if="resultsStage">
-    You got {% raw %}{{correct}{% endraw %}} right out of {% raw %}{{questions.length}{% endraw %}} questions. Your percentage is {% raw %}{{perc}{% endraw %}}%.
+    You got {% raw %}{{correct}}{% endraw %} right out of {% raw %}{{questions.length}}{% endraw %} questions. Your percentage is {% raw %}{{perc}}{% endraw %}%.
   </div>
   
 </div>
@@ -162,8 +162,8 @@ After the user clicks the button to start the quiz, they can begin answering que
 Vue.component('question', {
 	template:`
 <div>
-  <strong>Question {% raw %}{{ questionNumber }{% endraw %}}:</strong><br/>
-  <strong>{% raw %}{{ question.text }{% endraw %}} </strong>
+  <strong>Question {% raw %}{{ questionNumber }}{% endraw %}:</strong><br/>
+  <strong>{% raw %}{{ question.text }}{% endraw %} </strong>
 
   <div v-if="question.type === 'tf'">
     <input type="radio" name="currentQuestion" id="trueAnswer" v-model="answer" value="t"><label for="trueAnswer">True</label><br/>
@@ -172,7 +172,7 @@ Vue.component('question', {
 
   <div v-if="question.type === 'mc'">
     <div v-for="(mcanswer,index) in question.answers">
-    <input type="radio" :id="'answer'+index" name="currentQuestion" v-model="answer" :value="mcanswer"><label :for="'answer'+index">{% raw %}{{mcanswer}{% endraw %}}</label><br/>
+    <input type="radio" :id="'answer'+index" name="currentQuestion" v-model="answer" :value="mcanswer"><label :for="'answer'+index">{% raw %}{{mcanswer}}{% endraw %}</label><br/>
     </div>
   </div>
 
@@ -220,7 +220,7 @@ That's freaking cool. Here is the JavaScript. The main changes here is the creat
   template:`
 &lt;div&gt;
   &lt;div v-if=&quot;introStage&quot;&gt;
-    &lt;h1&gt;Welcome to the Quiz: {% raw %}{{title}{% endraw %}}&lt;/h1&gt;
+    &lt;h1&gt;Welcome to the Quiz: {% raw %}{{title}}{% endraw %}&lt;/h1&gt;
     &lt;p&gt;
       Some kind of text here. Blah blah.
     &lt;/p&gt;
@@ -237,7 +237,7 @@ That's freaking cool. Here is the JavaScript. The main changes here is the creat
   &lt;/div&gt;
   
   &lt;div v-if=&quot;resultsStage&quot;&gt;
-    You got {% raw %}{{correct}{% endraw %}} right out of {% raw %}{{questions.length}{% endraw %}} questions. Your percentage is {% raw %}{{perc}{% endraw %}}%.
+    You got {% raw %}{{correct}}{% endraw %} right out of {% raw %}{{questions.length}}{% endraw %} questions. Your percentage is {% raw %}{{perc}}{% endraw %}%.
   &lt;/div&gt;
 &lt;/div&gt;
 `,
@@ -297,8 +297,8 @@ That's freaking cool. Here is the JavaScript. The main changes here is the creat
 Vue.component('question', {
 	template:`
 &lt;div&gt;
-  &lt;strong&gt;Question {% raw %}{{ questionNumber }{% endraw %}}:&lt;/strong&gt;&lt;br/&gt;
-  &lt;strong&gt;{% raw %}{{ question.text }{% endraw %}} &lt;/strong&gt;
+  &lt;strong&gt;Question {% raw %}{{ questionNumber }}{% endraw %}:&lt;/strong&gt;&lt;br/&gt;
+  &lt;strong&gt;{% raw %}{{ question.text }}{% endraw %} &lt;/strong&gt;
 
   &lt;div v-if=&quot;question.type === 'tf'&quot;&gt;
     &lt;input type=&quot;radio&quot; name=&quot;currentQuestion&quot; id=&quot;trueAnswer&quot; v-model=&quot;answer&quot; value=&quot;t&quot;&gt;&lt;label for=&quot;trueAnswer&quot;&gt;True&lt;/label&gt;&lt;br/&gt;
@@ -307,7 +307,7 @@ Vue.component('question', {
 
   &lt;div v-if=&quot;question.type === 'mc'&quot;&gt;
     &lt;div v-for=&quot;(mcanswer,index) in question.answers&quot;&gt;
-    &lt;input type=&quot;radio&quot; :id=&quot;'answer'+index&quot; name=&quot;currentQuestion&quot; v-model=&quot;answer&quot; :value=&quot;mcanswer&quot;&gt;&lt;label :for=&quot;'answer'+index&quot;&gt;{% raw %}{{mcanswer}{% endraw %}}&lt;/label&gt;&lt;br/&gt;
+    &lt;input type=&quot;radio&quot; :id=&quot;'answer'+index&quot; name=&quot;currentQuestion&quot; v-model=&quot;answer&quot; :value=&quot;mcanswer&quot;&gt;&lt;label :for=&quot;'answer'+index&quot;&gt;{% raw %}{{mcanswer}}{% endraw %}&lt;/label&gt;&lt;br/&gt;
     &lt;/div&gt;
   &lt;/div&gt;
 
@@ -374,14 +374,14 @@ Your Vue component can map the content of that div by using the slot attribute. 
   <quiz url="https://api.myjson.com/bins/ahn1p">
 
     <div slot="intro" slot-scope="props">
-      This is my custom quiz header for {% raw %}{{props.title}{% endraw %}}.
+      This is my custom quiz header for {% raw %}{{props.title}}{% endraw %}.
     </div>
   
     <div slot="results" slot-scope="props">
       <h1>WOWOWOW!</h1> 
-        You got {% raw %}{{props.correct}{% endraw %}} right out of 
-        {% raw %}{{props.length}{% endraw %}} questions. 
-      Your percentage is {% raw %}{{props.perc}{% endraw %}}%.
+        You got {% raw %}{{props.correct}}{% endraw %} right out of 
+        {% raw %}{{props.length}}{% endraw %} questions. 
+      Your percentage is {% raw %}{{props.perc}}{% endraw %}%.
     </div>
   
   </quiz>
@@ -396,7 +396,7 @@ I've got two slots inside my quiz component now. Note the use of `slot-scope`. T
 <div>
   <div v-if="introStage">
     <slot name="intro" :title="title">
-    <h1>Welcome to the Quiz: {% raw %}{{title}{% endraw %}}</h1>
+    <h1>Welcome to the Quiz: {% raw %}{{title}}{% endraw %}</h1>
     <p>
       Some kind of text here. Blah blah.
     </p>    
@@ -414,7 +414,7 @@ I've got two slots inside my quiz component now. Note the use of `slot-scope`. T
   
   <div v-if="resultsStage">
     <slot name="results" :length="questions.length" :perc="perc" :correct="correct">
-    You got {% raw %}{{correct}{% endraw %}} right out of {% raw %}{{questions.length}{% endraw %}} questions. Your percentage is {% raw %}{{perc}{% endraw %}}%.
+    You got {% raw %}{{correct}}{% endraw %} right out of {% raw %}{{questions.length}}{% endraw %} questions. Your percentage is {% raw %}{{perc}}{% endraw %}%.
     </slot>
   </div>
 </div>

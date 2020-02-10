@@ -109,7 +109,7 @@ The only real interesting part here is setting the OAuth token in the header. Yo
 		options.headers = headers;
 			
 		var params = {};
-		params.attributes = '{% raw %}{"name":"'+options.fileName+'", "parent":{"id":"0"}{% endraw %}}';
+		params.attributes = '{% raw %}{"name":"'+options.fileName+'", "parent":{"id":"0"}}{% endraw %}';
 			
 		options.params = params;
 		var ft = new FileTransfer();

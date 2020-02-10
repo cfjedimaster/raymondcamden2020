@@ -230,13 +230,13 @@ On the home page, I had, what I thought, was a simple thing to do. When the page
 			//When clicking the link in details pages to add to fav
 			$(".addToFavoritesDiv a").live('vclick', function(event) {
 				var id=$(this).data("artid");
-				$.mobile.changePage("addtofav.cfm", {% raw %}{role:"dialog",data:{"id":id}{% endraw %}});
+				$.mobile.changePage("addtofav.cfm", {% raw %}{role:"dialog",data:{"id":id}}{% endraw %});
 			});
 
 			//When clicking the link in details pages to add to fav
 			$(".removeFromFavoritesDiv a").live('vclick', function(event) {
 				var id=$(this).data("artid");
-				$.mobile.changePage("removefromfav.cfm", {% raw %}{role:"dialog",data:{"id":id}{% endraw %}});
+				$.mobile.changePage("removefromfav.cfm", {% raw %}{role:"dialog",data:{"id":id}}{% endraw %});
 			});
 
 			//When confirming the add to fav

@@ -64,14 +64,14 @@ First, the HTML:
 	<div id="app" v-cloak>
 		<div v-if="loading"><i>Loading Random Character...</i></div>
 		<div v-else>
-			<h1>{% raw %}{{char.name}{% endraw %}}</h1>
+			<h1>{% raw %}{{char.name}}{% endraw %}</h1>
 
 			<p>
 				<span v-if="char.publisher && char.publisher.name">
-					<strong>Publisher:</strong> {% raw %}{{char.publisher.name}{% endraw %}}<br/>
+					<strong>Publisher:</strong> {% raw %}{{char.publisher.name}}{% endraw %}<br/>
 				</span>
 				<strong>First Issue:</strong> <a :href="char.first_issue.site_detail_url" target="_new">
-					{% raw %}{{char.first_issue.volume.name}{% endraw %}} {% raw %}{{char.first_issue.issue_number}{% endraw %}} ({% raw %}{{char.first_issue.cover_date}{% endraw %}})</a><br/>
+					{% raw %}{{char.first_issue.volume.name}}{% endraw %} {% raw %}{{char.first_issue.issue_number}}{% endraw %} ({% raw %}{{char.first_issue.cover_date}}{% endraw %})</a><br/>
 			</p>
 
 			<a :href="char.site_detail_url" target="_new"><img class="heroImage" :src="char.image"></a>
@@ -81,7 +81,7 @@ First, the HTML:
 			<h2>Creators</h2>
 			<ul>
 				<li v-for="creator in char.creators">
-					<a :href="creator.site_detail_url" target="_new">{% raw %}{{creator.name}{% endraw %}}</a>
+					<a :href="creator.site_detail_url" target="_new">{% raw %}{{creator.name}}{% endraw %}</a>
 				</li>
 			</ul>
 			</div>
@@ -89,28 +89,28 @@ First, the HTML:
 			<div v-if="char.powers.length">
 				<h2>Powers</h2>
 				<ul>
-					<li v-for="power in char.powers">{% raw %}{{power.name}{% endraw %}}</li>
+					<li v-for="power in char.powers">{% raw %}{{power.name}}{% endraw %}</li>
 				</ul>
 			</div>
 
 			<div v-if="char.teams.length">
 				<h2>Teams</h2>
 				<ul>
-					<li v-for="team in char.teams"><a :href="team.site_detail_url" target="_new">{% raw %}{{team.name}{% endraw %}}</a></li>
+					<li v-for="team in char.teams"><a :href="team.site_detail_url" target="_new">{% raw %}{{team.name}}{% endraw %}</a></li>
 				</ul>
 			</div>
 
 			<div v-if="char.character_friends.length">
 				<h2>Friends</h2>
 				<ul>
-					<li v-for="friend in char.character_friends"><a :href="friend.site_detail_url" target="_new">{% raw %}{{friend.name}{% endraw %}}</a></li>
+					<li v-for="friend in char.character_friends"><a :href="friend.site_detail_url" target="_new">{% raw %}{{friend.name}}{% endraw %}</a></li>
 				</ul>
 			</div>
 
 			<div v-if="char.character_enemies.length">
 				<h2>Enemies</h2>
 				<ul>
-					<li v-for="enemy in char.character_enemies"><a :href="enemy.site_detail_url" target="_new">{% raw %}{{enemy.name}{% endraw %}}</a></li>
+					<li v-for="enemy in char.character_enemies"><a :href="enemy.site_detail_url" target="_new">{% raw %}{{enemy.name}}{% endraw %}</a></li>
 				</ul>
 			</div>
 
