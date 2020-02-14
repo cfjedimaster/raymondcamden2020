@@ -1,0 +1,13 @@
+{
+	"title":"Raymond Camden",
+	"description":"DevRel at large, Star Wars nerd, Web/Serverless hacker, lover of good beer and good books. Oh, and cats.",
+	"url": "https://www.raymondcamden.com",
+	"navigation": [
+		{"text":"Home", "url":"/"},
+		{"text":"About","url":"/about/"},
+		{"text":"Speaking","url":"/speaking/"},
+		{"text":"Contact","url":"/contact/"},
+		{"text":"Search","url":"/search/"}
+	],
+	"author_name":"Raymond Camden"
+}

@@ -1,0 +1,29 @@
+---
+layout: default
+---
+<div class="site-content">
+    <div class="inner">
+        <main class="site-main">
+            <article class="post">
+                <header class="entry-header">
+                    <div class="entry-header-wrap">  
+                        {% if page.banner_image %}
+                        <div class="post-thumbnail">
+                            <img src="{{ "https://static.raymondcamden.com" | append: page.banner_image }}" alt="{% if page.banner_image_alt %}{{ page.banner_image_alt }}{% else %}{{ page.title }}{% endif %}">
+                        </div><!-- .post-thumbnail -->
+                        {% elsif page.local_banner_image %}
+                        <div class="post-thumbnail">
+                            <img src="{{ "/images/" | append: page.local_banner_image | prepend: site.baseurl }}" alt="{% if page.banner_image_alt %}{{ page.banner_image_alt }}{% else %}{{ page.title }}{% endif %}">
+                        </div>
+                        {% endif %}
+                        <h1 class="entry-title">{{page.title}}</h1>
+                    </div><!-- .entry-header-wrap -->
+                </header><!-- .entry-header -->
+                <div class="entry-content">
+                    {{content}}
+                </div><!-- .entry-content -->
+            </article><!-- .post -->
+        </main><!-- .site-main -->
+        {% include sidebar %}
+    </div><!-- .inner -->
+</div><!-- .site-content -->

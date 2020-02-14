@@ -1,0 +1,44 @@
+<footer class="site-footer">
+    <div class="inner">
+        <div class="social-links">
+            {% if site.twitter_username %}
+            <a href="https://twitter.com/{{ site.twitter_username }}" class="fa-twitter square fill-horizontal" rel="me"><span class="screen-reader-text">Twitter</span></a>
+            {% endif %}
+            {% if site.youtube_username %}
+            <a href="https://www.youtube.com/user/{{ site.youtube_username }}" class="fa-youtube-play square fill-horizontal"><span class="screen-reader-text">YouTube</span></a>
+            {% endif %}
+            {% if site.facebook_username %}
+            <a href="https://www.facebook.com/{{ site.facebook_username }}" class="fa-facebook square fill-horizontal"><span class="screen-reader-text">Facebook</span></a>
+            {% endif %}
+            {% if site.github_username %}
+            <a href="https://github.com/{{ site.github_username }}" class="fa-github-alt square fill-horizontal" rel="me"><span class="screen-reader-text">GitHub</span></a>
+            {% endif %}
+            {% if site.codepen_username %}
+            <a href="http://codepen.io/{{ site.codepen_username }}" class="fa-codepen square fill-horizontal"><span class="screen-reader-text">CodePen</span></a>
+            {% endif %}
+            {% if site.dribbble_uername %}
+            <a href="https://dribbble.com/{{ site.dribbble_uername }}" class="fa-dribbble square fill-horizontal"><span class="screen-reader-text">Dribbble</span></a>
+            {% endif %}
+            {% if site.medium_username %}
+            <a href="https://medium.com/{{ site.medium_username }}" class="fa-medium square fill-horizontal"><span class="screen-reader-text">Medium</span></a>
+            {% endif %}
+            {% if site.instagram_username %}
+            <a href="http://instagram.com/{{ site.instagram_username }}" class="fa-instagram square fill-horizontal"><span class="screen-reader-text">Instagram</span></a>
+            {% endif %}
+            {% if site.pinterest_username %}
+            <a href="http://www.pinterest.com/{{ site.pinterest_username }}" class="fa-pinterest-p square fill-horizontal"><span class="screen-reader-text">Pinterest</span></a>
+            {% endif %}
+            {% if site.linkedin_username %}
+            <a href="https://www.linkedin.com/in/{{ site.linkedin_username }}" class="fa-linkedin square fill-horizontal"><span class="screen-reader-text">LinkedIn</span></a>
+            {% endif %}
+            {% if site.weibo_username %}
+            <a href="http://weibo.com/{{ site.weibo_username }}" class="fa-weibo square fill-horizontal"><span class="screen-reader-text">Weibo</span></a>
+            {% endif %}
+            <a class="fa-feed square fill-horizontal" href="{{ site.baseurl }}/feed.xml"><span class="screen-reader-text">RSS</span></a>
+        </div><!-- .social-links -->
+        <div class="site-info">
+            &copy; <a href="{{ site.baseurl }}/">{{site.title}}</a> all rights reserved. <br />Powered by <a target="_blank" href="https://jekyllrb.com/">Jekyll</a>. BlogInn theme by <a target="_blank" href="http://justgoodthemes.com/">JustGoodThemes</a>
+            <a href="#top" id="top-link" class="fa-chevron-up top-link square fill-horizontal"><span class="screen-reader-text">Back to the top</span></a>
+        </div><!-- .site-info -->
+    </div><!-- .inner -->
+</footer><!-- .site-footer -->

@@ -1,0 +1,79 @@
+<aside class="sidebar">
+
+    {% if site.author_bio and site.author_name %}
+    <section class="widget widget-text">
+        <h2 class="widget-title">About {{ site.author_name }}</h2>
+        <p>{{ site.author_bio }}</p>
+    </section><!-- .widget-text -->
+    {% endif %}
+
+    <section class="widget widget-recent-posts">
+        <h2 class="widget-title">Latest Posts</h2>
+        <ul class="recent-posts">
+        </ul><!-- .recent-posts -->
+    </section><!-- .widget-recent-posts -->
+
+    <div style="margin:auto;width:200px;padding-bottom:30px">
+    {% include coffee.html %}
+    </div>
+
+    <!--Create a sorted array of tags-->
+    {% capture site_cats %}{% for cat in site.categories %}{{ cat | first }}{% unless forloop.last %},{% endunless %}{% endfor %}{% endcapture %}
+    {% assign sortedCats = site_cats | downcase | split:',' | sort %}
+
+    <!-- attempt to remove dupes by case -->
+    <!-- source, although i screwed with it - https://gist.github.com/pepelsbey/9334494 -->
+    {% assign uCats = array[1] %}
+    {% for item in sortedCats %}
+    {% unless uCats contains item %}
+        {% capture uCats %}{{ uCats }}{% unless forloop.first %},{% endunless %}{{ item }}{% endcapture %}
+    {% endunless %}
+    {% endfor %}
+    {% assign uCatsArray = uCats | split:',' | sort %}
+
+    <section class="widget widget-tags">
+        <h2 class="widget-title">Categories</h2>
+        <div class="tagcloud">
+            {% for cat in uCatsArray %} 
+            <a href="{{site.baseurl}}/categories/{{ cat | cgi_escape }}">{{ cat }}</a>
+            {% endfor %}
+        </div><!-- .tagcloud -->
+    </section><!-- .widget -->
+
+    <!--Create a sorted array of tags-->
+    {% capture site_tags %}{% for tag in site.tags %}{{ tag | first }}{% unless forloop.last %},{% endunless %}{% endfor %}{% endcapture %}
+    {% assign sortedTags = site_tags | downcase | split:',' | sort %}
+
+    <!-- same as above -->
+    {% assign uTags = array[1] %}
+    {% for item in sortedTags %}
+    {% unless uTags contains item %}
+        {% capture uTags %}{{ uTags }}{% unless forloop.first %},{% endunless %}{{ item }}{% endcapture %}
+    {% endunless %}
+    {% endfor %}
+    {% assign uTagsArray = uTags | split:',' | sort %}
+
+    <section class="widget widget-tags">
+        <h2 class="widget-title">Tags</h2>
+        <div class="tagcloud">
+            {% for tag in uTagsArray %}
+            <a href="{{site.baseurl}}/tags/{{ tag | cgi_escape }}/">{{ tag }}</a>
+            {% endfor %}
+        </div><!-- .tagcloud -->
+    </section><!-- .widget -->
+
+    <section class="widget">
+        <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+        <!-- Blog 2018 Right -->
+        <ins class="adsbygoogle"
+            style="display:block"
+            data-ad-client="ca-pub-1736437642005360"
+            data-ad-slot="5087649347"
+            data-ad-format="auto"></ins>
+        <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+
+    </section>
+
+</aside><!-- .sidebar -->
