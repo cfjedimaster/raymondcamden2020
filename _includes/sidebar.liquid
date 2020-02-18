@@ -17,25 +17,13 @@
     {% include coffee %}
     </div>
 
-    <!--Create a sorted array of tags-->
-    {% capture site_cats %}{% for cat in site.categories %}{{ cat | first }}{% unless forloop.last %},{% endunless %}{% endfor %}{% endcapture %}
-    {% assign sortedCats = site_cats | downcase | split:',' | sort %}
-
-    <!-- attempt to remove dupes by case -->
-    <!-- source, although i screwed with it - https://gist.github.com/pepelsbey/9334494 -->
-    {% assign uCats = array[1] %}
-    {% for item in sortedCats %}
-    {% unless uCats contains item %}
-        {% capture uCats %}{{ uCats }}{% unless forloop.first %},{% endunless %}{{ item }}{% endcapture %}
-    {% endunless %}
-    {% endfor %}
-    {% assign uCatsArray = uCats | split:',' | sort %}
+    {% assign cats = collections | postCategories %}
 
     <section class="widget widget-tags">
         <h2 class="widget-title">Categories</h2>
         <div class="tagcloud">
-            {% for cat in uCatsArray %} 
-            <a href="{{site.baseurl}}/categories/{{ cat | cgi_escape }}">{{ cat }}</a>
+            {% for cat in cats %} 
+                <a href="{{site.baseurl}}/categories/{{ cat | cgi_escape }}">{{ cat }}</a>
             {% endfor %}
         </div><!-- .tagcloud -->
     </section><!-- .widget -->
