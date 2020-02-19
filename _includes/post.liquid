@@ -1,3 +1,89 @@
-<h1>Post</h1>
+---
+layout: default
+---
+<div class="site-content">
+    <div class="inner">
+        <main class="site-main">
+            <article class="post">
+                <header class="entry-header"> 
+                    <div class="entry-header-wrap">
+                        {% if banner_image %}
+                        <div class="post-thumbnail">
+                            <img src="{{ "https://static.raymondcamden.com" | append: banner_image }}" alt="{% if banner_image_alt %}{{ banner_image_alt }}{% else %}{{ title }}{% endif %}">
+                        </div><!-- .post-thumbnail -->
+                        {% endif %}
+                        <h1 class="entry-title">{{title}}</h1>
+                    </div><!-- .entry-header-wrap -->
+                    <div class="entry-meta">
+                        by <span class="post-author">{{site.author_name}}</span> on <time class="published" datetime="{{ page.date | date: "%Y-%m-%d" }}">{{ page.date | date: "%B %e, %Y" }}</time> | <a href="#comments"><span class="disqus-comment-count" data-disqus-url="https://www.raymondcamden.com{{ page.url }}">Comments</span></a>
+                    </div><!-- .entry-meta -->
+                </header><!-- .entry-header -->
+                <div class="entry-content">
+                    {{content}}
+                </div><!-- .entry-content -->
+                <footer class="entry-footer">
+                    <div class="share-post">
+                        <span>Share</span>
+                        <a class="fa-twitter" target="_blank" href="https://twitter.com/intent/tweet?text={{ title | uri_escape }}&amp;url={{ site.url }}{{ page.url }}"><span class="screen-reader-text">Twitter</span></a>
+                        <a class="fa-facebook" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u={{ site.url }}{{ page.url }}&amp;t={{ title | uri_escape }}"><span class="screen-reader-text">Facebook</span></a>
+                    </div><!-- .share-post -->
+                    <div class="tag-links">
+                    {% if categories.size > 0 %}
+                        Posted in: {% for cat in categories %}<a href="{{site.baseurl}}/categories/{{ cat | cgi_escape }}"
+                            title="Pages in {{ cat }}" rel="cat">{{ cat }}</a>{% unless forloop.last %} {% endunless %}{% endfor %}
+                    {% endif %}
 
-{{{content}}}
+                    {% if tags.size > 0 %}
+                        Tagged: {% for tag in tags %}<a href="{{site.baseurl}}/tags/{{ tag | cgi_escape }}" title="Pages tagged {{ tag }}" rel="tag">{{ tag }}</a>{% unless forloop.last %} {% endunless %}{% endfor %}
+                    {% endif %}
+                    </div>
+
+                </footer><!-- .entry-footer -->
+            </article><!-- .post -->
+            <div class="author-box">
+                <div class="author-info">
+                    <div class="author-avatar" style="background-image: url({{site.baseurl}}{{ site.author_image }})"><span class="screen-reader-text">{{ site.author_name }}'s Picture</span></div>
+                    <div class="author-details">
+                        <h2 class="author-title">About {{ site.author_name }}</h2>
+                        <p class="author-bio">{{ site.author_bio }}
+               			If you like this article, please consider visiting my <a href="http://www.amazon.com/gp/registry/wishlist/2TCL1D08EZEYE/ref=cm_wl_rlist_go_v?">Amazon Wishlist</a> or <a href="https://paypal.me/RaymondCamden">donating via PayPal</a> to show your support. You can even
+                           <a href="https://www.buymeacoffee.com/raymondcamden">buy me a coffee</a>!
+                        </p>
+                        <span class="author-location"><i class="fa-map-marker" aria-hidden="true"></i> {{ site.author_location }}</span>
+                        <span class="author-website"><i class="fa-chain" aria-hidden="true"></i> <a href="{{ site.author_url }}" target="_blank"> {{ site.author_url }}</a></span>
+                    </div><!-- .author-details -->
+                </div><!-- .author-info -->
+            </div><!-- .author-box -->
+            <nav class="post-navigation">
+                <h2 class="screen-reader-text">Post navigation</h2>
+                {% if page.previous.url %}
+                <div class="nav-previous">
+                    <div class="nav-inside">
+                        {% if page.previous.banner_image %}
+                        <a href="{{ site.baseurl }}{{page.previous.url}}" class="nav-thumb" style="background-image: url({{ "https://static.raymondcamden.com" | append: page.previous.banner_image }})"></a>
+                        {% endif %}
+                        <div class="nav-before">Previous</div>
+                        <div class="nav-title"><a href="{{ site.baseurl }}{{page.previous.url}}">{{page.previous.title}}</a></div>
+                        <div class="nav-date">{{page.previous.date | date: "%B %-d, %Y"}}</div>
+                    </div><!-- .nav-inside -->
+                </div><!-- .nav-previous -->
+                {% endif %}
+                {% if page.next.url %}
+                <div class="nav-next">
+                    <div class="nav-inside">
+                        {% if page.next.banner_image %}
+                        <a href="{{ site.baseurl }}{{page.next.url}}" class="nav-thumb" style="background-image: url({{ "https://static.raymondcamden.com" | append: page.next.banner_image }})"></a>
+                        {% endif %}
+                        <div class="nav-before">Next</div>
+                        <div class="nav-title"><a href="{{ site.baseurl }}{{page.next.url}}">{{page.next.title}}</a></div>
+                        <div class="nav-date">{{page.next.date | date: "%B %-d, %Y"}}</div>
+                    </div><!-- .nav-inside -->
+                </div><!-- .nav-next -->
+                {% endif %}
+            </nav><!-- .post-navigation -->
+
+            {% include mydisqus %}
+        </main><!-- .site-main -->
+        {% include sidebar %}
+    </div><!-- .inner -->
+</div><!-- .site-content -->

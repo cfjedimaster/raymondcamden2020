@@ -4,9 +4,19 @@ module.exports = function(eleventyConfig) {
 	eleventyConfig.addPassthroughCopy("js");
 	eleventyConfig.addPassthroughCopy("images");
 	eleventyConfig.addPassthroughCopy("fonts");
+	eleventyConfig.addPassthroughCopy("./manifest.json");
 
 	//reference: https://github.com/11ty/eleventy/issues/179#issuecomment-413119342
 	eleventyConfig.addShortcode('excerpt', post => extractExcerpt(post));
+
+	eleventyConfig.addFilter('postCategories', collections => {
+    	let cats = [];
+
+      for(cat in collections) {
+        if(cat !== 'all' && cat !== 'posts') cats.push(cat);
+	    }
+      return cats.sort();
+  });
 
 	// reverse isn't supported in 11 liquid?
 	eleventyConfig.addFilter("reverse", a => a.slice().reverse() );

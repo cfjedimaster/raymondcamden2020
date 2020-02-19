@@ -9,5 +9,10 @@
 		{"text":"Contact","url":"/contact/"},
 		{"text":"Search","url":"/search/"}
 	],
-	"author_name":"Raymond Camden"
+	"author_name":"Raymond Camden",
+	"author_image": "/images/avatar.jpg",
+	"author_location": "Lafayette, LA",
+	"author_bio": "Raymond is a developer advocate. He focuses on JavaScript, serverless and enterprise cat demos.",
+	"author_url":  "https://www.raymondcamden.com"
+
 }
