@@ -14,6 +14,7 @@ module.exports = function(eleventyConfig) {
 
     for(let page of collections.posts) {
       for(let cat of page.data.categories) {
+        cat = cat.toLowerCase();
         cats.add(cat);
       }
     }
