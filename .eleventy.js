@@ -9,6 +9,19 @@ module.exports = function(eleventyConfig) {
 	//reference: https://github.com/11ty/eleventy/issues/179#issuecomment-413119342
 	eleventyConfig.addShortcode('excerpt', post => extractExcerpt(post));
 
+  eleventyConfig.addFilter('myEscape', s => {
+    return s.replace(/ /g, '+');
+  });
+
+  eleventyConfig.addFilter('getByCategory', (posts,cat) => {
+    let results = [];
+
+    for(let post of posts) {
+      if(post.data.categories.indexOf(cat) >= 0) results.push(post);
+    }
+    return results.reverse();
+  });
+
   eleventyConfig.addFilter('postCategories', collections => {
     let cats = new Set();
 
@@ -25,7 +38,7 @@ module.exports = function(eleventyConfig) {
     	let tags = [];
 
       for(let tag in collections) {
-        if(tag !== 'all' && tag !== 'posts') tags.push(tag);
+        if(tag !== 'all' && tag !== 'posts' && tag !== 'categories') tags.push(tag);
 	    }
       return tags.sort();
   });
@@ -37,10 +50,27 @@ module.exports = function(eleventyConfig) {
 		let posts = collection.getFilteredByGlob("_posts/**/*.md");
 		for(let i=0;i<posts.length;i++) {
 			posts[i].data.permalink += '.html';
-			posts[i].outputPath += '/index.html';
+      posts[i].outputPath += '/index.html';
 		}
 
 		return posts;
+	});
+
+  /*
+  yes, this duplicates the code above, but the addCollection API requires you to return data about
+  one collection at a time. As I want to use this data in pagination later, I think this is my only
+  choice
+  */
+  eleventyConfig.addCollection("categories", collection => {
+    let cats = new Set();
+		let posts = collection.getFilteredByGlob("_posts/**/*.md");
+		for(let i=0;i<posts.length;i++) {
+      for(let x=0;x<posts[i].data.categories.length;x++) {
+        cats.add(posts[i].data.categories[x].toLowerCase());
+      }
+		}
+
+		return Array.from(cats).sort();
 	});
 
 

@@ -1,0 +1,10 @@
+---
+pagination:
+    data: collections.categories
+    size: 1
+    alias: cat
+permalink: "categories/{{ cat | myEscape }}/"
+layout: category
+renderData:
+    title: "{{ tag }}"
+---

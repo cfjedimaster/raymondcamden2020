@@ -1,0 +1,13 @@
+---
+pagination:
+    data: collections
+    size: 1
+    alias: tag
+    filter:
+        - all
+        - posts
+permalink: "tags/{{ tag | slug }}/"
+layout: tag
+renderData:
+    title: "{{ tag }}"
+---

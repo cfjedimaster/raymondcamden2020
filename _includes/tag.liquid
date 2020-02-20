@@ -1,0 +1,32 @@
+---
+layout: default
+---
+
+title is {{ renderData.title }}
+
+{% assign posts = collections[tag] | reverse %}
+
+<div class="site-content">
+    <div class="inner">
+        <main class="site-main">
+            <article class="post">
+                <header class="entry-header">
+                    <div class="entry-header-wrap">  
+                        <h1 class="entry-title">{{ tag | capitalize }}</h1>
+                    </div>
+                </header><!-- .entry-header -->
+                <div class="entry-content">
+                    <p>
+                        {{ collections[tag].size }} total post(s):
+                    </p>
+                    <ul class="archive-posts-list">
+                        {% for post in posts %}
+                        <li><a href="{{ site.baseurl }}{{ post.url }}" rel="bookmark" title="Permanent Link to {{ site.baseurl }}{{ post.url }}">{{ post.data.title }}</a> <span class="archive-meta"> — <time class="published" datetime="{{ post.date | date: "%Y-%m-%d" }}">{{ post.date | date: "%B %e, %Y" }}</time></span></li>
+                        {% endfor %}
+                    </ul>
+                </div><!-- .entry-content -->
+            </article><!-- .post -->
+        </main><!-- .site-main -->
+        {% include sidebar %}
+    </div><!-- .inner -->
+</div><!-- .site-content -->

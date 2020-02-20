@@ -23,7 +23,7 @@
         <h2 class="widget-title">Categories</h2>
         <div class="tagcloud">
             {% for cat in cats %} 
-                <a href="{{site.baseurl}}/categories/{{ cat | cgi_escape }}">{{ cat }}</a>
+                <a href="{{site.baseurl}}/categories/{{ cat | myEscape }}">{{ cat }}</a>
             {% endfor %}
         </div><!-- .tagcloud -->
     </section><!-- .widget -->
@@ -35,7 +35,7 @@
         <h2 class="widget-title">Tags</h2>
         <div class="tagcloud">
             {% for tag in tags %}
-            <a href="{{site.baseurl}}/tags/{{ tag | cgi_escape }}/">{{ tag }}</a>
+            <a href="{{site.baseurl}}/tags/{{ tag | myEscape }}/">{{ tag }}</a>
             {% endfor %}
         </div><!-- .tagcloud -->
     </section><!-- .widget -->
