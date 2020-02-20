@@ -9,13 +9,24 @@ module.exports = function(eleventyConfig) {
 	//reference: https://github.com/11ty/eleventy/issues/179#issuecomment-413119342
 	eleventyConfig.addShortcode('excerpt', post => extractExcerpt(post));
 
-	eleventyConfig.addFilter('postCategories', collections => {
-    	let cats = [];
+  eleventyConfig.addFilter('postCategories', collections => {
+    let cats = new Set();
 
-      for(cat in collections) {
-        if(cat !== 'all' && cat !== 'posts') cats.push(cat);
+    for(let page of collections.posts) {
+      for(let cat of page.data.categories) {
+        cats.add(cat);
+      }
+    }
+    return Array.from(cats).sort();
+  });
+
+	eleventyConfig.addFilter('postTags', collections => {
+    	let tags = [];
+
+      for(let tag in collections) {
+        if(tag !== 'all' && tag !== 'posts') tags.push(tag);
 	    }
-      return cats.sort();
+      return tags.sort();
   });
 
 	// reverse isn't supported in 11 liquid?

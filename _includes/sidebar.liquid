@@ -29,22 +29,12 @@
     </section><!-- .widget -->
 
     <!--Create a sorted array of tags-->
-    {% capture site_tags %}{% for tag in site.tags %}{{ tag | first }}{% unless forloop.last %},{% endunless %}{% endfor %}{% endcapture %}
-    {% assign sortedTags = site_tags | downcase | split:',' | sort %}
-
-    <!-- same as above -->
-    {% assign uTags = array[1] %}
-    {% for item in sortedTags %}
-    {% unless uTags contains item %}
-        {% capture uTags %}{{ uTags }}{% unless forloop.first %},{% endunless %}{{ item }}{% endcapture %}
-    {% endunless %}
-    {% endfor %}
-    {% assign uTagsArray = uTags | split:',' | sort %}
+    {% assign tags = collections | postTags %}
 
     <section class="widget widget-tags">
         <h2 class="widget-title">Tags</h2>
         <div class="tagcloud">
-            {% for tag in uTagsArray %}
+            {% for tag in tags %}
             <a href="{{site.baseurl}}/tags/{{ tag | cgi_escape }}/">{{ tag }}</a>
             {% endfor %}
         </div><!-- .tagcloud -->
