@@ -6,21 +6,21 @@
     <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="twitter:card" content="summary" />
-    <meta name="twitter:title" content="{% if title %}{{ title }}{% else %}{{ site.title }}{% endif %}" />
+    <meta name="twitter:title" content="{% if renderData.title %}{{ renderData.title | capitalize }}{% elsif title %}{{ title }}{% else %}{{ site.title }}{% endif %}" />
     <meta name="twitter:creator" content="@raymondcamden" />    
     <meta name="twitter:site" content="@raymondcamden" />    
-    {% if page.description %}
+    {% if description %}
     <meta name="twitter:description" content="{{page.description}}" />
     {% endif %}
-    {% if page.banner_image %}
-    <meta name="twitter:image" content="{{ "https://static.raymondcamden.com" | append: page.banner_image }}" />
+    {% if banner_image %}
+    <meta name="twitter:image" content="{{ "https://static.raymondcamden.com" | append: banner_image }}" />
     {% endif %}
     <link rel="manifest" href="/manifest.json">
-    <link rel="shortcut icon" href="{{ "/favicon.ico" | prepend: site.baseurl }}">
+    <link rel="shortcut icon" href="{{ "/favicon.ico" | prepend: site.url }}">
     <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Lato:400,400italic,700,700italic" />
     <link rel="stylesheet" href="/css/main.css" />
     <link rel="stylesheet" href="/css/prism.css" />
-    <link rel="canonical" href="{{ page.url | replace:'/index.html','/' | prepend: site.baseurl | prepend: site.url }}">
+    <link rel="canonical" href="{{ page.url | replace:'/index.html','/' | prepend: site.url }}">
     <link rel="alternate" type="application/rss+xml" title="{{ site.title }} Feed" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}">
     <link rel="webmention" href="https://webmention.io/www.raymondcamden.com/webmention" />
     <link rel="pingback" href="https://webmention.io/www.raymondcamden.com/xmlrpc" />
