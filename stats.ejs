@@ -1,0 +1,88 @@
+---
+permalink: /stats.json
+---
+
+<%
+	totalWords = 0;
+	dateOb = [];
+	totalCategories = 0;
+	totalTags = 0;
+	cats = {};
+	tags = {};
+	firstPost = null;
+	lastPost = null;
+
+	for(post of collections.posts) {
+		let postWords = post.templateContent.split(' ').length;
+		totalWords += postWords;
+		//todo, format
+		dateOb.push(post.date);
+		for(let cat of post.data.categories) {
+			cat = cat.toLowerCase();
+			if(!cats[cat]) cats[cat] = 0;
+			cats[cat]++;
+		}
+		for(let tag of post.data.tags) {
+			tag = tag.toLowerCase();
+			if(!tags[tag]) tags[tag] = 0;
+			tags[tag]++;
+		}
+
+		if(!firstPost) firstPost = post;
+
+	}
+	lastPost = collections.posts[collections.posts.length-1];
+
+	avgWords = totalWords/collections.posts.length;
+%>
+
+{
+	"totalPosts":<%=  collections.posts.length %>,
+	"totalCategories": <%= Object.keys(cats).length %>,
+	"totalTags": <%= Object.keys(tags).length %>,
+	"totalWords": <%= totalWords %>,
+	"averageWordsPerPost": <%= avgWords %>,
+	"firstPost": {
+		"title":"<%= firstPost.data.title %>",
+		"published":"<%= firstPost.data.date %>",
+		"url":"<%= site.url %><%= firstPost.url %>"
+	},
+	"lastPost": {
+		"title":"<%= lastPost.data.title %>",
+		"published":"<%= lastPost.data.date %>",
+		"url":"<%= site.url %><%= lastPost.url %>"
+	},
+	"postsPerCategory":[
+		<% 
+		let doneOne = false;
+		for(let cat in cats) {
+		%> 
+			<% if(doneOne) {  %>
+				,
+			<% 
+				} else { 
+					doneOne = true;
+				}
+			%>
+			{ "name": "<%= cat %>" , "size": <%= cats[cat] %> }
+		<% } %>
+	],
+	"postsPerTag":[
+		<% 
+		doneOne = false;
+		for(let tag in tags) {
+		%> 
+		<% if(doneOne) {  %>
+				,
+			<% 
+				} else { 
+					doneOne = true;
+				}
+			%>
+
+			{ "name": "<%= tag %>" , "size": <%= tags[tag] %> }
+		<% } %>
+	],
+	"dates":"<%= dateOb.join(',') %>"
+
+}

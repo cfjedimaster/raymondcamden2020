@@ -13,23 +13,23 @@ permalink: /feed.xml
         <generator>Eleventy</generator>
         {% for post in posts limit:10 %}
             <item>
-                <title>{{ post.data.title | xml_escape }} {{ "ray <a>link</a>" | 'xml_escape' }}</title>
+                <title>{{ post.data.title | my_xml_escape }} </title>
                 <description>
 				{% if post.templateContent contains '<!--more-->' %}
-                        {{ post.content | split:'<!--more-->' | first | xml_escape }}
+                        {{ post.content | split:'<!--more-->' | first | my_xml_escape }}
                     {% else %}
 						{% capture content %}{% excerpt post %}{% endcapture %}
-                        {{ content | xml_escape }}
+                        {{ content | my_xml_escape }}
                     {% endif %}
 				</description>
                 <pubDate>{{ post.date | date_to_rfc822 }}</pubDate>
                 <link>{{ post.url | prepend: site.url }}</link>
                 <guid isPermaLink="true">{{ post.url | prepend: site.url }}</guid>
                 {% for tag in post.tags %}
-                <category>{{ tag | xml_escape }}</category>
+                <category>{{ tag | my_xml_escape }}</category>
                 {% endfor %}
                 {% for cat in post.categories %}
-                <category>{{ cat | xml_escape }}</category>
+                <category>{{ cat | my_xml_escape }}</category>
                 {% endfor %}
             </item>
         {% endfor %}

@@ -21,6 +21,14 @@ module.exports = function(eleventyConfig) {
     return s.replace(/ /g, '+');
   });
 
+  eleventyConfig.addFilter('my_xml_escape', s => {
+    return s.replace(/&/g, '&amp;')
+      .replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;')
+      .replace(/"/g, '&quot;')
+      .replace(/'/g, '&apos;');
+  });
+
   eleventyConfig.addFilter('getByCategory', (posts,cat) => {
     let results = [];
 
