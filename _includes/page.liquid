@@ -7,16 +7,16 @@ layout: default
             <article class="post">
                 <header class="entry-header">
                     <div class="entry-header-wrap">  
-                        {% if page.banner_image %}
+                        {% if banner_image %}
                         <div class="post-thumbnail">
-                            <img src="{{ "https://static.raymondcamden.com" | append: page.banner_image }}" alt="{% if page.banner_image_alt %}{{ page.banner_image_alt }}{% else %}{{ page.title }}{% endif %}">
+                            <img src="{{ "https://static.raymondcamden.com" | append: banner_image }}" alt="{% if banner_image_alt %}{{ banner_image_alt }}{% else %}{{ title }}{% endif %}">
                         </div><!-- .post-thumbnail -->
-                        {% elsif page.local_banner_image %}
+                        {% elsif local_banner_image %}
                         <div class="post-thumbnail">
-                            <img src="{{ "/images/" | append: page.local_banner_image | prepend: site.baseurl }}" alt="{% if page.banner_image_alt %}{{ page.banner_image_alt }}{% else %}{{ page.title }}{% endif %}">
+                            <img src="{{ "/images/" | append: local_banner_image | prepend: site.baseurl }}" alt="{% if banner_image_alt %}{{ banner_image_alt }}{% else %}{{ title }}{% endif %}">
                         </div>
                         {% endif %}
-                        <h1 class="entry-title">{{page.title}}</h1>
+                        <h1 class="entry-title">{{title}}</h1>
                     </div><!-- .entry-header-wrap -->
                 </header><!-- .entry-header -->
                 <div class="entry-content">
