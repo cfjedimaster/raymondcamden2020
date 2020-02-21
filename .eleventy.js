@@ -5,6 +5,9 @@ module.exports = function(eleventyConfig) {
 	eleventyConfig.addPassthroughCopy("images");
 	eleventyConfig.addPassthroughCopy("fonts");
 	eleventyConfig.addPassthroughCopy("./manifest.json");
+	eleventyConfig.addPassthroughCopy("./favicon.ico");
+	eleventyConfig.addPassthroughCopy("./_redirects");
+	eleventyConfig.addPassthroughCopy("./*.png");
 
 	//reference: https://github.com/11ty/eleventy/issues/179#issuecomment-413119342
 	eleventyConfig.addShortcode('excerpt', post => extractExcerpt(post));
