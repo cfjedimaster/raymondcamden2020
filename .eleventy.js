@@ -1,4 +1,8 @@
+const xmlFiltersPlugin = require('eleventy-xml-plugin');
+
 module.exports = function(eleventyConfig) {
+
+  eleventyConfig.addPlugin(xmlFiltersPlugin);
 
 	eleventyConfig.addPassthroughCopy("css");
 	eleventyConfig.addPassthroughCopy("js");
@@ -6,6 +10,7 @@ module.exports = function(eleventyConfig) {
 	eleventyConfig.addPassthroughCopy("fonts");
 	eleventyConfig.addPassthroughCopy("./manifest.json");
 	eleventyConfig.addPassthroughCopy("./favicon.ico");
+	eleventyConfig.addPassthroughCopy("./robots.txt");
 	eleventyConfig.addPassthroughCopy("./_redirects");
 	eleventyConfig.addPassthroughCopy("./*.png");
 

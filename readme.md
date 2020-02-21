@@ -6,3 +6,5 @@ I'll fill this out later, for now I'm taking notes.
 * tags are easy, categories?
 * rename search.md to search.html, change tabs in form
 * site stuff to data/site
+* https://github.com/jeremenichelli/eleventy-xml-plugin
+* 

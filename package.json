@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/cfjedimaster/raymondcamden2020#readme",
   "dependencies": {
-    "@11ty/eleventy": "^0.10.0"
+    "@11ty/eleventy": "^0.10.0",
+    "eleventy-xml-plugin": "^0.1.0"
   }
 }
