@@ -38,7 +38,9 @@ module.exports = function(eleventyConfig) {
     return results.reverse();
   });
 
+  let postCats = [];
   eleventyConfig.addFilter('postCategories', collections => {
+    if(postCats.length > 0) return postCats;
     let cats = new Set();
 
     for(let page of collections.posts) {
@@ -47,16 +49,19 @@ module.exports = function(eleventyConfig) {
         cats.add(cat);
       }
     }
-    return Array.from(cats).sort();
+    postCats = Array.from(cats).sort();
+    return postCats;
   });
 
+  let postTags = [];
 	eleventyConfig.addFilter('postTags', collections => {
+      if(postTags.length > 0) return postTags;
     	let tags = [];
-
       for(let tag in collections) {
         if(tag !== 'all' && tag !== 'posts' && tag !== 'categories') tags.push(tag);
-	    }
-      return tags.sort();
+      }
+      postTags = tags.sort();
+      return postTags;
   });
 
 	// reverse isn't supported in 11 liquid?
