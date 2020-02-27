@@ -64,6 +64,16 @@ module.exports = function(eleventyConfig) {
       return postTags;
   });
 
+  eleventyConfig.addFilter('titlecase', str => {
+    // https://stackoverflow.com/a/196991/52160
+    return str.replace(
+      /\w\S*/g,
+      function(txt) {
+        return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
+      }
+    );
+  });
+
 	// reverse isn't supported in 11 liquid?
 	eleventyConfig.addFilter("reverse", a => a.slice().reverse() );
 
