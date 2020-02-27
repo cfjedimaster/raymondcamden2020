@@ -15,11 +15,6 @@ I started a blog. I feel like I have to struggle to learn new things and if I ca
 
 <h3>My Next Events</h3>
 
-<p>
-<a href="https://devnexus.com/speakers/329">Kicking Butt with Vue.js</a><br/>
-DevNexus<br/>
-Atlanta, GA, February 19-21, 2020
-</p>
 
 <h3>My Past Events</h3>
 
@@ -28,6 +23,12 @@ Here are my past events, most recent first, in a nice scrollable list no one wil
 </p>
 
 <div style="height: 400px; overflow:scroll">
+
+<p>
+<a href="https://devnexus.com/speakers/329">Kicking Butt with Vue.js</a><br/>
+DevNexus<br/>
+Atlanta, GA, February 19-21, 2020
+</p>
 
 <p>
 <a href="https://cfe.dev/events/flashback-conference-2020/">The Dynamic Web, from CGI to Serverless</a><br/>
