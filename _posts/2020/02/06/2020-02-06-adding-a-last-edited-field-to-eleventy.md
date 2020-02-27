@@ -3,7 +3,7 @@ layout: post
 title: "Adding a Last Edited Field to Eleventy"
 date: "2020-02-06"
 categories: ["static sites"]
-tags: []
+tags: ["eleventy"]
 banner_image: /images/banners/calendar1.jpg
 permalink: /2020/02/06/adding-a-last-edited-field-to-eleventy
 description: How to add a "Last Edited" value to Eleventy pages.

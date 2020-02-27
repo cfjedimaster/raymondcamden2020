@@ -3,7 +3,7 @@ layout: post
 title: "Checking (and Upgrading) Template Engines in Eleventy"
 date: "2020-02-07"
 categories: ["static sites"]
-tags: []
+tags: ["eleventy"]
 banner_image: /images/banners/liquid.jpg
 permalink: /2020/02/07/checking-and-upgrading-template-engines-in-eleventy
 description: How to check the version of embedded template engines in Eleventy

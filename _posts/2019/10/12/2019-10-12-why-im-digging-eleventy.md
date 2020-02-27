@@ -3,7 +3,7 @@ layout: post
 title: "Why I'm Digging Eleventy"
 date: "2019-10-12"
 categories: ["static sites"]
-tags: []
+tags: ["eleventy"]
 banner_image: /images/banners/eleven.jpg
 permalink: /2019/10/12/why-im-digging-eleventy
 description: 
