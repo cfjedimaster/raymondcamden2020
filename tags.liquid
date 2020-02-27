@@ -6,7 +6,7 @@ pagination:
     filter:
         - all
         - posts
-permalink: "tags/{{ tag | slug }}/"
+permalink: "tags/{{ tag | myEscape }}/"
 layout: tag
 renderData:
     title: "{{ tag }}"
