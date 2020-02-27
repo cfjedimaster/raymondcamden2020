@@ -29,12 +29,12 @@ layout: default
                     </div><!-- .share-post -->
                     <div class="tag-links">
                     {% if categories.size > 0 %}
-                        Posted in: {% for cat in categories %}<a href="{{site.baseurl}}/categories/{{ cat | cgi_escape }}"
+                        Posted in: {% for cat in categories %}<a href="{{site.baseurl}}/categories/{{ cat | myEscape }}"
                             title="Pages in {{ cat }}" rel="cat">{{ cat }}</a>{% unless forloop.last %} {% endunless %}{% endfor %}
                     {% endif %}
 
                     {% if tags.size > 0 %}
-                        Tagged: {% for tag in tags %}<a href="{{site.baseurl}}/tags/{{ tag | cgi_escape }}" title="Pages tagged {{ tag }}" rel="tag">{{ tag }}</a>{% unless forloop.last %} {% endunless %}{% endfor %}
+                        Tagged: {% for tag in tags %}<a href="{{site.baseurl}}/tags/{{ tag | myEscape }}" title="Pages tagged {{ tag }}" rel="tag">{{ tag }}</a>{% unless forloop.last %} {% endunless %}{% endfor %}
                     {% endif %}
                     </div>
 
