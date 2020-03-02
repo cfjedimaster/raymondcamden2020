@@ -41,7 +41,7 @@ textarea {
 }
 </style>
 
-<form method="POST" id="contactform" data-netlify="true" name="contact" action="/thankyou">
+<form method="POST" id="contactform" data-netlify="true" name="contact2" action="/thankyou">
 
 <label for="contact_name">Name: </label>
 <input type="text" name="name" id="contact_name" required><br/>
