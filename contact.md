@@ -41,8 +41,7 @@ textarea {
 }
 </style>
 
-<form action="//formspree.io/raymondcamden@gmail.com" method="POST" id="contactform">
-<input type="hidden" name="_next" value="{{ site.url }}/thankyou">
+<form method="POST" id="contactform" data-netlify="true" name="contact" action="/thankyou">
 <input type="hidden" name="_subject" id="_subject" value="Blog Contact Form">
 <input type="hidden" name="_format" value="plain">
 
