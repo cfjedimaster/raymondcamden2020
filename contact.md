@@ -42,10 +42,6 @@ textarea {
 </style>
 
 <form method="POST" id="contactform" data-netlify="true" name="contact" action="/thankyou">
-<input type="hidden" name="_subject" id="_subject" value="Blog Contact Form">
-<input type="hidden" name="_format" value="plain">
-
-<input type="text" name="_gotcha" style="display:none" />
 
 <label for="contact_name">Name: </label>
 <input type="text" name="name" id="contact_name" required><br/>
