@@ -42,7 +42,7 @@ textarea {
 </style>
 
 <form action="https://formspree.io/amevkqex" method="POST" id="contactform">
-<input type="hidden" name="_next" value="{{ site.baseurl }}/thankyou">
+<input type="hidden" name="_next" value="https://www.raymondcamden.com/thankyou">
 <input type="hidden" name="_subject" id="_subject" value="Blog Contact Form">
 <input type="hidden" name="_format" value="plain">
 
