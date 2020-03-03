@@ -78,7 +78,8 @@ module.exports = function(eleventyConfig) {
 	eleventyConfig.addFilter("reverse", a => a.slice().reverse() );
 
 	eleventyConfig.addCollection("posts", collection => {
-		let posts = collection.getFilteredByGlob("_posts/**/*.md");
+   let posts = collection.getFilteredByGlob("_posts/**/*.md");
+
 		for(let i=0;i<posts.length;i++) {
 			posts[i].data.permalink += '.html';
       posts[i].outputPath += '/index.html';
