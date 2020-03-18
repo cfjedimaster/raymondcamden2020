@@ -13,7 +13,7 @@ guid: 3939
 <!--more-->
 <p/>
 
-<code>
+<pre><code data-language="html">
 &lt;cfset s = "&lt;font color=""red""&gt;&lt;b&gt;foo&lt;/b&gt;&lt;/font&gt;"&gt;
 &lt;cfxml variable="x"&gt;
 &lt;root&gt;
@@ -25,7 +25,7 @@ guid: 3939
 &lt;cfoutput&gt;
 #htmleditformat(toString(x))#
 &lt;/cfoutput&gt;
-</code>
+</code></pre>
 
 <p/>
 
@@ -41,9 +41,9 @@ As you can see, the HTML was escaped. That's not good. So what to do? When I fir
 
 <p/>
 
-<code>
+<pre><code>
 &lt;cfset x.root.child[1].xmlText = "&lt;![CDATA[" &  s & "]]&gt;"&gt;
-</code>
+</code></pre>
 
 <p/>
 
@@ -59,9 +59,9 @@ Finally I did some Googling, and ran across <a href="http://www.mail-archive.com
 
 <p/>
 
-<code>
+<pre><code>
 &lt;cfset x.root.child[1].xmlCData =   s&gt;
-</code>
+</code></pre>
 
 <p/>
 
