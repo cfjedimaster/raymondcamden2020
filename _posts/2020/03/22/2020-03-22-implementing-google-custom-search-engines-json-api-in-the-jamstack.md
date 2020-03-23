@@ -6,7 +6,7 @@ categories: ["serverless"]
 tags: ["javascript"]
 banner_image: /images/banners/search.jpg
 permalink: /2020/03/22/implementing-google-custom-search-engines-json-api-in-the-jamstack
-description: Using Google CSE JSON API via Serverless functions
+description: Using Google Custom Search Engine JSON API via Serverless functions
 ---
 
 I've been a fan of Google's [Custom Search Engine](https://cse.google.com) support for quite some time now. I use it [here](/search) to handle adding search to my site. In all the time I've used CSE though, I've only used it via the "embed" option (again, as you see on my site), but Google also supports a [JSON API](https://developers.google.com/custom-search/v1/overview) which gives you more fine grained control over displaying search results. I recently had to build a demo for someone using ColdFusion, so I thought I'd take a stab at demonstrating how to do with with serverless functions and the JAMStack.
