@@ -4,7 +4,7 @@ title: "Implementing Google Custom Search Engine's JSON API in the JAMStack"
 date: "2020-03-22"
 categories: ["serverless"]
 tags: ["javascript"]
-banner_image: /images/banners/welcome2018.jpg
+banner_image: /images/banners/search.jpg
 permalink: /2020/03/22/implementing-google-custom-search-engines-json-api-in-the-jamstack
 description: Using Google CSE JSON API via Serverless functions
 ---
