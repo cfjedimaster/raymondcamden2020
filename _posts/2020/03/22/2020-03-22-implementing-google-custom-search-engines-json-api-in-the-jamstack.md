@@ -23,7 +23,7 @@ A basic request looks like so: `https://www.googleapis.com/customsearch/v1?key=K
 
 Everything there should be relatively obvious except for `cx` which is your search engine ID. If you go to the CSE portal, select one of your CSEs, you can see it here:
 
-<img src="https://static.raymondcamden.com/images/2020/03/cse1a.png" alt="Image from CSE Portal" class="imgborder imgcenter">
+<img class="lazyload" data-src="https://static.raymondcamden.com/images/2020/03/cse1a.png" alt="Image from CSE Portal" class="imgborder imgcenter">
 
 The other variable you would use is `start` which controls pagination. This number cannot go over 91. 
 
@@ -211,4 +211,4 @@ In general this is just a simple wrapper to a back end API, but pay particular a
 
 So I'd love to show this to you. It *is* live right now on a demo site. But since I've got a limit of 100 requests per day, I don't think I can safely share it. You are welcome to the [source code](https://github.com/cfjedimaster/NetlifyTestingZone) but you'll have to trust me on how awesome it looks. Wait, don't trust me, look at this most excellent screen shot:
 
-<img src="https://static.raymondcamden.com/images/2020/03/cse2.png" alt="Screen shot" class="imgborder imgcenter">
+<img class="lazyload" data-src="https://static.raymondcamden.com/images/2020/03/cse2.png" alt="Screen shot" class="imgborder imgcenter">
