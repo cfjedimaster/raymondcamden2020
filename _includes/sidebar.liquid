@@ -4,6 +4,9 @@
     <section class="widget widget-text">
         <h2 class="widget-title">About {{ site.author_name }}</h2>
         <p>{{ site.author_bio }}</p>
+        <div style="margin:auto;width:200px;padding-bottom:0px">
+        {% include coffee %}
+        </div>
     </section><!-- .widget-text -->
     {% endif %}
 
@@ -12,10 +15,6 @@
         <ul class="recent-posts">
         </ul><!-- .recent-posts -->
     </section><!-- .widget-recent-posts -->
-
-    <div style="margin:auto;width:200px;padding-bottom:30px">
-    {% include coffee %}
-    </div>
 
     {% assign cats = collections | postCategories %}
 
@@ -39,19 +38,5 @@
             {% endfor %}
         </div><!-- .tagcloud -->
     </section><!-- .widget -->
-
-    <section class="widget">
-        <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-        <!-- Blog 2018 Right -->
-        <ins class="adsbygoogle"
-            style="display:block"
-            data-ad-client="ca-pub-1736437642005360"
-            data-ad-slot="5087649347"
-            data-ad-format="auto"></ins>
-        <script>
-        (adsbygoogle = window.adsbygoogle || []).push({});
-        </script>
-
-    </section>
 
 </aside><!-- .sidebar -->
