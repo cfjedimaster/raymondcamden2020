@@ -25,25 +25,25 @@ That was a longish intro so let's walk through an example. I'm going to build a 
 
 Ok, assuming you've signed up for Pipedream, your default view is a dashboard of your workflows:
 
-<img class="lazyload" data-src="https://static.raymondcamden.com/images/2020/03/p1.png" alt="Pipedream dashboard" class="imgborder imgcenter">
+<img data-src="https://static.raymondcamden.com/images/2020/03/p1.png" alt="Pipedream dashboard" class="lazyload imgborder imgcenter">
 
 Begin by clicking the big obvious green New Workflow button.
 
-<img class="lazyload" data-src="https://static.raymondcamden.com/images/2020/03/p2.png" alt="Workflow dashboard" class="imgborder imgcenter">
+<img data-src="https://static.raymondcamden.com/images/2020/03/p2.png" alt="Workflow dashboard" class="lazyload imgborder imgcenter">
 
 This is the default dashboard for working with workflows and there's a *lot* going on in it. One of the issues with the site now is that they don't use a lot of alt text on their images and sometimes it's difficult to know what a particular UI item does. I've let them know this and they're working on correcting it. Right now though I'm going to focus on two parts. I'm going to give it a title (upper left hand side) and then select the "Cron Scheduler" trigger as I want a time based workflow:
 
-<img class="lazyload" data-src="https://static.raymondcamden.com/images/2020/03/p3.png" alt="Workflow with settings" class="imgborder imgcenter">
+<img data-src="https://static.raymondcamden.com/images/2020/03/p3.png" alt="Workflow with settings" class="lazyload imgborder imgcenter">
 
 Note that the Cron trigger has both a simple and complex view which I *really* appreciate. Cron syntax makes regex look friendly so I like having a simpler way to define my timing schedule. 
 
 Ok, so notice the + sign below my trigger. Clicking it gives you a quick form to select your next step. 
 
-<img class="lazyload" data-src="https://static.raymondcamden.com/images/2020/03/p4.png" alt="Adding a new step" class="imgborder imgcenter">
+<img data-src="https://static.raymondcamden.com/images/2020/03/p4.png" alt="Adding a new step" class="lazyload imgborder imgcenter">
 
 I'm going to select the "Search Twitter" action:
 
-<img class="lazyload" data-src="https://static.raymondcamden.com/images/2020/03/p5.png" alt="Search Twitter" class="imgborder imgcenter">
+<img data-src="https://static.raymondcamden.com/images/2020/03/p5.png" alt="Search Twitter" class="lazyload imgborder imgcenter">
 
 So it was a bit hard to fit this into a screen shot but I want to point out a few things. First, I love the big obvious warning at the bottom. It's making it clear I need to connect this to an account. Then note the big red button in the step itself. That's what I'll click to connect the workflow to my Twitter account. Next notice params. It's showing you one param, q, which is your search term. There's more properties but this action takes a sensible view of, "90% of the time all you need is this one param." I've noticed this in a bunch of actions and it's really nicely done. 
 
@@ -51,37 +51,37 @@ What you see only partially in the screen shot is the code. You do not have to m
 
 I clicked connect account and selected my current account and then entered a term. 
 
-<img class="lazyload" data-src="https://static.raymondcamden.com/images/2020/03/p6.png" alt="Search term selected" class="imgborder imgcenter">
+<img data-src="https://static.raymondcamden.com/images/2020/03/p6.png" alt="Search term selected" class="lazyload imgborder imgcenter">
 
 Next we'll add a new step and select "Run Node.js code". This is where we'll write some custom logic. I'm going to take the results from the Twitter search and make it better for an email. 
 
-<img class="lazyload" data-src="https://static.raymondcamden.com/images/2020/03/p7a.png" alt="Code" class="imgborder imgcenter">
+<img data-src="https://static.raymondcamden.com/images/2020/03/p7a.png" alt="Code" class="lazyload imgborder imgcenter">
 
 Basically it creates a variable, `this.message`, and populates it with the result of the previous step. Note how it access it via `steps.search_twitter.$return_value`. Also note that by writing to `this.message` the value will be available in later steps.
 
 For the final step I'll click add again, and select "Email by Pipedream":
 
-<img class="lazyload" data-src="https://static.raymondcamden.com/images/2020/03/p8.png" alt="" class="imgborder imgcenter">
+<img  data-src="https://static.raymondcamden.com/images/2020/03/p8.png" alt="" class="lazyload imgborder imgcenter">
 
 This step automatically emails me, the workflow owner, so I just need to customize the subject and message text. For subject I simply entered a hard coded value. For text, I can address step data by typing "step" and the field autocompletes as I typed. My previous step was named "nodejs" (that's a default value and you can, and should, rename your steps) so I ended up with the following values:
 
-<img class="lazyload" data-src="https://static.raymondcamden.com/images/2020/03/p9.png" alt="Email settings" class="imgborder imgcenter">
+<img data-src="https://static.raymondcamden.com/images/2020/03/p9.png" alt="Email settings" class="lazyload imgborder imgcenter">
 
 The last thing I did was click Deploy. Now for the fun part - you can test your workflow by hitting "Run Now":
 
-<img class="lazyload" data-src="https://static.raymondcamden.com/images/2020/03/p10.png" alt="Finished workflow" class="imgborder imgcenter">
+<img data-src="https://static.raymondcamden.com/images/2020/03/p10.png" alt="Finished workflow" class="lazyload imgborder imgcenter">
 
 What's cool now - and it wasn't completely obvious to me at first - if you click the event now you will see the data in the workflow itself - ie you'll see the results in every step. So I click the execution first (and note it flags errors here in a quick to read way as well as execution time):
 
-<img class="lazyload" data-src="https://static.raymondcamden.com/images/2020/03/p11.png" alt="Logs of operations" class="imgborder imgcenter">
+<img data-src="https://static.raymondcamden.com/images/2020/03/p11.png" alt="Logs of operations" class="lazyload imgborder imgcenter">
 
 After you click it, then go to a step, like the search twitter one, to see the result data:
 
-<img class="lazyload" data-src="https://static.raymondcamden.com/images/2020/03/p12.png" alt="Result data" class="imgborder imgcenter">
+<img data-src="https://static.raymondcamden.com/images/2020/03/p12.png" alt="Result data" class="lazyload imgborder imgcenter">
 
 This is really useful for debugging. I'll also note that you can use console.log and see the messages. And here's the email:
 
-<img class="lazyload" data-src="https://static.raymondcamden.com/images/2020/03/p13.png" alt="email" class="imgborder imgcenter">
+<img data-src="https://static.raymondcamden.com/images/2020/03/p13.png" alt="email" class="lazyload imgborder imgcenter">
 
 As I said, it's easy to copy and reuse workflows. You can find mine [here](https://pipedream.com/@raymondcamden/email-me-da-kittahs-p_MOCMdZ/edit) but I'd suggest the [nicer one](https://pipedream.com/@dylan/email-me-new-tweets-p_RRCaqW/edit) by Dylan.
 
