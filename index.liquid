@@ -12,7 +12,15 @@ layout: default
                 <header class="entry-header"> 
                     <div class="entry-header-wrap">
                         {% if post.data.banner_image %}
-                        <a href="{{post.url}}" class="post-thumbnail"><img class="lazyload" data-src="{{ "https://static.raymondcamden.com" | append: post.data.banner_image }}" alt="{% if post.data.banner_image_alt %}{{ post.data.banner_image_alt }}{% else %}{{ post.data.title }} {% endif %}"></a>
+                        <a href="{{post.url}}" class="post-thumbnail">
+                            <img 
+                            {% if forloop.first %}
+                            src="{{ "https://static.raymondcamden.com" | append: post.data.banner_image }}"
+                            {% else %}
+                            class="lazyload" data-src="{{ "https://static.raymondcamden.com" | append: post.data.banner_image }}" 
+                            {% endif %}
+                            
+                            alt="{% if post.data.banner_image_alt %}{{ post.data.banner_image_alt }}{% else %}{{ post.data.title }} {% endif %}" width="900"></a>
                         {% endif %}
                         <h2 class="entry-title"><a href="{{ post.url }}" rel="bookmark" title="Permanent Link to {{ post.url }}">{{post.data.title}}</a></h2>
                     </div><!-- .entry-header-wrap -->
