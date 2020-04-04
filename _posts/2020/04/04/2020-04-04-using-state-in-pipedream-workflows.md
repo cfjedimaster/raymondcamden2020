@@ -6,7 +6,7 @@ categories: ["serverless"]
 tags: ["javascript"]
 banner_image: /images/banners/pipes2.jpg
 permalink: /2020/04/04/using-state-in-pipedream-workflows
-description: Using context in Pipedream to remember values
+description: Using checkpoint in Pipedream to remember values
 ---
 
 I've been playing a lot with [Pipedream](https://pipedream.com/) lately and have been enjoying the heck out of it. If you didn't see it, my [last post](https://www.raymondcamden.com/2020/04/02/building-a-twitter-bot-in-pipedream) described how to build a simple Twitter bot using the platform. Today I want to demonstrate something else with Pipedream, a feature that is pretty simple but incredibly useful - [managing state](https://docs.pipedream.com/workflows/steps/code/#managing-state). 
@@ -15,9 +15,9 @@ Many times when working with serverless functions, it would be convenient to sto
 
 One of my favorite features of Webtask (sigh, RIP Webtask) was that it supported a state system that let you read and write to a JavaScript object that persisted for your function. Obviously it doesn't replace something like MongoDB but for remembering a few values it was incredibly useful. 
 
-Pipedream has a similar feature, but done a lot better I think. Pipedream supports a variable called `$context`. This value will persist for your workflow. It can contain anything, either a simple value (maybe you want to store only one thing) or a full JavaScript object. Anything that can be serialized can be stored. Even better, while $context is global to the entire workflow (and is most likely the option you'll use), you can even have *per step* state if you use `$this.context`. 
+Pipedream has a similar feature, but done a lot better I think. Pipedream supports a variable called `$checkpoint`. This value will persist for your workflow. It can contain anything, either a simple value (maybe you want to store only one thing) or a full JavaScript object. Anything that can be serialized can be stored. Even better, while $checkpoint is global to the entire workflow (and is most likely the option you'll use), you can even have *per step* state if you use `$this.checkpoint`. 
 
-When I first [blogged](https://www.raymondcamden.com/2020/03/28/a-look-at-pipedream) about Pipedream, I described a simple workflow that did a Twitter search, formatted the results, and emailed them to me. One issue with the workflow is that it would (possibly) keep sending the same results over and over again. The Twitter API supports returning results after a previous tweet so this should be easy to fix, and with the `$context` variable, it's easy to implement. (See my note at the bottom.) 
+When I first [blogged](https://www.raymondcamden.com/2020/03/28/a-look-at-pipedream) about Pipedream, I described a simple workflow that did a Twitter search, formatted the results, and emailed them to me. One issue with the workflow is that it would (possibly) keep sending the same results over and over again. The Twitter API supports returning results after a previous tweet so this should be easy to fix, and with the `$checkpoint` variable, it's easy to implement. (See my note at the bottom.) 
 
 Before I describe how I did it, here's a quick refresher of how the workflow looked. In this case I'm using the nicer workflow [Dylan Sather](https://twitter.com/DylanSather) of Pipedream had setup. It was a bit more complex, and reusable than the simpler version I did. Anyway, here are the steps:
 
