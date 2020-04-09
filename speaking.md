@@ -16,21 +16,15 @@ I started a blog. I feel like I have to struggle to learn new things and if I ca
 <h3>My Next Events</h3>
 
 <p>
-<a href="https://www.twitch.tv/polyglotdev">Twitch stream on Eleventy</a><br/>
-I'll be doing a stream on polyglotdev about the coolness that is Eleventy.<br/>
-Online, March 31, 2020
-</p>
-
-<p>
-<a href="https://www.twitch.tv/heredev">Displaying your Data Hub Data</a><br/>
-A Twitch stream where I'll demonstrate different ways of mapping Data Hub geospatial data.<br/>
-Online, April 1, 2020
-</p>
-
-<p>
 <a href="https://www.twitch.tv/heredev">Adding Location Services to your JAMstack</a><br/>
 A look at using HERE location services with static sites. Another Twitch livestream!<br/>
 Online, April 15, 2020
+</p>
+
+<p>
+<a href="https://devchat.tv/conferences/javascript-remote-2020/">Learning JavaScript by Doing JavaScript</a>
+JavaScript Remote Conf 2020<br/>
+Online, May 13, 2020
 </p>
 
 <h3>My Past Events</h3>
@@ -40,6 +34,18 @@ Here are my past events, most recent first, in a nice scrollable list no one wil
 </p>
 
 <div style="height: 400px; overflow:scroll">
+
+<p>
+<a href="https://www.twitch.tv/heredev">Displaying your Data Hub Data</a><br/>
+A Twitch stream where I'll demonstrate different ways of mapping Data Hub geospatial data.<br/>
+Online, April 1, 2020
+</p>
+
+<p>
+<a href="https://www.twitch.tv/polyglotdev">Twitch stream on Eleventy</a><br/>
+I'll be doing a stream on polyglotdev about the coolness that is Eleventy.<br/>
+Online, March 31, 2020
+</p>
 
 <p>
 <a href="https://devnexus.com/speakers/329">Kicking Butt with Vue.js</a><br/>
