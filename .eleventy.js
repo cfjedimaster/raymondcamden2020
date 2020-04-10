@@ -27,7 +27,8 @@ module.exports = function(eleventyConfig) {
       .replace(/</g, '&lt;')
       .replace(/>/g, '&gt;')
       .replace(/"/g, '&quot;')
-      .replace(/'/g, '&apos;');
+      .replace(/'/g, '&apos;')
+      .replace(/data-src/g,'src');
   });
 
   eleventyConfig.addFilter('getByCategory', (posts,cat) => {
