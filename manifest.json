@@ -10,8 +10,8 @@
 	"description": "DevRel at large, Star Wars nerd, Web/Serverless hacker, lover of good beer and good books. Oh, and cats.",
 	"orientation": "any",
 	"background_color": "transparent",
-	"related_applications": "",
-	"prefer_related_applications": "false",
+	"related_applications": [],
+	"prefer_related_applications": false,
 	"generated": "true",
 	"icons": [
 		{

@@ -17,7 +17,7 @@
     {% endif %}
     <link rel="manifest" href="/manifest.json">
     <link rel="shortcut icon" href="{{ "/favicon.ico" | prepend: site.url }}">
-    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Lato:400,400italic,700,700italic&display=swap" />
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Lato:400,400italic,700,700italic&display=swap" media="print" onload="this.media='all'" />
     <link rel="stylesheet" href="/css/main.css" />
     <link rel="stylesheet" href="/css/prism.css" />
     <link rel="canonical" href="{{ page.url | replace:'/index.html','/' | prepend: site.url }}">
