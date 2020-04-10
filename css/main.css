@@ -2,7 +2,7 @@
 /** Variables ---------------------------------------------------------------------------- */
 /* Colors */
 /** Icons | Font Awesome by Dave Gandy | http://fontawesome.io ---------------------------------------------------------------------------- */
-@font-face { font-family: 'fontawesome'; src: url("../fonts/fontawesome.eot?lc16yo"); src: url("../fonts/fontawesome.eot?lc16yo#iefix") format("embedded-opentype"), url("../fonts/fontawesome.ttf?lc16yo") format("truetype"), url("../fonts/fontawesome.woff?lc16yo") format("woff"), url("../fonts/fontawesome.svg?lc16yo#fontawesome") format("svg"); font-weight: normal; font-style: normal; }
+@font-face { font-family: 'fontawesome'; src: url("../fonts/fontawesome.eot?lc16yo"); src: url("../fonts/fontawesome.eot?lc16yo#iefix") format("embedded-opentype"), url("../fonts/fontawesome.ttf?lc16yo") format("truetype"), url("../fonts/fontawesome.woff?lc16yo") format("woff"), url("../fonts/fontawesome.svg?lc16yo#fontawesome") format("svg"); font-weight: normal; font-style: normal; font-display: swap; }
 
 [class^="fa-"], [class*=" fa-"] { /* use !important to prevent issues with browser extensions that change fonts */ font-family: 'fontawesome' !important; speak: none; font-style: normal; font-weight: normal; font-variant: normal; text-transform: none; line-height: 1; /* Better Font Rendering =========== */ -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
 
