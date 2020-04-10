@@ -27,6 +27,12 @@ JavaScript Remote Conf 2020<br/>
 Online, May 13, 2020
 </p>
 
+<p>
+<a href="https://www.meetup.com/SeattleVueJS/events/269959927/">Introduction to Vue.js</a>
+Seattle VueJS Meetup<br/>
+Online, May 27, 2020
+</p>
+
 <h3>My Past Events</h3>
 
 <p>
