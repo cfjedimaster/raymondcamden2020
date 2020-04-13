@@ -5,7 +5,7 @@ date: "2020-04-13"
 categories: ["developer"]
 tags: []
 banner_image: /images/banners/wrong_way.jpg
-permalink: /2020/04/13/my-developer-relations-red-flags
+permalink: /2020/04/13/what-are-red-flags-to-me
 description: Some things that make me worry as a developer...
 ---
 
