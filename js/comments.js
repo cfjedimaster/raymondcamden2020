@@ -1,6 +1,5 @@
 let is_disqus_loaded = false;
 function loadComments(){
-	console.log('load comments');
 	if(!is_disqus_loaded){
 		is_disqus_loaded = true;
 		const d = document, s = d.createElement('script');
