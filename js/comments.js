@@ -1,5 +1,6 @@
 let is_disqus_loaded = false;
 function loadComments(){
+	console.log('load comments');
 	if(!is_disqus_loaded){
 		is_disqus_loaded = true;
 		const d = document, s = d.createElement('script');
@@ -13,7 +14,7 @@ if(/bot|google|baidu|bing|msn|duckduckgo|slurp|yandex/i.test(navigator.userAgent
 	loadComments();
 }
 // load comments if URL hash contains #comment
-if(location && location.hash && location.hash.includes('comments')){
+if(location && location.hash && location.hash.includes('comment')){
 	loadComments();
 }
 // load comments when comments enter viewport
