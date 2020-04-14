@@ -20,7 +20,7 @@ If you find this information useful (currently at {{ collections.posts | size }}
 I have not done a great job of tracking my various articles on other web sites, but I hope to correct that now. Consider the list below a beginning (as of July 2013) and certainly <i>not</i> a complete list.
 
 <ul>
-<li><a href="This went live a few days ago and I missed it - I compared the experience of building a @vuejs app in three different UI platforms: https://blog.logrocket.com/comparing-the-web-page-designs-of-three-vue-ui-libraries/">Comparing the web page designs of three Vue UI libraries</a></li>
+<li><a href="https://blog.logrocket.com/comparing-the-web-page-designs-of-three-vue-ui-libraries">Comparing the web page designs of three Vue UI libraries</a></li>
 <li><a href="https://blog.logrocket.com/charting-with-vue-a-comparison/">Charting with Vue: A comparison</a> for LogRocket</li>
 <li><a href="https://www.stackbit.com/blog/jamstack-voice-assistants/">Voice Assistants and the JAMstack</a> for Stackbit</li>
 <li><a href="https://www.stackbit.com/blog/jamstack-search/">Searching the JAMStack</a> for Stackbit</li>
