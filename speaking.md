@@ -16,9 +16,8 @@ I started a blog. I feel like I have to struggle to learn new things and if I ca
 <h3>My Next Events</h3>
 
 <p>
-<a href="https://www.twitch.tv/heredev">Adding Location Services to your JAMstack</a><br/>
-A look at using HERE location services with static sites. Another Twitch livestream!<br/>
-Online, April 15, 2020
+Geocoding and Search<br/>
+Online, April 28, 2020
 </p>
 
 <p>
@@ -40,6 +39,17 @@ Here are my past events, most recent first, in a nice scrollable list no one wil
 </p>
 
 <div style="height: 400px; overflow:scroll">
+
+<p>
+Introduction to HERE Studio<br/>
+Online, April 24, 2020
+</p>
+
+<p>
+<a href="https://www.twitch.tv/heredev">Adding Location Services to your JAMstack</a><br/>
+A look at using HERE location services with static sites. Another Twitch livestream!<br/>
+Online, April 15, 2020
+</p>
 
 <p>
 <a href="https://www.twitch.tv/heredev">Displaying your Data Hub Data</a><br/>
