@@ -3,7 +3,7 @@ layout: post
 title: "Processing Email Sentiment with Pipedream"
 date: "2020-04-15"
 categories: ["serverless"]
-tags: ["javascript"]
+tags: ["javascript","pipedream"]
 banner_image: /images/banners/angrycat.jpg
 permalink: /2020/04/15/processing-email-sentiment-with-pipedream
 description: A sentiment analysis workflow example with Pipedream

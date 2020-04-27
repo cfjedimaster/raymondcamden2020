@@ -3,7 +3,7 @@ layout: post
 title: "Creating Both HTML and API with Pipedream"
 date: "2020-04-14"
 categories: ["serverless"]
-tags: ["javascript"]
+tags: ["javascript","pipedream"]
 banner_image: /images/banners/pipes.jpg
 permalink: /2020/04/14/creating-both-html-and-api-with-pipedream
 description: Serving both HTML and data with a Pipedream workflow

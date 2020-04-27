@@ -3,7 +3,7 @@ layout: post
 title: "Using State in Pipedream Workflows"
 date: "2020-04-04"
 categories: ["serverless"]
-tags: ["javascript"]
+tags: ["javascript","pipedream"]
 banner_image: /images/banners/pipes2.jpg
 permalink: /2020/04/04/using-state-in-pipedream-workflows
 description: Using checkpoint in Pipedream to remember values

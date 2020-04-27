@@ -3,7 +3,7 @@ layout: post
 title: "Building a Google Sheets Twitter Bot with Pipedream"
 date: "2020-04-27"
 categories: ["serverless"]
-tags: ["javascript"]
+tags: ["javascript","pipedream"]
 banner_image: /images/banners/moon.jpg
 permalink: /2020/04/27/building-a-google-sheets-twitter-bot-with-pipedream
 description: Using Pipedream to create a Google Sheets-driven "random" Twitter Bot

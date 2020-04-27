@@ -3,7 +3,7 @@ layout: post
 title: "Building a Twitter Bot in Pipedream"
 date: "2020-04-02"
 categories: ["serverless"]
-tags: ["javascript"]
+tags: ["javascript","pipedream"]
 banner_image: /images/banners/rah.jpg
 permalink: /2020/04/02/building-a-twitter-bot-in-pipedream
 description: Building a Twitter Bot in the Pipedream platform

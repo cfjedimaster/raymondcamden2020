@@ -3,7 +3,7 @@ layout: post
 title: "A Look at Pipedream"
 date: "2020-03-28"
 categories: ["serverless"]
-tags: ["javascript"]
+tags: ["javascript","pipedream"]
 banner_image: /images/banners/pipes.jpg
 permalink: /2020/03/28/a-look-at-pipedream
 description: A look at building workflows, simply and serverless, with Pipedream

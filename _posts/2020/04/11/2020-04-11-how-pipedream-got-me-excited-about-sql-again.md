@@ -3,7 +3,7 @@ layout: post
 title: "How Pipedream Got Me Excited About SQL Again"
 date: "2020-04-11"
 categories: ["serverless"]
-tags: ["javascript"]
+tags: ["javascript","pipedream"]
 banner_image: /images/banners/pipes3.jpg
 permalink: /2020/04/11/how-pipedream-got-me-excited-about-sql-again
 description: A look at Pipedream's SQL Service
