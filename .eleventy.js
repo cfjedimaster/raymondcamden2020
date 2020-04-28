@@ -14,6 +14,7 @@ module.exports = function(eleventyConfig) {
 	eleventyConfig.addPassthroughCopy("./ads.txt");
 	eleventyConfig.addPassthroughCopy("./_redirects");
 	eleventyConfig.addPassthroughCopy("./*.png");
+	eleventyConfig.addPassthroughCopy("./service-worker.js");
 
 	//reference: https://github.com/11ty/eleventy/issues/179#issuecomment-413119342
 	eleventyConfig.addShortcode('excerpt', post => extractExcerpt(post));
