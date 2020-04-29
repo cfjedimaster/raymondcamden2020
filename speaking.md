@@ -16,8 +16,9 @@ I started a blog. I feel like I have to struggle to learn new things and if I ca
 <h3>My Next Events</h3>
 
 <p>
-Geocoding and Search<br/>
-Online, April 28, 2020
+<a href="https://opensource101.com/sessions/writing-the-darn-docs/">Writing the Darn Docs</a>
+OpenSource 101 at Home<br/>
+Online, May 13, 2020
 </p>
 
 <p>
@@ -25,6 +26,7 @@ Online, April 28, 2020
 JavaScript Remote Conf 2020<br/>
 Online, May 13, 2020
 </p>
+
 
 <p>
 <a href="https://www.meetup.com/SeattleVueJS/events/269959927/">Introduction to Vue.js</a>
@@ -39,6 +41,11 @@ Here are my past events, most recent first, in a nice scrollable list no one wil
 </p>
 
 <div style="height: 400px; overflow:scroll">
+
+<p>
+Geocoding and Search<br/>
+Online, April 28, 2020
+</p>
 
 <p>
 Introduction to HERE Studio<br/>
