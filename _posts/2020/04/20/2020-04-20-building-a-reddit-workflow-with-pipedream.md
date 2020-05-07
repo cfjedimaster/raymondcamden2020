@@ -3,7 +3,7 @@ layout: post
 title: "Building a Reddit Workflow with Pipedream"
 date: "2020-04-20"
 categories: ["serverless"]
-tags: ["javascript"]
+tags: ["javascript","pipedream"]
 banner_image: /images/banners/cat_newspaper.jpg
 permalink: /2020/04/20/building-a-reddit-workflow-with-pipedream
 description: Pipedream workflows for working with Reddit
