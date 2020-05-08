@@ -25,7 +25,7 @@ As part of the install process, they document how to check your WSL installs. Yo
 <img data-src="https://static.raymondcamden.com/images/2020/05/wsl1.png" alt="wsl cli example" class="lazyload imgborder imgcenter">
 </p>
 
-To update, you simply run `wsl --set-version Ubuntu 2` wher `Ubuntu` is the name of your distro and may be different. You may get prompted to install stuff first:
+To update, you simply run `wsl --set-version Ubuntu 2` where `Ubuntu` is the name of your distro and may be different. You may get prompted to install stuff first:
 
 <p>
 <img data-src="https://static.raymondcamden.com/images/2020/05/wsl2.png" alt="Warning to install stuff" class="lazyload imgborder imgcenter">
