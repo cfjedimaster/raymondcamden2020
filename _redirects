@@ -117,4 +117,4 @@ admin/index.php /
 /2019/08/08/drag-and-drop-file-upload-in-vuejs/single.txt /2019/08/08/drag-and-drop-file-upload-in-vuejs/
 /index.cfm/2010/6/30/Flash-Remoting-onCFCRequest-Issue /2010/06/30/Flash-Remoting-onCFCRequest-Issue
 
-http://www.raymondcamden.com/wp-content/* https://static.raymondcamden.com/wp-content/
+/wp-content/* https://static.raymondcamden.com/wp-content/:splat
