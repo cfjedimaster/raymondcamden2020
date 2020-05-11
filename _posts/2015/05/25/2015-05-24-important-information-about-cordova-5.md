@@ -21,15 +21,17 @@ So let's talk about this plugin. If you create a new project using the default t
 
 CSP is implemented via a meta tag in your HTML. Again, not your config.xml file but your actual HTML. This is what you'll see in the HTML file from the default template:
 
-<code>&lt;meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *"&gt;</code>
+```html
+&lt;meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *"&gt;
+```
 
 That's pretty weird looking, right? What you are basically seeing is a set of rules that dictate what resources can be loaded and how. You can split the above content by semicolons:
 
-<code>
+```html
 default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'
 style-src 'self' 'unsafe-inline'
 media-src *
-</code>
+```
 
 The beginning of each part represents a "policy directive", basically "what my security rule applies to". So for example, media-src represents <code>audio</code> and <code>video</code> tags. style-src represents style sheets. There's more policy directives (including script-src) to give you really fine grained control over all aspects of your application. You can find the complete list <a href="https://developer.mozilla.org/en-US/docs/Web/Security/CSP/CSP_policy_directives#Supported_policy_directives">here</a>. default-src represents a default value but it <strong>only</strong> applies to policy directives that end with -src. If that sounds confusing, wait, I'm going to make it a bit more confusing in a bit.
 
@@ -43,16 +45,20 @@ Now - I know all of us are good JavaScript developers and <strong>always</strong
 
 Let's consider a simple example. I created a new application and then added a CDN copy of jQuery:
 
-<code>&lt;script src="http://code.jquery.com/jquery-2.1.4.min.js" /&gt;</code>
+```html
+&lt;script src="http://code.jquery.com/jquery-2.1.4.min.js" /&gt;
+```
 
 <strong>To be clear - I do not recommend this. If you do this and your app is offline than your entire application is screwed.</strong>
 
 I then used this code in my deviceReady block:
 
-<pre><code class="language-javascript">$.get("http://www.cnn.com", function(res) {
+```js
+$.get("http://www.cnn.com", function(res) {
     console.log(res);
     $("h1").html("set to cnn");
-}</code></pre>
+}
+```
 
 Out the gate, none of this will work. You can see this yourself in your remote inspector:
 
@@ -60,9 +66,9 @@ Out the gate, none of this will work. You can see this yourself in your remote i
 
 First, I need to update my CSP to allow a script src at code.jquery.com:
 
-<code>
+```html
 script-src 'self' http://code.jquery.com
-</code>
+```
 
 <strong>Notice I added 'self'!</strong> I had thought that default-src including 'self' would cover this, but it does not. As soon as I added script-src, I needed to also add 'self' here to let local scripts work. 
 
@@ -72,11 +78,15 @@ Correcting that lets jQuery load - but guess what - there's more:
 
 What's nice is that the error is actually pretty descriptive. In a lot of security things in the browser I've seen things silently fail so this is a big help. It is telling you that you either need to set permission in default-src, or use the policy directive connect-src. connect-src is what you want here and applies to XHR, WebSocket, and EventSource directives. Here is what I added:
 
-<code>connect-src http://www.cnn.com</code>
+```html
+connect-src http://www.cnn.com<
+```
 
 So... make sense? Let's get a bit more particular. First off, what happens if you screw up your CSP? Imagine the following:
 
-<code>&lt;meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; script-src 'self' http://code.jquery.com connect-src http://www.cnn.com"&gt;</code>
+```html
+&lt;meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; script-src 'self' http://code.jquery.com connect-src http://www.cnn.com"&gt;
+```
 
 See the error? Maybe you don't - that's the point. When running, you will get an error in the console:
 
