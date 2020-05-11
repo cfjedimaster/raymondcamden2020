@@ -22,7 +22,7 @@ So let's talk about this plugin. If you create a new project using the default t
 CSP is implemented via a meta tag in your HTML. Again, not your config.xml file but your actual HTML. This is what you'll see in the HTML file from the default template:
 
 ```html
-&lt;meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *"&gt;
+<meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *">
 ```
 
 That's pretty weird looking, right? What you are basically seeing is a set of rules that dictate what resources can be loaded and how. You can split the above content by semicolons:
@@ -46,7 +46,7 @@ Now - I know all of us are good JavaScript developers and <strong>always</strong
 Let's consider a simple example. I created a new application and then added a CDN copy of jQuery:
 
 ```html
-&lt;script src="http://code.jquery.com/jquery-2.1.4.min.js" /&gt;
+<script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
 ```
 
 <strong>To be clear - I do not recommend this. If you do this and your app is offline than your entire application is screwed.</strong>
@@ -85,7 +85,7 @@ connect-src http://www.cnn.com<
 So... make sense? Let's get a bit more particular. First off, what happens if you screw up your CSP? Imagine the following:
 
 ```html
-&lt;meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; script-src 'self' http://code.jquery.com connect-src http://www.cnn.com"&gt;
+<meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; script-src 'self' http://code.jquery.com connect-src http://www.cnn.com">
 ```
 
 See the error? Maybe you don't - that's the point. When running, you will get an error in the console:
