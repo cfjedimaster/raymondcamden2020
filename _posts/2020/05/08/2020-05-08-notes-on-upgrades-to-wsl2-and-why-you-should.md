@@ -53,7 +53,7 @@ On my fancy new laptop, this was rather quick, unfortunately I don't remember ho
 
 You can also make WSL2 the default by doing this: `wsl --set-default-version 2`. I only run one distro on my machine so this really isn't an issue for me.
 
-Ok, done! But wait, there's some very important things to note. I did some immediate testing the first time I did an update and noticed that npm was *not* faster. I was disaappointed, reached out on Twitter, and was reminded that if I'm still using the main Windows filesystem (`/mnt/c`), file IO is still going to be slow. I did some testing under `~/` and right away saw a huge boost. I typically do all my work in `/mnt/c/projects`, but simply set up `~/projects` as my new place to do crap. 
+Ok, done! But wait, there's some very important things to note. I did some immediate testing the first time I did an update and noticed that npm was *not* faster. I was disappointed, reached out on Twitter, and was reminded that if I'm still using the main Windows filesystem (`/mnt/c`), file IO is still going to be slow. I did some testing under `~/` and right away saw a huge boost. I typically do all my work in `/mnt/c/projects`, but simply set up `~/projects` as my new place to do crap. 
 
 This then quickly led to an issue - how do I edit files there? I've got two answers to that.
 
@@ -63,7 +63,7 @@ First, you can browse your distro file system in Explorer.exe by going to `\\wsl
 <img data-src="https://static.raymondcamden.com/images/2020/05/wsl6.png" alt="WSL support in Explorer" class="lazyload imgborder imgcenter">
 </p>
 
-You'll see yuor distros there and can work with your file system. In my testing, I've noticed that when I copy files over to Ubuntu, I *sometimes* get a copy with ":Zone.Identifier" in it. This is known and I believe has something to do with AV stuff. You can read more about it here: [Zone.Identifier Files when copying from Windows to WSL filestructure](https://github.com/microsoft/WSL/issues/4609). For now I'm just deleting when I see them, typically before I do a git commit. 
+You'll see your distros there and can work with your file system. In my testing, I've noticed that when I copy files over to Ubuntu, I *sometimes* get a copy with ":Zone.Identifier" in it. This is known and I believe has something to do with AV stuff. You can read more about it here: [Zone.Identifier Files when copying from Windows to WSL filestructure](https://github.com/microsoft/WSL/issues/4609). For now I'm just deleting when I see them, typically before I do a git commit. 
 
 Also, I believe I read that WSL is going to be more tightly integrated into Explorer in the future. So there's that.
 
