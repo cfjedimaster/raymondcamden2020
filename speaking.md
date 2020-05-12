@@ -18,7 +18,7 @@ I started a blog. I feel like I have to struggle to learn new things and if I ca
 <p>
 <a href="https://opensource101.com/sessions/writing-the-darn-docs/">Writing the Darn Docs</a>
 OpenSource 101 at Home<br/>
-Online, May 13, 2020
+Online, May 12, 2020
 </p>
 
 <p>

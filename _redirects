@@ -116,3 +116,6 @@ admin/index.php /
 
 /2019/08/08/drag-and-drop-file-upload-in-vuejs/single.txt /2019/08/08/drag-and-drop-file-upload-in-vuejs/
 /index.cfm/2010/6/30/Flash-Remoting-onCFCRequest-Issue /2010/06/30/Flash-Remoting-onCFCRequest-Issue
+
+/wp-content/* https://static.raymondcamden.com/wp-content/:splat
+/index.cfm/2008/7/7/Friday-Puzzler-a-bit-early /2008/07/07/Friday-Puzzler-a-bit-early
