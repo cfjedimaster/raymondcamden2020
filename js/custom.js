@@ -30,7 +30,7 @@
         });
 
         // recent posts
-        $('#recent-posts').load('/recentPosts/');
+        $('#recentPosts').load('/recentPosts/');
 
     });
 

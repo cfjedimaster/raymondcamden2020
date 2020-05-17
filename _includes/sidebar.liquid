@@ -17,26 +17,8 @@
         </div>
     </section>
 
-    <section class="widget widget-recent-posts">
-        <h2 class="widget-title">Latest Posts</h2>
-        <ul class="recent-posts" id="recent-posts">
-        </ul>
-    </section>
-
-    {% if popularposts %}
-    <section class="widget widget-recent-posts">
-        <h2 class="widget-title">Popular Posts This Week</h2>
-        <ul class="recent-posts">
-        {% for post in popularposts limit:5 %}
-            {% assign postData = post.path | toTitle: collections.posts %}
-            {% if postData.title != "" %}
-            <li class="recent-item"><a href="{{ site.url }}{{ post.path }}">{{ postData.title }}</a> <span> {{ postData.date | date: "%B %e, %Y" }}</span></li>
-            {% endif %}
-        {% endfor %}
-        </ul>
-    </section>
-    {% endif %}
-
+    <div id="recentPosts"></div>
+    
     {% assign cats = collections | postCategories %}
 
     <section class="widget widget-tags">
