@@ -16,7 +16,7 @@ title:
 
 {% if popularposts %}
 <section class="widget widget-recent-posts">
-<h2 class="widget-title">Popular Posts This Week</h2>
+<h2 class="widget-title">Popular Posts</h2>
 <ul class="recent-posts">
 	{% for post in popularposts limit:5 %}
 		{% assign postData = post.path | toTitle: collections.posts %}
