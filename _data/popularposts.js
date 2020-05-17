@@ -4,7 +4,7 @@ module.exports = function() {
 
 	let token = process.env.NETLIFY_TOKEN;
 	let siteId = process.env.NETLIFY_SITE_ID;
-	console.log('token',token,'siteid',siteId);
+
 	return new Promise(async (resolve, reject) => {
 
 		let today = new Date();
