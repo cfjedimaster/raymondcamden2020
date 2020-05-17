@@ -19,6 +19,21 @@ module.exports = function(eleventyConfig) {
 	//reference: https://github.com/11ty/eleventy/issues/179#issuecomment-413119342
 	eleventyConfig.addShortcode('excerpt', post => extractExcerpt(post));
 
+  let titlePostCache = {};
+  eleventyConfig.addFilter('toTitle', (p, posts) => {
+    if(titlePostCache[p]) return titlePostCache[p];
+    //console.log('toTitle for '+p+'\n', JSON.stringify(titlePostCache));
+    for(let i=0;i<posts.length;i++) {
+      if(posts[i].url == p) {
+        titlePostCache[p] = { title: posts[i].data.title, date: posts[i].date};
+        return titlePostCache[p];
+      }
+    }
+    // cache that we couldn't match
+    titlePostCache[p] = { title: ''};
+    return titlePostCache;
+  });
+
   eleventyConfig.addFilter('myEscape', s => {
     return s.replace(/ /g, '+');
   });

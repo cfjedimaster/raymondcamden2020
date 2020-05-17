@@ -1,3 +1,4 @@
+
 <aside class="sidebar">
 
     {% if site.author_bio and site.author_name %}
@@ -18,9 +19,23 @@
 
     <section class="widget widget-recent-posts">
         <h2 class="widget-title">Latest Posts</h2>
-        <ul class="recent-posts">
+        <ul class="recent-posts" id="recent-posts">
         </ul><!-- .recent-posts -->
     </section><!-- .widget-recent-posts -->
+
+    {% if popularposts %}
+    <section class="widget widget-recent-posts">
+        <h2 class="widget-title">Popular Posts This Week</h2>
+        <ul class="recent-posts">
+        {% for post in popularposts limit:5 %}
+            {% assign postData = post.path | toTitle: collections.posts %}
+            {% if postData.title != "" %}
+            <li class="recent-item"><a href="{{ site.url }}{{ post.path }}">{{ postData.title }}</a> <span> {{ postData.date | date: "%B %e, %Y" }}</span></li>
+            {% endif %}
+        {% endfor %}
+        </ul>
+    </section>
+    {% endif %}
 
     {% assign cats = collections | postCategories %}
 
