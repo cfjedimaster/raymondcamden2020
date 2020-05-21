@@ -31,7 +31,7 @@ module.exports = function(eleventyConfig) {
     }
     // cache that we couldn't match
     titlePostCache[p] = { title: ''};
-    return titlePostCache;
+    return titlePostCache[p];
   });
 
   eleventyConfig.addFilter('myEscape', s => {
