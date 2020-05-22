@@ -16,19 +16,6 @@ I started a blog. I feel like I have to struggle to learn new things and if I ca
 <h3>My Next Events</h3>
 
 <p>
-<a href="https://opensource101.com/sessions/writing-the-darn-docs/">Writing the Darn Docs</a>
-OpenSource 101 at Home<br/>
-Online, May 12, 2020
-</p>
-
-<p>
-<a href="https://devchat.tv/conferences/javascript-remote-2020/">Learning JavaScript by Doing JavaScript</a>
-JavaScript Remote Conf 2020<br/>
-Online, May 13, 2020
-</p>
-
-
-<p>
 <a href="https://www.meetup.com/SeattleVueJS/events/269959927/">Introduction to Vue.js</a>
 Seattle VueJS Meetup<br/>
 Online, May 27, 2020
@@ -41,6 +28,18 @@ Here are my past events, most recent first, in a nice scrollable list no one wil
 </p>
 
 <div style="height: 400px; overflow:scroll">
+
+<p>
+<a href="https://devchat.tv/conferences/javascript-remote-2020/">Learning JavaScript by Doing JavaScript</a>
+JavaScript Remote Conf 2020<br/>
+Online, May 13, 2020
+</p>
+
+<p>
+<a href="https://opensource101.com/sessions/writing-the-darn-docs/">Writing the Darn Docs</a>
+OpenSource 101 at Home<br/>
+Online, May 12, 2020
+</p>
 
 <p>
 Geocoding and Search<br/>
