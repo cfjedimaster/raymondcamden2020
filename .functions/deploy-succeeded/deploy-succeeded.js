@@ -12,7 +12,7 @@ Deploy Succeeded for ${pubData.name}
 
     `;
     console.log('this is my body: '+body);
-    sendEmail(body, 'Netlify Build Succeeded', 'raymondcamden@gmail.com', 'raymondcamden@gmail.com');
+    await sendEmail(body, 'Netlify Build Succeeded', 'raymondcamden@gmail.com', 'raymondcamden@gmail.com');
 
   } catch (err) {
     console.log('error handler for function ran', err.toString());
@@ -20,7 +20,7 @@ Deploy Succeeded for ${pubData.name}
   }
 }
 
-function sendEmail(body, subject, from_email, to_email) {
+async function sendEmail(body, subject, from_email, to_email) {
   console.log('in send mail');
   let mailContent = new helper.Content('text/plain', body);
   let mail = new helper.Mail(from_email, subject, to_email, mailContent);
@@ -39,6 +39,7 @@ function sendEmail(body, subject, from_email, to_email) {
     console.log('in try');
     sg.API(request, function(error, response) {
       console.log('in API ok handler i think');
+      return true;
       if(error) {
         console.log('oh oh error in API');
         console.log(error.response.body);
