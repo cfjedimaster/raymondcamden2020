@@ -22,8 +22,7 @@ Messages:`;
         body += `
 
 [${msg.type}] ${msg.title}
-${msg.description}
-        `;
+${msg.description}`;
       });
     }
 
