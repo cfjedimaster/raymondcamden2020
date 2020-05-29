@@ -26,7 +26,7 @@ Duration:    ${toMinutes(pubData.deploy_time)}
 function toMinutes(s) {
 	if(s < 60) return `${s} seconds`;
 	let minutes = (s - (s % 60)) / 60;
-	return `${minutes} minute(s) and ${s%60} seconds`;
+	return `${minutes}m ${s%60}s`;
 }
 
 async function sendEmail(body, subject, from, to) {
