@@ -14,11 +14,10 @@ I started a blog. I feel like I have to struggle to learn new things and if I ca
  I'll get back to you as soon as I can.
 
 <h3>My Next Events</h3>
-
 <p>
-<a href="https://www.meetup.com/SeattleVueJS/events/269959927/">Introduction to Vue.js</a>
-Seattle VueJS Meetup<br/>
-Online, May 27, 2020
+<a href="https://cfe.dev/events/vue-workshop/">Building Web Applications with Vue.js</a><br/>
+Certified Fresh Events<br/>
+Online, June 16, 2020
 </p>
 
 <h3>My Past Events</h3>
@@ -28,6 +27,12 @@ Here are my past events, most recent first, in a nice scrollable list no one wil
 </p>
 
 <div style="height: 400px; overflow:scroll">
+
+<p>
+<a href="https://www.meetup.com/SeattleVueJS/events/269959927/">Introduction to Vue.js</a><br/>
+Seattle VueJS Meetup<br/>
+Online, May 27, 2020
+</p>
 
 <p>
 <a href="https://devchat.tv/conferences/javascript-remote-2020/">Learning JavaScript by Doing JavaScript</a>
