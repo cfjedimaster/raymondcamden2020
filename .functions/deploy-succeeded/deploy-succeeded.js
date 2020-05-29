@@ -35,17 +35,14 @@ async function sendEmail(body, subject, from_email, to_email) {
 
   console.log('got a request ob');
 
-  try {
-    console.log('in try');
+  return new Promise((resolve, reject) => {
     sg.API(request, function(error, response) {
       console.log('in API ok handler i think');
-      return true;
+      resolve(true);
       if(error) {
         console.log('oh oh error in API');
-        console.log(error.response.body);
+        reject(error.response.body);
       }
     });
-  } catch(e) {
-    console.log('ok got an error in try catch', e.toString());
-  }
+  });
 }
