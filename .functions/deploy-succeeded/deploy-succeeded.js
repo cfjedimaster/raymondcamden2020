@@ -21,9 +21,11 @@ Deploy Succeeded for ${pubData.name}
 }
 
 function sendEmail(body, subject, from_email, to_email) {
+  console.log('in send mail');
   let mailContent = new helper.Content('text/plain', body);
   let mail = new helper.Mail(from_email, subject, to_email, mailContent);
   let sg = require('sendgrid')(SG_KEY);
+  console.log('got an sg object');
 
   let request = sg.emptyRequest({
     method: 'POST',
@@ -31,7 +33,10 @@ function sendEmail(body, subject, from_email, to_email) {
     body: mail.toJSON()
   });
 
+  console.log('got a request ob');
+
   sg.API(request, function(error, response) {
+    console.log('in API ok handler i think');
     if(error) {
     console.log(error.response.body);
     }
