@@ -21,7 +21,7 @@ Deploy Succeeded for ${pubData.name}
 }
 
 async function sendEmail(body, subject, from_email, to_email) {
-  console.log('in send mail');
+  console.log('in send mail', SG_KEY);
   let mailContent = new helper.Content('text/plain', body);
   let mail = new helper.Mail(from_email, subject, to_email, mailContent);
   let sg = require('sendgrid')(SG_KEY);
