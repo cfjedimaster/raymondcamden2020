@@ -41,6 +41,7 @@ async function sendEmail(body, subject, from_email, to_email) {
       resolve(true);
       if(error) {
         console.log('oh oh error in API');
+        console.log(error.toString());
         reject(error.response.body);
       }
     });
