@@ -35,11 +35,16 @@ function sendEmail(body, subject, from_email, to_email) {
 
   console.log('got a request ob');
 
-  sg.API(request, function(error, response) {
-    console.log('in API ok handler i think');
-    if(error) {
-      console.log('oh oh error in API');
-      console.log(error.response.body);
-    }
-  });
+  try {
+    console.log('in try');
+    sg.API(request, function(error, response) {
+      console.log('in API ok handler i think');
+      if(error) {
+        console.log('oh oh error in API');
+        console.log(error.response.body);
+      }
+    });
+  } catch(e) {
+    console.log('ok got an error in try catch', e.toString());
+  }
 }
