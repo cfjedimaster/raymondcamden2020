@@ -14,6 +14,19 @@ Build Title: ${pubData.title}
 Finished:    ${pubData.published_at}
 Duration:    ${toMinutes(pubData.deploy_time)}
     `;
+
+    if(pubData.summary && pubData.summary.messages) {
+      body += `
+Messages:`;
+      pubData.summary.messages.forEach(msg => {
+        body += `
+
+[${msg.type}] ${msg.title}
+${msg.description}
+        `;
+      });
+    }
+
     console.log('this is my body: '+body);
     await sendEmail(body, 'Netlify Build Succeeded', 'raymondcamden@gmail.com', 'raymondcamden@gmail.com');
 
@@ -30,7 +43,6 @@ function toMinutes(s) {
 }
 
 async function sendEmail(body, subject, from, to) {
-  console.log('in send mail', SG_KEY);
   let mailContent = new helper.Content('text/plain', body);
   let from_email = new helper.Email(from);
   let to_email = new helper.Email(to);
