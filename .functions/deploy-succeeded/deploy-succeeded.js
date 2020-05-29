@@ -8,8 +8,11 @@ exports.handler = async (event, context) => {
     console.log('deploy succeeded run!');
     let pubData = JSON.parse(event.body).payload;
     let body = `
-Deploy Succeeded for ${pubData.name}
+Deploy Succeeded for ${pubData.name} (${pubData.url})
 
+Build Title: ${pubData.title}
+Finished:    ${pubData.published_at}
+Duration:    ${toMinutes(pubData.deploy_time)}
     `;
     console.log('this is my body: '+body);
     await sendEmail(body, 'Netlify Build Succeeded', 'raymondcamden@gmail.com', 'raymondcamden@gmail.com');
@@ -18,6 +21,12 @@ Deploy Succeeded for ${pubData.name}
     console.log('error handler for function ran', err.toString());
     return { statusCode: 500, body: err.toString() }
   }
+}
+
+function toMinutes(s) {
+	if(s < 60) return `${s} seconds`;
+	let minutes = (s - (s % 60)) / 60;
+	return `${minutes} minute(s) and ${s%60} seconds`;
 }
 
 async function sendEmail(body, subject, from, to) {
@@ -36,11 +45,10 @@ async function sendEmail(body, subject, from, to) {
 
   return new Promise((resolve, reject) => {
     sg.API(request, function(error, response) {
-      console.log('in API ok handler i think');
       resolve(true);
       if(error) {
         console.log('oh oh error in API');
-        console.log(error.toString());
+        console.log(JSON.stringify(error.response));
         reject(error.response.body);
       }
     });
