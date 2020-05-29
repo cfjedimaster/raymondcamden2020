@@ -20,20 +20,19 @@ Deploy Succeeded for ${pubData.name}
   }
 }
 
-async function sendEmail(body, subject, from_email, to_email) {
+async function sendEmail(body, subject, from, to) {
   console.log('in send mail', SG_KEY);
   let mailContent = new helper.Content('text/plain', body);
+  let from_email = new helper.Email(from);
+  let to_email = new helper.Email(to);
   let mail = new helper.Mail(from_email, subject, to_email, mailContent);
   let sg = require('sendgrid')(SG_KEY);
-  console.log('got an sg object');
 
   let request = sg.emptyRequest({
     method: 'POST',
     path: '/v3/mail/send',
     body: mail.toJSON()
   });
-
-  console.log('got a request ob');
 
   return new Promise((resolve, reject) => {
     sg.API(request, function(error, response) {
