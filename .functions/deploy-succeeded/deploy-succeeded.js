@@ -38,7 +38,8 @@ function sendEmail(body, subject, from_email, to_email) {
   sg.API(request, function(error, response) {
     console.log('in API ok handler i think');
     if(error) {
-    console.log(error.response.body);
+      console.log('oh oh error in API');
+      console.log(error.response.body);
     }
   });
 }
