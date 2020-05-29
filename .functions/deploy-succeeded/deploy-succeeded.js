@@ -11,10 +11,11 @@ exports.handler = async (event, context) => {
 Deploy Succeeded for ${pubData.name}
 
     `;
-
+    console.log('this is my body: '+body);
     sendEmail(body, 'Netlify Build Succeeded', 'raymondcamden@gmail.com', 'raymondcamden@gmail.com');
-    
+
   } catch (err) {
+    console.log('error handler for function ran', err.toString());
     return { statusCode: 500, body: err.toString() }
   }
 }
