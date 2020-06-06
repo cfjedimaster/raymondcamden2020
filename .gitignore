@@ -2,3 +2,6 @@ node_modules
 .eleventyignore
 _site
 .vscode/
+
+# Local Netlify folder
+.netlify

@@ -17,43 +17,14 @@ One of the features Netlify supports is sending an email to you on various event
 
 Short and sweet. But I really want a bit more information about the build, specifically how long it took. Netlify is quick, but my site is rather large. Every now and then I screw things up and one of the ways I can quickly tell is by seeing how long a build took. All of this information is available and I can go to the Netlify site to get those details, but it would be nice if my email simply passed that along. 
 
-Luckily, Netlify supports [triggers](https://docs.netlify.com/functions/trigger-on-events/#available-triggers) that let you fire off calls to serverless functions based on various events. Unluckily for us, Netlify...
-
-Still....
-
-Hasn't...
-
-(Still reading?)
-
-Documented what they send to the events. 
-
-<p>
-<img data-src="https://static.raymondcamden.com/images/2020/02/lackofdocs.jpg" alt="Lack of docs" class="lazyload imgborder imgcenter">
-</p>
-
-I've [harped](https://www.raymondcamden.com/2020/02/22/adding-a-sms-alert-for-netlify-builds-with-ringcentral) on this before, but it's getting ridiculous now. I believe this feature has been out over a year and so far, this is all the documentation they provide:
-
-```js
-{
-  "payload": {
-    # information about the object that triggered the event
-  },
-  "site": {
-    # information about the associated site
-  }
-}
-```
-
-It's incredibly frustrating to have to trigger events manually and use console.log to figure this stuff out. My only guess as to why this isn't documented yet is because the data passed in is changing. Well crap, stuff changes, you don't use that as an excuse to not document. 
-
-So my initial work was just setting up a function (properly named, Netlify uses the name to associate it with the event) and used console.log to look at the payload. While kinda spelled out in the text, but not made clear, this data will be in your `event.body` value passed to the function and will be a JSON string. (The text says JSON "document" which I guess implies string, but should really be more clear imo.) To look at the payload, I used this:
+Luckily, Netlify supports [triggers](https://docs.netlify.com/functions/trigger-on-events/#available-triggers) that let you fire off calls to serverless functions based on various events. Right now the details of the information sent isn't documented, so my initial work was just setting up a function (properly named, Netlify uses the name to associate it with the event) and using console.log to look at the payload. While kinda spelled out in the text, but not made clear, this data will be in your `event.body` value passed to the function and will be a JSON string. To look at the payload, I used this:
 
 ```js
 let pubData = JSON.parse(event.body).payload;
 console.log(pubData);
 ```
 
-There's no way to retrieve logs from functions via the CLI so I used the Function tab in my Netlift site to view the output. It's hard to read so I literally copied it to my browser console, re-parsed it (it was in string form in the log of course), copied to my clipboard, and pasted it into my editor. Here's what payload looks like. There are a few values I think may be sensitive so I've replaced them with the name of my favorite character from My Little Pony.
+There's no way to retrieve logs from functions via the CLI so I used the Function tab in my Netlify site to view the output. It's hard to read so I literally copied it to my browser console, re-parsed it (it was in string form in the log of course), copied to my clipboard, and pasted it into my editor. Here's what payload looks like. There are a few values I think may be sensitive so I've replaced them with the name of my favorite character from My Little Pony.
 
 ```js
 "payload": {
