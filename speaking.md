@@ -21,7 +21,7 @@ Online, June 16, 2020
 </p>
 
 <p>
-<a href="https://www.tracydevs.com/2020/06/adding-location-services-to-your-jamstack/">Adding Location Services to Your JAMStac</a><br/>
+<a href="https://www.tracydevs.com/2020/06/adding-location-services-to-your-jamstack/">Adding Location Services to Your JAMStack</a><br/>
 Tracy Developer Meetup<br/>
 Online, June 18, 2020
 </p>
