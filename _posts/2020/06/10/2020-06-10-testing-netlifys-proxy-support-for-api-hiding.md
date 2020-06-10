@@ -51,4 +51,6 @@ So why *wouldn't* you use this versus a serverless function? If I use a serverle
 
 If you want to see my simple demo in action, go to <https://netlifydemos.netlify.app/test_proxy.html> and you can see the complete source over at <https://github.com/cfjedimaster/NetlifyTestingZone>.
 
+Oh, a quick note. Obviously a public GitHub repo is going to contain your `_redirects` file. In that case you would need to use a private repository instead. You could also deploy from the CLI, but than you use the CI/CD setup that Netlify shines at. If you really want a public GitHub repo than you'll need to use a serverless function and environment variable instead. (Not much work at all!)
+
 <i>Header photo by <a href="https://unsplash.com/@martino_pietropoli?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Martino Pietropoli</a> on Unsplash</i>
