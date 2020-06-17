@@ -2,7 +2,7 @@
 layout: post
 title: "Adding Another Template Language to Eleventy"
 date: "2020-02-19"
-categories: ["static sites"]
+categories: ["static sites","javascript"]
 tags: ["eleventy"]
 banner_image: /images/banners/foreign_books.jpg
 permalink: /2020/02/19/adding-another-template-language-to-eleventy

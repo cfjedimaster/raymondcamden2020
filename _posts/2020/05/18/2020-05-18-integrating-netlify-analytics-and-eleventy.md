@@ -2,7 +2,7 @@
 layout: post
 title: "Integrating Netlify Analytics and Eleventy"
 date: "2020-05-18"
-categories: ["javascript"]
+categories: ["javascript","static sites"]
 tags: ["eleventy"]
 banner_image: /images/banners/paper_graph.jpg
 permalink: /2020/05/18/integrating-netlify-analytics-and-eleventy

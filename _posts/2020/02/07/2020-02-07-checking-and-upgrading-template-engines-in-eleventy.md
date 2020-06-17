@@ -2,7 +2,7 @@
 layout: post
 title: "Checking (and Upgrading) Template Engines in Eleventy"
 date: "2020-02-07"
-categories: ["static sites"]
+categories: ["javascript","static sites"]
 tags: ["eleventy"]
 banner_image: /images/banners/liquid.jpg
 permalink: /2020/02/07/checking-and-upgrading-template-engines-in-eleventy
