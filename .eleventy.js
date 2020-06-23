@@ -92,6 +92,14 @@ module.exports = function(eleventyConfig) {
     );
   });
 
+  eleventyConfig.addFilter('jsonify', function (variable) {
+    return JSON.stringify(variable);
+  });
+
+  eleventyConfig.addFilter('algExcerpt', function (variable) {
+    return variable.substring(0,5000);
+  });
+
 	// reverse isn't supported in 11 liquid?
 	eleventyConfig.addFilter("reverse", a => a.slice().reverse() );
 
