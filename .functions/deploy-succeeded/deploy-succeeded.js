@@ -3,7 +3,7 @@ My code for successful deploys now consists of two main actions. Send me a nicer
 */
 
 const indexing = require('algolia-indexing');
-const algCredentials = { appId: process.eng.ALG_APP_ID, apiKey: process.ALG_API_KEY, indexName: 'raymondcamden' };
+const algCredentials = { appId: process.env.ALG_APP_ID, apiKey: process.env.ALG_API_KEY, indexName: 'raymondcamden' };
 
 const SG_KEY = process.env.SENDGRID;
 const helper = require('sendgrid').mail;
@@ -11,13 +11,34 @@ const helper = require('sendgrid').mail;
 const fetch = require('node-fetch');
 
 exports.handler = async (event, context) => {
+
+
   try {
 
+
+    /// HANDLE ALOGLIA
+    // first, get my index
+//    let dataResp = await fetch('https://www.raymondcamden.com/algolia.json');
+    let dataResp = await fetch('http://localhost:8888/algolia.json');
+    let data = await dataResp.json();
+    console.log('Successfully got the data, size of articles '+data.length, data[0].title);
+
+    indexing.verbose();
+
+    const settings = { };
+    try {
+      await indexing.fullAtomic(algCredentials, data, settings);
+    } catch(e) {
+      console.log('error in fullAtomic', e);
+    };
+    console.log('Algolia indexing updated. Hopefully.');
+    
     console.log('deploy succeeded run!');
 
-    /// HANDLE EMAIL
-    let pubData = JSON.parse(event.body).payload;
-    let body = `
+    /// HANDLE EMAIL (if sent)
+    if(event && event.body) {
+      let pubData = JSON.parse(event.body).payload;
+      let body = `
 Deploy Succeeded for ${pubData.name} (${pubData.url})
 
 Build Title: ${pubData.title}
@@ -25,33 +46,26 @@ Finished:    ${pubData.published_at}
 Duration:    ${toMinutes(pubData.deploy_time)}
     `;
 
-    if(pubData.summary && pubData.summary.messages) {
-      body += `
-Messages:`;
-      pubData.summary.messages.forEach(msg => {
+      if(pubData.summary && pubData.summary.messages) {
         body += `
+  Messages:`;
+        pubData.summary.messages.forEach(msg => {
+          body += `
 
-[${msg.type}] ${msg.title}
-${msg.description}`;
-      });
+  [${msg.type}] ${msg.title}
+  ${msg.description}`;
+        });
+      }
+
+      await sendEmail(body, 'Netlify Build Succeeded', 'raymondcamden@gmail.com', 'raymondcamden@gmail.com');
     }
 
-    await sendEmail(body, 'Netlify Build Succeeded', 'raymondcamden@gmail.com', 'raymondcamden@gmail.com');
+    return { statusCode: 200, body: 'I\'m done with this shit...' }
 
   } catch (err) {
     console.log('error handler for function ran', err.toString());
     return { statusCode: 500, body: err.toString() }
   }
-
-  /// HANDLE ALOGLIA
-  // first, get my index
-  let dataResp = await fetch('https://www.raymondcamden.com/algolia.json');
-  let data = await dataResp.json();
-  console.log('Successfully got the data, size of articles '+data.length);
-
-  const settings = { };
-  await indexing.fullAtomic(algCredentials, data, settings);
-  console.log('Algolia indexing updated. Hopefully.');
 
 }
 

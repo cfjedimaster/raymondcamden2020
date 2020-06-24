@@ -4,7 +4,7 @@ permalink: /algolia.json
 
 {% assign posts = collections.posts | reverse %}
 [
-{% for post in posts limit:5 %}
+{% for post in posts %}
 	{
 		"title": {{post.data.title | jsonify}},
 		"date":"{{ page.date }}",
