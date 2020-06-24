@@ -2,6 +2,9 @@
 My code for successful deploys now consists of two main actions. Send me a nicer email and update my Algolia index.
 */
 
+const indexing = require('algolia-indexing');
+const algCredentials = { appId: process.eng.ALG_APP_ID, apiKey: process.ALG_API_KEY, indexName: 'raymondcamden' };
+
 const SG_KEY = process.env.SENDGRID;
 const helper = require('sendgrid').mail;
 
@@ -33,7 +36,6 @@ ${msg.description}`;
       });
     }
 
-    console.log('this is my body: '+body);
     await sendEmail(body, 'Netlify Build Succeeded', 'raymondcamden@gmail.com', 'raymondcamden@gmail.com');
 
   } catch (err) {
@@ -45,8 +47,12 @@ ${msg.description}`;
   // first, get my index
   let dataResp = await fetch('https://www.raymondcamden.com/algolia.json');
   let data = await dataResp.json();
-  console.log('Successfully got the data, size is '+data.length);
-  
+  console.log('Successfully got the data, size of articles '+data.length);
+
+  const settings = { };
+  await indexing.fullAtomic(algCredentials, data, settings);
+  console.log('Algolia indexing updated. Hopefully.');
+
 }
 
 function toMinutes(s) {
