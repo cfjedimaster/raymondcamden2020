@@ -1,11 +1,18 @@
-const SG_KEY = process.env.SENDGRID;
+/*
+My code for successful deploys now consists of two main actions. Send me a nicer email and update my Algolia index.
+*/
 
+const SG_KEY = process.env.SENDGRID;
 const helper = require('sendgrid').mail;
+
+const fetch = require('node-fetch');
 
 exports.handler = async (event, context) => {
   try {
 
     console.log('deploy succeeded run!');
+
+    /// HANDLE EMAIL
     let pubData = JSON.parse(event.body).payload;
     let body = `
 Deploy Succeeded for ${pubData.name} (${pubData.url})
@@ -33,6 +40,13 @@ ${msg.description}`;
     console.log('error handler for function ran', err.toString());
     return { statusCode: 500, body: err.toString() }
   }
+
+  /// HANDLE ALOGLIA
+  // first, get my index
+  let dataResp = await fetch('https://www.raymondcamden.com/algolia.json');
+  let data = await dataResp.json();
+  console.log('Successfully got the data, size is '+data.length);
+  
 }
 
 function toMinutes(s) {
