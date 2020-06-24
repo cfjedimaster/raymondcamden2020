@@ -18,8 +18,8 @@ exports.handler = async (event, context) => {
 
     /// HANDLE ALOGLIA
     // first, get my index
-//    let dataResp = await fetch('https://www.raymondcamden.com/algolia.json');
-    let dataResp = await fetch('http://localhost:8888/algolia.json');
+    let dataResp = await fetch('https://www.raymondcamden.com/algolia.json');
+
     let data = await dataResp.json();
     console.log('Successfully got the data, size of articles '+data.length, data[0].title);
 
