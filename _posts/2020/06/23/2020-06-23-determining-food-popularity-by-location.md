@@ -257,3 +257,5 @@ You can demo this here: <https://cfjedimaster.github.io/heredemos/mapsjs/food.ht
 I've spent some time clicking around and I've got to say I find the results pretty fascinating. Let me know what you think by leaving me a comment below!
 
 <i>Header photo by <a href="https://unsplash.com/@foodiesfeed?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Jakub Kapusnak</a> on Unsplash</i>
+
+cat food, this text is just here while I test some Algolia stuff. you may ignore. :)
