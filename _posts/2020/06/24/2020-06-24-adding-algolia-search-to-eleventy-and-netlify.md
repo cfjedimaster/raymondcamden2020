@@ -197,7 +197,7 @@ The free tier has a limit of 10k entries and I'm currently at 6,119, but if you 
 
 So I built, on my blog, basically what you see above. The first issue I ran into was the `deploy-succeeded` function took too long to run. Netlify limits you to 10 seconds per function. I asked for more time, and they responded super quick, but they only go up to 20. 
 
-I then thought - why not use [Pipedream](https://pipedream.com/)? There's nothing specific about my logic that has to be on the Netlify server. They support webhooks so I could use that to fire off the Pipedream webhook. I rebuilt my logic there (it took about three minutes, I'm a huge Pipdream fan!), but then ran into another issue.
+I then thought - why not use [Pipedream](https://pipedream.com/)? There's nothing specific about my logic that has to be on the Netlify server. They support webhooks so I could use that to fire off the Pipedream webhook. I rebuilt my logic there (it took about three minutes, I'm a huge Pipedream fan!), but then ran into another issue.
 
 As part of how `algolia-indexing` works, it has to duplicate your index and work on a copy. My index was over 6k and when it tried to duplicate it, that brought me over the 10k limit. I've reached out to Tim to see if there's a way around that, but for now I'm kinda stuck. I'm still going to work on it and hopefully I can get it in here soon.
 
