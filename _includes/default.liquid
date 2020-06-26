@@ -9,11 +9,18 @@
     <meta name="twitter:title" content="{% if renderData.title %}{{ renderData.title | capitalize }}{% elsif title %}{{ title }}{% else %}{{ site.title }}{% endif %}" />
     <meta name="twitter:creator" content="@raymondcamden" />    
     <meta name="twitter:site" content="@raymondcamden" />    
+    <meta name="og:title" content="{% if renderData.title %}{{ renderData.title | capitalize }}{% elsif title %}{{ title }}{% else %}{{ site.title }}{% endif %}" />
+    <meta name="og:url" content="{{ page.url | prepend: site.url }}" />
+    <meta name="og:type" content="blog" />
+
     {% if description %}
     <meta name="twitter:description" content="{{page.description}}" />
+    <meta name="og:description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}" />
     {% endif %}
+
     {% if banner_image %}
     <meta name="twitter:image" content="{{ "https://static.raymondcamden.com" | append: banner_image }}" />
+    <meta name="og:image" content="{{ "https://static.raymondcamden.com" | append: banner_image }}" />
     {% endif %}
     <link rel="manifest" href="/manifest.json">
     <link rel="shortcut icon" href="{{ "/favicon.ico" | prepend: site.url }}">
