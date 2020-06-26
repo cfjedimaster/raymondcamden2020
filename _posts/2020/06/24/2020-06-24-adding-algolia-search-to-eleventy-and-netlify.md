@@ -71,7 +71,7 @@ With that file generated, I manually uploaded it to Algolia and tested. Their da
 <img data-src="https://static.raymondcamden.com/images/2020/06/ag2.png" alt="Algolia dashboard" class="lazyload imgborder imgcenter">
 </p>
 
-Ok, so technically, if you don't mind some manual work, you're done. You could simply reupload the JSON file everytime you generate your site. And I know that sounds lame, but I can totally see people building a site that potentially gets updated pretty rarely. In that case it may be worth the (relatively minor) hassle.
+Ok, so technically, if you don't mind some manual work, you're done. You could simply reupload the JSON file every time you generate your site. And I know that sounds lame, but I can totally see people building a site that potentially gets updated pretty rarely. In that case it may be worth the (relatively minor) hassle.
 
 But what if you *do* want to automate it? Here's where things get a bit... interesting. I knew that Algolia had REST APIs I could use. I also knew that Netlify has a `deploy-succeeded` event you can write custom code for. (See my [blog post](https://www.raymondcamden.com/2020/05/29/enhancing-your-netlify-build-notifications) from last month on it.) My first issue was trying to determine how I'd know what changed since my last build. I couldn't really use the file system as Netlify checks stuff out to their system and the last modified values wouldn't match what I would expect. I toyed with the idea of using the date of my posts to grab the last new post. But this wouldn't handle edits to old posts. I then thought about adding new front matter, `lastEdited`, and then simply merging the last few posts and the last few edited posts. I say "few" because my assumption is that I may push a few files at once to GitHub. 
 
@@ -133,7 +133,7 @@ Probably the weirdest line is this:
 let dataResp = await fetch('https://eleventyalgolia.netlify.app/algolia.json');
 ```
 
-Even though my serverless functions are in the same repository as the rest of my site, they aren't on the file system. When deployed, it can't just read the JSON file Eleventy created. That means I need to retrieve it via HTTP. Once done, I just pass it to his library and that's it. I tested this a few times by writing new blog posts, commiting to GitHub, and then seeing the index update automatically when the build was done.
+Even though my serverless functions are in the same repository as the rest of my site, they aren't on the file system. When deployed, it can't just read the JSON file Eleventy created. That means I need to retrieve it via HTTP. Once done, I just pass it to his library and that's it. I tested this a few times by writing new blog posts, committing to GitHub, and then seeing the index update automatically when the build was done.
 
 Woot! Now I needed to actually add a search to my site. This is the only thing I really found awkward with Algolia. (To be clear, not wrong, just... awkward.) In the Algolia docs, they have a section titled "Building Search UI". Going there leads you to their [InstantSearch.js](https://www.algolia.com/doc/guides/building-search-ui/what-is-instantsearch/js/) product. This looks to be a cool library for working with their search, but it's more than I wanted really. It felt like a solution for people not as familiar with JavaScript. Or folks who wanted more of the UI built out automatically for them. That's fine, but what I really wanted was a simple `.search` method I could use where I'd handle all the UI.
 
