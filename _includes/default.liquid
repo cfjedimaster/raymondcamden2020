@@ -14,8 +14,11 @@
     <meta name="og:type" content="blog" />
 
     {% if description %}
-    <meta name="twitter:description" content="{{page.description}}" />
-    <meta name="og:description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}" />
+    <meta name="twitter:description" content="{{description}}" />
+    <meta name="og:description" content="{{ description }}" />
+    {% else %}
+    <meta name="twitter:description" content="{{site.description}}" />
+    <meta name="og:description" content="{{ site.description }}" />
     {% endif %}
 
     {% if banner_image %}
