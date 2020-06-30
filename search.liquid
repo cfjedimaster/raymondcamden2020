@@ -1,0 +1,79 @@
+---
+layout: page
+title: Search
+description: Search this Site
+---
+
+{% raw %}
+<div id="app">
+	<input v-model="search" type="search"> <button @click="doSearch">Search</button>
+  <div v-if="searching">
+    <p><i>Searching for results...</i></p>
+  </div>
+  <div v-if="noResults">
+    <p>
+      Sorry, but there were no results.
+    </p>
+  </div>
+	<div v-if="results && !noResults">
+		<h3>Results</h3>
+    <p v-if="numResults > 1">
+    There were {{numResults}} total results for this search.
+    </p><p v-else>
+    There was one total result for this search.
+    </p>
+		<p v-for="(result,idx) in results" :key="idx">
+			{{ idx+1}}) <a :href="result.url">{{result.title}}</a><br/>
+      Published: {{ result.date }}<br/>
+      Excerpt: <span v-html="result._snippetResult.content.value"></span>
+		</p>
+	</div>
+</div>
+{% endraw %}
+
+<script src="https://cdn.jsdelivr.net/npm/algoliasearch@4/dist/algoliasearch-lite.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script>
+
+const app = new Vue({
+	el:'#app',
+	data: {
+		search:'',
+    searching:false,
+		algolia_client:null,
+		algolia_index:null,
+		results:null,
+		numResults:null,
+    noResults:false
+	},
+	created() {
+		this.client = algoliasearch('WFABFE7Z9Q', 'd1c88c3f98648a69f11cdd9d5a87de08');
+		this.index = this.client.initIndex('raymondcamden');
+	},
+	methods: {
+		async doSearch() {
+			this.results = null;
+			if(this.search === '') return;
+      this.searching = true;
+      this.noResults = false;
+			console.log('search for '+this.search);
+			let resultsRaw = await this.index.search(this.search,{
+				attributesToRetrieve:['title', 'url','date'],
+        attributesToSnippet:['content'],
+        hitsPerPage: 50
+			});
+			console.log('results', resultsRaw);
+
+      let options = { year: 'numeric', month: 'long', day: 'numeric' };
+      let formatter = new Intl.DateTimeFormat('en-US',options);
+      resultsRaw.hits.forEach(h => {
+        h.date = formatter.format(new Date(h.date));
+      });
+			this.results = resultsRaw.hits;
+			this.numResults = resultsRaw.nbHits;
+      this.searching = false;
+      this.noResults = this.results.length === 0;
+		}
+	}
+})
+</script>
