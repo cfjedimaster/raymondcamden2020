@@ -54,25 +54,25 @@ const app = new Vue({
 		async doSearch() {
 			this.results = null;
 			if(this.search === '') return;
-      this.searching = true;
-      this.noResults = false;
+			this.searching = true;
+			this.noResults = false;
 			console.log('search for '+this.search);
 			let resultsRaw = await this.index.search(this.search,{
 				attributesToRetrieve:['title', 'url','date'],
-        attributesToSnippet:['content'],
-        hitsPerPage: 50
+				attributesToSnippet:['content'],
+				hitsPerPage: 50
 			});
 			console.log('results', resultsRaw);
 
-      let options = { year: 'numeric', month: 'long', day: 'numeric' };
-      let formatter = new Intl.DateTimeFormat('en-US',options);
-      resultsRaw.hits.forEach(h => {
-        h.date = formatter.format(new Date(h.date));
-      });
+			let options = { year: 'numeric', month: 'long', day: 'numeric' };
+			let formatter = new Intl.DateTimeFormat('en-US',options);
+			resultsRaw.hits.forEach(h => {
+				h.date = formatter.format(new Date(h.date));
+			});
 			this.results = resultsRaw.hits;
 			this.numResults = resultsRaw.nbHits;
-      this.searching = false;
-      this.noResults = this.results.length === 0;
+			this.searching = false;
+			this.noResults = this.results.length === 0;
 		}
 	}
 })

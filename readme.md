@@ -1,10 +1,8 @@
-I'll fill this out later, for now I'm taking notes.
+##My Blog
 
+Yeah, that's it really.
 
-* bad raw escape in older Angular posts
-* issue with tag/title pages
-* tags are easy, categories?
-* rename search.md to search.html, change tabs in form
-* site stuff to data/site
-* https://github.com/jeremenichelli/eleventy-xml-plugin
-* 
+Notes for myself:
+
+* genpos.js - generate new post md file
+* spell check cli - spellchecker pathtomd -d ~/projects/raymondcamden2020/dict.txt 
