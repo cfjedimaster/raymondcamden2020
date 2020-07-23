@@ -16,7 +16,9 @@ I started a blog. I feel like I have to struggle to learn new things and if I ca
 <h3>My Next Events</h3>
 
 <p>
-None currently scheduled.
+<a href="https://www.meetup.com/Women-Who-Code-London/events/272071323/">Introduction to Vue.js</a><br/>
+Women Who Code London<br/>
+Online, July 29, 2020
 </p>
 
 <h3>My Past Events</h3>
