@@ -15,17 +15,6 @@ I started a blog. I feel like I have to struggle to learn new things and if I ca
 
 <h3>My Next Events</h3>
 
-<p>
-<a href="https://www.meetup.com/JAMStack_berlin/events/270907371">Introduction to Eleventy</a><br/>
-JAMstack_Berlin<br/>
-Online, July 27, 2020
-</p>
-
-<p>
-<a href="https://www.meetup.com/Women-Who-Code-London/events/272071323/">Introduction to Vue.js</a><br/>
-Women Who Code London<br/>
-Online, July 29, 2020
-</p>
 
 <h3>My Past Events</h3>
 
@@ -34,6 +23,18 @@ Here are my past events, most recent first, in a nice scrollable list no one wil
 </p>
 
 <div style="height: 400px; overflow:scroll">
+
+<p>
+<a href="https://www.meetup.com/Women-Who-Code-London/events/272071323/">Introduction to Vue.js</a><br/>
+Women Who Code London<br/>
+Online, July 29, 2020
+</p>
+
+<p>
+<a href="https://www.meetup.com/JAMStack_berlin/events/270907371">Introduction to Eleventy</a><br/>
+JAMstack_Berlin<br/>
+Online, July 27, 2020
+</p>
 
 <p>
 <a href="https://www.meetup.com/sandiegojs/events/qzjltrybckbvb/">Introduction to Vuex</a><br/>
