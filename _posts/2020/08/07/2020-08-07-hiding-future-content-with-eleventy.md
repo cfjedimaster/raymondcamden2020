@@ -6,7 +6,7 @@ categories: ["static sites"]
 tags: ["eleventy"]
 banner_image: /images/banners/foggy-bank.jpg
 permalink: /2020/08/07/hiding-future-content-with-eleventy
-description: 
+description: How to use custom filters and collections to hide Eleventy content for the future.
 ---
 
 Here's a quick tip for something that's been on my mind lately with [Eleventy](https://www.11ty.dev) - hiding content so that it's published but not linked. What do I mean by that? Eleventy doesn't support the idea of "drafts" such that you can have content locally but not in production. You can use `permalink: false` (documented [here](https://www.11ty.dev/docs/permalinks/#disable-templating-in-permalinks)) to stop a page from being output, but it will still exist in collections. I thought a more useful case may be the ability to publish content for the future such that they are not listed in collections until their publish date has come to pass. This has the benefit of letting you see the content if you know the URL. This lets you write a post for next week, publish, and share the URL with a reviewer. In order for this to be effective though you need to have builds scheduled on a regular basis. It would be simple to schedule a daily, or even hourly, build on Netlify and other platforms (let me know if you want to see an example of that!). Let's consider a simple example.
