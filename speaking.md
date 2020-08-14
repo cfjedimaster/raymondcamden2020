@@ -15,6 +15,12 @@ I started a blog. I feel like I have to struggle to learn new things and if I ca
 
 <h3>My Next Events</h3>
 
+<p>
+<a href="https://connect.tech/session?id=329">API Integration in your Jamstack</a><br/>
+connect.tech 2020<br/>
+Online, October 14, 2020
+</p>
+
 
 <h3>My Past Events</h3>
 
