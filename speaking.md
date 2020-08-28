@@ -16,12 +16,6 @@ I started a blog. I feel like I have to struggle to learn new things and if I ca
 <h3>My Next Events</h3>
 
 <p>
-<a href="https://www.sciencejf.com/talks/visualizing-map-data-with-here-studio/">Visualizing Map Data with HERE Studio</a><br/>
-Science Journalism Forum<br/>
-Online, August 25, 2020
-</p>
-
-<p>
 <a href="https://connect.tech/session?id=329">API Integration in your Jamstack</a><br/>
 connect.tech 2020<br/>
 Online, October 14, 2020
@@ -35,6 +29,11 @@ Here are my past events, most recent first, in a nice scrollable list no one wil
 </p>
 
 <div style="height: 400px; overflow:scroll">
+<p>
+<a href="https://www.sciencejf.com/talks/visualizing-map-data-with-here-studio/">Visualizing Map Data with HERE Studio</a><br/>
+Science Journalism Forum<br/>
+Online, August 25, 2020
+</p>
 
 <p>
 <a href="https://www.meetup.com/Women-Who-Code-London/events/272071323/">Introduction to Vue.js</a><br/>
