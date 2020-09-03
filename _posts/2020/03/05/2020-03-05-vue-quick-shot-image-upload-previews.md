@@ -3,7 +3,7 @@ layout: post
 title: "Vue Quick Shot - Image Upload Previews"
 date: "2020-03-05"
 categories: ["javascript"]
-tags: ["vuejs"]
+tags: ["vuejs","vue quick shot"]
 banner_image: /images/banners/tip.jpg
 permalink: /2020/03/05/vue-quick-shot-image-upload-previews
 description: Adding an image preview to file upload controls

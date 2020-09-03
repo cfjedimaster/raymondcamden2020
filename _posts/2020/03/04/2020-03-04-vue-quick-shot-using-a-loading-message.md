@@ -3,7 +3,7 @@ layout: post
 title: "Vue Quick Shot - Using a Loading Message"
 date: "2020-03-04"
 categories: ["javascript"]
-tags: ["vuejs"]
+tags: ["vuejs","vue quick shot"]
 banner_image: /images/banners/tip.jpg
 permalink: /2020/03/04/vue-quick-shot-using-a-loading-message
 description: My next Vue quick shot - adding loading messages while you wait...

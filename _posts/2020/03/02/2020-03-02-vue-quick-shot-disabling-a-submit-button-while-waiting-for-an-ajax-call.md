@@ -3,7 +3,7 @@ layout: post
 title: "Vue Quick Shot - Disabling a Submit Button While Waiting for an Ajax Call"
 date: "2020-03-02"
 categories: ["javascript"]
-tags: ["vuejs"]
+tags: ["vuejs","vue quick shot"]
 banner_image: /images/banners/tip.jpg
 permalink: /2020/03/02/vue-quick-shot-disabling-a-submit-button-while-waiting-for-an-ajax-call
 description: First in a series of quick Vue tips - disabling a submit button while waiting for a remote call

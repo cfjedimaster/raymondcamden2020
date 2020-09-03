@@ -3,7 +3,7 @@ layout: post
 title: "Vue Quick Shot - Copy to the Clipboard"
 date: "2020-03-04T19:00:00.000Z"
 categories: ["javascript"]
-tags: ["vuejs"]
+tags: ["vuejs","vue quick shot"]
 banner_image: /images/banners/tip.jpg
 permalink: /2020/03/04/vue-quick-shot-copy-to-the-clipboard
 description: My third Vue quick shot - copying to the clipboard

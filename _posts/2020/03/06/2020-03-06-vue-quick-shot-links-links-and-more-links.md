@@ -3,7 +3,7 @@ layout: post
 title: "Vue Quick Shot - Links, Links, and More Links"
 date: "2020-03-06"
 categories: ["javascript"]
-tags: ["vuejs"]
+tags: ["vuejs","vue quick shot"]
 banner_image: /images/banners/tip.jpg
 permalink: /2020/03/06/vue-quick-shot-links-links-and-more-links
 description: A list of resources for Vue developers
