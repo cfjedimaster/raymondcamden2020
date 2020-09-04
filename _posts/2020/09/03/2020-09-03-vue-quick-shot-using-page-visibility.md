@@ -6,7 +6,7 @@ categories: ["javascript"]
 tags: ["vuejs","vue quick shot"]
 banner_image: /images/banners/tip.jpg
 permalink: /2020/09/03/vue-quick-shot-using-page-visibility
-description: 
+description: How to use Vue and detect when your web page is visible.
 ---
 
 Back in March I did a week of quick Vue tips (you can see them all [here](https://www.raymondcamden.com/tags/vue+quick+shot/)). I really enjoyed that set of blog posts as it let me show some quick and simple "X with Vue.js" examples. To be honest, I haven't really thought about them for a while, but earlier this week a reader posted a comment on one of them and for some reason, that got the creative juices flowing again. With that in mind - I'm happy to share another Vue Quick Shot - using the Page Visibility API.
