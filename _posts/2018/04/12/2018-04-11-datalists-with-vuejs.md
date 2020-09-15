@@ -72,7 +72,7 @@ const app = new Vue({
     }
   },
   created() {
-    fetch('https://swapi.co/api/films/')
+    fetch('https://swapi.dev/api/films/')
     .then(res => res.json())
     .then(res => {
       this.films = res.results.map(f => {
@@ -83,7 +83,7 @@ const app = new Vue({
 })
 ```
 
-All I did was add in a `created` event handler and hit the [Star Wars API](https://swapi.co) for my data. You can test the result below:
+All I did was add in a `created` event handler and hit the [Star Wars API](https://swapi.dev) for my data. You can test the result below:
 
 <p data-height="400" data-theme-id="0" data-slug-hash="KoYrrg" data-default-tab="js,result" data-user="cfjedimaster" data-embed-version="2" data-pen-title="Dynamic Datalist" class="codepen">See the Pen <a href="https://codepen.io/cfjedimaster/pen/KoYrrg/">Dynamic Datalist</a> by Raymond Camden (<a href="https://codepen.io/cfjedimaster">@cfjedimaster</a>) on <a href="https://codepen.io">CodePen</a>.</p>
 <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
