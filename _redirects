@@ -119,3 +119,18 @@ admin/index.php /
 
 /wp-content/* https://static.raymondcamden.com/wp-content/:splat
 /index.cfm/2008/7/7/Friday-Puzzler-a-bit-early /2008/07/07/Friday-Puzzler-a-bit-early
+
+//wp-includes/wlwmanifest.xml /
+//wordpress/wp-includes/wlwmanifest.xml /
+//blog/wp-includes/wlwmanifest.xml /
+//cms/wp-includes/wlwmanifest.xml /
+//news/wp-includes/wlwmanifest.xml /
+//sito/wp-includes/wlwmanifest.xml /
+//web/wp-includes/wlwmanifest.xml /
+//wp2/wp-includes/wlwmanifest.xml /
+//site/wp-includes/wlwmanifest.xml /
+//website/wp-includes/wlwmanifest.xml /
+//xmlrpc.php /
+//test/wp-includes/wlwmanifest.xml /
+//wp/wp-includes/wlwmanifest.xml /
+//wp1/wp-includes/wlwmanifest.xml /
