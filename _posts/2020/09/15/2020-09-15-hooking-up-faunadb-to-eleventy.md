@@ -153,7 +153,7 @@ Luckily we have some options. First, many Jamstack services provide a simple way
 
 You could also schedule this on a periodic basis. If you know, for example, that your logistics department updates shipping times once a day, you can simply automate the rebuild to also run once a day. But let's consider another approach.
 
-FaunaB provides both a server-side library to work with data as well as a client-side side one. We've got Eleventy loading products at build time and generating pages for each one. What if we assume some of that data is pretty static (products are probably rarely added or removed) and some is very dynamic? Let's update the site such that the `shippingTimeInDays` value is loaded on the client and is *always* up to date.
+FaunaDB provides both a server-side library to work with data as well as a client-side side one. We've got Eleventy loading products at build time and generating pages for each one. What if we assume some of that data is pretty static (products are probably rarely added or removed) and some is very dynamic? Let's update the site such that the `shippingTimeInDays` value is loaded on the client and is *always* up to date.
 
 To get started, I first modified my data file to copy the ID of each product:
 
