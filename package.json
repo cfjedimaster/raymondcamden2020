@@ -21,6 +21,7 @@
     "@11ty/eleventy": "^0.10.0",
     "algolia-indexing": "^1.0.1",
     "eleventy-xml-plugin": "^0.1.0",
+    "html-minifier": "^4.0.0",
     "node-fetch": "^2.6.0",
     "sendgrid": "^5.2.3"
   }
