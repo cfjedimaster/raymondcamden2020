@@ -6,16 +6,16 @@
     <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="twitter:card" content="summary" />
-    <meta name="twitter:title" content="{% if renderData.title %}{{ renderData.title | capitalize }}{% elsif title %}{{ title }}{% else %}{{ site.title }}{% endif %}" />
+    <meta name="twitter:title" content="{% if renderData.title %}{{ renderData.title | my_xml_escape }}{% elsif title %}{{ title | my_xml_escape}}{% else %}{{ site.title }}{% endif %}" />
     <meta name="twitter:creator" content="@raymondcamden" />    
     <meta name="twitter:site" content="@raymondcamden" />    
-    <meta name="og:title" content="{% if renderData.title %}{{ renderData.title | capitalize }}{% elsif title %}{{ title }}{% else %}{{ site.title }}{% endif %}" />
+    <meta name="og:title" content="{% if renderData.title %}{{ renderData.title | my_xml_escape }}{% elsif title %}{{ title | my_xml_escape }}{% else %}{{ site.title }}{% endif %}" />
     <meta name="og:url" content="{{ page.url | prepend: site.url }}" />
     <meta name="og:type" content="blog" />
 
     {% if description %}
-    <meta name="twitter:description" content="{{description}}" />
-    <meta name="og:description" content="{{ description }}" />
+    <meta name="twitter:description" content="{{description | my_xml_escape }}" />
+    <meta name="og:description" content="{{ description | my_xml_escape }}" />
     {% else %}
     <meta name="twitter:description" content="{{site.description}}" />
     <meta name="og:description" content="{{ site.description }}" />
