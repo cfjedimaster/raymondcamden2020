@@ -143,9 +143,9 @@ I'll skip <code>doStoresForStates</code>, that simply gives me a root variable k
 			if(states.indexOf(storeList[i].storeState) === -1) states.push(storeList[i].storeState);
 		}
 		states.sort();
-		var s = "<option value=\"\">-- State --</option>";
+		var s = "&lt;option value=\"\"&gt;-- State --&lt;/option&gt;";
 		for(var i=0;i&lt;states.length;i++) {
-			s += "<option>" + states[i] + "</option>";
+			s += "&lt;option&gt;" + states[i] + "&lt;/option&gt;";
 		}
 		stateOptionHTML = s;
 	}
@@ -163,9 +163,9 @@ The state drop down has an event listener to respond to changes. The only thing 
 <pre><code class="language-javascript">function doStores() {
 	var selected = $(this).val();
 	if(selected === "") return;
-	var storeHTML = "<option value=\"\">-- Location --</option>";
-	for(var i=0;i<storeData[selected].length;i++) {
-		storeHTML += "<option value=\"" + storeData[selected][i].number + "\">" + storeData[selected][i].city + ", " + storeData[selected][i].name + "</option>"; 	
+	var storeHTML = "&lt;option value=\"\"&gt;-- Location --&lt;/option&gt;";
+	for(var i=0;i&lt;storeData[selected].length;i++) {
+		storeHTML += "&lt;option value=\"" + storeData[selected][i].number + "\"&gt;" + storeData[selected][i].city + ", " + storeData[selected][i].name + "&lt;/option&gt;"; 	
 	}
 	$(this).next("select").html(storeHTML);
 }</code></pre>

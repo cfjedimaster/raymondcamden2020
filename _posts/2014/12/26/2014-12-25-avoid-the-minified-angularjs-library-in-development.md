@@ -43,11 +43,11 @@ Yeah, have fun with that. In case you don't feel like scrolling over the entire 
 [$injector:modulerr] Failed to instantiate module somethingbad due to:
 [$injector:nomod] Module 'somethingbad' is not available! You either misspelled the module name or forgot to load it. If registering a module ensure that you specify the dependencies as the second argument.
 http://errors.angularjs.org/1.2.28/$injector/nomod?p0=somethingbad
-minErr/<@http://localhost:8000/app/bower_components/angular/angular.js:78:12
-module/<@http://localhost:8000/app/bower_components/angular/angular.js:1677:1
+minErr/&lt;@http://localhost:8000/app/bower_components/angular/angular.js:78:12
+module/&lt;@http://localhost:8000/app/bower_components/angular/angular.js:1677:1
 ensure@http://localhost:8000/app/bower_components/angular/angular.js:1601:38
 module@http://localhost:8000/app/bower_components/angular/angular.js:1675:1
-loadModules/<@http://localhost:8000/app/bower_components/angular/angular.js:3877:22
+loadModules/&lt;@http://localhost:8000/app/bower_components/angular/angular.js:3877:22
 forEach@http://localhost:8000/app/bower_components/angular/angular.js:325:9
 loadModules@http://localhost:8000/app/bower_co angular.js:78
 </code></pre>

@@ -38,10 +38,11 @@ This is the search pod.<br>
 
 Note the use of the viewState to set my title. This let me pass a title to my pod. So far so good. My pod view code had HTML and this:
 
-<code>
+```html
 <cfif viewCollection.exists("podbody")>
   #viewCollection.getView("podbody")#
 </cfif>
+```
 
 Everything ran fine until I added another pod:
 

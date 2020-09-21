@@ -13,9 +13,9 @@ Steve asks:
 <p/>
 <blockquote>
 I'm getting onto the jquery / CF integration a bit late.  When I get some time I really want to go through all of your tutorials. What I was trying to find was a simple "edit" type form that would be a modal pop up window from a page of items.
-<br/<br/>
+<br/><br/>
 For example, say you have a product listing of widgets - and next to each widget is an "edit" link that would open a modal jquery window with some form fields on it - populated by a CFC from a db query and then updated via a CFC from the modal window which then closes on update.
-<br><br/>
+<br/><br/>
 This seems like a pretty good "real world" tutorial but in just browsing through your stuff, and plenty of other sites, I'm not seeing one that really explains this concept.
 </blockquote>
 <p>

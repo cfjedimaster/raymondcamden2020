@@ -13,7 +13,7 @@ About two weeks ago a fellow techie in town clued me in a web page run by my loc
 
 <p>
 <!--more-->
-First I needed a way to parse the data on the page. It seemed to follow a pretty standard format. The table always had four columns and the data seemed to be published in a consistent manner. For the heck of it I decided to create a Yahoo Pipe to parse the HTML. This was completely unnecessary, but it was fun, and that's all that matters. Unfortunately I seem to have lost the pipe online, but the URL still works. You can view it in your browser <a href="http://query.yahooapis.com/v1/public/yql?q=select{% raw %}%20*%{% endraw %}20from{% raw %}%20html%{% endraw %}20where{% raw %}%20(url%{% endraw %}3D"http://67.32.159.27/webcad/webcad.asp"{% raw %}%20and%{% endraw %}20xpath{% raw %}%3D'//table[@border%{% endraw %}3D"0"]/tr[@bgcolor{% raw %}%3D"%{% endraw %}23FFFF99"]'){% raw %}%20or%{% endraw %}20(url{% raw %}%3D"http://67.32.159.27/webcad/webcad.asp"%{% endraw %}20and{% raw %}%20xpath%{% endraw %}3D'//table[@border{% raw %}%3D"0"]/tr[@bgcolor%{% endraw %}3D"{% raw %}%2399FF99"]')%{% endraw %}0A&format=json">here</a>. The only interesting part really is the YQL:
+First I needed a way to parse the data on the page. It seemed to follow a pretty standard format. The table always had four columns and the data seemed to be published in a consistent manner. For the heck of it I decided to create a Yahoo Pipe to parse the HTML. This was completely unnecessary, but it was fun, and that's all that matters. Unfortunately I seem to have lost the pipe online, but the URL still works. (Edit in 20220 - sorry - no it doesn't.) 
 
 <p>
 

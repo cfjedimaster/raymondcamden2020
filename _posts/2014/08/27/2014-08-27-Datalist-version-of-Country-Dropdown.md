@@ -61,7 +61,7 @@ Ok, so how to convert this to a datalist? I just need to add a text input and co
 
 <pre><code class="language-javascript">s = $("select");
 html = "";
-for(var i=0;i&lt;s.options.length; i++) {% raw %}{ html+= "<option value=\""+s.options[i].text+"\">\n"; }{% endraw %}
+for(var i=0;i&lt;s.options.length; i++) {% raw %}{ html+= "&lt;option value=\""+s.options[i].text+"\"&gt;\n"; }{% endraw %}
 copy(html);</code></pre>
 
 <p>

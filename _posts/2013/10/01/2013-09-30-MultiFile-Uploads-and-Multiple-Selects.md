@@ -41,10 +41,10 @@ But my experiment had given me an idea. Remember that we can use an event handle
 		
 	var files = e.target.files;
 
-	for(var i=0; i<files.length; i++) {
+	for(var i=0; i&lt;files.length; i++) {
 		var f = files[i];
 			
-		selDiv.innerHTML += f.name + "<br/>";
+		selDiv.innerHTML += f.name + "&lt;br/&gt;";
 
 	}
 		

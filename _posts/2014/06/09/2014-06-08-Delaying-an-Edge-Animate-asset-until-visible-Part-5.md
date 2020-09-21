@@ -58,8 +58,8 @@ In a case where the asset is in an object tag, the window object represents the 
 		var elemTop = $(elem).offset().top;
 		var elemBottom = elemTop + $(elem).height();
 
-		return ((elemBottom >= docViewTop) && (elemTop <= docViewBottom)
-		  && (elemBottom <= docViewBottom) &&  (elemTop >= docViewTop) );
+		return ((elemBottom &gt;= docViewTop) && (elemTop &lt;= docViewBottom)
+		  && (elemBottom &lt;= docViewBottom) &&  (elemTop &gt;= docViewTop) );
 	}		  
 
 	var element = sym.element;

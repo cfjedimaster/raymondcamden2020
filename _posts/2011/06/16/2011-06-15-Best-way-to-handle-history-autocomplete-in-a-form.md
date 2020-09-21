@@ -19,7 +19,7 @@ I have a text input that it used for a search criteria, and I only want to enabl
 Suppose the text input is called "searchBox". With jQuery, I can do this:
 <br/><br/>
 $("#searchBox").keyup(function() {<br/>
- $("#btnGo").button("option", "disabled", $(this).val().length < 5 );<br/>
+ $("#btnGo").button("option", "disabled", $(this).val().length &lt; 5 );<br/>
 });<br/>
 <br/><br/>
 (It's a jQuery UI button, which is why the syntax for enabling is different from a normal button).

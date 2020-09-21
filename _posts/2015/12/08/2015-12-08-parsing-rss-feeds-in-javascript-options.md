@@ -97,7 +97,7 @@ $(document).ready(function() {
 			console.log(result.error);
 		} else {
 			var entries = result.feed.entries;
-			for(var i = 0; i < entries.length; i++){
+			for(var i = 0; i &lt; entries.length; i++){
 				var entry = entries[i];
 				console.dir(entry);
 			}
