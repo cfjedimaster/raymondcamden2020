@@ -36,6 +36,18 @@ templateEngineOverride: false
 		</tr>
 	</table>
 
+    <h3>Posts Per Week (Last 8 Weeks)</h3>
+    <table>
+        <tr>
+            <td>Week</td>
+            <td>Posts</td>
+        </tr>
+        <tr v-for="week in weekData">
+            <td>{{week.sunday | date}}-{{week.saturday | date}}</td>
+            <td>{{week.hits}}</td>
+        </tr>
+    </table>
+
     <h3>Posts Per Year</h3>
     <table>
         <tr>
@@ -83,6 +95,11 @@ Vue.filter('number', s =>  {
   return new Intl.NumberFormat().format(s);
 });
 
+Vue.filter('date', s =>  {
+  if(!window.Intl) return s;
+  return new Intl.DateTimeFormat().format(s);
+});
+
 new Vue({
 	el:'#app',
 	data:{
@@ -101,7 +118,8 @@ new Vue({
 		avgWords:0,
         years:{},
         cats:[], 
-        tags:[]
+        tags:[],
+        weekData:[]
 	},
 	created:function() {
 		fetch('/stats.json')
@@ -137,6 +155,25 @@ new Vue({
             this.cats = res.postsPerCategory;
             this.tags = res.postsPerTag;
 
+            //generate 8 weeks of weeks
+            let weekData = generateWeekData();
+            // get the earliest day
+            let earliest = weekData[weekData.length-1].sunday;
+            // loop from last date until a post is before earliest
+            let curr = dates.length-1;
+            let thisDate = new Date(dates[curr]);
+            console.log('earliest is '+earliest+' and thisDate is '+thisDate);
+            while(thisDate && thisDate.getTime() > earliest.getTime()) {
+                console.log('thisDate',thisDate);
+                // loop over our weeks and if im inside, hits++
+                weekData.forEach(w => {
+                    if(w.sunday.getTime() < thisDate.getTime() && thisDate.getTime() < w.saturday.getTime()) w.hits++;
+                });
+
+                thisDate = new Date(dates[--curr]);
+            }
+            //copy it over now that we're done with it, don't like this I think
+            this.weekData = weekData;
 		}).catch(e => {
             console.error(e);
         });
@@ -161,4 +198,32 @@ new Vue({
         }
     }
 });
+
+/*
+I just create an array where [0].start is the Sunday of last week, [0].end is the Saturday.
+I generate 8 of these with 0 being last week, 1 the week before, and so forth. 
+My solution uses code from: https://stackoverflow.com/a/13682133/52160
+Also https://stackoverflow.com/a/13682065/52160
+*/
+function generateWeekData() {
+    let weeks = [];
+    let weekMS = 60 * 60 * 24 * 7 * 1000;
+    for(let i=0;i<8;i++) {
+
+        let d = new Date();
+
+        // set to Monday of this week
+        d.setDate(d.getDate() - (d.getDay() + 6) % 7);
+
+        // set to previous Monday
+        d.setDate(d.getDate() - (7*(i+1)));
+
+        // create new date of day before
+        let sunday = new Date(d.getFullYear(), d.getMonth(), d.getDate() - 1);
+        let saturday = new Date(sunday.getFullYear(), sunday.getMonth(), sunday.getDate()+6);
+
+        weeks.push({sunday, saturday, hits:0});
+    }
+    return weeks;
+}
 </script>
