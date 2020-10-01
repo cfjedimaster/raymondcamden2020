@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">    
     <title>{% if renderData.title %}{{ renderData.title | titlecase }}{% elsif title %}{{ title }}{% else %}{{ site.title }}{% endif %}</title> 
-    <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
+    <meta name="description" content="{% if description %}{{ description | my_xml_escape }}{% else %}{{ site.description | my_xml_escape }}{% endif %}">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:title" content="{% if renderData.title %}{{ renderData.title | my_xml_escape }}{% elsif title %}{{ title | my_xml_escape}}{% else %}{{ site.title }}{% endif %}" />
