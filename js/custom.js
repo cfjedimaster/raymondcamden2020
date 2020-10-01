@@ -29,9 +29,6 @@
             e.preventDefault();
         });
 
-        // recent posts
-        $('#recentPosts').load('/recentPosts/');
-
     });
 
 }(jQuery));
