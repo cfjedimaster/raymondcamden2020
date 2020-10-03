@@ -135,3 +135,4 @@ admin/index.php /
 /wp/wp-includes/wlwmanifest.xml /
 /wp1/wp-includes/wlwmanifest.xml /
 /wp2/wp-includes/wlwmanifest.xml /
+*wlwmanifest.xml /
