@@ -21,6 +21,11 @@ exports.handler = async (event, context) => {
     return {
       statusCode: 200,
       body: JSON.stringify(cats),
+      headers: {
+        'Access-Control-Allow-Origin': '*',
+        'Access-Control-Allow-Headers': 'Content-Type',
+        'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE'
+      }
     }
   } catch (err) {
     return { statusCode: 500, body: err.toString() }
