@@ -12,7 +12,7 @@ Earlier this week I was talking to a good friend of mine (who is also a recent c
 
 I began with a Vue app that loaded in data via an Ajax call and rendered a table. This initial version has no sorting or pagination, it just loads data and dumps it in the view. Here's the layout:
 
-```markup
+```html
 <div id="app">
   
   <table>
@@ -46,7 +46,7 @@ const app = new Vue({
     cats:[]
   },
   created:function() {
-    fetch('https://api.myjson.com/bins/s9lux')
+    fetch('https://www.raymondcamden.com/.netlify/functions/get-cats')
     .then(res => res.json())
     .then(res => {
       this.cats = res;
@@ -62,7 +62,7 @@ const app = new Vue({
 
 Alright, so for the first update, I decided to add sorting. I made two changes to the view. First, I added click handlers to my headers so I could do sorting. Secondly, I switched my loop to use `sortedCats`, which I'm going to set up as a Vue computed property. Here's the new HTML:
 
-```markup
+```html
 <div id="app">
   
   <table>
@@ -137,7 +137,7 @@ By the way, you'll notice some debug data at the bottom of the view. In a real a
 
 Woot! Almost there! For the final version I added pagination. I didn't want to add more cats to my JSON data set, so I used a relatively small "page size" of 3. I began by adding buttons to the front end for pagination:
 
-```markup
+```html
 <p>
 <button @click="prevPage">Previous</button> 
 <button @click="nextPage">Next</button>
