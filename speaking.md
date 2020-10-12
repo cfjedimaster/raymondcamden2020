@@ -21,6 +21,12 @@ connect.tech 2020<br/>
 Online, October 14, 2020
 </p>
 
+<p>
+<a href="https://apiworld.co/hackathon/">Introduction to HERE APIs</a><br/>
+API World<br/>
+Online, October 26, 2020
+</p>
+
 
 <h3>My Past Events</h3>
 
