@@ -135,4 +135,6 @@ admin/index.php /
 /wp/wp-includes/wlwmanifest.xml /
 /wp1/wp-includes/wlwmanifest.xml /
 /wp2/wp-includes/wlwmanifest.xml /
-*wlwmanifest.xml /
+
+/index.cfm/2012/11/26/Reading-Microdata-Elements-in-Chrome /2012/11/26/Reading-Microdata-Elements-in-Chrome
+/index.cfm/2012/4/6/Face-detection-with-getUserMedia /2012/04/06/Face-detection-with-getUserMedia
