@@ -6,7 +6,7 @@ description: All about Raymond Camden
 
 <img src="https://static.raymondcamden.com/images/ray2019c.jpg" style="float:left;margin-right:10px">
 
-My name is Raymond Camden. I'm a father of seven living in beautiful Lafayette, Louisiana. I am a Lead Developer Evangelist working at [HERE](https://here.com) Most of my time is spent writing, researching, or presenting. When I'm not behind a computer, I'm an avid XBox/PS4 player, enjoy movies, and read like crazy. 
+My name is Raymond Camden. I'm a married father of eight  living in beautiful Lafayette, Louisiana. I am a Lead Developer Evangelist working at [HERE](https://here.com) Most of my time is spent writing, researching, or presenting. When I'm not behind a computer, I'm an avid XBox/PS4 player, enjoy movies, and read like crazy. 
 
 I've been lucky to have been invited to speak at many conferences over the years. If you would like me to speak at your conference or organization, please <a href="/contact">contact</a> me. I can cover pretty much any topic you see my blog about, but feel free to request just about anything. I love presenting on topics I'm not yet familiar with as it gives me a chance to learn something new.
 
@@ -20,6 +20,7 @@ If you find this information useful (currently at {{ collections.posts | size }}
 I have not done a great job of tracking my various articles on other web sites, but I hope to correct that now. Consider the list below a beginning (as of July 2013) and certainly <i>not</i> a complete list.
 
 <ul>
+<li><a href="https://snipcart.com/blog/netlify-forms">Contact Form Processing Made Easy with Netlify</a> for Snipcart</a></li>
 <li><a href="https://blog.logrocket.com/comparing-the-web-page-designs-of-three-vue-ui-libraries">Comparing the web page designs of three Vue UI libraries</a> for LogRocket</li>
 <li><a href="https://blog.logrocket.com/charting-with-vue-a-comparison/">Charting with Vue: A comparison</a> for LogRocket</li>
 <li><a href="https://www.stackbit.com/blog/jamstack-voice-assistants/">Voice Assistants and the JAMstack</a> for Stackbit</li>
