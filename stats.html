@@ -34,6 +34,14 @@ templateEngineOverride: false
 		<td>Average Words per Post:</td>
 		<td>{{avgWords | number}}</td>
 		</tr>
+        <tr>
+        <td>Current Build Status:</td>
+        <td>{{ buildStatus }}</td>
+        </tr>
+        <tr v-if="buildPublished">
+            <td>Build Time:</td>
+            <td>{{ buildTime }}</td>
+        </tr>
 	</table>
 
     <h3>Posts Per Week (Last 8 Weeks)</h3>
@@ -119,64 +127,72 @@ new Vue({
         years:{},
         cats:[], 
         tags:[],
-        weekData:[]
+        weekData:[],
+        buildStatus:'',
+        buildPublished:false,
+        buildTime:''
 	},
-	created:function() {
-		fetch('/stats.json')
-		.then(res => res.json())
-		.then(res => {
-			this.totalPosts = res.totalPosts;
-			
-			this.firstPost = {
-				title:res.firstPost.title,
-				date:res.firstPost.published,
-				url:res.firstPost.url,
-				age:moment(res.firstPost.published).fromNow()
-			};
+	created:async function() {
+        let data = await fetch('/stats.json');
+        let res = await data.json();
 
-			this.lastPost = {
-				title:res.lastPost.title,
-				date:res.lastPost.published,
-				url:res.lastPost.url,
-				age:moment(res.lastPost.published).fromNow()
-			};
+        this.totalPosts = res.totalPosts;
+        
+        this.firstPost = {
+            title:res.firstPost.title,
+            date:res.firstPost.published,
+            url:res.firstPost.url,
+            age:moment(res.firstPost.published).fromNow()
+        };
 
-			this.totalWords = res.totalWords;
-			this.avgWords = res.averageWordsPerPost.toFixed();
+        this.lastPost = {
+            title:res.lastPost.title,
+            date:res.lastPost.published,
+            url:res.lastPost.url,
+            age:moment(res.lastPost.published).fromNow()
+        };
 
-            let dates = res.dates.split(',');
-            // process res.dates on the client site
-            dates.forEach(d => {
-                let year = new Date(d).getFullYear();
-                if(!this.years[year]) Vue.set(this.years,year,0);
-                Vue.set(this.years,year, this.years[year]+1);
+        this.totalWords = res.totalWords;
+        this.avgWords = res.averageWordsPerPost.toFixed();
+
+        let dates = res.dates.split(',');
+        // process res.dates on the client site
+        dates.forEach(d => {
+            let year = new Date(d).getFullYear();
+            if(!this.years[year]) Vue.set(this.years,year,0);
+            Vue.set(this.years,year, this.years[year]+1);
+        });
+
+        this.cats = res.postsPerCategory;
+        this.tags = res.postsPerTag;
+
+        //generate 8 weeks of weeks
+        let weekData = generateWeekData();
+        // get the earliest day
+        let earliest = weekData[weekData.length-1].sunday;
+        // loop from last date until a post is before earliest
+        let curr = dates.length-1;
+        let thisDate = new Date(dates[curr]);
+        while(thisDate && thisDate.getTime() > earliest.getTime()) {
+            // loop over our weeks and if im inside, hits++
+            weekData.forEach(w => {
+                if(w.sunday.getTime() < thisDate.getTime() && thisDate.getTime() < w.saturday.getTime()) w.hits++;
             });
 
-            this.cats = res.postsPerCategory;
-            this.tags = res.postsPerTag;
+            thisDate = new Date(dates[--curr]);
+        }
+        //copy it over now that we're done with it, don't like this I think
+        this.weekData = weekData;
 
-            //generate 8 weeks of weeks
-            let weekData = generateWeekData();
-            // get the earliest day
-            let earliest = weekData[weekData.length-1].sunday;
-            // loop from last date until a post is before earliest
-            let curr = dates.length-1;
-            let thisDate = new Date(dates[curr]);
-            console.log('earliest is '+earliest+' and thisDate is '+thisDate);
-            while(thisDate && thisDate.getTime() > earliest.getTime()) {
-                console.log('thisDate',thisDate);
-                // loop over our weeks and if im inside, hits++
-                weekData.forEach(w => {
-                    if(w.sunday.getTime() < thisDate.getTime() && thisDate.getTime() < w.saturday.getTime()) w.hits++;
-                });
+        // new work to show build status
+        let buildReq = await fetch('/.netlify/functions/deploy-status');
+        let buildData = await buildReq.json();
+        if(buildData.state === 'ready') {
+            this.buildStatus = 'Published';
+            this.buildTime = buildData.published_at;
+            this.buildPublished = true;
+        } else this.buildStatus = buildData.state;
 
-                thisDate = new Date(dates[--curr]);
-            }
-            //copy it over now that we're done with it, don't like this I think
-            this.weekData = weekData;
-		}).catch(e => {
-            console.error(e);
-        });
 	},
     computed:{
         sortedCats:function() {
