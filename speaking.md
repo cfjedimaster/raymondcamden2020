@@ -15,12 +15,7 @@ I started a blog. I feel like I have to struggle to learn new things and if I ca
 
 <h3>My Next Events</h3>
 
-<p>
-<a href="https://apiworld.co/hackathon/">Introduction to HERE APIs</a><br/>
-API World<br/>
-Online, October 26, 2020
-</p>
-
+More to come...
 
 <h3>My Past Events</h3>
 
@@ -29,6 +24,18 @@ Here are my past events, most recent first, in a nice scrollable list no one wil
 </p>
 
 <div style="height: 400px; overflow:scroll">
+
+<p>
+<a href="https://vuetoronto.com/">The Vue CLI for People Scared of the Vue CLI</a><br/>
+VueConf Toronto 2020<br/>
+Online, November 5, 2020
+</p>
+
+<p>
+<a href="https://apiworld.co/hackathon/">Introduction to HERE APIs</a><br/>
+API World<br/>
+Online, October 26, 2020
+</p>
 
 <p>
 <a href="https://connect.tech/session?id=329">API Integration in your Jamstack</a><br/>
