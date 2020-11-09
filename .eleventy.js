@@ -111,7 +111,6 @@ module.exports = function(eleventyConfig) {
 	eleventyConfig.addFilter("reverse", a => a.slice().reverse() );
 
   eleventyConfig.addFilter('ageInDays', d => {
-    console.log(d);
     let date = new Date(d);
     let now = new Date();
     let diff = now.getTime() - date.getTime();
