@@ -110,6 +110,15 @@ module.exports = function(eleventyConfig) {
 	// reverse isn't supported in 11 liquid?
 	eleventyConfig.addFilter("reverse", a => a.slice().reverse() );
 
+  eleventyConfig.addFilter('ageInDays', d => {
+    console.log(d);
+    let date = new Date(d);
+    let now = new Date();
+    let diff = now.getTime() - date.getTime();
+    let day_diff = Math.floor(diff / (1000 * 3600 * 24)); 
+    return day_diff;
+  });
+
 	eleventyConfig.addCollection("posts", collection => {
    let posts = collection.getFilteredByGlob("_posts/**/*.md");
 

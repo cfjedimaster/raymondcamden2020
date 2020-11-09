@@ -1,6 +1,7 @@
 ---
 layout: default
 ---
+
 <div class="site-content">
     <div class="inner">
         <main class="site-main">
@@ -17,8 +18,13 @@ layout: default
                     <div class="entry-meta">
                         by <span class="post-author">{{site.author_name}}</span> on <time class="published" datetime="{{ page.date | date: "%Y-%m-%d" }}">{{ page.date | date: "%B %e, %Y" }}</time> | <a href="#comments">Comments</a>
                     </div><!-- .entry-meta -->
+
                 </header><!-- .entry-header -->
                 <div class="entry-content">
+                    {% assign age = date | ageInDays %}
+                    {% assign twoyears = 365 | times: 2 %}
+                    {% if age > twoyears %}<p class="oldPost">This post is more than 2 years old.</p>{% endif %}
+
                     {{content}}
                 </div><!-- .entry-content -->
                 <footer class="entry-footer">
@@ -37,7 +43,6 @@ layout: default
                         Tagged: {% for tag in tags %}<a href="{{site.baseurl}}/tags/{{ tag | myEscape }}" title="Pages tagged {{ tag }}" rel="tag">{{ tag }}</a>{% unless forloop.last %} {% endunless %}{% endfor %}
                     {% endif %}
                     </div>
-
                 </footer><!-- .entry-footer -->
             </article><!-- .post -->
             <div class="author-box">

@@ -871,3 +871,11 @@ a.archive-top-link { font-size: 11px; }
   font-size: 9px;
   line-height: 1;
 }
+
+
+.oldPost {
+  font-size: 14px;
+  font-weight: bold;
+  text-decoration: underline;
+  margin-bottom: 5px;
+}
