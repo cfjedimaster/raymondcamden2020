@@ -15,7 +15,11 @@ I started a blog. I feel like I have to struggle to learn new things and if I ca
 
 <h3>My Next Events</h3>
 
-More to come...
+<p>
+<a href="https://www.meetup.com/JAMstack-Toronto/events/274128808/">11ties: 11 min ⚡️ talks on 11ty, on 11/11</a><br/>
+Jamstack Toronto<br/>
+Online, November 11, 2020
+</p>
 
 <h3>My Past Events</h3>
 
