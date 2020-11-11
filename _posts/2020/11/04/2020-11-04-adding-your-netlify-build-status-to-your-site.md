@@ -127,7 +127,7 @@ Here's an example result:
 }
 ```
 
-Cool! So at this point you can do just about anything. For me, I decided to add information about my build status to my [stats](./stats) page. I added two new fields to the data I display. First is the build status. If the result of the call is `ready`, then it means `published`. If my build is published, then I render the `published_at` result. You can get the complete source of my stats page (along with the rest of the site) on my [GitHub](https://github.com/cfjedimaster/raymondcamden2020) repo for the site, but here's the simple Vue.js code I'm using in my `create` method:
+Cool! So at this point you can do just about anything. For me, I decided to add information about my build status to my [stats](/stats) page. I added two new fields to the data I display. First is the build status. If the result of the call is `ready`, then it means `published`. If my build is published, then I render the `published_at` result. You can get the complete source of my stats page (along with the rest of the site) on my [GitHub](https://github.com/cfjedimaster/raymondcamden2020) repo for the site, but here's the simple Vue.js code I'm using in my `create` method:
 
 ```js
 // new work to show build status
@@ -140,4 +140,4 @@ if(buildData.state === 'ready') {
 } else this.buildStatus = buildData.state;
 ```
 
-As I said, you can see this on my [stats](./stats) page if you're curious. I hope this little example is useful. Most of my Netlify API posts relate to analytics which are *not* officially supported, but this time everything I've shown is safe to use. Enjoy!
+As I said, you can see this on my [stats](/stats) page if you're curious. I hope this little example is useful. Most of my Netlify API posts relate to analytics which are *not* officially supported, but this time everything I've shown is safe to use. Enjoy!
