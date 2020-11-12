@@ -3,7 +3,7 @@ layout: post
 title: "Hooking Up FaunaDB to Eleventy"
 date: "2020-09-15"
 categories: ["static sites"]
-tags: ["eleventy","faunada"]
+tags: ["eleventy","faunadb"]
 banner_image: /images/banners/field-flowers.jpg
 permalink: /2020/09/15/hooking-up-faunadb-to-eleventy
 description: 
