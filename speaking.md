@@ -15,11 +15,7 @@ I started a blog. I feel like I have to struggle to learn new things and if I ca
 
 <h3>My Next Events</h3>
 
-<p>
-<a href="https://www.meetup.com/JAMstack-Toronto/events/274128808/">11ties: 11 min ⚡️ talks on 11ty, on 11/11</a><br/>
-Jamstack Toronto<br/>
-Online, November 11, 2020
-</p>
+Nothing planned currently. Invite me to speak at your event! 
 
 <h3>My Past Events</h3>
 
@@ -28,6 +24,12 @@ Here are my past events, most recent first, in a nice scrollable list no one wil
 </p>
 
 <div style="height: 400px; overflow:scroll">
+
+<p>
+<a href="https://www.meetup.com/JAMstack-Toronto/events/274128808/">11ties: 11 min ⚡️ talks on 11ty, on 11/11</a><br/>
+Jamstack Toronto<br/>
+Online, November 11, 2020
+</p>
 
 <p>
 <a href="https://vuetoronto.com/">The Vue CLI for People Scared of the Vue CLI</a><br/>
