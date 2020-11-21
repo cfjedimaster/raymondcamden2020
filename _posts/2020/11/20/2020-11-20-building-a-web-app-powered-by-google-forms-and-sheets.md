@@ -31,9 +31,13 @@ I set up the form to save to a Google Sheet (that isn't the default), and then o
 
 Notice that Google has also added a timestamp. I don't need that but it's handy information. Now for the fun part. My sheet is only editable by me, but the public has the ability to store data in it via the form. But only I can edit the additional columns. 
 
-I then published my sheet to the web. As I said above, this is where spam can come into play, but as I said, it's only going to be visible by curious web developers who look at my code and open up the sheet directly. You can see this yourself here: <https://docs.google.com/spreadsheets/d/e/2PACX-1vQLVvd7h1zohI2GTCI4GPEVNEn_9t9qqtW-YJK4FKgv7p98d1PkLuMyAawF_uoLYulyzcqmJ301BDlF/pubhtml>
+I then published my sheet to the web. As I said above, this is where spam can come into play, but as I said, it's only going to be visible by curious web developers who look at my code and open up the sheet directly. You can see this yourself here: <https://docs.google.com/spreadsheets/d/e/2PACX-1vQLVvd7h1zohI2GTCI4GPEVNEn_9t9qqtW-YJK4FKgv7p98d1PkLuMyAawF_uoLYulyzcqmJ301BDlF/pubhtml>. 
 
-So how do I get this into a web app? You can modify the URL to output both CSV and JSON. I'm going to use CSV since there is a great library for it, [Papa Pare](https://www.papaparse.com/). To get the CSV output, you change the URL to this: <https://docs.google.com/spreadsheets/d/e/2PACX-1vQLVvd7h1zohI2GTCI4GPEVNEn_9t9qqtW-YJK4FKgv7p98d1PkLuMyAawF_uoLYulyzcqmJ301BDlF/pub?output=csv> If you open that URL your browser should download the raw CSV. But how do I use it in a web app?
+So how do I get this into a web app? You can modify the URL to output both CSV and JSON. I'm going to use CSV since there is a great library for it, [Papa Pare](https://www.papaparse.com/). To get the CSV output, you change the URL to this: <https://docs.google.com/spreadsheets/d/e/2PACX-1vQLVvd7h1zohI2GTCI4GPEVNEn_9t9qqtW-YJK4FKgv7p98d1PkLuMyAawF_uoLYulyzcqmJ301BDlF/pub?output=csv> If you open that URL your browser should download the raw CSV. 
+
+**Edit:** Note that enabling remote access takes one step. When you publish to the web, it defaults to web. If you switch to CSV, you actually get the link shared above, but it does *not* work for anonymous requests, the user has to sign in. I also needed to get a shareable link, viewer only. The link did not need to be used and the URL itself isn't important. I shared the document that way too, opened it at least once, and then went back to to test my CSV link. At that point it worked. Long story short, you need to do both, and confirm your link works in an incognito browser before you try to use it in JavaScript.
+
+So how do I use it in a web app?
 
 I began by building a simple Vue.js application. I didn't have to use Vue but I had to use Vue, know what I mean? I started off with a simple layout:
 
