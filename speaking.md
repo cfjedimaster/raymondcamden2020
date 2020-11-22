@@ -15,7 +15,16 @@ I started a blog. I feel like I have to struggle to learn new things and if I ca
 
 <h3>My Next Events</h3>
 
+<!--
 Nothing planned currently. Invite me to speak at your event! 
+-->
+
+<p>
+<a href="https://websummit.com/schedule/timeslot/mapping-without-maps-hosted-by-here-technologies">Mapping Without Maps</a><br/>
+websummit<br/>
+Online, December 2, 2020
+</p>
+
 
 <h3>My Past Events</h3>
 
