@@ -1,0 +1,32 @@
+---
+permalink: /jsonfeed/index.json
+---
+
+{% assign posts = collections.posts | reverse %}
+
+{
+    "version": "https://jsonfeed.org/version/1",
+    "title": "{{ site.title }}",
+    "home_page_url": "{{ site.url }}",
+    "feed_url": "{{ site.url }}{{ page.url }}",
+	"description": "{{ site.description | my_xml_escape}}",
+	"author":"{{site.author_name | my_xml_escape}}",
+	"items":[
+            {% for post in posts limit:10 %}
+			{
+				"id": "{{site.url}}{{ post.url }}",
+				"title": "{{ post.data.title | my_xml_escape }}",
+				"content_text": {% capture content %}{% excerpt post %}{% endcapture %}
+                        "{{ content | my_xml_escape }}",
+				"url": "link",
+				"date_published": "{{ post.date }}",
+				"tags": [
+				{% for tag in post.data.tags %}
+                "{{ tag | my_xml_escape }}" {% if forloop.last != true %},{% endif %}
+                {% endfor %}
+				]
+			}{% if forloop.last != true %},{% endif %}
+
+			{% endfor %}
+	]
+}

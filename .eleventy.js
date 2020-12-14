@@ -45,6 +45,7 @@ module.exports = function(eleventyConfig) {
       .replace(/>/g, '&gt;')
       .replace(/"/g, '&quot;')
       .replace(/'/g, '&apos;')
+      .replace(/\n/g, '')
       .replace(/data-src/g,'src');
   });
 
