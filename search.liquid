@@ -5,7 +5,7 @@ description: Search this Site
 ---
 
 {% raw %}
-<div id="app">
+<div id="app" v-cloak>
 	<input v-model="search" type="search"> <button @click="doSearch">Search</button>
   <div v-if="searching">
     <p><i>Searching for results...</i></p>
@@ -23,7 +23,7 @@ description: Search this Site
     There was one total result for this search.
     </p>
 		<p v-for="(result,idx) in results" :key="idx">
-			{{ idx+1}}) <a :href="result.url">{{result.title}}</a><br/>
+			{{ idx+1}}) <a :href="result.url" @click="track(result.url, result.objectID, idx+1)">{{result.title}}</a><br/>
       Published: {{ result.date }}<br/>
       Excerpt: <span v-html="result._snippetResult.content.value"></span>
 		</p>
@@ -34,17 +34,35 @@ description: Search this Site
 <script src="https://cdn.jsdelivr.net/npm/algoliasearch@4/dist/algoliasearch-lite.umd.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 <script>
+var ALGOLIA_INSIGHTS_SRC = "https://cdn.jsdelivr.net/npm/search-insights@1.6.3";
+
+!function(e,a,t,n,s,i,c){e.AlgoliaAnalyticsObject=s,e[s]=e[s]||function(){
+(e[s].queue=e[s].queue||[]).push(arguments)},i=a.createElement(t),c=a.getElementsByTagName(t)[0],
+i.async=1,i.src=n,c.parentNode.insertBefore(i,c)
+}(window,document,"script",ALGOLIA_INSIGHTS_SRC,"aa");
+
+
+// Initialize library
+aa('init', {
+	appId: 'WFABFE7Z9Q',
+	apiKey: 'd1c88c3f98648a69f11cdd9d5a87de08'
+});
+</script>
+
+
+<script>
 
 const app = new Vue({
 	el:'#app',
 	data: {
 		search:'',
-    searching:false,
+    	searching:false,
 		algolia_client:null,
 		algolia_index:null,
 		results:null,
 		numResults:null,
-    noResults:false
+    	noResults:false, 
+		queryID:null
 	},
 	created() {
 		this.client = algoliasearch('WFABFE7Z9Q', 'd1c88c3f98648a69f11cdd9d5a87de08');
@@ -60,7 +78,8 @@ const app = new Vue({
 			let resultsRaw = await this.index.search(this.search,{
 				attributesToRetrieve:['title', 'url','date'],
 				attributesToSnippet:['content'],
-				hitsPerPage: 50
+				hitsPerPage: 50,
+				clickAnalytics:true
 			});
 			console.log('results', resultsRaw);
 
@@ -73,6 +92,17 @@ const app = new Vue({
 			this.numResults = resultsRaw.nbHits;
 			this.searching = false;
 			this.noResults = this.results.length === 0;
+			this.queryID = resultsRaw.queryID;
+		},
+		track(url,id, pos) {			
+			console.log('track', url, id, pos);
+			aa('clickedObjectIDsAfterSearch', {
+				eventName: 'click_on_search_page',
+				index: 'raymondcamden',
+				queryID: this.queryID,
+				objectIDs:[id],
+				positions:[pos]
+			});
 		}
 	}
 })
