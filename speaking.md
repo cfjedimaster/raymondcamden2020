@@ -18,12 +18,12 @@ I started a blog. I feel like I have to struggle to learn new things and if I ca
 <!--
 Nothing planned currently. Invite me to speak at your event! 
 -->
-
 <p>
-<a href="https://www.meetup.com/NorthAtlantaJavaScript/events/274871614/">A Beginner's Guide to Wrangling Asynchronicity in JavaScript</a><br/>
-North Atlanta JavaScript and Web Dev<br/>
-Online, December 17, 2020
+<a href="https://cfe.dev/events/the-jam-2021/">Search This!</a><br/>
+The Jam.dev<br/>
+Online, January 28, 2021
 </p>
+
 
 <h3>My Past Events</h3>
 
@@ -32,6 +32,12 @@ Here are my past events, most recent first, in a nice scrollable list no one wil
 </p>
 
 <div style="height: 400px; overflow:scroll">
+
+<p>
+<a href="https://www.meetup.com/NorthAtlantaJavaScript/events/274871614/">A Beginner's Guide to Wrangling Asynchronicity in JavaScript</a><br/>
+North Atlanta JavaScript and Web Dev<br/>
+Online, December 17, 2020
+</p>
 
 <p>
 <a href="https://websummit.com/schedule/timeslot/mapping-without-maps-hosted-by-here-technologies">Mapping Without Maps</a><br/>
