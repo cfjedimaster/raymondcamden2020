@@ -10,7 +10,7 @@ permalink: /2017/06/15/testing-multiple-image-recognition-services-at-once
 
 I'm a big fan of image recognition APIs - by that I mean services that let you send in a picture and have them scanned to determine what's actually in the picture. When they work well, it's cool as heck. When they fail, it's typically pretty funny. All in all that's a win-win for me. For a while now I've been wanting to build something that would let me compare multiple services like this at the same time. This week - I did that. 
 
-I call it "RecogTester", which isn't very imaginative, but it provides a reports via Google's [Cloud Vision](https://cloud.google.com/vision/) API, IBM Bluemix's [Visual Recognition] API, and Microsoft's [Computer Vision](https://azure.microsoft.com/en-us/services/cognitive-services/computer-vision/) API. The UI of my app isn't spectactuclar, but here's how it looks. 
+I call it "RecogTester", which isn't very imaginative, but it provides a reports via Google's [Cloud Vision](https://cloud.google.com/vision/) API, IBM Bluemix's [Visual Recognition](https://www.ibm.com/cloud/watson-visual-recognition) API, and Microsoft's [Computer Vision](https://azure.microsoft.com/en-us/services/cognitive-services/computer-vision/) API. The UI of my app isn't spectactuclar, but here's how it looks. 
 
 Initially, it is just a form prompting you to select a picture:
 
