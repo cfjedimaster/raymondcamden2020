@@ -40,8 +40,12 @@ exports.handler = async (event, context) => {
     };
 
     data.forEach(d => {
+      /*
+      define an objectID for Algolia
+      */
+      d.objectID = d.url;
       batch.requests.push({
-        'action':'addObject',
+        'action':'updateObject',
         'body':d
       })
     });
