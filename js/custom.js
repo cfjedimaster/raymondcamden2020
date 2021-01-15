@@ -52,33 +52,33 @@
     "onPopupOpen": function () {},
     "onInitialise": function (status) {
         var hasConsented = this.hasConsented();
-        /*
+        
         var ezstandalone = ezstandalone || {};
         ezstandalone.cmd = ezstandalone.cmd || [];
         ezstandalone.cmd.push(function () {
             ezstandalone.setDisablePersonalizedStatistics(!hasConsented);
             ezstandalone.setDisablePersonalizedAds(!hasConsented);
             ezstandalone.setEzoicAnchorAd(false);
-            ezstandalone.define(101, 102, 103, 104);
+            ezstandalone.define(101);
             ezstandalone.enable();
             ezstandalone.display();
         });
-        */
+        
     },
     "onStatusChange": function (status, chosenBefore) {
         var hasConsented = this.hasConsented();
-        /*
+        
         var ezstandalone = ezstandalone || {};
         ezstandalone.cmd = ezstandalone.cmd || [];
         ezstandalone.cmd.push(function () {
             ezstandalone.setDisablePersonalizedStatistics(!hasConsented);
             ezstandalone.setDisablePersonalizedAds(!hasConsented);
             ezstandalone.setEzoicAnchorAd(false);
-            ezstandalone.define(101, 102, 103, 104);
+            ezstandalone.define(101);
             ezstandalone.enable();
             ezstandalone.display();
         });
-        */
+        
     },
     "law": {
         "regionalLaw": true,
