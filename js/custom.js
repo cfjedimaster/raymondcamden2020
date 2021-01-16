@@ -59,7 +59,7 @@
             ezstandalone.setDisablePersonalizedStatistics(!hasConsented);
             ezstandalone.setDisablePersonalizedAds(!hasConsented);
             ezstandalone.setEzoicAnchorAd(false);
-            ezstandalone.define(101);
+            ezstandalone.define(101,102);
             ezstandalone.enable();
             ezstandalone.display();
         });
@@ -74,7 +74,7 @@
             ezstandalone.setDisablePersonalizedStatistics(!hasConsented);
             ezstandalone.setDisablePersonalizedAds(!hasConsented);
             ezstandalone.setEzoicAnchorAd(false);
-            ezstandalone.define(101);
+            ezstandalone.define(101,102);
             ezstandalone.enable();
             ezstandalone.display();
         });
