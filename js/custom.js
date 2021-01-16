@@ -29,62 +29,68 @@
             e.preventDefault();
         });
 
+        window.cookieconsent.initialise({
+            "palette": {
+                "popup": {
+                    "background": "#000"
+                },
+                "button": {
+                    "background": "#f1d600"
+                },
+            },
+            "type": "opt-in",
+            "content": {
+                "href": "/privacy-policy/"
+            },
+            "revokable": true,
+            "dismissOnWindowClick": true,
+            "dismissOnScroll": 200,
+            "onPopupOpen": function () {},
+            "onInitialise": function (status) {
+                var hasConsented = this.hasConsented();
+                console.log('onInit', hasConsented);
+                var ezstandalone = window.ezstandalone || {};
+                console.log('ez',ezstandalone);
+                ezstandalone.cmd = ezstandalone.cmd || [];
+                ezstandalone.cmd.push(function () {
+                    console.log('enter func');
+                    //ezstandalone.setDisablePersonalizedStatistics(!hasConsented);
+                    //ezstandalone.setDisablePersonalizedAds(!hasConsented);
+                    //ezstandalone.setEzoicAnchorAd(false);
+                    ezstandalone.define(101,102);
+                    ezstandalone.enable();
+                    ezstandalone.display();
+                    console.log('display');
+                });
+                
+            },
+            "onStatusChange": function (status, chosenBefore) {
+                var hasConsented = this.hasConsented();
+                console.log('onStatusChange', hasConsented);
+                var ezstandalone = window.ezstandalone || {};
+                ezstandalone.cmd = ezstandalone.cmd || [];
+                ezstandalone.cmd.push(function () {
+                    console.log('enter func');
+                    //ezstandalone.setDisablePersonalizedStatistics(!hasConsented);
+                    //ezstandalone.setDisablePersonalizedAds(!hasConsented);
+                    //ezstandalone.setEzoicAnchorAd(false);
+                    ezstandalone.define(101,102);
+                    ezstandalone.enable();
+                    ezstandalone.display();
+                    console.log('display');
+                });
+                
+            },
+            "law": {
+                "regionalLaw": true,
+            },
+            "location": false,
+        });
+
+
     });
 
 }(jQuery));
-
- window.cookieconsent.initialise({
-    "palette": {
-        "popup": {
-            "background": "#000"
-        },
-        "button": {
-            "background": "#f1d600"
-        },
-    },
-    "type": "opt-in",
-    "content": {
-        "href": "/privacy-policy/"
-    },
-    "revokable": true,
-    "dismissOnWindowClick": true,
-    "dismissOnScroll": 200,
-    "onPopupOpen": function () {},
-    "onInitialise": function (status) {
-        var hasConsented = this.hasConsented();
-        
-        var ezstandalone = ezstandalone || {};
-        ezstandalone.cmd = ezstandalone.cmd || [];
-        ezstandalone.cmd.push(function () {
-            ezstandalone.setDisablePersonalizedStatistics(!hasConsented);
-            ezstandalone.setDisablePersonalizedAds(!hasConsented);
-            ezstandalone.setEzoicAnchorAd(false);
-            ezstandalone.define(101,102);
-            ezstandalone.enable();
-            ezstandalone.display();
-        });
-        
-    },
-    "onStatusChange": function (status, chosenBefore) {
-        var hasConsented = this.hasConsented();
-        
-        var ezstandalone = ezstandalone || {};
-        ezstandalone.cmd = ezstandalone.cmd || [];
-        ezstandalone.cmd.push(function () {
-            ezstandalone.setDisablePersonalizedStatistics(!hasConsented);
-            ezstandalone.setDisablePersonalizedAds(!hasConsented);
-            ezstandalone.setEzoicAnchorAd(false);
-            ezstandalone.define(101,102);
-            ezstandalone.enable();
-            ezstandalone.display();
-        });
-        
-    },
-    "law": {
-        "regionalLaw": true,
-    },
-    "location": false,
-});
 
 if ('serviceWorker' in navigator) {
   // Use the window load event to keep the page load performant
