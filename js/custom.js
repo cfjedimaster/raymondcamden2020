@@ -29,6 +29,7 @@
             e.preventDefault();
         });
 
+        $('.entry-content > p:nth-of-type(3)').after('<div id="ezoic-pub-ad-placeholder-117"></div>');
         window.cookieconsent.initialise({
             "palette": {
                 "popup": {
@@ -56,7 +57,7 @@
                     ezstandalone.setDisablePersonalizedStatistics(!hasConsented);
                     ezstandalone.setDisablePersonalizedAds(!hasConsented);
                     ezstandalone.setEzoicAnchorAd(false);
-                    ezstandalone.define(101,102);
+                    ezstandalone.define(101,102,117);
                     ezstandalone.enable();
                     ezstandalone.display();
                     console.log('display');
@@ -72,7 +73,7 @@
                     ezstandalone.setDisablePersonalizedStatistics(!hasConsented);
                     ezstandalone.setDisablePersonalizedAds(!hasConsented);
                     ezstandalone.setEzoicAnchorAd(false);
-                    ezstandalone.define(101,102);
+                    ezstandalone.define(101,102,117);
                     ezstandalone.enable();
                     ezstandalone.display();
                     console.log('display');
