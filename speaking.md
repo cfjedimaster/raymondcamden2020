@@ -24,6 +24,12 @@ The Jam.dev<br/>
 Online, January 28, 2021
 </p>
 
+<p>
+<a href="https://www.tracydevs.com/2021/05/building-serverless-workflows-pipedream/">Building Serverless Workflows in Pipedream
+</a><br/>
+Tracy Developer Meetup<br/>
+Online, May 14, 2021
+</p>
 
 <h3>My Past Events</h3>
 
