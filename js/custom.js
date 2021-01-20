@@ -55,14 +55,12 @@
                 console.log('ez',ezstandalone);
                 ezstandalone.cmd = ezstandalone.cmd || [];
                 ezstandalone.cmd.push(function () {
-                    console.log('enter func');
                     ezstandalone.setDisablePersonalizedStatistics(!hasConsented);
                     ezstandalone.setDisablePersonalizedAds(!hasConsented);
                     ezstandalone.setEzoicAnchorAd(false);
                     ezstandalone.define(101,102,117);
                     ezstandalone.enable();
                     ezstandalone.display();
-                    console.log('display');
                 });
                 
             },
@@ -71,14 +69,12 @@
                 var ezstandalone = window.ezstandalone || {};
                 ezstandalone.cmd = ezstandalone.cmd || [];
                 ezstandalone.cmd.push(function () {
-                    console.log('enter func');
                     ezstandalone.setDisablePersonalizedStatistics(!hasConsented);
                     ezstandalone.setDisablePersonalizedAds(!hasConsented);
                     ezstandalone.setEzoicAnchorAd(false);
                     ezstandalone.define(101,102,117);
                     ezstandalone.enable();
                     ezstandalone.display();
-                    console.log('display');
                 });
                 
             },
