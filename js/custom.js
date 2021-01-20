@@ -29,7 +29,9 @@
             e.preventDefault();
         });
 
-        $('.entry-content > p:nth-of-type(3)').after('<div id="ezoic-pub-ad-placeholder-117"></div>');
+        //blog posts only, cheap way to do this
+        if(window.location.pathname.indexOf('/2') === 0) $('.entry-content > p:nth-of-type(3)').after('<div id="ezoic-pub-ad-placeholder-117"></div>');
+
         window.cookieconsent.initialise({
             "palette": {
                 "popup": {
