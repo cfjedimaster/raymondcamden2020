@@ -818,3 +818,19 @@ a.archive-top-link { font-size: 11px; }
   text-decoration: underline;
   margin-bottom: 5px;
 }
+
+div.comment {
+	border-style:solid;
+  border-width:thin;
+	margin-bottom: 10px;
+	display: grid;
+	grid-template-columns: 70px 1fr;
+}
+
+div.comment div {
+  padding: 5px;
+}
+
+div.comment_header {
+	font-weight: bold;	
+}

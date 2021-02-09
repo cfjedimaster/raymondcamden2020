@@ -1,5 +1,6 @@
 const xmlFiltersPlugin = require('eleventy-xml-plugin');
 const htmlmin = require("html-minifier");
+const fs = require('fs');
 
 module.exports = function(eleventyConfig) {
 
@@ -160,7 +161,33 @@ module.exports = function(eleventyConfig) {
     return content;
   });
 
+
+  eleventyConfig.addShortcode("hasAnyComments", function(e, old) {
+    return getCommentText(e,old) !== '';
+  });
+
+  eleventyConfig.addShortcode("commentInclude", function(e, old) {
+    return getCommentText(e,old);
+  });
+
 };
+
+/*
+I support hasAnyComments and commentInclude. I take the logic of trying to load
+old comment html. I return either the html or a blank string
+*/
+function getCommentText(path, old) {
+    path = './_includes/comments'+path+'.inc';
+    let oldpath = '';
+    if(old) oldpath = './_includes/comments' + old.replace('http://www.raymondcamden.com','') + '.inc';
+    if(fs.existsSync(path)) {
+      return fs.readFileSync(path,'utf-8');
+    } else if(old && fs.existsSync(oldpath)) {
+      return fs.readFileSync(oldpath,'utf-8');
+    } else {
+      return '';
+    }
+}
 
 const excerptMinimumLength = 140;
 const excerptSeparator = '<!--more-->';

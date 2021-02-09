@@ -1,0 +1,14 @@
+
+<div class="comment" id="c_1713622351">
+	<div>
+		<img src="//a.disquscdn.com/1611874952/images/noavatar32.png" class="comment_author_profile_pic">
+	</div>
+	<div>
+		<div class="comment_header">
+		Comment <a href="#c_1713622351">1</a> by O?uz Demirkap?
+		posted on 11/4/2005 at 3:41 PM
+		</div>
+		<div class="comment_text"><p>Hi Ray,</p><p>I have just checked new BlogCFC beta and here are some notes.</p><p>- MySQL script does not work as I expected for me. I use Navicat 2005 as MySQL manager and it could not get database with current script. I need to delete lines such as "/*!40101 SET NAMES utf8 */;" in order to get expected script run. I think this is a compatibility problem for clients softwares.<br>- Unicode problem for MySQL script has been resolved.<br>- There are still Unicode problems on RSS feeds. Unicode chars are like ????. This is really important!<br>- I have just clicked link for one of the category and I got following error.</p><p>~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~<br>We're sorry, but an error has occured while processing your request.<br>An error occured while processing a document. Here is the relevant information:<br>Date: 	11/4/05 10:13 AM<br>Script Name: 	/blogbeta/index.cfm?mode=cat&amp;catid=5A690C8D-F559-638B-55D825837AC4964D<br>Browser: 	Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US; rv:1.8) Gecko/20051025 Firefox/1.5<br>Referer: 	http://localhost/blogbeta/index.cfm?designmode<br>Message: 	Cannot format given Object as a Date<br>Type: 	coldfusion.runtime.CfErrorWrapper<br>~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</p><p>- Problem on "print" link on entry as following.</p><p>~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~<br>We're sorry, but an error has occured while processing your request.<br>An error occured while processing a document. Here is the relevant information:<br>Date: 	11/4/05 10:16 AM<br>Script Name: 	/blogbeta/print.cfm?id=5A6B2E63-B79F-4A39-E52F37B83C319EFE<br>Browser: 	Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US; rv:1.8) Gecko/20051025 Firefox/1.5<br>Referer: 	http://localhost/blogbeta/index.cfm<br>Message: 	Element ROOTURL is undefined in REQUEST.<br>Type: 	coldfusion.runtime.CfErrorWrapper<br>~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</p><p>I am not sure but I need to inform that I have some Unicode chars in my tests and that would be the reason for these errors.</p><p>And here are some suggestions:</p><p>- A confirmation for delete links would be useful.<br>- A confirmation message for blog subscription would be nice.<br>- As I mentioned before a sorf function for categories would be nice.<br>- Unicode support for MSSQL is also a good improvement.</p></div>
+	</div>
+</div>
+		

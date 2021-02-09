@@ -1,0 +1,14 @@
+
+<div class="comment" id="c_1713614500">
+	<div>
+		<img src="//a.disquscdn.com/1611874952/images/noavatar32.png" class="comment_author_profile_pic">
+	</div>
+	<div>
+		<div class="comment_header">
+		Comment <a href="#c_1713614500">1</a> by Aaron Johnson
+		posted on 3/12/2003 at 1:43 AM
+		</div>
+		<div class="comment_text"><p>and this directly maps onto what happens with Java.  Here''s an example, 2 classes, Dog and Poodle, each part of the animal package. Run the DogWrapper from the command line after compiling... you''ll see that doing this:</p><p>Dog d = new Dog("Ray", "Poodle");<br>System.out.println("Hi my name is " + d.getName());<br>System.out.println("I''m a " + d.getType());</p><p>actually creates and returns a Poodle object, which extends the Dog object...  thought you''d enjoy....</p><p>AJ</p><p>********************************************<br>package animal;<br>public class Dog {</p><p>	private String name;<br>	private String type;</p><p>	public Dog() {<br>		name = "Noname";<br>		type = "mutt";<br>	}</p><p>	public Dog(String dogname, String dogtype) {</p><p>		if (dogtype.compareTo("Poodle") == 1) {</p><p>			// create a poodle object, in this case a Poodle is returned to <br>			// from the constructor even though they requested a Dog<br>			Poodle p = new Poodle();</p><p>		} else {<br>			name = dogname;<br>			type = dogtype;	<br>		}</p><p>	}</p><p>	public String getName() {<br>		return <a href="http://disq.us/url?url=http%3A%2F%2Fthis.name%3AEm-S9q6F4e-8KUeib7Eeo3ysjlY&amp;cuid=3321886" rel="nofollow noopener" title="this.name">this.name</a>;<br>	}</p><p>	public String getType() {<br>		return this.type;	<br>	}</p><p>}</p><p>********************************************</p><p>package animal;</p><p>public class Poodle extends Dog {</p><p>	private String name;<br>	private String type;</p><p>	public Poodle() {<br>		name = "Noname";<br>		type = "Poodle";<br>	}</p><p>	public Poodle(String dogname) {<br>		name = dogname;<br>		type = "Poodle";<br>	}</p><p>	public String getName() {<br>		return <a href="http://disq.us/url?url=http%3A%2F%2Fthis.name%3AEm-S9q6F4e-8KUeib7Eeo3ysjlY&amp;cuid=3321886" rel="nofollow noopener" title="this.name">this.name</a>;<br>	}</p><p>	public String getType() {<br>		return this.type;	<br>	}</p><p>}</p><p>********************************************</p><p>package animal;<br>public class DogWrapper {</p><p>	public static void main(String[] args) {</p><p>		Dog d = new Dog("Ray", "Poodle");<br>		System.out.println("Hi my name is " + d.getName());<br>		System.out.println("I''m a " + d.getType());</p><p>		Poodle p = new Poodle("Davey");<br>		System.out.println("My name is " + p.getName());<br>		System.out.println("I''m a " + p.getType());</p><p>		Dog e = new Dog("Maia", "Lab");<br>		System.out.println("Hi my name is " + e.getName());<br>		System.out.println("I''m a " + e.getType());</p><p>	}<br>}</p></div>
+	</div>
+</div>
+		

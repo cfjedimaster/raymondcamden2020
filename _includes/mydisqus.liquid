@@ -1,21 +1,11 @@
+
+{% capture hasComments %}{% hasAnyComments page.url, oldurl %}{% endcapture %}
+
+{% if hasComments == "true" %}
 <div class="comments-area">
-    <div class="comments-inner">
-		<div id="post_id" data="{{comment_id}}"></div>
-        <h2 class="comments-title" id="comments">Comments</h2>
-        <div id="disqus_thread"></div>
-		<script src="/js/comments.js" async></script>
+	<div class="comments-inner">
+	<h3>Archived Comments</h3>
+    {% commentInclude page.url, oldurl %}
     </div>
 </div>
-
-<script>
-var disqus_config = function () {
-	{% if page.guid %}
-	this.page.url = 'https://www.raymondcamden.com{{ page.url }}'; 
-	this.page.identifier = '/?p={{ page.guid }}'; 
-	{% elsif page.oldurl %}
-	this.page.url = '{{ page.oldurl }}'; 
-	{% else %}
-	this.page.url = 'http://www.raymondcamden.com{{ page.url }}'; 
-	{% endif %}
-};
-</script>
+{% endif %}

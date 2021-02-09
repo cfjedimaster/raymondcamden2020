@@ -1,0 +1,27 @@
+
+<div class="comment" id="c_1713724947">
+	<div>
+		<img src="//a.disquscdn.com/1611874952/images/noavatar32.png" class="comment_author_profile_pic">
+	</div>
+	<div>
+		<div class="comment_header">
+		Comment <a href="#c_1713724947">1</a> by Mike Collins
+		posted on 7/1/2010 at 4:01 AM
+		</div>
+		<div class="comment_text"><p>I just built a flex project and ran into same issue.</p><p>All my target functions had to be returntype='any' .  It would be nice to see onCFCRequest pick up the targeted cfc methods returntype.</p><p>Here is what I ended up doing.  I created a structure that allowed me send info about the call in the returned structure.  This also allows you to capture a session timeout in your flex app if you want too code for that.</p><p>This is for only authenticated users and all requests come thru flex.</p><p>I have not used this in a production yet.</p><p>&lt;code&gt;<br>  &lt;cffunction	name="onCFCRequest" access="remote"	output="true"	 returntype="struct" &gt;<br>         &lt;!--- Define arguments. ---&gt;<br>		&lt;cfargument name="cfcname" type="string" required="true" hint="component requested by the user."	/&gt;<br> 		&lt;cfargument	name="method" type="string"	required="true"	hint="method requested by the user."	/&gt;<br> 		&lt;cfargument	name="args"	 required="true"	hint="collection sent by the user."	/&gt;<br> 		&lt;cfset var mainresult = StructNew()&gt;</p><p>	   &lt;cfset <a href="http://disq.us/url?url=http%3A%2F%2Fmainresult.app%3AkupYTC2Ac1n86cwXVg9JIxUirnY&amp;cuid=3321886" rel="nofollow noopener" title="mainresult.app">mainresult.app</a> = "appname"&gt;<br>       &lt;cfset mainresult.cfcname = "#arguments.cfcname#"&gt;<br>       &lt;cfset mainresult.method = "#arguments.method#"&gt;<br>       &lt;cfset mainresult.incomingvalues = "#arguments.args#"&gt;</p><p>      &lt;!--- Check Session ---&gt;<br>        &lt;!--- Get session and look for  ---&gt;<br> 		&lt;cfset var pc = getpagecontext()&gt;<br>		&lt;cfset var s = pc.getSession()&gt;<br>		&lt;cfif isdefined("s")&gt;<br>			&lt;cfset var REQ = pc.getRequest()&gt;<br>			&lt;cfif REQ.isRequestedSessionIdFromURL() &gt;<br>				&lt;!--- You can implement to deny access or to track this type of access at this point. ---&gt;<br>                &lt;cfset mainresult.status = "Invalid session - session from url"&gt;<br>                &lt;cfset mainresult.cfresult = "invalidsession"&gt;<br>				&lt;cfreturn mainresult&gt;<br>			&lt;cfelse&gt;<br>				&lt;!--- HTTP Session found using Cookie value ---&gt;</p><p>				&lt;!--- Check to see if user is calling authenticate method ---&gt;<br>      			&lt;cfif arguments.method EQ "authenticate"&gt;<br>                    &lt;cfinvoke component="#arguments.cfcname#" method="#arguments.method#" returnVariable="result" argumentCollection="#arguments.args#" /&gt;<br>                     &lt;!--- Only let calls go thru for authenticated sessions. ---&gt;<br>                     &lt;cfif not isdefined("session.user.username")&gt;<br>                        &lt;cfset mainresult.status = "Invalid session - session not defined"&gt;<br>                        &lt;cfset mainresult.cfresult = "invalidsession"&gt;<br>                        &lt;cfreturn mainresult /&gt;<br>                    &lt;/cfif&gt;<br>                    &lt;cfif len(session.user.username) LT 1&gt;<br>                        &lt;cfset mainresult.status = "Invalid session - no user assigned to session"&gt;<br>                        &lt;cfset mainresult.cfresult = "invalidsession"&gt;<br>                        &lt;cfreturn mainresult /&gt;<br>                    &lt;/cfif&gt;<br>                    &lt;!--- User authenticated  ---&gt;<br>                    &lt;cfset mainresult.cfresult = true&gt;<br>                    &lt;cfreturn mainresult&gt;<br>                &lt;/cfif&gt;</p><p>            &lt;/cfif&gt;<br>		&lt;cfelse&gt;	<br>			&lt;!--- No http session was found  ---&gt;<br>            &lt;cfset mainresult.status = "Invalid session - no session found"&gt;<br>            &lt;cfset mainresult.cfresult = "invalidsession"&gt;<br>            &lt;cfreturn mainresult&gt;<br>	&lt;/cfif&gt;</p><p>       &lt;!--- One more check to make sure we have a valid session. ---&gt;<br>       &lt;cfif not isdefined("session.user.username")&gt;<br>			&lt;cfset mainresult.status = "Invalid session - session not defined"&gt;<br>            &lt;cfset mainresult.cfresult = "invalidsession"&gt;<br>            &lt;cfreturn mainresult /&gt;<br>        &lt;/cfif&gt;<br>        &lt;cfif len(session.user.username) LT 1&gt;<br>            &lt;cfset mainresult.status = "Invalid session - no user assigned to session"&gt;<br>            &lt;cfset mainresult.cfresult = "invalidsession"&gt;<br>            &lt;cfreturn mainresult /&gt;<br>        &lt;/cfif&gt;</p><p>      	&lt;cfinvoke component="#arguments.cfcname#" method="#arguments.method#" returnVariable="result" argumentCollection="#arguments.args#" /&gt;<br>       	&lt;cfset mainresult.cfresult = result&gt;</p><p>        &lt;cfreturn mainresult /&gt; <br>	&lt;/cffunction&gt;&lt;/code&gt;</p></div>
+	</div>
+</div>
+		
+<div class="comment" id="c_1713724952">
+	<div>
+		<img src="//a.disquscdn.com/1611874952/images/noavatar32.png" class="comment_author_profile_pic">
+	</div>
+	<div>
+		<div class="comment_header">
+		Comment <a href="#c_1713724952">2</a> by fosrias
+		posted on 9/18/2010 at 2:03 AM
+		</div>
+		<div class="comment_text"><p>Just found it. Thanks for the help.</p></div>
+	</div>
+</div>
+		
