@@ -5,6 +5,32 @@ description: Drop me a line...
 banner_image: /images/banners/contact_header2.jpg
 ---
 
+<script>
+document.addEventListener('DOMContentLoaded', init, false);
+function init() {
+	let form = document.querySelector('#contactForm');
+	form.addEventListener('submit', sendContact, false);
+}
+
+function sendContact(e) {
+	e.preventDefault();
+	let data = {
+		name: document.querySelector('#contact_name').value,
+		email: document.querySelector('#email').value,
+		comments: document.querySelector('#contact_comments').value
+	}
+
+	fetch('/.netlify/functions/sendComments', {
+		method:'post',
+		body:JSON.stringify(data)
+	}).then(res => res.text())
+	.then(res => {
+		document.location.href = '/thankyou';
+	});
+
+}
+</script>
+
 Have a question you want answered? Is there something you would like me to write about on the blog? Just use the form below to reach out to me. I can’t promise I will respond to every question, but I will try to either respond or post an entry to the blog relating to your inquiry.
 
 If you are asking about a particular blog entry, *please* share the URL of the entry you are asking about.
@@ -12,17 +38,6 @@ If you are asking about a particular blog entry, *please* share the URL of the e
 Another note - I cannot (and will not!) provide support for ColdFusion UI controls like cfgrid, cfinput, etc. I've discussed why multiple times and have even provided [direction](https://github.com/cfjedimaster/ColdFusion-UI-the-Right-Way) about how to move away from them.
 
 Finally - I do not accept paid article submissions or infographics.
-
-<script>
-document.addEventListener("DOMContentLoaded", function() {
-
-	var $sub = $("#_subject");
-	$("#email").on("input", function() {
-		$sub.val("Blog Contact Form (" + $(this).val() + ")");
-	});
-	
-}, false);
-</script>
 
 <style>
 label {
@@ -40,19 +55,17 @@ textarea {
 	width: 100%;
 }
 </style>
-
+<!--
 <form action="https://formspree.io/amevkqex" method="POST" id="contactform">
-<input type="hidden" name="_next" value="https://www.raymondcamden.com/thankyou">
-<input type="hidden" name="_subject" id="_subject" value="Blog Contact Form">
-<input type="hidden" name="_format" value="plain">
+-->
+<form action="" method="POST" id="contactForm">
 
-<input type="text" name="_gotcha" style="display:none" />
 
 <label for="contact_name">Name: </label>
 <input type="text" name="name" id="contact_name" required><br/>
 
 <label for="email">Email: </label>
-<input type="email" name="_replyto" id="email" required><br/>
+<input type="email" name="replyto" id="email" required><br/>
 
 <label for="contact_comments">Comments: </label><br/>
 <textarea name="comments" id="contact_comments" required></textarea>
