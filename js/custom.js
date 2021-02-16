@@ -55,7 +55,6 @@
             "onInitialise": function (status) {
                 var hasConsented = this.hasConsented();
                 var ezstandalone = window.ezstandalone || {};
-                console.log('ez',ezstandalone);
                 ezstandalone.cmd = ezstandalone.cmd || [];
                 ezstandalone.cmd.push(function () {
                     ezstandalone.setDisablePersonalizedStatistics(!hasConsented);
@@ -100,7 +99,6 @@ if ('serviceWorker' in navigator) {
 }
 
 async function doWebMentions() {
-    console.log('do WebMentions');
     let url = 'https://www.raymondcamden.com' + document.location.pathname.substring(0, document.location.pathname.length-1);
     let mentions = await getWebmentions(url);
     console.log('mentions', mentions.length);
@@ -139,6 +137,8 @@ async function doWebMentions() {
             html += iMention;
         });
         $('#webmentions-replies').html(html);
+
+        if(replies.length || likes.length || retweets.length) $('.webmentions-area').show();
 
     }
 
