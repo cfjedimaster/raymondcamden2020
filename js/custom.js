@@ -99,7 +99,10 @@ if ('serviceWorker' in navigator) {
 }
 
 async function doWebMentions() {
-    let url = 'https://www.raymondcamden.com' + document.location.pathname.substring(0, document.location.pathname.length-1);
+    let url = 'https://www.raymondcamden.com' + document.location.pathname;
+    // remove possible trailing /
+    if(url.slice(-1) === '/') url = url.substring(0, url.length-1);
+
     let mentions = await getWebmentions(url);
     console.log('mentions', mentions.length);
 
