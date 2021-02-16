@@ -59,6 +59,7 @@ layout: default
                     </div><!-- .author-details -->
                 </div><!-- .author-info -->
             </div><!-- .author-box -->
+            {% comment %}
             <nav class="post-navigation">
                 <h2 class="screen-reader-text">Post navigation</h2>
                 {% if page.previous.url %}
@@ -86,8 +87,11 @@ layout: default
                 </div><!-- .nav-next -->
                 {% endif %}
             </nav><!-- .post-navigation -->
+            {% endcomment %}
 
+            {% include webmentions %}
             {% include mydisqus %}
+
         </main><!-- .site-main -->
         {% include sidebar %}
     </div><!-- .inner -->

@@ -582,6 +582,7 @@ figcaption { text-align: center; font-style: italic; }
 
 /** 3. Content ---------------------------------------------------------------------------- */
 .entry-content, .entry-footer, .author-info, .comments-inner, .post-navigation .nav-inside { margin: 0 auto; max-width: 740px; padding-left: 30px; padding-right: 30px; }
+.comments-inner { max-width: 100%; }
 
 .entry-content h1, .entry-content h2, .entry-content h3, .entry-content h4, .entry-content h5, .entry-content h6 { margin-top: 36px; }
 
@@ -633,7 +634,7 @@ figcaption { text-align: center; font-style: italic; }
 .share-post a:hover, .tag-links a:hover { background-color: #22b3eb; color: #ffffff; }
 
 /* Author box */
-.author-box { background-color: #ffffff; margin-bottom: 40px; padding-bottom: 40px; padding-top: 40px; }
+.author-box { background-color: #ffffff; margin-bottom: 20px; padding-bottom: 40px; padding-top: 40px; }
 
 .post + .author-box { margin-top: -40px; }
 
@@ -833,4 +834,17 @@ div.comment div {
 
 div.comment_header {
 	font-weight: bold;	
+}
+
+.webmentions-area { background-color: #ffffff;  padding-bottom: 60px; padding-top: 40px; margin-bottom: 20px; }
+.webmentions-inner { padding-left: 30px; padding-right: 30px;  }
+.webmentions-inner h3 { margin-top: 10px; }
+
+.webmentions-area img {
+  border-radius: 50%;
+  height: 48px;
+  width: 48px;
+  object-fit: cover;
+  box-shadow: 0 3px 6px rgb(0 0 0 / 15%), 0 2px 4px rgb(0 0 0 / 12%);
+  margin-right: 5px;
 }
