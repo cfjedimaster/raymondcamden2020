@@ -146,7 +146,7 @@ async function doWebMentions() {
     }
 
     if(likes.length || retweets.length) {
-        let title = `<h3>${likes.length} Like${likes.length > 1?'s':''} and ${retweets.length} Retweet${retweets.length > 1?'s':''}</h3>`;
+        let title = `<h3>${likes.length} Like${likes.length !== 1?'s':''} and ${retweets.length} Retweet${retweets.length !== 1?'s':''}</h3>`;
         let html = title;
 
         if(likes.length) {
