@@ -139,9 +139,8 @@ async function doWebMentions() {
             `;
             html += iMention;
         });
+        
         $('#webmentions-replies').html(html);
-
-        if(replies.length || likes.length || retweets.length) $('.webmentions-area').show();
 
     }
 
@@ -175,6 +174,8 @@ async function doWebMentions() {
         $('#webmentions-likes').html(html);
 
     }
+
+    if(replies.length || likes.length || retweets.length) $('.webmentions-area').show();
 
 }
 
