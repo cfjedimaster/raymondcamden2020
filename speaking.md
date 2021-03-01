@@ -20,8 +20,15 @@ Nothing planned currently. Invite me to speak at your event!
 -->
 
 <p>
+<a href="https://www.brdnug.org/2021/03/brdnug-meeting-march-10-2021-twitch/">Embracing the Jamstack</a><br/>
+Baton Rouge .NET User Group<br/>
+Online, March 10, 2021
+</p>
+
+
+<p>
 <a href="http://mmcfug.org/">Embracing the Jamstack</a><br/>
- Mid-Michigan ColdFusion Users Group<br/>
+Mid-Michigan ColdFusion Users Group<br/>
 Online, April 13, 2021
 </p>
 
