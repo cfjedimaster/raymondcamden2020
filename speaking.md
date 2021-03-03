@@ -25,11 +25,16 @@ Baton Rouge .NET User Group<br/>
 Online, March 10, 2021
 </p>
 
-
 <p>
 <a href="http://mmcfug.org/">Embracing the Jamstack</a><br/>
 Mid-Michigan ColdFusion Users Group<br/>
 Online, April 13, 2021
+</p>
+
+<p>
+<a href="https://www.meetup.com/Atlanta-Vue-js-Meetup/events/276177433/">Introduction to Vite.js</a><br/>
+Atlanta Vue.js Meetup<br/>
+Online, April 37, 2021
 </p>
 
 <p>
