@@ -68,7 +68,20 @@ With this computed property, I then updated `sortedCats` to base it's value on `
 return this.filteredCats.sort((a,b) => {
 ```
 
-The end result is a Vue computed property based on a Vue computed property, which I knew was possible, but I don't think I've actually used it before. And it's cool! Here's the completed CodePen for you to play with:
+The end result is a Vue computed property based on a Vue computed property, which I knew was possible, but I don't think I've actually used it before. 
+
+<strong>Edit on 3/12/21:</strong> After releasing this blog post yesterday, the reader who originally reached out to me discovered a bug. If you go to page 2 and filter to a value that only has one page, you see an empty page. To fix this, I added a watcher such that when you change the filter value, we reset to page one:
+
+```js
+watch: {
+  filter() {
+    console.log('reset to p1 due to filter');
+    this.currentPage = 1;
+  }
+},
+```
+
+Here's the completed CodePen for you to play with:
 
 <p class="codepen" data-height="400" data-theme-id="dark" data-default-tab="js,result" data-user="cfjedimaster" data-slug-hash="poNqVWP" style="height: 400px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Vue - Sortable / Searchable Table">
   <span>See the Pen <a href="https://codepen.io/cfjedimaster/pen/poNqVWP">
