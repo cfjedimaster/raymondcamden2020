@@ -1,6 +1,6 @@
 {
 	"title":"Raymond Camden",
-	"description":"DevRel at large, Star Wars nerd, Web/Serverless hacker, lover of good beer and good books. Oh, and cats.",
+	"description":"DevRel at Adobe, Star Wars nerd, Web/Serverless hacker, lover of good beer and good books. Oh, and cats.",
 	"url": "https://www.raymondcamden.com",
 	"navigation": [
 		{"text":"Home", "url":"/"},
@@ -12,7 +12,7 @@
 	"author_name":"Raymond Camden",
 	"author_image": "/images/avatar.jpg",
 	"author_location": "Lafayette, LA",
-	"author_bio": "Raymond is a developer advocate for HERE Technologies. He focuses on JavaScript, serverless and enterprise cat demos.",
+	"author_bio": "Raymond is a senior developer evangelist for Adobe. He focuses on document services, JavaScript, and enterprise cat demos.",
 	"author_url":  "https://www.raymondcamden.com",
 	"twitter_username": "raymondcamden",
 	"github_username": "cfjedimaster",
