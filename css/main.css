@@ -828,6 +828,10 @@ div.comment {
 	grid-template-columns: 70px 1fr;
 }
 
+div.comment_text {
+  word-break: break-all;
+}
+
 div.comment div {
   padding: 5px;
 }
