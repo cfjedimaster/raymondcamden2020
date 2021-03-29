@@ -142,13 +142,13 @@ Online, May 27, 2020
 </p>
 
 <p>
-<a href="https://devchat.tv/conferences/javascript-remote-2020/">Learning JavaScript by Doing JavaScript</a>
+<a href="https://devchat.tv/conferences/javascript-remote-2020/">Learning JavaScript by Doing JavaScript</a><br/>
 JavaScript Remote Conf 2020<br/>
 Online, May 13, 2020
 </p>
 
 <p>
-<a href="https://opensource101.com/sessions/writing-the-darn-docs/">Writing the Darn Docs</a>
+<a href="https://opensource101.com/sessions/writing-the-darn-docs/">Writing the Darn Docs</a><br/>
 OpenSource 101 at Home<br/>
 Online, May 12, 2020
 </p>
