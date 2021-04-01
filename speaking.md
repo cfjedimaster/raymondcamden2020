@@ -19,11 +19,6 @@ I started a blog. I feel like I have to struggle to learn new things and if I ca
 Nothing planned currently. Invite me to speak at your event! 
 -->
 
-<p>
-<a href="https://www.brdnug.org/2021/03/brdnug-meeting-march-10-2021-twitch/">Embracing the Jamstack</a><br/>
-Baton Rouge .NET User Group<br/>
-Online, March 10, 2021
-</p>
 
 <p>
 <a href="http://mmcfug.org/">Embracing the Jamstack</a><br/>
@@ -34,7 +29,7 @@ Online, April 13, 2021
 <p>
 <a href="https://www.meetup.com/Atlanta-Vue-js-Meetup/events/276177433/">Introduction to Vite.js</a><br/>
 Atlanta Vue.js Meetup<br/>
-Online, April 37, 2021
+Online, April 27, 2021
 </p>
 
 <p>
@@ -51,6 +46,13 @@ Here are my past events, most recent first, in a nice scrollable list no one wil
 </p>
 
 <div style="height: 400px; overflow:scroll">
+
+<p>
+<a href="https://www.brdnug.org/2021/03/brdnug-meeting-march-10-2021-twitch/">Embracing the Jamstack</a><br/>
+Baton Rouge .NET User Group<br/>
+Online, March 10, 2021
+</p>
+
 <p>
 <a href="https://cfe.dev/events/the-jam-2021/">Search This!</a><br/>
 The Jam.dev<br/>
