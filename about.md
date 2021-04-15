@@ -34,7 +34,7 @@ I have not done a great job of tracking my various articles on other web sites, 
 <li><a href="https://www.nativescript.org/blog/tips-for-vue-developers-picking-up-nativescript">Tips for Vue Developers Picking Up NativeScript</a></li>
 <li><a href="https://www.nativescript.org/blog/getting-your-route-on-with-nativescript-vue-episode-two">Getting Your Route On with NativeScript-Vue: Episode Two</a></li>
 <li><a href="https://www.nativescript.org/blog/getting-your-route-on-with-nativescript-vue-episode-one">Getting Your Route On with NativeScript-Vue: Episode One</a></li>
-<li><a href="https://css-tricks.com/making-the-move-from-jquery-to-vue/">Making the Move form jQuery to Vue</a> for CSS-Tricks</li>
+<li><a href="https://css-tricks.com/making-the-move-from-jquery-to-vue/">Making the Move from jQuery to Vue</a> for CSS-Tricks</li>
 <li><a href="https://www.nativescript.org/blog/client-side-storage-in-nativescript-applications">Client-Side Storage in NativeScript Applications</a></li>
 <li><a href="https://www.nativescript.org/blog/working-with-vuex-in-your-nativescript-vue-application-now-with-cats">Working with Vuex in Your NativeScript-Vue Application - Now with Cats!</a></li>
 <li><a href="https://www.nativescript.org/blog/working-with-vuex-in-your-nativescript-vue-application">Working with Vuex in Your NativeScript-Vue Application</a></li>
