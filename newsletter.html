@@ -37,7 +37,8 @@ const app = new Vue({
 			if(this.email === '') return;
 			this.working = true;
 			console.log('do add for'+this.email);
-
+			this.status = 'Attemping to subscribe you...';
+			
 			fetch(SUBSCRIBE_API + this.email)
 			.then(res => {
 				return res.json()
