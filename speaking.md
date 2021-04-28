@@ -21,18 +21,6 @@ Nothing planned currently. Invite me to speak at your event!
 
 
 <p>
-<a href="http://mmcfug.org/">Embracing the Jamstack</a><br/>
-Mid-Michigan ColdFusion Users Group<br/>
-Online, April 13, 2021
-</p>
-
-<p>
-<a href="https://www.meetup.com/Atlanta-Vue-js-Meetup/events/276177433/">Introduction to Vite.js</a><br/>
-Atlanta Vue.js Meetup<br/>
-Online, April 27, 2021
-</p>
-
-<p>
 <a href="https://www.tracydevs.com/2021/05/building-serverless-workflows-pipedream/">Building Serverless Workflows in Pipedream
 </a><br/>
 Tracy Developer Meetup<br/>
@@ -46,6 +34,18 @@ Here are my past events, most recent first, in a nice scrollable list no one wil
 </p>
 
 <div style="height: 400px; overflow:scroll">
+
+<p>
+<a href="https://www.meetup.com/Atlanta-Vue-js-Meetup/events/276177433/">Introduction to Vite.js</a><br/>
+Atlanta Vue.js Meetup<br/>
+Online, April 27, 2021
+</p>
+
+<p>
+<a href="http://mmcfug.org/">Embracing the Jamstack</a><br/>
+Mid-Michigan ColdFusion Users Group<br/>
+Online, April 13, 2021
+</p>
 
 <p>
 <a href="https://www.brdnug.org/2021/03/brdnug-meeting-march-10-2021-twitch/">Embracing the Jamstack</a><br/>
