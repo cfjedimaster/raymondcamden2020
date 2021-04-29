@@ -33,6 +33,7 @@
         if(window.location.pathname.indexOf('/2') === 0) {
             $('.entry-content > p:nth-of-type(3)').after('<div id="ezoic-pub-ad-placeholder-117"></div>');
             doWebMentions();
+            doSubscriptionForm();
         }
 
         window.cookieconsent.initialise({
@@ -197,4 +198,36 @@ async function getWebmentions(url) {
    .then(res => res.json())
    .then(res => resolve(res.children));
  }); 
+}
+
+function doSubscriptionForm() {
+    const SUBSCRIBE_API = '/.netlify/functions/newsletter-signup?email=';
+    const subEmail = document.querySelector('#subEmail');
+    const subButton = document.querySelector('#subButton');
+    const subStatus = document.querySelector('#subStatus');
+
+    subButton.addEventListener('click', () => {
+        const email = subEmail.value;
+        if(!email) return;
+        console.log('add '+email);
+        subButton.disabled = true;
+        subStatus.innerHTML = 'Attempting to subscribe you...';
+        fetch(SUBSCRIBE_API + email)
+        .then(res => {
+            return res.json()
+        })
+        .then(res => {
+            console.log('status',res.status);
+            if(res.status === 'subscribed') {
+                subStatus.innerHTML = 'You have been subscribed!';
+            } else if(res.status === 400) {
+                subStatus.innerHTML = `There was an error: ${res.detail}`;
+            }
+            subButton.disabled = false;
+        })
+        .catch(e => {
+            console.log('error result', e);
+        });
+
+    });
 }

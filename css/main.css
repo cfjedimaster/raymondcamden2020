@@ -841,8 +841,8 @@ div.comment_header {
 }
 
 .webmentions-area { background-color: #ffffff;  padding-bottom: 60px; padding-top: 40px; margin-bottom: 20px; }
-.webmentions-inner { padding-left: 30px; padding-right: 30px;  }
-.webmentions-inner h3 { margin-top: 10px; }
+.webmentions-inner, .subscribe-inner { padding-left: 30px; padding-right: 30px;  }
+.webmentions-inner h3, .subscribe-inner h3 { margin-top: 10px; }
 
 .webmentions-area img {
   border-radius: 50%;
@@ -852,3 +852,6 @@ div.comment_header {
   box-shadow: 0 3px 6px rgb(0 0 0 / 15%), 0 2px 4px rgb(0 0 0 / 12%);
   margin-right: 5px;
 }
+
+.subscribe-box { background-color: #ffffff;  padding-bottom: 60px; padding-top: 40px; margin-bottom: 20px; }
+[v-cloak] {display: none}

@@ -6,6 +6,7 @@
 		{"text":"Home", "url":"/"},
 		{"text":"About","url":"/about/"},
 		{"text":"Speaking","url":"/speaking/"},
+		{"text":"Subscribe","url":"/subscribe/"},
 		{"text":"Contact","url":"/contact/"},
 		{"text":"Search","url":"/search/"}
 	],
