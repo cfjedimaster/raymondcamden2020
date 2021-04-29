@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Crickets and Other Things"
-date: "2021-04-28"
+date: "2021-04-28T18:00:00"
 categories: ["Misc"]
 tags: []
 banner_image: /images/banners/crickets.jpg
