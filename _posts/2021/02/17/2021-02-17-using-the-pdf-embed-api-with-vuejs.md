@@ -40,6 +40,7 @@ Once you have a key, you can copy the code from the [Getting Started](https://ww
     });
  </script>
 </body>
+</html>
 ```
 
 Breaking this down, you listen for an event signifying that the library is loaded and then create a new "view" based on a div in your HTML. (In the example above, `adobe-dc-view`.) Once that's done you can use the `previewFile` method to add it the PDF viewer to the page. Here's a screen shot of this particular example:
