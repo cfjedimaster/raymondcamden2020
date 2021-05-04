@@ -114,6 +114,11 @@ async function doWebMentions() {
     console.log('RTs', retweets.length);
 
     let replies = mentions.filter(m => ['in-reply-to','mention-of'].indexOf(m['wm-property']) >= 0);
+    /*
+    some replies do not have a content value, like a tweet with *just* an image. I could 
+    maybe do it above all at once, but keeping it simpler....
+    */
+    replies = replies.filter(r => r.content);
     console.log('Replies', replies.length);
 
     if(replies.length) {
@@ -131,7 +136,7 @@ async function doWebMentions() {
                     Reply by ${m.author.name}
                     posted on ${dateFormat(m.published)}
                     </div>
-                    <div class="comment_text">${truncate(m.content.text, 300)}</div>
+                    <div class="comment_text">${truncate(m.content.text, 400)}</div>
                     <a href="$(m.url}" target="_blank" rel="noopener noreferrer">
                     source <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="10px"><path fill="currentColor" d="M432 320h-32a16 16 0 00-16 16v112H64V128h144a16 16 0 0016-16V80a16 16 0 00-16-16H48a48 48 0 00-48 48v352a48 48 0 0048 48h352a48 48 0 0048-48V336a16 16 0 00-16-16zM488 0H360c-21.37 0-32.05 25.91-17 41l35.73 35.73L135 320.37a24 24 0 000 34L157.67 377a24 24 0 0034 0l243.61-243.68L471 169c15 15 41 4.5 41-17V24a24 24 0 00-24-24z" /></svg>
                     </a>
