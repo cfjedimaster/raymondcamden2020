@@ -52,15 +52,21 @@ exports.handler = async (event, context) => {
     console.log('batch data done');
     
     //then batch
-    resp = await fetch(host + `/1/indexes/${algCredentials.indexName}/batch`, {
-      method:'POST',
-      body: JSON.stringify(batch),
-      headers: {
-        'X-Algolia-Application-Id':algCredentials.appId,
-        'X-Algolia-API-Key':algCredentials.apiKey
-      }
-    });
-    
+    try {
+      resp = await fetch(host + `/1/indexes/${algCredentials.indexName}/batch`, {
+        method:'POST',
+        body: JSON.stringify(batch),
+        headers: {
+          'X-Algolia-Application-Id':algCredentials.appId,
+          'X-Algolia-API-Key':algCredentials.apiKey
+        }
+      });
+    } catch(e) {
+      console.log('Error returned when doing the batch.');
+      console.log(JSON.stringify(e));
+      return;
+    }
+
     result = await resp.json();
     if(result.objectIDs) console.log(`i had ${result.objectIDs.length} objects added`);
 
