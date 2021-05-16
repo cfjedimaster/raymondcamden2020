@@ -36,6 +36,8 @@ var day = String(now.getDate());
 if(day.length == 1) day = '0' + day;
 
 var date = year + '-'+month+'-'+day;
+// added to supply a time so my mail list thing works
+date += 'T18:00:00';
 
 var slug = title.replace(/ /g,'-').toLowerCase();
 //remove multiple -
