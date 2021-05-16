@@ -69,6 +69,7 @@ exports.handler = async (event, context) => {
 
     result = await resp.json();
     if(result.objectIDs) console.log(`i had ${result.objectIDs.length} objects added`);
+    else console.log('Bad Algolia result!', JSON.stringify(result));
 
     /// HANDLE EMAIL (if sent)
     if(event && event.body) {
