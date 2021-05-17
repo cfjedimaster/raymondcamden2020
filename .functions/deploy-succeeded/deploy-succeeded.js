@@ -9,6 +9,10 @@ const helper = require('sendgrid').mail;
 
 const fetch = require('node-fetch');
 
+const algoliaSearch = require('algoliasearch');
+const algolia = algoliaSearch(algCredentials.appId, algCredentials.apiKey);
+const index = algolia.initIndex(algCredentials.indexName);
+
 exports.handler = async (event, context) => {
 
 
@@ -22,54 +26,29 @@ exports.handler = async (event, context) => {
     let data = await dataResp.json();
     console.log('Successfully got the data, size of articles '+data.length, data[0].title);
 
-    let host = `https://${algCredentials.appId}.algolia.net`;
+    //first clear 
 
-    //first clear
-    let resp = await fetch(host + `/1/indexes/${algCredentials.indexName}/clear`, {
-      method:'POST',
-      headers: {
-        'X-Algolia-Application-Id':algCredentials.appId,
-        'X-Algolia-API-Key':algCredentials.apiKey
-      }
-    });
-    let result = await resp.json();
-    console.log('clear result is '+JSON.stringify(result));
+    console.log('Try to clear Algolia index');
+    let clearResult = await index.clearObjects().wait();
+    console.log('clearResult', clearResult);
 
-    let batch = {
-      "requests":[]
-    };
+    let requests = [];
 
     data.forEach(d => {
       /*
       define an objectID for Algolia
       */
       d.objectID = d.url;
-      batch.requests.push({
+      requests.push({
         'action':'updateObject',
         'body':d
       })
     });
-    console.log('batch data done');
+    console.log('Batch data object created to add to Algolia index');
     
-    //then batch
-    try {
-      resp = await fetch(host + `/1/indexes/${algCredentials.indexName}/batch`, {
-        method:'POST',
-        body: JSON.stringify(batch),
-        headers: {
-          'X-Algolia-Application-Id':algCredentials.appId,
-          'X-Algolia-API-Key':algCredentials.apiKey
-        }
-      });
-    } catch(e) {
-      console.log('Error returned when doing the batch.');
-      console.log(JSON.stringify(e));
-      return;
-    }
+    let batchResult = await index.batch(requests);
+    console.log('Request to batch index fired, not waiting, good luck');
 
-    result = await resp.json();
-    if(result.objectIDs) console.log(`i had ${result.objectIDs.length} objects added`);
-    else console.log('Bad Algolia result!', JSON.stringify(result));
 
     /// HANDLE EMAIL (if sent)
     if(event && event.body) {
@@ -99,7 +78,7 @@ Duration:    ${toMinutes(pubData.deploy_time)}
     return { statusCode: 200, body: 'I\'m done with this shit...' }
 
   } catch (err) {
-    console.log('error handler for function ran', err.toString());
+    console.log('error handler for function ran', JSON.stringify(err.message));
     return { statusCode: 500, body: err.toString() }
   }
 
