@@ -9,6 +9,22 @@ permalink: /2020/07/01/adding-algolia-search-to-eleventy-and-netlify-part-two
 description: An update to my post on using Algolia with Eleventy
 ---
 
+<div style="background-color:#c0c0c0; padding: 10px">
+<p><strong>Important Update: May 18, 2021</strong></p>
+<p>
+Recently I noticed that my search feature wasn't working. When I checked my index, it was empty. I wasn't able to replicate
+it consistently so I reached out to Algolia's support. Turns out, the `clear` API call I was doing was *not* synchronous. I don't mean the HTTP aspect. That was obvious and I was doing an await on it. But the actual operation itself wasn't complete when the HTTP call was done. This meant that my next operation, where I added 6k objects, would fail as it put me over the max for my free tier. 
+</p>
+
+<p>
+You'll notice that Haroen in the comments below suggested using the SDK. So did support. And that helped right away. I'm not sure why I was opposed to using the SDK, maybe I just didn't want another dependency, but I wish I had just used it as it makes the code quite a bit simpler. So for example, I now do: <code>let clearResult = await index.clearObjects().wait();</code> to handle the clear and wait for it to finish. Much easier. 
+</p>
+
+<p>
+You can see the code in my deploy-succeeded serverless function here: <a href="https://github.com/cfjedimaster/raymondcamden2020/blob/master/.functions/deploy-succeeded/deploy-succeeded.js">github.com/cfjedimaster/raymondcamden2020/blob/master/.functions/deploy-succeeded/deploy-succeeded.js</a> Sorry for the mistake folks!
+</p>
+</div>
+
 This will be a quick update as I'm on vacation and should be busy playing XBox, but I've got an update to my 
 post on [using Algolia with Eleventy](https://www.raymondcamden.com/2020/06/24/adding-algolia-search-to-eleventy-and-netlify). Please read it first as this post won't make much sense without it. In that post, I described a way to use [Algolia](https://www.algolia.com/) with [Eleventy](https://www.11ty.dev/). The process was basically:
 
