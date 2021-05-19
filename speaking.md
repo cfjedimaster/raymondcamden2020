@@ -15,7 +15,14 @@ I started a blog. I feel like I have to struggle to learn new things and if I ca
 
 <h3>My Next Events</h3>
 
+<!--
 Nothing planned currently. Invite me to speak at your event! 
+-->
+<p>
+<a href="https://adobe.vconfex.com/site/adobe-coldfusion-developer-week/977">Adobe Document Services and ColdFusion</a><br/>
+Adobe ColdFusion Developer Week<br/>
+Online, June 22 - 24, 2021
+</p>
 
 
 <h3>My Past Events</h3>
