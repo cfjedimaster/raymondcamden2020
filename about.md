@@ -20,6 +20,7 @@ If you find this information useful (currently at {{ collections.posts | size }}
 I have not done a great job of tracking my various articles on other web sites, but I hope to correct that now. Consider the list below a beginning (as of July 2013) and certainly <i>not</i> a complete list.
 
 <ul>
+<li><a href="https://css-tricks.com/wrangling-control-over-pdfs-with-the-adobe-pdf-embed-api/">Wrangling Control Over PDFs with the Adobe PDF Embed API</a> for CSS-Tricks</li>
 <li><a href="https://snipcart.com/blog/jamstack-static-site-comments">Static Site Comments: A Jamstack How-To</a> for Snipcart</li>
 <li><a href="https://snipcart.com/blog/11ty-tutorial">11ty Tutorial: Cranking Your Jamstack Blog Up to 11!</a> for Snipcart</li>
 <li><a href="https://snipcart.com/blog/netlify-forms">Contact Form Processing Made Easy with Netlify</a> for Snipcart</li>
