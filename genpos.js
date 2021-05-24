@@ -37,7 +37,8 @@ if(day.length == 1) day = '0' + day;
 
 var date = year + '-'+month+'-'+day;
 // added to supply a time so my mail list thing works
-date += 'T18:00:00';
+// mod on 5/25/2021, this makes the filename a bit ugly, so changed date to dateFm for dateFontMatter
+let dateFm = date + 'T18:00:00';
 
 var slug = title.replace(/ /g,'-').toLowerCase();
 //remove multiple -
@@ -50,7 +51,7 @@ slug = slug.replace(/[^\w\-]+/g,'');
 var template = `---
 layout: post
 title: "${title}"
-date: "${date}"
+date: "${dateFm}"
 categories: [${categories}]
 tags: [${tags}]
 banner_image: /images/banners/welcome2018.jpg
