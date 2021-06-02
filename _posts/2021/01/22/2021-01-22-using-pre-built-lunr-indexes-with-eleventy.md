@@ -98,6 +98,6 @@ async created() {
 
 Two big changes. First, I load the index and pass it to `lunr.Index.load` to have it ready for searching. I then do a second call to get my raw data again. One of the weird things about Lunr is that search results do not contain the actual record you search but a reference to it. Well that's not weird per se, it's probably effecient, but in order to display my results properly, I need those original docs too. 
 
-In my testing, my pre-built index was bigger than the raw data. That makes some sense I guess. But the end result of this change is that I'm doing two network loads, one potentially big, in order to save the indexing time. You would have to hope that this change is, overall, wortwhile performance wise and that the network "penalty" is comparatively less. Hopefully. :)
+In my testing, my pre-built index was bigger than the raw data. That makes some sense I guess. But the end result of this change is that I'm doing two network loads, one potentially big, in order to save the indexing time. You would have to hope that this change is, overall, worthwhile performance wise and that the network "penalty" is comparatively less. Hopefully. :)
 
 Anyway, this was an interesting experiment. If you want to see the source, you can find it here: [https://github.com/cfjedimaster/eleventy-demos/tree/master/lunr2]. As always, if you've tried this yourself I'd love to hear about it. Leave me a comment below.
