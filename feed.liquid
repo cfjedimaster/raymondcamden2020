@@ -2,40 +2,46 @@
 permalink: /feed.xml
 ---
 {% assign posts = collections.posts | reverse %}<?xml version="1.0" encoding="UTF-8"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-    <channel>
-        <title>{{ site.title | xml_escape }}</title>
-        <description>{{ site.description | xml_escape }}</description>
-        <link>{{ site.url }}/</link>
-        <atom:link href="{{ "/feed.xml" | prepend: site.url }}" rel="self" type="application/rss+xml"/>
-        <pubDate>{{ page.date | date_to_rfc822 }}</pubDate>
-        <lastBuildDate>{{ page.date | date_to_rfc822 }}</lastBuildDate>
-        <generator>Eleventy</generator>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <title>{{ site.title | xml_escape }}</title>
+    <link href="{{ "/feed.xml" | prepend: site.url }}" rel="self" type="application/atom+xml"></link>
+    <link href="{{ site.url }}/" rel="alternate" type="text/html"></link>
+    <subtitle>{{ site.description | xml_escape }}</subtitle>
+
+    <updated>{{ page.date | date_to_xmlschema }}</updated>
+    <author>
+        <name>Raymond Camden</name>
+        <email>raymondcamden@gmail.com</email>
+    </author>
+    <id>{{ "/feed.xml" | prepend: site.url }}</id>
+
+    <generator>Eleventy</generator>
+
         {% for post in posts limit:10 %}
-            <item>
+            <entry>
+                <id>{{ post.url | prepend: site.url }}</id>
                 <title>{{ post.data.title | my_xml_escape }}</title>
-                <description>
+                <updated>{{ post.date | date_to_xmlschema }}</updated>
+
+                <content type="html">
 				{% if post.templateContent contains '<!--more-->' %}
                         {{ post.content | split:'<!--more-->' | first | my_xml_escape }}
                     {% else %}
 						{% capture content %}{% excerpt post %}{% endcapture %}
                         {{ content | my_xml_escape }}
                     {% endif %}
-				</description>
-                <pubDate>{{ post.date | date_to_rfc822 }}</pubDate>
-                <link>{{ post.url | prepend: site.url }}</link>
-                <guid isPermaLink="true">{{ post.url | prepend: site.url }}</guid>
+				</content>
+
                 {% for tag in post.data.tags %}
-                <category>{{ tag | my_xml_escape }}</category>
+                <category term="{{ tag | my_xml_escape }}" />
                 {% endfor %}
                 {% for cat in post.data.categories %}
-                <category>{{ cat | my_xml_escape }}</category>
+                <category term="{{ cat | my_xml_escape }}" />
                 {% endfor %}
                 <author>
                     <name>Raymond Camden</name>
                     <email>raymondcamden@gmail.com</email>
                 </author>
-            </item>
+            </entry>
         {% endfor %}
-    </channel>
-</rss>
+</feed>
