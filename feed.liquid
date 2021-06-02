@@ -31,6 +31,10 @@ permalink: /feed.xml
                 {% for cat in post.data.categories %}
                 <category>{{ cat | my_xml_escape }}</category>
                 {% endfor %}
+                <author>
+                    <name>Raymond Camden</name>
+                    <email>raymondcamden@gmail.com</email>
+                </author>
             </item>
         {% endfor %}
     </channel>
