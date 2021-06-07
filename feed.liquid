@@ -22,7 +22,7 @@ permalink: /feed.xml
                 <id>{{ post.url | prepend: site.url }}</id>
                 <title>{{ post.data.title | my_xml_escape }}</title>
                 <updated>{{ post.date | date_to_xmlschema }}</updated>
-
+                <link href="{{ post.url | prepend: site.url }}" rel="alternate" type="text/html" title="{{ post.data.title | my_xml_escape }}"/>
                 <content type="html">
 				{% if post.templateContent contains '<!--more-->' %}
                         {{ post.content | split:'<!--more-->' | first | my_xml_escape }}
