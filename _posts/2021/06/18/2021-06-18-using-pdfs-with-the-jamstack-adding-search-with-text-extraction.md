@@ -152,7 +152,7 @@ To me, the important part is just `Text`, and I use that in my `filter` and `red
 
 The end result of all this is an array of PDF data that includes where the PDF is (I use this so I can render it with the Embed API), a path to the thumbnail (used in the home page for links), and the text content. 
 
-Alright, so at this point, I can build a search engine. I've covered various types of Jamstack friendly search engines here before, but the simplest one would be [Lunr](https://lunrjs.com/). The quick and dirty solution for building the searchn engine would be to expose my PDF data for indexing by Lunr and then adding a page that uses JavaScript and the Lunr library to search it. First, here is my index:
+Alright, so at this point, I can build a search engine. I've covered various types of Jamstack friendly search engines here before, but the simplest one would be [Lunr](https://lunrjs.com/). The quick and dirty solution for building the search engine would be to expose my PDF data for indexing by Lunr and then adding a page that uses JavaScript and the Lunr library to search it. First, here is my index:
 
 ```
 ---
