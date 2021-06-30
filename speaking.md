@@ -19,9 +19,9 @@ I started a blog. I feel like I have to struggle to learn new things and if I ca
 Nothing planned currently. Invite me to speak at your event! 
 -->
 <p>
-<a href="https://adobe.vconfex.com/site/adobe-coldfusion-developer-week/977">Adobe Document Services and ColdFusion</a><br/>
-Adobe ColdFusion Developer Week<br/>
-Online, June 22 - 24, 2021
+<a href="https://apiworld.co/">Building awesome document workflows with APIs</a><br/>
+API World<br/>
+Online, October 26-28, 2021
 </p>
 
 
@@ -32,6 +32,12 @@ Here are my past events, most recent first, in a nice scrollable list no one wil
 </p>
 
 <div style="height: 400px; overflow:scroll">
+
+<p>
+<a href="https://adobe.vconfex.com/site/adobe-coldfusion-developer-week/977">Adobe Document Services and ColdFusion</a><br/>
+Adobe ColdFusion Developer Week<br/>
+Online, June 22 - 24, 2021
+</p>
 
 <p>
 <a href="https://www.tracydevs.com/2021/05/building-serverless-workflows-pipedream/">Building Serverless Workflows in Pipedream
