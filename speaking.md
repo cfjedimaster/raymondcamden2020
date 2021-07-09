@@ -19,6 +19,13 @@ I started a blog. I feel like I have to struggle to learn new things and if I ca
 Nothing planned currently. Invite me to speak at your event! 
 -->
 <p>
+<a href="https://cfe.dev/events/wrangle-documents-on-the-web/">Working with Documents on the Web
+</a><br/>
+Certified Fresh Events<br/>
+Online, August 26, 2021
+</p>
+
+<p>
 <a href="https://apiworld.co/">Building awesome document workflows with APIs</a><br/>
 API World<br/>
 Online, October 26-28, 2021
