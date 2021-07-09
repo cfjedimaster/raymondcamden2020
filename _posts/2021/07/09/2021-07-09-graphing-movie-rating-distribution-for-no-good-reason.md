@@ -225,4 +225,4 @@ And here's the result:
 <img data-src="https://static.raymondcamden.com/images/2021/07/mpa1.jpg" alt="Bar chart" class="lazyload imgborder imgcenter">
 </p>
 
-I realize that's too small to read. I put the web app itself up here: <https://static.raymondcamden.com/demos/mpa/mpa.html>
+I realize that's too small to read. I put the web app itself up here: <https://static.raymondcamden.com/demos/mpa/mpa.html> If you've got any questions about this, hit me up!
