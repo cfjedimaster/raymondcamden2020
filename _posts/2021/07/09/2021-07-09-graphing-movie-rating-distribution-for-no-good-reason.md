@@ -4,7 +4,7 @@ title: "Graphing Movie Rating Distribution For No Good Reason"
 date: "2021-07-09T18:00:00"
 categories: ["javascript"]
 tags: ["javascript"]
-banner_image: /images/banners/welcome2018.jpg
+banner_image: /images/banners/movietheater.jpg
 permalink: /2021/07/09/graphing-movie-rating-distribution-for-no-good-reason
 description: Using JavaScript to plot out movie rating distributions
 ---
@@ -226,3 +226,6 @@ And here's the result:
 </p>
 
 I realize that's too small to read. I put the web app itself up here: <https://static.raymondcamden.com/demos/mpa/mpa.html> If you've got any questions about this, hit me up!
+
+Photo by <a href="https://unsplash.com/@felixmooneeram?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Felix Mooneeram</a> on <a href="https://unsplash.com/s/photos/movie-theater?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+  
