@@ -80,6 +80,7 @@
 /index.cfm /
 /rss.cfm /feed.xml
 /rss /feed.xml
+/feeds /feed.xml
 
 /index.xml /feed.xml
 /feed /feed.xml
