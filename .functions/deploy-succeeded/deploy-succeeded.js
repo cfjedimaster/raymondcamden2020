@@ -18,35 +18,55 @@ exports.handler = async (event, context) => {
 
   try {
 
+    /*
+    Update on Aug 9, 2021:
+    I'm still having issues with timeouts and poor logging support from Netlify. So now
+    we have new logic. We will get the index and NOT delete them all. We wil get the first 3 entries
+    from the JSON file (newest are first) and do updateObjects on it. This should be MUCH quicker.
 
+    Why 3? No real reason. This runs on every build but only matters on new posts. This will ensure new
+    posts show up in the index.
+
+    For edits, or deletes (I've deleted maybe 2-3 times in the past 10+ years), I'll use a new script that basically
+    does what this used to do. Clear all and add all. This is so rare I'm not even going to build that code for now
+    as I can do it later and just grab the older version.
+
+    Also, I discovered the call to convert my algolia.json to data was VERY slow, not surprising considering the size.
+    So I added a new index, algolia_new.json, that's the last 5 items. Again, 5 is kinda arbitrary. 
+    */
     /// HANDLE ALOGLIA
     // first, get my index
-    let dataResp = await fetch('https://www.raymondcamden.com/algolia.json');
+    console.time('getJSON');
+    let dataResp = await fetch('https://www.raymondcamden.com/algolia_new.json');
+    console.timeEnd('getJSON');
 
+    console.time('toJSON');
     let data = await dataResp.json();
+    console.timeEnd('toJSON');
+
     console.log('Successfully got the data, size of articles '+data.length, data[0].title);
 
     //first clear 
 
-    console.log('Try to clear Algolia index');
-    let clearResult = await index.clearObjects().wait();
-    console.log('clearResult', clearResult);
-
     let requests = [];
 
-    data.forEach(d => {
+    // If you use my code for a new blog, your index may not have 3 items!
+    for(let i=0;i<3;i++) {
       /*
       define an objectID for Algolia
       */
+      let d = data[i];
       d.objectID = d.url;
       requests.push({
         'action':'updateObject',
         'body':d
       })
-    });
+    };
     console.log('Batch data object created to add to Algolia index');
-    
+
+    console.time('batchCall');
     let batchResult = await index.batch(requests);
+    console.timeEnd('batchCall');
     console.log('Request to batch index fired, not waiting, good luck');
 
 
