@@ -34,15 +34,12 @@ exports.handler = async (event, context) => {
     Also, I discovered the call to convert my algolia.json to data was VERY slow, not surprising considering the size.
     So I added a new index, algolia_new.json, that's the last 5 items. Again, 5 is kinda arbitrary. 
     */
+
     /// HANDLE ALOGLIA
     // first, get my index
-    console.time('getJSON');
     let dataResp = await fetch('https://www.raymondcamden.com/algolia_new.json');
-    console.timeEnd('getJSON');
 
-    console.time('toJSON');
     let data = await dataResp.json();
-    console.timeEnd('toJSON');
 
     console.log('Successfully got the data, size of articles '+data.length, data[0].title);
 
@@ -64,9 +61,7 @@ exports.handler = async (event, context) => {
     };
     console.log('Batch data object created to add to Algolia index');
 
-    console.time('batchCall');
     let batchResult = await index.batch(requests);
-    console.timeEnd('batchCall');
     console.log('Request to batch index fired, not waiting, good luck');
 
 
