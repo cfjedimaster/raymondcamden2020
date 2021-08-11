@@ -113,7 +113,14 @@ async function doWebMentions() {
     let retweets = mentions.filter(m => m['wm-property'] === 'repost-of');
     console.log('RTs', retweets.length);
 
-    let replies = mentions.filter(m => ['in-reply-to','mention-of'].indexOf(m['wm-property']) >= 0);
+    let replies = mentions.filter(m => ['in-reply-to','mention-of'].indexOf(m['wm-property']) >= 0).sort((a, b) => {
+        let aDate = new Date(a.published);
+        let bDate = new Date(b.published);
+        if(aDate.getTime() < bDate.getTime()) return -1;
+        if(aDate.getTime() > bDate.getTime()) return 1;
+        return 0;
+    });
+
     /*
     some replies do not have a content value, like a tweet with *just* an image. I could 
     maybe do it above all at once, but keeping it simpler....
