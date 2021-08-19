@@ -9,6 +9,8 @@ permalink: /2021/07/12/creating-an-additive-capture-shortcode-in-eleventy
 description: Creating a capture shortcode that appends insteads of replacing
 ---
 
+**Edit on August 19, 2021: I found an issue with my code where a shortcode for 'foo' on page 1 would be shared with the same name on other pages. I corrected it by using the current page scope. Fixes are inline.**
+
 Ok, so let me start off by saying that a) I'm not sure this is a good idea and b) it may already exist and I just don't know about it. This all came about from me doing some research on an [Eleventy tagged question](https://stackoverflow.com/questions/tagged/eleventy) on StackOverflow. If you aren't aware, Liquid has a tag built in called capture. It looks like so:
 
 ```html
@@ -47,20 +49,22 @@ module.exports = function(eleventyConfig) {
     	_CAPTURES = {};
 	});
 	
-	eleventyConfig.addPairedShortcode("mycapture", (content, name) => {
-		if(!_CAPTURES[name]) _CAPTURES[name] = '';
-		_CAPTURES[name] += content;
+	eleventyConfig.addPairedShortcode("mycapture", function (content, name) {
+		if(!_CAPTURES[this.page.inputPath]) _CAPTURES[this.page.inputPath] = {};
+		if(!_CAPTURES[this.page.inputPath][name]) _CAPTURES[this.page.inputPath][name] = '';
+		_CAPTURES[this.page.inputPath][name] += content;
 		return '';
-  	});
+	});
 
-	eleventyConfig.addShortcode("displaycapture", name => {
-		return _CAPTURES[name];
+	eleventyConfig.addShortcode("displaycapture", function(name) {
+		if(_CAPTURES[this.page.inputPath] && _CAPTURES[this.page.inputPath][name]) return _CAPTURES[this.page.inputPath][name];
+		return '';
 	});
 
 };
 ```
 
-This `.eleventy.js` file defines two shortcodes - `mycapture` and `displaycapture`. I define a global variable (I'll explain `beforeBuild` in a sec) named `_CAPTURES` that stores key value pairs. When using `mycapture`, the text inside the shortcode get passed to the `content` variable and when I actually write the shortcode, I include the `name` argument. Here's an example:
+This `.eleventy.js` file defines two shortcodes - `mycapture` and `displaycapture`. I define a global variable (I'll explain `beforeBuild` in a sec) named `_CAPTURES` that stores key value pairs. In order to keep a key, `foo`, local to one page, I use the current page's `inputPath` value. (This is something I edited after the initial blog post.)  When using `mycapture`, the text inside the shortcode get passed to the `content` variable and when I actually write the shortcode, I include the `name` argument. Here's an example:
 
 ```html
 {% raw %}{% mycapture "foo" %}
