@@ -37,6 +37,12 @@ API World<br/>
 Online, October 26-28, 2021
 </p>
 
+<p>
+<a href="https://2021.connect.tech/session?id=6222">A Beginner's Guide to Wrangling Asynchronicity in JavaScript</a> and <a href="https://2021.connect.tech/session?id=6219">Slice and Dice PDFs like a Pro</a><br/>
+connect.tech<br/>
+Atlanta, Georgia, November 8-10, 2021
+</p>
+
 
 <h3>My Past Events</h3>
 
