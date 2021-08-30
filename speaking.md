@@ -18,12 +18,6 @@ I started a blog. I feel like I have to struggle to learn new things and if I ca
 <!--
 Nothing planned currently. Invite me to speak at your event! 
 -->
-<p>
-<a href="https://cfe.dev/events/wrangle-documents-on-the-web/">Working with Documents on the Web
-</a><br/>
-Certified Fresh Events<br/>
-Online, August 26, 2021
-</p>
 
 <p>
 <a href="https://www.intothebox.org/">Extending PDF Capabilities With Adobe Document Services</a><br/>
@@ -51,6 +45,13 @@ Here are my past events, most recent first, in a nice scrollable list no one wil
 </p>
 
 <div style="height: 400px; overflow:scroll">
+
+<p>
+<a href="https://cfe.dev/events/wrangle-documents-on-the-web/">Working with Documents on the Web
+</a><br/>
+Certified Fresh Events<br/>
+Online, August 26, 2021
+</p>
 
 <p>
 <a href="https://adobe.vconfex.com/site/adobe-coldfusion-developer-week/977">Adobe Document Services and ColdFusion</a><br/>
