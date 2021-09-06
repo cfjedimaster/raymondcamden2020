@@ -18,17 +18,23 @@ I started a blog. I feel like I have to struggle to learn new things and if I ca
 <!--
 Nothing planned currently. Invite me to speak at your event! 
 -->
+
 <p>
-<a href="https://cfe.dev/events/wrangle-documents-on-the-web/">Working with Documents on the Web
-</a><br/>
-Certified Fresh Events<br/>
-Online, August 26, 2021
+<a href="https://www.intothebox.org/">Extending PDF Capabilities With Adobe Document Services</a><br/>
+Ortus Galaxy - Web Development Conference<br/>
+Houston, Texas, September 23-24, 2021
 </p>
 
 <p>
 <a href="https://apiworld.co/">Building awesome document workflows with APIs</a><br/>
 API World<br/>
 Online, October 26-28, 2021
+</p>
+
+<p>
+<a href="https://2021.connect.tech/session?id=6222">A Beginner's Guide to Wrangling Asynchronicity in JavaScript</a> and <a href="https://2021.connect.tech/session?id=6219">Slice and Dice PDFs like a Pro</a><br/>
+connect.tech<br/>
+Atlanta, Georgia, November 8-10, 2021
 </p>
 
 
@@ -39,6 +45,13 @@ Here are my past events, most recent first, in a nice scrollable list no one wil
 </p>
 
 <div style="height: 400px; overflow:scroll">
+
+<p>
+<a href="https://cfe.dev/events/wrangle-documents-on-the-web/">Working with Documents on the Web
+</a><br/>
+Certified Fresh Events<br/>
+Online, August 26, 2021
+</p>
 
 <p>
 <a href="https://adobe.vconfex.com/site/adobe-coldfusion-developer-week/977">Adobe Document Services and ColdFusion</a><br/>

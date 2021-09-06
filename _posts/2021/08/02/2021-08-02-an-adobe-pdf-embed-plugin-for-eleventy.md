@@ -9,7 +9,7 @@ permalink: /2021/08/02/an-adobe-pdf-embed-plugin-for-eleventy
 description: Eleventy users can now add a PDF Embed plugin to their sites
 ---
 
-I've covered in the past how to use the [Adobe PDF Embed API](https://www.adobe.io/apis/documentcloud/dcsdk/pdf-embed.html) with Eleventy (["Using PDFs with the Jamstack"](https://www.raymondcamden.com/2021/02/25/using-pdfs-with-the-jamstack). While the Embed API is relatively simple to add to a page, I thought it would be kind of fun to build an Eleventy plugin to make it simpler. Last week, I released it: <https://www.npmjs.com/package/eleventy-plugin-pdfembed>.
+I've covered in the past how to use the [Adobe PDF Embed API](https://www.adobe.io/apis/documentcloud/dcsdk/pdf-embed.html) with Eleventy (["Using PDFs with the Jamstack"](https://www.raymondcamden.com/2021/02/25/using-pdfs-with-the-jamstack)). While the Embed API is relatively simple to add to a page, I thought it would be kind of fun to build an Eleventy plugin to make it simpler. Last week, I released it: <https://www.npmjs.com/package/eleventy-plugin-pdfembed>.
 
 To use it, first add the plugin via npm to your Eleventy project:
 
