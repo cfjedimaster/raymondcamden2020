@@ -20,12 +20,6 @@ Nothing planned currently. Invite me to speak at your event!
 -->
 
 <p>
-<a href="https://developerevents.adobe.com/events/details/adobe-developer-events-developer-experience-presents-adobe-developers-live/">Wrangle PDFs on the web like a pro</a> and <a href="https://developerevents.adobe.com/events/details/adobe-developer-events-developer-experience-presents-adobe-developers-live/">Dynamically generating documents with Adobe Document Generation API</a><br/>
-Adobe Developers Live<br/>
-Online, October 4-5, 2021
-</p>
-
-<p>
 <a href="https://apiworld.co/">Building awesome document workflows with APIs</a><br/>
 API World<br/>
 Online, October 26-28, 2021
@@ -45,6 +39,12 @@ Here are my past events, most recent first, in a nice scrollable list no one wil
 </p>
 
 <div style="height: 400px; overflow:scroll">
+
+<p>
+<a href="https://developerevents.adobe.com/events/details/adobe-developer-events-developer-experience-presents-adobe-developers-live/">Wrangle PDFs on the web like a pro</a> and <a href="https://developerevents.adobe.com/events/details/adobe-developer-events-developer-experience-presents-adobe-developers-live/">Dynamically generating documents with Adobe Document Generation API</a><br/>
+Adobe Developers Live<br/>
+Online, October 4-5, 2021
+</p>
 
 <p>
 <a href="https://www.intothebox.org/">Extending PDF Capabilities With Adobe Document Services</a><br/>
