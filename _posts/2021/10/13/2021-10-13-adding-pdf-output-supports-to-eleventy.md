@@ -92,7 +92,7 @@ Initially I just returned `contents`, but the PDF was corrupt. While testing, I 
 [11ty] TypeError [ERR_INVALID_ARG_TYPE]: The "data" argument must be of type string or an instance of Buffer, TypedArray, or DataView. Received null
 ```
 
-I noticed the `or Buffer` part and that's when I swiched to using `Buffer.from` and that's when it started working well. Here's an example of the output:
+I noticed the `or Buffer` part and that's when I swiched to using `Buffer.from` and that's when it started working well. Despite the error message from Eleventy, I'm not entirely sure I'm supposed to be doing that. I filed [this issue](https://github.com/11ty/eleventy/issues/2023) to ask the docs to be clarified on it or the feature to be removed. (Not transforms, but being able to return non-string results.) Here's an example of the output:
 
 <div id="adobe-dc-view" style="height: 600px; width: 600px;"></div>
 <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
@@ -109,7 +109,43 @@ function displayPDF() {
 };
 </script>
 
-Despite the error message from Eleventy, I'm not entirely sure I'm supposed to be doing that. I filed [this issue](https://github.com/11ty/eleventy/issues/2023) to ask the docs to be clarified on it or the feature to be removed. (Not transformers, but being able to return non-string results.) As always, let me know what you think!
+As I said, the `createPDF` call just wraps our SDK. But here it is:
+
+```js
+async function createPDF(source, creds) {
+
+	return new Promise((resolve, reject) => {
+
+		const credentials =  pdfSDK.Credentials
+		.serviceAccountCredentialsBuilder()
+		.fromFile(creds)
+		.build();
+
+		const executionContext = pdfSDK.ExecutionContext.create(credentials),
+				createPdfOperation = pdfSDK.CreatePDF.Operation.createNew();
+
+		// Set operation input from a source file
+		const input = pdfSDK.FileRef.createFromLocalFile(source);
+		createPdfOperation.setInput(input);
+
+		// Execute the operation and Save the result to the specified location.
+		createPdfOperation.execute(executionContext)
+		.then(result => resolve(result))
+		.catch(err => {
+			if(err instanceof pdfSDK.Error.ServiceApiError
+			|| err instanceof pdfSDK.Error.ServiceUsageError) {
+				reject(err);
+			} else {
+				reject(err);
+			}
+		});
+
+	});
+}
+```
+
+The complete source code for this demo may be found here: <https://github.com/cfjedimaster/eleventy-demos/tree/master/pdftest5>
+As always, let me know what you think!
 
 Photo by <a href="https://unsplash.com/@iqram_shawon?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Iqram-O-dowla Shawon</a> on <a href="https://unsplash.com/s/photos/transformers?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
   
