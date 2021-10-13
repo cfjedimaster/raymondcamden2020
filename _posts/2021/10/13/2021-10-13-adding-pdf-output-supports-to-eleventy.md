@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Adding PDF Output Supports to Eleventy"
+title: "Adding PDF Output Support to Eleventy"
 date: "2021-10-13T18:00:00"
 categories: ["static sites"]
 tags: ["eleventy","adobe","pdf services"]
