@@ -30,7 +30,7 @@ layout: default
                 <footer class="entry-footer">
                     <div class="share-post">
                         <span>Share</span>
-                        <a class="fa-twitter" target="_blank" href="https://twitter.com/intent/tweet?text={{ title | uri_escape | my_xml_escape }}&amp;url={{ site.url }}{{ page.url }}"><span class="screen-reader-text">Twitter</span></a>
+                        <a class="fa-twitter" target="_blank" href="https://twitter.com/intent/tweet?text={{ title | my_xml_escape }}&amp;url={{ site.url }}{{ page.url }}"><span class="screen-reader-text">Twitter</span></a>
                         <a class="fa-facebook" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u={{ site.url }}{{ page.url }}&amp;t={{ title | my_xml_escape }}"><span class="screen-reader-text">Facebook</span></a>
                     </div><!-- .share-post -->
                     <div class="tag-links">
@@ -108,10 +108,10 @@ email address below. You will get an email once a day when new posts have been r
             </nav><!-- .post-navigation -->
             {% endcomment %}
 
-            {% include webmentions %}
-            {% include mydisqus %}
+            {% include 'webmentions' %}
+            {% include 'mydisqus' %}
 
         </main><!-- .site-main -->
-        {% include sidebar %}
+        {% include 'sidebar' %}
     </div><!-- .inner -->
 </div><!-- .site-content -->

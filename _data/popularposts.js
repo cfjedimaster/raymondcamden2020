@@ -7,6 +7,8 @@ module.exports = function() {
 
 	return new Promise(async (resolve, reject) => {
 
+		if(!token || !siteId) return resolve();
+
 		let today = new Date();
 		let lastWeek = new Date();
 		lastWeek.setDate(today.getDate() - 7);
