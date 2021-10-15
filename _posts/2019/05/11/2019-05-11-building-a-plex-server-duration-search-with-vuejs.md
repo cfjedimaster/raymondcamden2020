@@ -258,7 +258,7 @@ export default {
 This is virtually a repeat of the previous screen except this time I'm just asking for one prompt, the server. There isn't any validation on this, just a commit to the store. Finally, here's the movie display.
 
 ```html
-<template>
+{% raw %}<template>
   <div>
     <h1>Movies</h1>
 
@@ -294,7 +294,7 @@ This is virtually a repeat of the previous screen except this time I'm just aski
       </v-layout>
     </v-container>
   </div>
-</template>
+</template>{% endraw %}
 
 <script>
 import plex from "../api/plex";

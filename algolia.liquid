@@ -1,7 +1,7 @@
 ---
 permalink: /algolia.json
 ---
-
+{% comment %}
 {% assign posts = collections.posts | reverse %}
 [
 {% for post in posts %}
@@ -24,3 +24,5 @@ permalink: /algolia.json
 	}{% unless forloop.last %},{% endunless %}
 {% endfor %}
 ]
+Ray 10/15/2021: For now...
+{% endcomment %}

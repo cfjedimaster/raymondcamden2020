@@ -179,7 +179,8 @@ For the most part, the only issue I ran into here was figuring out various YAML 
 
 For comparison's sake, here's the layout using Jekyll's templating language, Liquid.
 
-<pre><code class="language-markup">---
+<pre><code class="language-markup">
+{% raw %}---
 layout: default
 ---
 
@@ -244,7 +245,7 @@ layout: default
 &lt;p&gt;&lt;strong&gt;Full UDF Source: &lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
 &lt;pre&gt;&lt;code class=&quot;language-{% if page.tagBased %}markup{% else %}javascript{% endif %}&quot;&gt;{{ page.javaDoc | xml_escape }}{{ page.code | xml_escape }}&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 
-&lt;&#x2F;div&gt;
+&lt;&#x2F;div&gt;{% endraw %}
 </code></pre>
 
 Personally, I like this a heck of a lot better. 

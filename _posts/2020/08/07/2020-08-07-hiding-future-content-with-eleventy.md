@@ -55,7 +55,7 @@ Basically I take the current time (which remember will be build time, hence my w
 ```html
 <h2>Posts</h2>
 
-{% assign posts = collections.posts | released %}
+{% raw %}{% assign posts = collections.posts | released %}{% endraw %}
 <ul>
 {% raw %}{% for post in posts  %}
 	<li><a href="{{ post.url }}">{{ post.data.title }}</a> - {{ post.date }}</li>
