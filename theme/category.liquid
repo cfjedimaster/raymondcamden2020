@@ -1,0 +1,25 @@
+---
+layout: default
+---
+
+{% assign posts = collections.posts | getByCategory: cat %}
+
+<main id="main" class="site-main">
+
+	<div class="post-feed inner">
+		<header class="page-header underline">
+			<h1 class="page-title">{{cat | titlecase}}</h1>
+			<p class="page-description">{{ posts.size }} total post(s):</p>
+		</header>
+
+		<ul class="archive-posts-list">
+			{% for post in posts %}
+			<li><a href="{{ site.baseurl }}{{ post.url }}" rel="bookmark" title="Permanent
+				Link to {{ site.baseurl }}{{ post.url }}">{{ post.data.title }}</a> <span class="archive-meta"> — <time class="published" datetime="{{ post.date | date: "%Y-%m-%d" }}">{{ post.date | date: "%B %e, %Y" }}</time></span></li>
+			{% endfor %}
+		</ul>
+
+	</div>
+
+</main>
+
