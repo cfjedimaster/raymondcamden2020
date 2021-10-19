@@ -1,0 +1,361 @@
+/**
+ * 4. Posts And Pages
+ */
+
+.post {
+  margin-bottom: 1.66667em;
+  position: relative;
+}
+
+.post-header {
+  margin-bottom: 1.66667em;
+}
+
+.post-title {
+  font-size: 1.66667rem;
+  margin: 0 0 0.5em;
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+}
+
+.post-thumbnail {
+  display: block;
+  margin-bottom: 1.66667em;
+
+  img {
+    width: 100%;
+  }
+}
+
+.post-meta {
+  color: $gray-light;
+  font-size: 0.77778rem;
+  letter-spacing: 1px;
+  line-height: 1.5;
+  margin-bottom: 0.75em;
+}
+
+.post-tags,
+.post-share {
+  font-size: 0.77778rem;
+  line-height: 1.5;
+
+  a {
+    display: inline-block;
+    margin-right: 10px;
+    text-decoration: none;
+  }
+}
+
+.post-share-title {
+  color: $gray-darkest;
+  display: inline-block;
+  font-weight: 700;
+  margin-right: 10px;
+}
+
+.post-tags a:before {
+  content: "\0023";
+}
+
+.comments-area,
+.read-next,
+.tagcloud {
+  margin-bottom: 1.66667em;
+  margin-top: 3.33333em;
+}
+
+.post-feed-title,
+.comments-title,
+.read-next-title,
+.tagcloud-title {
+  color: $gray-dark;
+  font-family: $font-primary;
+  font-size: 0.77778rem;
+  font-weight: normal;
+  letter-spacing: 0.14em;
+  line-height: 1.2;
+  margin: 0 0 2.14285em;
+  text-transform: uppercase;
+}
+
+.post-feed {
+  .post {
+    border-bottom: 1px solid $gray-lighter;
+  }
+
+  .post-header {
+    margin-bottom: 0.83333em;
+  }
+
+  .post-content {
+    font-size: 0.88889rem;
+    margin-bottom: 1.66667em;
+  }
+
+  .post-excerpt.dots:not(:empty):after {
+    content: "\2026";
+  }
+}
+
+.read-next {
+  .post-title {
+    font-size: 1.33333rem;
+
+    @media only screen and (max-width: 360px) {
+      font-size: 1.11111rem;
+    }
+  }
+
+  .post-meta {
+    margin-bottom: 0.5em;
+  }
+}
+
+.tagcloud {
+  a {
+    border: 1px solid $gray-lighter;
+    display: inline-block;
+    font-size: 0.77778rem;
+    line-height: 1.5;
+    margin: 0 0.25em 0.5em 0;
+    padding: 0.5em 0.75em;
+    text-decoration: none;
+
+    &:hover {
+      background: $color-accent;
+      color: #fff;
+    }
+  }
+}
+
+/* Single posts */
+.post-full {
+  .post-title {
+    font-size: 2.66667rem;
+    margin: 0;
+
+    &:after {
+      margin-top: 0.35em;
+    }
+  }
+
+  .post-meta {
+    margin-bottom: 1.42857em;
+  }
+
+  .post-tags {
+    margin-top: 2.14285em;
+  }
+
+  &:not(.post-custom) {
+    .post-content > p:first-child:first-letter {
+      color: $gray-darkest;
+      font-weight: 400;
+      font-size: 72px;
+      font-family: $font-secondary;
+      float: left;
+      line-height: 0.8;
+      margin-right: 15px;
+      position: relative;
+      text-transform: uppercase;
+      vertical-align: bottom;
+    }
+  }
+
+  @media only screen and (max-width: 800px) {
+    .post-title {
+      font-size: 2.22222rem;
+    }
+  }
+
+  @media only screen and (max-width: 600px) {
+    .post-title {
+      font-size: 1.875rem;
+    }
+
+    &:not(.post-custom) {
+      .post-content > p:first-child:first-letter {
+        font-size: 60px;
+        margin-right: 10px;
+      }
+    }
+  }
+}
+
+@-moz-document url-prefix() {
+  .post-full:not(.post-custom) .post-content > p:first-child:first-letter {
+    padding-top: 0.08em;
+  }
+}
+
+/* Hero section */
+.hero {
+  margin-bottom: 2.5em;
+
+  &:after {
+    margin-top: 1.66667em;
+  }
+}
+
+.hero-text {
+  color: $gray-darkest;
+  font-family: $font-secondary;
+  font-size: 1.66667rem;
+  line-height: 1.2;
+  margin: 0;
+
+  @media only screen and (max-width: 480px) {
+    font-size: 1.33333rem;
+  }
+}
+
+/* Featured posts */
+.featured-posts {
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin: 0 -0.83333em 2.5em;
+}
+
+.post-featured {
+  -ms-flex: 0 0 100%;
+  -webkit-flex: 0 0 100%;
+  flex: 0 0 100%;
+
+  .post-inside {
+    padding: 0 0.833333em;
+  }
+
+  .post-thumbnail {
+    display: block;
+    height: 0;
+    padding-top: 60%;
+    position: relative;
+    width: 100%;
+  }
+
+  img {
+    height: 100%;
+    left: 0;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
+
+  .post-header {
+    margin: 0;
+  }
+
+  .post-meta {
+    margin-bottom: 0.5em;
+  }
+
+  @media only screen and (min-width: 601px) and (max-width: 800px), only screen and (min-width: 1001px) {
+    .post-title {
+      font-size: 1.33333rem;
+    }
+
+    &:only-child,
+    &:first-child:nth-last-child(3) {
+      -ms-flex: 0 0 100%;
+      -webkit-flex: 0 0 100%;
+      flex: 0 0 100%;
+
+      .post-thumbnail {
+        margin: 0;
+      }
+
+      .post-meta {
+        margin-bottom: 0.75em;
+      }
+
+      .post-title {
+        font-size: 1.66667rem;
+      }
+    }
+
+    &.has-image {
+      &:only-child,
+      &:first-child:nth-last-child(3) {
+        .post-header {
+          background: rgba($gray-darkest,.9);
+          border-left: 2px solid $color-accent;
+          bottom: 1.66667em;
+          left: 2.5em;
+          margin: 0;
+          max-width: 60%;
+          min-width: 30%;
+          padding: 1.5em;
+          position: absolute;
+        }
+
+        .post-title {
+          color: #fff;
+        }
+
+        .post-tags {
+          a {
+            &:hover {
+              color: $gray-light;
+            }
+          }
+        }
+      }
+    }
+
+    &:first-child:nth-last-child(2),
+    &:nth-child(2):nth-last-child(2) {
+      -ms-flex: 0 0 60%;
+      -webkit-flex: 0 0 60%;
+      flex: 0 0 60%;
+
+      .post-thumbnail {
+        padding-top: 60%;
+      }
+    }
+
+    &:nth-child(2):last-child,
+    &:nth-child(3):last-child {
+      -ms-flex: 0 0 40%;
+      -webkit-flex: 0 0 40%;
+      flex: 0 0 40%;
+
+      .post-thumbnail {
+        padding-top: calc(90% + 9px);
+      }
+    }
+  }
+
+  @media only screen and (min-width: 601px) and (max-width: 800px) {
+    &:only-child,
+    &:first-child:nth-last-child(3) {
+      .post-thumbnail + .post-header {
+        bottom: 3vw;
+        left: 4.5vw;
+        max-width: 75%;
+        min-width: 30%;
+      }
+    }
+  }
+
+  @media only screen and (min-width: 1001px) {
+    .post-title {
+      font-size: 1.66667rem;
+    }
+  
+    &:only-child,
+    &:first-child:nth-last-child(3) {
+      .post-title {
+        font-size: 2rem;
+      }
+    }
+  }
+}

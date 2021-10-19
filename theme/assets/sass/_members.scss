@@ -1,0 +1,436 @@
+/**
+ * 9. Members
+ */
+
+// Member menu
+.members-menu {
+  color: $gray;
+  font-size: 0.77778rem;
+  line-height: 1.5;
+  list-style: none;
+  margin: 1.66667rem 0 0;
+  padding: 0;
+  text-align: center;
+
+  a {
+    color: $gray-light;
+    display: inline-block;
+    text-decoration: none;
+
+    &:not(.button) {
+      &:hover,
+      &:focus {
+        color: $color-accent;
+      }
+    }
+  }
+
+  .button {
+    display: block;
+    margin-bottom: 1em;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+
+// Member templates
+.site-signin,
+.site-signup,
+.site-account,
+.site-membership {
+  .page-title {
+    font-size: 2.66667rem;
+    margin: 0;
+  
+    &:after {
+      margin-top: 0.35em;
+    }
+  }
+}
+
+.account-subscription {
+  margin-bottom: 2.5em;
+}
+
+.account-group-label {
+  font-size: 1rem;
+  margin-right: 6px;
+}
+
+.account-actions {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  list-style: none;
+  margin-top: 1.66667em;
+  padding: 0;
+
+  .button {
+    margin: 0 10px 1em 0;
+  }
+}
+
+// Member subscribe box
+.subscribe-box {
+  border: 1px solid $gray-lighter;
+  box-sizing: border-box;
+  margin-bottom: 1.66667em;
+  padding: 1.66667em;
+
+  .note {
+    margin: 1.25em 0 0;
+  }
+}
+
+.subscribe-box-title {
+  font-size: 1.33333rem;
+  margin: 0 0 0.41667em;
+}
+
+.post-full + .subscribe-box {
+  margin-top: 3.33333em;
+}
+
+.post-full {
+  .post-excerpt {
+    position: relative;
+
+    &:before {
+      background: -webkit-linear-gradient(top, rgba(255,255,255,0) 0%,rgba(255,255,255,0) 20%,rgba(255,255,255,1) 100%);
+      background: linear-gradient(to bottom, rgba(255,255,255,0) 0%,rgba(255,255,255,0) 20%,rgba(255,255,255,1) 100%);
+      bottom: 0;
+      content: "";
+      height: 90%;
+      left: 0;
+      position: absolute;
+      right: 0;
+    }
+  }
+}
+
+// Member forms
+form[data-members-form] {
+  .form-group {
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+  }
+
+  .subscribe-email {
+    display: block;
+    -webkit-flex: 1 1 auto;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    height: 2.5em;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .button {
+    margin-left: 10px;
+    position: relative;
+  }
+
+  .button-content {
+    white-space: nowrap;
+  }
+
+  .button-loader {
+    display: none;
+  }
+
+  .message-signup-success,
+  .message-signin-success,
+  .message-invalid,
+  .message-error {
+    display: none;
+    font-size: 0.88889rem;
+    line-height: 1.5;
+    margin: 0.66667rem 0 0;
+  }
+
+  .message-signup-success,
+  .message-signin-success {
+    color: $color-accent;
+  }
+
+  .message-invalid,
+  .message-error {
+    color: $red;
+  }
+
+  &.loading {
+    .button-content {
+      visibility: hidden;
+    }
+
+    .button-loader {
+      display: block;
+      height: 30px;
+      left: 50%;
+      margin-left: -15px;
+      margin-top: -15px;
+      position: absolute;
+      top: 50%;
+      width: 30px;
+
+      svg {
+        fill: currentColor;
+        height: 30px;
+      }
+    }
+  }
+
+  &.invalid .message-invalid,
+  &.error .message-error {
+    display: block;
+  }
+
+  &.success {
+    &.signup-form,
+    &.subscribe-form {
+      .message-signup-success {
+        display: block;
+      }
+    }
+
+    &.signin-form {
+      .message-signin-success {
+        display: block;
+      }
+    }
+  }
+}
+
+// Notifications
+.notification {
+  background: $color-accent;
+  box-sizing: border-box;
+  color: #fff;
+  font-size: 1rem;
+  left: 0;
+  line-height: 1.5;
+  padding: 0.66667rem 3vw;
+  position: fixed;
+  right: 0;
+  top: 0;
+  -webkit-transform: translateY(-150%);
+  transform: translateY(-150%);
+  -webkit-transition: -webkit-transform .35s ease-in-out .5s, visibility .35s ease-in-out .5s;
+  -webkit-transition: transform .35s ease-in-out .5s, visibility .35s ease-in-out .5s;
+  transition: transform .35s ease-in-out .5s, visibility .35s ease-in-out .5s;
+  visibility: hidden;
+  z-index: 9999;
+
+  a {
+    color: inherit;
+  }
+
+  .notification-close {
+    height: 30px;
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    width: 30px;
+  }
+
+  .icon-close {
+    width: 24px;
+  }
+}
+
+.subscribe-success .notification-subscribe,
+.signup-success .notification-signup,
+.signin-success .notification-signin,
+.checkout-success .notification-checkout,
+.billing-success .notification-billing-update,
+.billing-cancel .notification-billing-update-cancel {
+  -webkit-transform: translateY(0);
+  transform: translateY(0);
+  visibility: visible;
+
+  &.closed {
+    -webkit-transform: translateY(-150%);
+    transform: translateY(-150%);
+    visibility: hidden;
+  }
+}
+
+// Membership plans
+.membership-box {
+  margin-top: 2.5em;
+}
+
+.membership-box-title {
+  color: $gray-dark;
+  font-family: $font-primary;
+  font-size: 0.88889rem;
+  font-weight: normal;
+  letter-spacing: 0.06em;
+  line-height: 1.2;
+  margin: 0 0 1.66667rem;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.membership-plans {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  margin: 0 -0.83333em;
+}
+
+.membership-plan {
+  border: 1px solid $gray-darkest;
+  box-sizing: border-box;
+  color: $gray-darkest;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1 0 220px;
+  -ms-flex: 1 0 220px;
+  flex: 1 0 220px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  margin: 0 0.83333em 1.66667em;
+  padding: 1.66667em;
+  text-align: center;
+}
+
+.membership-plan-header {
+  margin-bottom: 1.66667em;
+
+  h3 {
+    margin: 0 0 0.66667rem;
+  }
+
+  small {
+    font-size: 2rem;
+    line-height: 1.2;
+  }
+}
+
+.membership-plan-content {
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  font-size: 0.88889rem;
+  line-height: 1.5;
+
+  ul,
+  ol {
+    list-style: none;
+    padding: 0;
+  }
+
+  li {
+    margin-bottom: 0.4em;
+  }
+}
+
+.membership-plan-footer {
+  .button {
+    display: block;
+    margin-top: 1.11111rem;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+
+.site-membership {
+  .membership-plans {
+    @media only screen and (min-width: 1086px) {
+      margin-left: calc(510px - 47vw);
+      margin-right: calc(510px - 47vw);
+    }
+
+    @media only screen and (min-width: 1469px) {
+      margin-left: -180px;
+      margin-right: -180px;
+    }
+  }
+}
+
+.notification {
+  @media only screen and (min-width: 801px) {
+    left: 30vw;
+  }
+  
+  @media only screen and (min-width: 1001px) {
+    left: 300px;
+  }
+  
+  @media only screen and (min-width: 2001px) {
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .membership-plans {
+    margin-left: -1.5vw;
+    margin-right: -1.5vw;
+  }
+
+  .membership-plan {
+    margin-left: 1.5vw;
+    margin-right: 1.5vw;
+    padding-left: 3vw;
+    padding-right: 3vw;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .site-signin,
+  .site-signup,
+  .site-account {
+    .page-title {
+      font-size: 2.22222rem;
+    }
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .site-signin,
+  .site-signup,
+  .site-account {
+    .page-title {
+      font-size: 1.875rem;
+    }
+  }
+
+  .subscribe-box {
+    padding-left: 3vw;
+    padding-right: 3vw;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  form[data-members-form] {
+    .form-group {
+      -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+      flex-direction: column;
+    }
+
+    .button {
+      -webkit-align-self: flex-start;
+      align-self: flex-start;
+      -webkit-flex: 0 1 auto;
+      -ms-flex: 0 1 auto;
+      flex: 0 1 auto;
+      margin: 1em 0 0;
+    }
+  }
+}

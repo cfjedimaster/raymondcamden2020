@@ -1,0 +1,39 @@
+/**
+ * 5. Pagination
+ */
+
+.pagination {
+  margin-bottom: 3.33333em;
+  margin-top: 3.33333em;
+  text-align: center;
+
+  .nav-links {
+    padding: 0 60px;
+    position: relative;
+  }
+}
+
+.page-number {
+  color: $gray-light;
+  display: inline-block;
+  font-size: 0.77778rem;
+  line-height: 1.5;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.newer-posts,
+.older-posts {
+  height: 30px;
+  position: absolute;
+  top: 0;
+  width: 40px;
+}
+
+.newer-posts {
+  left: 0;
+}
+
+.older-posts {
+  right: 0;
+}

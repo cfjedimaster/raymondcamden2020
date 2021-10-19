@@ -1,0 +1,88 @@
+/**
+ * 8. Site Footer
+ */
+
+.site-footer {
+  border-top: 1px solid $gray-lighter;
+  padding-top: 2.5em;
+}
+
+.site-info {
+  font-size: 11px;
+  letter-spacing: 1px;
+  line-height: 1.5;
+  margin-bottom: 0;
+  text-transform: uppercase;
+
+  a {
+    text-decoration: none;
+  }
+}
+
+.footer-navigation {
+  .menu {
+    list-style: none;
+    margin: 0 0 1em;
+    padding: 0;
+  }
+
+  .menu-item {
+    font-size: 12px;
+    letter-spacing: 1px;
+    line-height: 1.5;
+    margin: 0 0 0.5em;
+    text-transform: uppercase;
+  }
+
+  a {
+    color: $gray;
+    text-decoration: none;
+
+    &:hover {
+      color: $color-accent;
+    }
+  }
+}
+
+.back-to-top {
+  bottom: 3vw;
+  display: none;
+  height: 40px;
+  position: fixed;
+  right: 3vw;
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+  width: 40px;
+  z-index: 1;
+
+  &:hover,
+  &:focus {
+    color: $color-accent;
+    outline: 0;
+  }
+
+  canvas{
+    display: block;
+    height: 40px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    width: 40px;
+  }
+}
+
+@media only screen and (min-width: 481px) {
+  .footer-navigation {
+    .menu {
+      list-style: none;
+      margin-bottom: 0.5em;
+    }
+
+    .menu-item {
+      display: inline-block;
+      margin: 0 10px 0 0;
+    }
+  }
+}

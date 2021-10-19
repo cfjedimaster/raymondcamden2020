@@ -1,0 +1,59 @@
+/**
+ * 7. Error Template
+ */
+
+.error-template {
+  background-color: $gray-darkest;
+  color: $gray-light;
+  position: relative;
+
+  .site {
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+
+  .site-content {
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    margin: 0;
+    text-align: center;
+  }
+}
+
+.error-cover {
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  bottom: 0;
+  left: 0;
+  opacity: 0.15;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.error-code {
+  color: #fff;
+  margin: 0 0 0.5rem;
+}
+
+.error-link {
+  font-family: $font-secondary;
+  font-style: italic;
+
+  &:hover {
+    color: $gray-light;
+  }
+}
+
+@media only screen and (min-width: 801px) {
+  .error-code {
+    font-size: 4rem;
+  }
+}

@@ -11,15 +11,19 @@ I may also send additional notes from time to time as well. And of course, you c
 unsubscribe any time. 
 </p>
 
-<div id="app">
-<input v-model="email" type="email"> 
-<button @click="doSubscribe" :disabled="working">Subscribe</button>
-<p style="font-weight: bold">
-{% raw %}
-{{ status }}
-{% endraw %}
-</p>
-</div>
+<form data-members-form="subscribe" class="subscribe-form">
+
+<div id="app" class="form-group">
+	<label for="subscribe-email" class="screen-reader-text">Your email address</label>
+	<input v-model="email" type="email" class="subscribe-email" placeholder="Your email address"> 
+	<button @click="doSubscribe" :disabled="working" class="button" type="submit">Subscribe</button>
+	<p style="font-weight: bold">
+	{% raw %}
+	{{ status }}
+	{% endraw %}
+	</p>
+	</div>
+</form>
 
 <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 <script>

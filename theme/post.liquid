@@ -1,0 +1,88 @@
+---
+layout: default
+body_class: post-template
+---
+
+<main id="main" class="site-main">
+
+	<article class="post post-full inner">
+
+		<header class="post-header">
+			<div class="post-meta">
+				<time class="published" datetime="{{ page.date | date: "%Y-%m-%d" }}">{{ page.date | date: "%B %e, %Y" }}</time>
+				{% assign age = page.date | ageInDays %}
+                {% assign twoyears = 365 | times: 2 %}
+                {% if age > twoyears %}
+				<span class="oldPost">This post is more than 2 years old.</span>
+				{% endif %}
+			</div><!-- .post-meta -->
+			<h1 class="post-title underline">{{title}}</h1>
+			<div class="post-tags">
+				{% comment %}
+				Can't use nice filter here as we don't have access to an object that has 
+				the current page. 
+				{% endcomment %}
+
+				{% for cat in categories %}
+					<a href="/categories/ {{ cat | myEscape}}">{{cat}}</a>
+				{% endfor %}
+				{% for tag in tags %}
+					<a href="/tags/ {{ tag | myEscape}}">{{tag}}</a>
+				{% endfor %}
+			</div>
+		</header><!-- .post-header -->
+
+        {% if banner_image %}
+		<div class="post-thumbnail">
+			<img src="{{ "https://static.raymondcamden.com" | append: banner_image }}" alt="{% if banner_image_alt %}{{ banner_image_alt }}{% else %}{{ title | my_xml_escape}}{% endif %}">
+		</div>
+		{% endif %}
+
+
+		<div class="post-content">
+			{{content}}
+		</div><!-- .post-content -->
+
+		<footer class="post-footer">
+			<p class="post-share">
+				<span class="post-share-title">Share:</span>
+				<a target="_blank" href="https://twitter.com/intent/tweet?text={{ title | my_xml_escape }}&amp;url={{ site.url }}{{ page.url }}" rel="noopener">Twitter</a>
+				<a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u={{ site.url }}{{ page.url }}&amp;t={{ title | my_xml_escape }}" rel="noopener">Facebook</a>
+				<a target="_blank" href="https://www.linkedin.com/shareArticle?mini=true&url={{site.url}}&amp;title={{title | my_xml_escape}}&amp;source={{site.title | my_xml_escape}}" rel="noopener">LinkedIn</a>
+			</p>
+		</footer><!-- .post-footer -->
+
+		<div class="author-box">
+			<div class="author-info">
+				<div class="author-avatar" style="background-image: url({{site.baseurl}}{{ site.author_image }})"><span class="screen-reader-text">{{ site.author_name }}'s Picture</span></div>
+				<div class="author-details">
+					<h4 class="author-title">About {{ site.author_name }}</h4>
+					<p class="author-bio">{{ site.author_bio }}
+					If you like this article, please consider visiting my <a href="http://www.amazon.com/gp/registry/wishlist/2TCL1D08EZEYE/ref=cm_wl_rlist_go_v?">Amazon Wishlist</a> or <a href="https://paypal.me/RaymondCamden">donating via PayPal</a> to show your support. You can even
+						<a href="https://www.buymeacoffee.com/raymondcamden">buy me a coffee</a>!
+					</p>
+					<p>
+					Want to get a copy of every new post? Use the form below to sign up for my newsletter.
+					</p>
+					<p id="subStatus"></p>
+					<form data-members-form="subscribe" class="subscribe-form">
+					<div class="form-group">
+					<input data-members-email class="subscribe-email" type="email" name="email" placeholder="Your email address" id="subEmail"/>
+					<button class="button" type="submit" id="subButton">
+					<span class="button-content">Subscribe</span>
+					</button>
+					</div>
+					</form><!-- subscribe-form -->
+
+				</div><!-- .author-details -->
+			</div><!-- .author-info -->
+		</div><!-- .author-box -->
+
+		{% include 'webmentions' %}
+
+	</article><!-- .post -->
+
+
+
+
+</main><!-- .site-main -->

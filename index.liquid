@@ -4,9 +4,77 @@ layout: default
 
 {% assign posts = collections.posts | reverse %}
 
-<div class="site-content">
-    <div class="inner">
-        <main class="site-main"> 
+<main id="main" class="site-main">
+
+    {% if site.author_bio %}
+    <div class="hero inner underline">
+        <p class="hero-text">{{site.author_bio}}</p>
+    </div>
+    {% endif %}
+
+    {% for post in posts limit:3 %}
+        {% if forloop.first %}
+        <div id="featured-posts" class="featured-posts">
+        {% endif %}
+
+            <article class="post post-featured has-image">
+                <div class="post-inside">
+                    <a href="{{post.url}}" class="post-thumbnail">
+                        <img 
+                        src="{{ "https://static.raymondcamden.com" | append: post.data.banner_image }}"
+                        alt="{% if post.data.banner_image_alt %}{{ post.data.banner_image_alt }}{% else %}{{ post.data.title }} {% endif %}" width="900"></a>                        
+                    <header class="post-header">
+                        <div class="post-meta">
+                            <time class="published" datetime="{{ post.date | date: "%Y-%m-%d" }}">{{ post.date | date: "%B %e, %Y" }}</time>
+                        </div><!-- .post-meta -->
+                        <h2 class="post-title"><a href="{{post.url}}" rel="bookmark">{{post.data.title}}</a></h2>
+                        <div class="post-tags">
+                            {% assign ctList = post | catTagList %}
+                            {% for ct in ctList %}
+                                <a href="{{ct.url}}">{{ct.name}}</a>
+                            {% endfor %}
+                        </div>
+                    </header><!-- .post-header -->
+                </div><!-- .post-inside -->
+            </article><!-- .post -->
+
+        {% if forloop.last %}
+        </div>
+        {% endif %}
+
+    {% endfor %}
+
+	<div class="post-feed inner">
+		<div class="post-feed-title underline">Latest Posts</div>
+        {% for post in posts limit:7 offset:3 %}
+        <article class="post">
+            <header class="post-header">
+                <div class="post-meta">
+                    <time class="published" datetime="{{ post.date | date: "%Y-%m-%d" }}">{{ post.date | date: "%B %e, %Y" }}</time>
+                </div>
+                <h2 class="post-title"><a href="{{post.url}}" rel="bookmark">{{post.data.title}}</a></h2>
+            </header>
+            <div class="post-content">
+                <p class="post-excerpt dots">
+                {% if post.templateContent contains '<!--more-->' %}
+                        {{ post.content | split:'<!--more-->' | first }}
+                    {% else %}
+                        {% excerpt post %}
+                    {% endif %}
+                </p>
+                <p class="post-tags">
+                    {% assign ctList = post | catTagList %}
+                    {% for ct in ctList %}
+                       <a href="{{ct.url}}">{{ct.name}}</a>
+                    {% endfor %}
+                </p>
+            </div><!-- .post-content -->
+        </article><!-- .post -->
+        {% endfor %}
+	</div>
+
+</main>
+{% comment %}
             {% for post in posts limit:10 %}
             <article class="post">
                 <header class="entry-header"> 
@@ -55,3 +123,5 @@ layout: default
         {% include 'sidebar' %}
     </div><!-- .inner -->
 </div><!-- .site-content -->
+
+{% endcomment %}

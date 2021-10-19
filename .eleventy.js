@@ -2,8 +2,15 @@ const xmlFiltersPlugin = require('eleventy-xml-plugin');
 const htmlmin = require("html-minifier");
 const fs = require('fs');
 
+// remove me
+const UpgradeHelper = require("@11ty/eleventy-upgrade-help");
+
+
 module.exports = function(eleventyConfig) {
 
+  //remove me
+  eleventyConfig.addPlugin(UpgradeHelper);
+  
   eleventyConfig.addPlugin(xmlFiltersPlugin);
 
 	eleventyConfig.addPassthroughCopy("css");
@@ -41,6 +48,7 @@ module.exports = function(eleventyConfig) {
   });
 
   eleventyConfig.addFilter('my_xml_escape', s => {
+    if(!s) return;
     return s.replace(/&/g, '&amp;')
       .replace(/</g, '&lt;')
       .replace(/>/g, '&gt;')
@@ -86,6 +94,7 @@ module.exports = function(eleventyConfig) {
   });
 
   eleventyConfig.addFilter('titlecase', str => {
+    if(!str) return;
     // https://stackoverflow.com/a/196991/52160
     return str.replace(
       /\w\S*/g,
@@ -109,8 +118,31 @@ module.exports = function(eleventyConfig) {
     return text.substring(0,5000);
   });
 
-	// reverse isn't supported in 11 liquid?
-	eleventyConfig.addFilter("reverse", a => a.slice().reverse() );
+  /*
+  My posts have categories and tags. This filter returns a joined list of em
+  */
+  eleventyConfig.addFilter('catTagList', p => {
+    /*
+      Can't use this:
+        return p.data.categories.concat(p.data.tags);
+      Because I need to know category vs tag for proper linking
+    */
+    let result = [];
+    for(let i=0; i<p.data.categories.length; i++) {
+      result.push({
+        name: p.data.categories[i],
+        url: '/categories/'+eleventyConfig.getFilter('myEscape')(p.data.categories[i])
+      });
+    }
+    for(let i=0; i<p.data.tags.length; i++) {
+      result.push({
+        name: p.data.tags[i],
+        url: '/tags/'+eleventyConfig.getFilter('myEscape')(p.data.tags[i])
+      });
+    }
+
+    return result;
+  });
 
   eleventyConfig.addFilter('ageInDays', d => {
     let date = new Date(d);
@@ -169,6 +201,24 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addShortcode("commentInclude", function(e, old) {
     return getCommentText(e,old);
   });
+
+  // Testing new layout
+  /*
+  let includes = '_includes';
+  if(process.env.NEWTHEME) {
+    includes = 'theme';
+    eleventyConfig.ignores.add('_includes');
+  } else eleventyConfig.ignores.add('theme');
+  */
+
+  let includes = 'theme';
+  eleventyConfig.ignores.add('_includes');
+  
+  return {
+    dir: {
+      includes
+    }
+  }
 
 };
 

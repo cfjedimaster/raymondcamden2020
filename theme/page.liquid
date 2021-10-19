@@ -1,0 +1,25 @@
+---
+layout: default
+---
+
+<main id="main" class="site-main">
+
+	<article class="page post-full inner">
+
+		<header class="post-header">
+			<h1 class="post-title underline">{{title}}</h1>
+		</header><!-- .post-header -->
+
+		{% if banner_image %}
+		<div class="post-thumbnail">
+            <img src="{{ "https://static.raymondcamden.com" | append: banner_image }}" alt="{% if banner_image_alt %}{{ banner_image_alt }}{% else %}{{ title }}{% endif %}">
+		</div>
+		{% endif %}
+
+		<div class="post-content">
+			{{content}}
+		</div><!-- .post-content -->
+
+	</article><!-- .post -->
+
+</main><!-- .site-main -->

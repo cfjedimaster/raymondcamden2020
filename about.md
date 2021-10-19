@@ -2,9 +2,9 @@
 layout: page
 title: About Me
 description: All about Raymond Camden
+body_class: page-template
 ---
 
-<img src="https://static.raymondcamden.com/images/ray2019c.jpg" style="float:left;margin-right:10px">
 
 My name is Raymond Camden. I'm a married father of eight  living in beautiful Lafayette, Louisiana. I am a Senior Developer Evangelist working at [Adobe](https://adobe.com) Most of my time is spent writing, researching, or presenting. When I'm not behind a computer, I'm an avid XBox/Playstation player, enjoy movies, and read like crazy. 
 
@@ -17,7 +17,8 @@ If you find this content useful (currently at {{ collections.posts | size }} pos
 
 <h3>Articles</h3>
 
-I have not done a great job of tracking my various articles on other web sites, but I hope to correct that now. Consider the list below a beginning (as of July 2013) and certainly <i>not</i> a complete list.
+I have not done a great job of tracking my various articles on other web sites, but the list below is 
+somewhat complete from 2013 and onward.
 
 <ul>
 <li><a href="https://snipcart.com/blog/jamstack-hosting-netlify-alternatives">Jamstack Hosting Solutions: Challengers to the Throne</a> for Snipcart</li>
@@ -99,18 +100,20 @@ I have not done a great job of tracking my various articles on other web sites, 
 
 <h3>My Books</h3>
 
-<p>
-<a href="https://www.amazon.com/gp/product/B08M3J514S/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=B08M3J514S&linkCode=as2&tag=raymondcamd06-20&linkId=0cf7abe7a5fc4e3f7d4566b6bdcf5553"><img src="https://static.raymondcamden.com/images/books/vuebook2020.jpg" title="Front-End Development Projects with Vue.js" style="float:left;margin-right:10px"></a>
-<a href="http://www.oreilly.com/programming/free/developing-serverless-applications.csp"><img src="https://static.raymondcamden.com/images/books/owbook_small.jpg" title="Developing Serverless Applications" style="float:left;margin-right:10px"></a>
-<a href="https://www.amazon.com/gp/product/B06XHGH789/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=B06XHGH789&linkCode=as2&tag=raymondcamd06-20&linkId=f23f73d89dfe77d76a37e967d7e28cd0"><img src="https://static.raymondcamden.com/images/2017/3/ssglrg.jpg" style="float:left;max-width:175px;margin-right:10px" title="The Book!"></a>
-<a href="https://www.amazon.com/gp/product/1491935111/ref=as_li_tl?ie=UTF8&tag=raymondcamd06-20&camp=1789&creative=9325&linkCode=as2&creativeASIN=1491935111&linkId=239944c4f3cbf1e35ce47f4eb857b2a7"><img src="https://static.raymondcamden.com/images/books/clientsidedatastorage.jpg" title="Client-Side Data Storage" border="0" style="float:left;margin-right:10px;"></a>
-</p>
+<style>
+.bookList img {
+	max-width: 150px;
+	height: 200px;
+}
+</style>
 
-<br clear="left">
-
-<p>
-<a href="https://www.amazon.com/gp/product/1633430065/ref=as_li_tl?ie=UTF8&tag=raymondcamd06-20&camp=1789&creative=9325&linkCode=as2&creativeASIN=1633430065&linkId=77fe8ca57d4789f895c2d1f7c20d8422"><img src="https://static.raymondcamden.com/images/books/cordova.png" title="Apache Cordova in Action" border="0" style="float:left;margin-right:10px;"></a>
-<a href="https://www.amazon.com/gp/product/178355505X/ref=as_li_tl?ie=UTF8&tag=raymondcamd06-20&camp=1789&creative=9325&linkCode=as2&creativeASIN=178355505X&linkId=f0cc46598be3d7c6fbe5c948703f9210"><img src="https://static.raymondcamden.com/images/2016/03/jqm3small.jpg" style="float:left"></a>
+<p class="bookList">
+<a href="https://www.amazon.com/gp/product/B08M3J514S/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=B08M3J514S&linkCode=as2&tag=raymondcamd06-20&linkId=0cf7abe7a5fc4e3f7d4566b6bdcf5553"><img src="https://static.raymondcamden.com/images/books/vuebook2020.jpg" title="Front-End Development Projects with Vue.js"></a>
+<a href="http://www.oreilly.com/programming/free/developing-serverless-applications.csp"><img src="https://static.raymondcamden.com/images/books/owbook_small.jpg" title="Developing Serverless Applications"></a>
+<a href="https://www.amazon.com/gp/product/B06XHGH789/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=B06XHGH789&linkCode=as2&tag=raymondcamd06-20&linkId=f23f73d89dfe77d76a37e967d7e28cd0"><img src="https://static.raymondcamden.com/images/2017/3/ssglrg.jpg" title="The Book!"></a>
+<a href="https://www.amazon.com/gp/product/1491935111/ref=as_li_tl?ie=UTF8&tag=raymondcamd06-20&camp=1789&creative=9325&linkCode=as2&creativeASIN=1491935111&linkId=239944c4f3cbf1e35ce47f4eb857b2a7"><img src="https://static.raymondcamden.com/images/books/clientsidedatastorage.jpg" title="Client-Side Data Storage" ></a>
+<a href="https://www.amazon.com/gp/product/1633430065/ref=as_li_tl?ie=UTF8&tag=raymondcamd06-20&camp=1789&creative=9325&linkCode=as2&creativeASIN=1633430065&linkId=77fe8ca57d4789f895c2d1f7c20d8422"><img src="https://static.raymondcamden.com/images/books/cordova.png" title="Apache Cordova in Action" ></a>
+<a href="https://www.amazon.com/gp/product/178355505X/ref=as_li_tl?ie=UTF8&tag=raymondcamd06-20&camp=1789&creative=9325&linkCode=as2&creativeASIN=178355505X&linkId=f0cc46598be3d7c6fbe5c948703f9210"><img src="https://static.raymondcamden.com/images/2016/03/jqm3small.jpg"></a>
 </p>
 
 <br clear="left">

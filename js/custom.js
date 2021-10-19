@@ -1,96 +1,11 @@
-/**
- * Main JS file for BlogInn behaviours
- */
 
-/*globals jQuery, document */
-(function ($) {
-    "use strict";
-
-    $(document).ready(function(){
-        // Responsive video embeds
-        $('.entry-content').fitVids();
-
-        // Navigation
-        $('#menu-toggle').click(function(){
-            var _this = $(this);
-            _this.toggleClass( 'toggled-on' ).attr('aria-expanded', _this.attr('aria-expanded') === 'false' ? 'true' : 'false');
-            $('.nav-menu').slideToggle();
-        });
-        $(window).bind('resize orientationchange', function() {
-            if ( $('#menu-toggle').is(':hidden') ) {
-                $('#menu-toggle').removeClass('toggled-on').attr('aria-expanded', 'false');
-                $('.nav-menu').removeAttr('style');
-            }
-        });
-
-        // Scroll to top
-        $('#top-link').on('click', function(e) {
-            $('html, body').animate({'scrollTop': 0});
-            e.preventDefault();
-        });
-
-        //blog posts only, cheap way to do this
-        if(window.location.pathname.indexOf('/2') === 0) {
-            $('.entry-content > p:nth-of-type(3)').after('<div id="ezoic-pub-ad-placeholder-117"></div>');
-            doWebMentions();
-            doSubscriptionForm();
-        }
-
-        window.cookieconsent.initialise({
-            "palette": {
-                "popup": {
-                    "background": "#000"
-                },
-                "button": {
-                    "background": "#f1d600"
-                },
-            },
-            "type": "opt-in",
-            "content": {
-                "href": "/privacy-policy/"
-            },
-            "revokable": true,
-            "dismissOnWindowClick": true,
-            "dismissOnScroll": 200,
-            "onPopupOpen": function () {},
-            "onInitialise": function (status) {
-                var hasConsented = this.hasConsented();
-                var ezstandalone = window.ezstandalone || {};
-                ezstandalone.cmd = ezstandalone.cmd || [];
-                ezstandalone.cmd.push(function () {
-                    ezstandalone.setDisablePersonalizedStatistics(!hasConsented);
-                    ezstandalone.setDisablePersonalizedAds(!hasConsented);
-                    ezstandalone.setEzoicAnchorAd(false);
-                    ezstandalone.define(101,102,117);
-                    ezstandalone.enable();
-                    ezstandalone.display();
-                });
-                
-            },
-            "onStatusChange": function (status, chosenBefore) {
-                var hasConsented = this.hasConsented();
-                var ezstandalone = window.ezstandalone || {};
-                ezstandalone.cmd = ezstandalone.cmd || [];
-                ezstandalone.cmd.push(function () {
-                    ezstandalone.setDisablePersonalizedStatistics(!hasConsented);
-                    ezstandalone.setDisablePersonalizedAds(!hasConsented);
-                    ezstandalone.setEzoicAnchorAd(false);
-                    ezstandalone.define(101,102,117);
-                    ezstandalone.enable();
-                    ezstandalone.display();
-                });
-                
-            },
-            "law": {
-                "regionalLaw": true,
-            },
-            "location": false,
-        });
-
-
-    });
-
-}(jQuery));
+$(document).ready(function(){
+    //blog posts only, cheap way to do this
+    if(window.location.pathname.indexOf('/2') === 0) {
+        doWebMentions();
+        doSubscriptionForm();
+    }
+});
 
 if ('serviceWorker' in navigator) {
   // Use the window load event to keep the page load performant
@@ -129,7 +44,7 @@ async function doWebMentions() {
     console.log('Replies', replies.length);
 
     if(replies.length) {
-        let title = `<h3>${replies.length} ${replies.length !== 1?'Replies':'Reply'}</h3>`;
+        let title = `<h4>${replies.length} ${replies.length !== 1?'Replies':'Reply'}</h4>`;
         let html = title;
 
         replies.forEach(m => {
@@ -158,7 +73,7 @@ async function doWebMentions() {
     }
 
     if(likes.length || retweets.length) {
-        let title = `<h3>${likes.length} Like${likes.length !== 1?'s':''} and ${retweets.length} Retweet${retweets.length !== 1?'s':''}</h3>`;
+        let title = `<h4>${likes.length} Like${likes.length !== 1?'s':''} and ${retweets.length} Retweet${retweets.length !== 1?'s':''}</h4>`;
         let html = title;
 
         if(likes.length) {
@@ -173,7 +88,6 @@ async function doWebMentions() {
         }
 
         if(retweets.length) {
-            let rtHTML = `<h3>${retweets.length} Retweet` + (retweets.length > 1?'s':'') + '</h3>';
             retweets.forEach(r => {
                 let iRT = '';
                 if(r.author.photo) iRT = `<img src="${r.author.photo}" alt="${r.author.name}" width="48" height="48" class="lazyload">`;

@@ -1,0 +1,58 @@
+<header id="masthead" class="site-header">
+	<div class="site-header-wrap">
+		<div class="site-header-inside">
+
+			<div class="site-branding">
+				<p class="profile"><a href="{{site.url}}">
+					<img srcset="{{ site.author_image}} 100w, {{site.author_image}} 300w" 
+					sizes="(max-width: 800px) 50px, 100px" 
+					src="{{site.author_image}}" alt="{{site.author_name}}" class="avatar" /></a></p>
+				<div class="site-identity">
+					<h1 class="site-title"><a href="{{site.url}}">{{site.title}}</a></h1>
+					<p class="site-description">{{site.description}}</p>
+				</div><!-- .site-identity -->
+				<button id="menu-toggle" class="menu-toggle"><span class="screen-reader-text">Menu</span><span class="icon-menu" aria-hidden="true"></span></button>
+			</div><!-- .site-branding -->
+
+			<nav id="main-navigation" class="site-navigation" aria-label="Main Navigation">
+				<div class="site-nav-wrap">
+					<div class="site-nav-inside">
+
+						<ul class="menu">
+						
+							{% for link in site.navigation %}
+								{% assign current = false %}
+								{% if page.url == link.url %}
+									{% assign current = true %}
+								{% endif %}
+								<li class="menu-item {% if current%}current-menu-item{%endif%}">
+								<a href="{{link.url}}">{{link.text}}</a></li>
+							{% endfor %}
+						</ul>
+
+						<div class="social-links">
+							{% if site.twitter_username %}
+							<a href="https://twitter.com/{{site.twitter_username}}" target="_blank" rel="noopener">{% include "icons/twitter" %}</a>
+							{% endif %}
+							{% if site.youtube_username %}
+							<a href="https://youtube.com/user/{{site.youtube_username}}" target="_blank" rel="noopener">{% include "icons/youtube" %}</a>
+							{% endif %}
+							{% if site.github_username %}
+							<a href="https://github.com/{{site.github_username}}" target="_blank" rel="noopener">{% include "icons/github" %}</a>
+							{% endif %}
+							{% if site.codepen_username %}
+							<a href="https://codepen.io/{{site.codepen_username}}" target="_blank" rel="noopener">{% include "icons/codepen" %}</a>
+							{% endif %}
+							{% if site.linkedin_username %}
+							<a href="https://linkedin.com/in/{{site.linkedin_username}}" target="_blank" rel="noopener">{% include "icons/linkedin" %}</a>
+							{% endif %}
+							<a href="{{ "/feed.xml" | prepend: site.url }}" target="_blank" rel="noopener">{% include "icons/rss" %}</a>
+						</div><!-- .social-links -->
+
+					</div><!-- .site-nav-inside -->
+				</div><!-- .site-nav-wrap -->
+			</nav><!-- .site-navigation -->
+
+		</div><!-- .site-header-inside -->
+	</div><!-- .site-header-wrap -->
+</header><!-- .site-header -->
