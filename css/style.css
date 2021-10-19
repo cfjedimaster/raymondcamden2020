@@ -2539,8 +2539,7 @@ body.hidden-scroll {
 .author-details { padding-left: 120px; }
 .author-info .author-avatar { background-position: center; background-size: cover; border-radius: 50%; height: 85px; float: left; margin-right: 30px; width: 85px; }
 
-.webmentions-area { background-color: #ffffff;  padding-bottom: 60px; padding-top: 40px; margin-bottom: 20px; }
-.webmentions-inner, .subscribe-inner { padding-left: 30px; padding-right: 30px;  }
+.webmentions-area { background-color: #ffffff;  padding-bottom: 60px; padding-top: 0px; margin-bottom: 20px; }
 .webmentions-inner h3, .subscribe-inner h3 { margin-top: 10px; }
 
 .webmentions-area img {
