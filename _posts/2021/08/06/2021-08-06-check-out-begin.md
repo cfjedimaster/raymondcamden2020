@@ -2,7 +2,7 @@
 layout: post
 title: "Check out Begin"
 date: "2021-08-06T18:00:00"
-categories: ["development","servereless"]
+categories: ["development","serverless"]
 tags: ["javascript","begin"]
 banner_image: /images/banners/begin.jpg
 permalink: /2021/08/06/check-out-begin
