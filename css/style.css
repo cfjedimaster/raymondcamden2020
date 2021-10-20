@@ -2537,7 +2537,7 @@ body.hidden-scroll {
 .author-info { font-size: 16px; line-height: 1.5; min-height: 85px; }
 .author-info a { text-decoration: none; }
 
-.webmentions-area { background-color: #ffffff;  padding-bottom: 60px; padding-top: 40px; margin-bottom: 20px; }
+.webmentions-area { background-color: #ffffff;  padding-bottom: 60px; padding-top: 0px; margin-bottom: 20px; }
 .webmentions-inner h3, .subscribe-inner h3 { margin-top: 10px; }
 
 .webmentions-area img {
