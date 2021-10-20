@@ -1,3 +1,9 @@
+/*
+Removed with site redesign. I do NOT need to keep this file around, 
+but as of 10/20/2021, I'm still doing cleanup. I'll eventually remove this completely.
+*/
+
+/*
 const fetch = require('node-fetch');
 
 module.exports = function() {
@@ -37,3 +43,4 @@ module.exports = function() {
 	});
 
 };
+*/
