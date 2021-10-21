@@ -2533,7 +2533,7 @@ body.hidden-scroll {
 }
 
 /* Ray area */
-.author-box { padding-top: 40px; background-color: #ddd; padding: 20px; }
+.author-box { background-color: #ddd; padding: 20px; }
 .author-info { font-size: 16px; line-height: 1.5; min-height: 85px; }
 .author-info a { text-decoration: none; }
 
