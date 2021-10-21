@@ -2568,3 +2568,7 @@ div.comment div {
 div.comment_header {
 	font-weight: bold;	
 }
+
+.imgborder { border: solid black 1px; }
+
+.imgcenter { display: block; margin: auto; }
