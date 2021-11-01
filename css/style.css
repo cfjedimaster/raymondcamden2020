@@ -243,8 +243,9 @@ body {
   line-height: 1.66667;
 }
 
+/*   color: #d4a259; */
 a {
-  color: #d4a259;
+  color: #6a512c;
   text-decoration: underline;
   -webkit-transition: color .3s ease;
   transition: color .3s ease;
@@ -1167,7 +1168,7 @@ img {
 }
 
 .site-description {
-  color: #666;
+  color: #fff;
   font-family: "Karla", sans-serif;
   font-weight: normal;
   font-size: 13px;
@@ -1410,7 +1411,7 @@ a[href$="/rss/"] svg {
 }
 
 .post-meta {
-  color: #aaa;
+  color: #fff;
   font-size: 0.77778rem;
   letter-spacing: 1px;
   line-height: 1.5;
@@ -1640,9 +1641,11 @@ a[href$="/rss/"] svg {
   .post-featured.has-image:only-child .post-title, .post-featured.has-image:first-child:nth-last-child(3) .post-title {
     color: #fff;
   }
-  .post-featured.has-image:only-child .post-tags a:hover, .post-featured.has-image:first-child:nth-last-child(3) .post-tags a:hover {
-    color: #aaa;
+
+  .post-featured.has-image:only-child .post-tags a:hover, .post-featured.has-image:first-child:nth-last-child(3) .post-tags a {
+    color: #fff;
   }
+
   .post-featured:first-child:nth-last-child(2), .post-featured:nth-child(2):nth-last-child(2) {
     -ms-flex: 0 0 60%;
     -webkit-flex: 0 0 60%;
@@ -2534,7 +2537,7 @@ body.hidden-scroll {
 
 /* Ray area */
 .author-box { background-color: #ddd; padding: 20px; }
-.author-info { font-size: 16px; line-height: 1.5; min-height: 85px; }
+.author-info { font-size: 16px; line-height: 1.5; min-height: 85px; color: black; }
 .author-info a { text-decoration: none; }
 
 .webmentions-area { background-color: #ffffff;  padding-bottom: 60px; padding-top: 40px; margin-bottom: 20px; }
