@@ -110,6 +110,7 @@ module.exports = function(eleventyConfig) {
     if(str === 'coldfusion') return 'ColdFusion';
     if(str === 'javascript') return 'JavaScript';
     if(str === 'jquery') return 'jQuery';
+    if(str === 'pdf services') return 'PDF Services';
     return str;
   });
 
