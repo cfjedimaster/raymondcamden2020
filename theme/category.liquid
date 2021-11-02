@@ -4,11 +4,17 @@ layout: default
 
 {% assign posts = collections.posts | getByCategory: cat %}
 
+{% comment %}
+We do some mods for some cats based on their names
+{% endcomment %}
+{% assign category = cat %}
+{% assign category = cat | fixcattag %}
+
 <main id="main" class="site-main">
 
 	<div class="post-feed inner">
 		<header class="page-header underline">
-			<h1 class="page-title">{{cat | titlecase}}</h1>
+			<h1 class="page-title">{{category | titlecase}}</h1>
 			<p class="page-description">{{ posts.size }} total post(s):</p>
 		</header>
 

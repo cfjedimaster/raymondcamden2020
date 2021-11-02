@@ -96,12 +96,21 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addFilter('titlecase', str => {
     if(!str) return;
     // https://stackoverflow.com/a/196991/52160
+    // modified 11/2/2021 to no longer lowercase the rest
     return str.replace(
       /\w\S*/g,
       function(txt) {
-        return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
+        return txt.charAt(0).toUpperCase() + txt.substr(1);
       }
     );
+  });
+
+  eleventyConfig.addFilter('fixcattag', str => {
+    if(!str) return;
+    if(str === 'coldfusion') return 'ColdFusion';
+    if(str === 'javascript') return 'JavaScript';
+    if(str === 'jquery') return 'jQuery';
+    return str;
   });
 
   eleventyConfig.addFilter('jsonify', function (variable) {

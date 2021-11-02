@@ -4,11 +4,16 @@ layout: default
 
 {% assign posts = collections[tag] | reverse %}
 
+{% comment %}
+We do some mods for some tags based on their names
+{% endcomment %}
+{% assign tagname = tag | fixcattag %}
+
 <main id="main" class="site-main">
 
 	<div class="post-feed inner">
 		<header class="page-header underline">
-			<h1 class="page-title">{{tag | titlecase}}</h1>
+			<h1 class="page-title">{{tagname | titlecase}}</h1>
 			<p class="page-description">{{ collections[tag].size }} total post(s):</p>
 		</header>
 
