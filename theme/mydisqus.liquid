@@ -1,0 +1,11 @@
+
+{% capture hasComments %}{% hasAnyComments page.url, oldurl %}{% endcapture %}
+
+{% if hasComments == "true" %}
+<div class="comments-area">
+	<div class="comments-inner">
+	<h3>Archived Comments</h3>
+    {% commentInclude page.url, oldurl %}
+    </div>
+</div>
+{% endif %}
