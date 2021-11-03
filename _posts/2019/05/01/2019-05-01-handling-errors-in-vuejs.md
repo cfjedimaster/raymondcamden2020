@@ -23,7 +23,7 @@ In order to test out the various error handling techniques, I decided to use thr
 
 This example will not display an error to the user but will have a `[Vue warn]` message in the console. 
 
-<img src="https://static.raymondcamden.com/images/2019/05/ve1a.png" alt="Error messages" class="imgborder imgcenter">
+<img data-src="https://static.raymondcamden.com/images/2019/05/ve1a.png" alt="Error messages" class="imgborder imgcenter lazyload">
 
 You can view this example here:
 
@@ -55,7 +55,7 @@ const app = new Vue({
 
 This throws both a `[Vue warn]` and a regular error in the console and doesn't show anything to the user.
 
-<img src="https://static.raymondcamden.com/images/2019/05/ve1.png" alt="Error messages" class="imgborder imgcenter">
+<img data-src="https://static.raymondcamden.com/images/2019/05/ve1.png" alt="Error messages" class="imgborder imgcenter lazyload">
 
 
 Here's an embed for this.
@@ -88,7 +88,7 @@ const app = new Vue({
 
 Like the last one, this error will be thrown twice in the console, one warning and one proper error. Unlike last time, the error is only thrown when you actually click the button.
 
-<img src="https://static.raymondcamden.com/images/2019/05/ve2.png" alt="Error with the click handler" class="imgborder imgcenter">
+<img data-src="https://static.raymondcamden.com/images/2019/05/ve2.png" alt="Error with the click handler" class="lazyload imgborder imgcenter">
 
 And here's the embed for this one:
 
@@ -103,7 +103,7 @@ Ok, before we go on, I just want to be clear that this isn't representative of e
 
 Ok, so how *do* you handle errors in Vue applications? I have to say I was a bit surprised that the main [Vue Guide](https://vuejs.org/v2/guide/) did not have a clearly defined section on error handling. 
 
-<img src="https://static.raymondcamden.com/images/2019/05/ve3.png" alt="Results for Error" class="imgborder imgcenter">
+<img data-src="https://static.raymondcamden.com/images/2019/05/ve3.png" alt="Results for Error" class="lazyload imgborder imgcenter">
 
 Yes, there is one in the guide, but the text is short enough to fit in a quote:
 
@@ -301,7 +301,7 @@ So yeah... interesting feature. I'm guessing it would mostly be used by people b
 
 ## The One Technique to Rule Them All: window.onerror
 
-<img src="https://static.raymondcamden.com/images/2019/05/ring.png" alt="Obligatory LOTR reference ring" class="imgcenter">
+<img data-src="https://static.raymondcamden.com/images/2019/05/ring.png" alt="Obligatory LOTR reference ring" class="lazyload imgcenter">
 
 The final (and most powerful) option is to use [window.onerror](https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onerror), a global error handler for *anything* that can possibly go wrong with your JavaScript. The handler takes the form of:
 
