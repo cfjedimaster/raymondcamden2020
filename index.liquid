@@ -55,7 +55,7 @@ layout: default
                 <h2 class="post-title"><a href="{{post.url}}" rel="bookmark">{{post.data.title}}</a></h2>
             </header>
             <div class="post-content">
-                <p class="post-excerpt dots">
+                <p class="post-excerpt">
                 {% if post.templateContent contains '<!--more-->' %}
                         {{ post.content | split:'<!--more-->' | first }}
                     {% else %}

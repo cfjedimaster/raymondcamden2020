@@ -191,7 +191,7 @@ module.exports = function(eleventyConfig) {
 	});
 
   eleventyConfig.addTransform("htmlmin", function(content, outputPath) {
-    if( outputPath.endsWith(".html") ) {
+    if(process.env.CI && outputPath.endsWith(".html") ) {
       let minified = htmlmin.minify(content, {
         useShortDoctype: true,
         removeComments: true,
@@ -273,7 +273,10 @@ function extractExcerpt(doc) {
   }
 
   const excerptEnd = findExcerptEnd(content);
-  return content.substring(0, excerptEnd).trim();
+  /*
+  Modified 11/4/2021 to remove <p></p> as it conflicts with CSS used to display ...
+  */
+  return content.substring(0, excerptEnd).trim().replace('<p>', '').replace('</p>','');
 }
 
 /**

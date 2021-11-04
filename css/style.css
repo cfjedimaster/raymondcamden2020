@@ -1441,12 +1441,12 @@ a[href$="/rss/"] svg {
   content: "\0023";
 }
 
+/*
 .comments-area,
 .read-next,
 .tagcloud {
-  margin-bottom: 1.66667em;
-/*  margin-top: 3.33333em;*/
 }
+*/
 
 .post-feed-title,
 .comments-title,
@@ -2540,7 +2540,7 @@ body.hidden-scroll {
 .author-info { font-size: 16px; line-height: 1.5; min-height: 85px; color: black; }
 .author-info a { text-decoration: none; }
 
-.webmentions-area { background-color: #ffffff;  padding-top: 40px; margin-bottom: 40px; }
+.webmentions-area { background-color: #ffffff;  padding-top: 40px;  }
 .webmentions-inner h3, .subscribe-inner h3 { margin-top: 10px; }
 
 .webmentions-area img {
@@ -2575,3 +2575,8 @@ div.comment_header {
 .imgborder { border: solid black 1px; }
 
 .imgcenter { display: block; margin: auto; }
+
+.comments-area {
+  padding-top: 40px;
+}
+
