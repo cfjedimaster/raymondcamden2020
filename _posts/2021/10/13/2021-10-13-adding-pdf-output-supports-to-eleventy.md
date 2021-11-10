@@ -6,7 +6,7 @@ categories: ["static sites"]
 tags: ["eleventy","adobe","pdf services"]
 banner_image: /images/banners/transformers.jpg
 permalink: /2021/10/13/adding-pdf-output-supports-to-eleventy
-description: Using Eleventy transforms and Adobe PDF Services to create dynamic PDFs.1
+description: Using Eleventy transforms and Adobe PDF Services to create dynamic PDFs.
 ---
 
 I've blogged a few times now about integrating [Adobe PDF Services](https://www.adobe.io/apis/documentcloud/dcsdk/) with [Eleventy](https://www.11ty.dev/), but so far my examples have either been for supporting existing PDFs or [converting documents](https://www.raymondcamden.com/2021/08/30/using-pdfs-with-the-jamstack-building-a-document-viewer) into PDFs for a consistent viewing expirement. Today's test is yet another example of something that may not be a good idea, but it worked, and it's cool, so I'm sharing it!
