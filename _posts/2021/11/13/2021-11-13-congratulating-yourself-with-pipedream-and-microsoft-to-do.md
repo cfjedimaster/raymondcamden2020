@@ -31,7 +31,7 @@ Cool! We had an API and I was ready to go. Microsoft has [great documentation](h
 
 I reached out on their forums, and got responses, but after three plus months of back and forth, I never got a resolution. While I appreciated Microsoft folks trying to help, in the end though I was stuck with an API that didn't work for me. (And that's an important detail, it seemed to be tied to an issue with my account, but we never got to the end of it. If you want you can peruse the details at the [thread](https://docs.microsoft.com/en-us/answers/questions/150401/503-errors-trying-to-get-todo-lists.html?childToView=169860#comment-169860).) 
 
-On a whim, and wanting to do something productive and fun on a Saturday morning, I randly hopped over to the Graph Explorer and tried it again... and it worked!
+On a whim, and wanting to do something productive and fun on a Saturday morning, I randomly hopped over to the Graph Explorer and tried it again... and it worked!
 
 <p>
 <img data-src="https://static.raymondcamden.com/images/2021/11/todo2.jpg" alt="Happy Cat" class="lazyload imgborder imgcenter">
