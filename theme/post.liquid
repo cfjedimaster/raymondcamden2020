@@ -13,7 +13,7 @@ body_class: post-template
 				{% assign age = page.date | ageInDays %}
                 {% assign twoyears = 365 | times: 2 %}
                 {% if age > twoyears %}
-				<span class="oldPost">This post is more than 2 years old.</span>
+				<span class="oldPost">(This post is more than 2 years old.)</span>
 				{% endif %}
 			</div><!-- .post-meta -->
 			<h1 class="post-title underline">{{title}}</h1>
