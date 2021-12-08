@@ -3,7 +3,7 @@ layout: post
 title: "Recreating Breaking Bad Credits with JavaScript (and a bit of CSS)"
 date: "2021-05-31T18:00:00"
 categories: ["javascript"]
-tags: ["javacript"]
+tags: ["javascript"]
 banner_image: /images/banners/breakingbad.jpg
 permalink: /2021/05/31/recreating-breaking-bad-credits-with-javascript-and-a-bit-of-css
 description: Using JavaScript to mimic Breaking Bad's credit effects
