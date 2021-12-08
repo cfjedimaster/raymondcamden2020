@@ -9,7 +9,7 @@ permalink: /2021/12/08/fun-scary-webcam-demo
 description: A look at Windy's Webcam API to demonstrate just how many cameras are around you
 ---
 
-[Windy](https://www.windy.com/) is a fascinating site/app that gives realtime visualizations of wind speed and direction in your area. While a static picture doesn't do the animation justice, here's my local area right now.
+[Windy](https://www.windy.com/) is a fascinating site/app that gives realtime visualizations of wind speed and direction in your area. As a static picture wouldn't do it justice, here's my local area right now.
 
 <iframe width="650" height="450" src="https://embed.windy.com/embed2.html?lat=32.073&lon=-91.121&detailLat=32.073&detailLon=-91.121&width=650&height=450&zoom=4&level=surface&overlay=wind&product=ecmwf&menu=&message=&marker=&calendar=now&pressure=&type=map&location=coordinates&detail=&metricWind=default&metricTemp=default&radarRange=-1" frameborder="0"></iframe>
 
