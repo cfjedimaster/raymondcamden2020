@@ -1,0 +1,29 @@
+---
+layout: page
+body_class: page-template
+permalink: /categories/index.html
+title: Categories List
+---
+
+<%
+	cats =collections.categories.sort();
+    
+	function titleCase(str) {
+		return str.replace(
+		/\w\S*/g,
+		function(txt) {
+			return txt.charAt(0).toUpperCase() + txt.substr(1);
+		}
+		);
+	}
+
+	function  myEscape(s)  {
+	    return s.replace(/ /g, '+');
+	}
+%>
+
+<ul>
+	<% for(cat of cats) { %> 
+		<li><a href="/categories/<%= myEscape(cat) %>"><%= titleCase(cat) %></a></li>
+	<% } %>
+</ul>

@@ -1,0 +1,29 @@
+---
+layout: page
+body_class: page-template
+permalink: /tags/index.html
+title: Tags List
+---
+
+<%
+	tags = Object.keys(collections).filter(a => ['all','posts','categories'].includes(a) === false).sort();
+    
+	function titleCase(str) {
+		return str.replace(
+		/\w\S*/g,
+		function(txt) {
+			return txt.charAt(0).toUpperCase() + txt.substr(1);
+		}
+		);
+	}
+
+	function  myEscape(s)  {
+	    return s.replace(/ /g, '+');
+	}
+%>
+
+<ul>
+	<% for(tag of tags) { %>
+		<li><a href="/tags/<%= myEscape(tag) %>"><%= titleCase(tag) %></a></li>
+	<% } %>
+</ul>
