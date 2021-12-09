@@ -150,3 +150,5 @@ admin/index.php /
 /media/wp-includes/wlwmanifest.xml /
 /about-me /about
 /ads.txt https://srv.adstxtmanager.com/14551/raymondcamden.com 301
+
+/.well-known/* /
