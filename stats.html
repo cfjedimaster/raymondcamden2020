@@ -56,6 +56,17 @@ templateEngineOverride: false
         </tr>
     </table>
 
+    <h3>Post Views for Items in RSS</h3>
+    <table>
+        <tr>
+            <td>Post</td>
+            <td>Views</td>
+        </tr>
+        <tr v-for="post in postViewsRSS">
+            <td><a :href="post.url">{{post.title}}</a></td>
+            <td>{{post.views}}</td>
+        </tr>
+    </table>
     <h3>Posts Per Year</h3>
     <table>
         <tr>
@@ -130,7 +141,8 @@ new Vue({
         weekData:[],
         buildStatus:'',
         buildPublished:false,
-        buildTime:''
+        buildTime:'',
+        postViewsRSS:[]
 	},
 	created:async function() {
         let data = await fetch('/stats.json');
@@ -192,6 +204,18 @@ new Vue({
             this.buildTime = buildData.published_at;
             this.buildPublished = true;
         } else this.buildStatus = buildData.state;
+
+        // new rss thing
+        let rss = await (await fetch('/jsonfeed/index.json')).json();
+        for(item of rss.items) {
+            let url = item.id.replace('https://','');
+            let views = (await (await fetch(`/.netlify/functions/getPageViews?path=${url}`)).json()).views;
+            this.postViewsRSS.push({
+                url:item.id,
+                title:item.title,
+                views
+            })
+        }
 
 	},
     computed:{
