@@ -29,7 +29,7 @@ const handler = async (event) => {
 }
 
 async function getPageViews(propertyId,url) {
-  console.log('look up', url);
+
   // year there is a bit arbitrary, I set up my GA4 account a year ago
 	const [response] = await analyticsDataClient.runReport({
 		property: `properties/${propertyId}`,
