@@ -1410,6 +1410,15 @@ a[href$="/rss/"] svg {
   width: 100%;
 }
 
+/* only make post page headers smaller */
+/*
+I'm not happy with the size of the images on posts - but when I shrink the header, it distorts, 
+and if I remove width 100%, it's left aligned. To do later..
+.post-full .post-thumbnail img {
+  max-height: 400px;
+}
+*/
+
 .post-meta {
   color: #000; 
   font-size: 0.77778rem;
