@@ -209,7 +209,7 @@ new Vue({
         let rss = await (await fetch('/jsonfeed/index.json')).json();
         for(item of rss.items) {
             let url = item.id.replace('https://','');
-            let views = (await (await fetch(`/.netlify/functions/getPageViews?path=${url}`)).json()).views;
+            let views = (await (await fetch(`/api/getPageViews?path=${url}`)).json()).views;
             this.postViewsRSS.push({
                 url:item.id,
                 title:item.title,

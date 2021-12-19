@@ -1,3 +1,5 @@
+/api/getPageViews /.netlify/functions/getPageViews
+
 /index.cfm/2013/5/20/Capturing-camerapicture-data-without-PhoneGap /2013/05/20/capturing-camerapicture-data-without-phonegap/ 301
 /index.cfm/2012/3/9/PhoneGaps-File-API /2012/03/09/PhoneGaps-File-API 301
 /2014/11/7/Cordova-and-Asset-Downloads/ /2014/11/07/Cordova-and-Asset-Downloads/ 301
