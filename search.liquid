@@ -4,8 +4,12 @@ title: Search
 description: Search this Site
 ---
 
+<style>
+[v-cloak] {display: none}
+</style>
+
 {% raw %}
-<div id="app">
+<div id="app" v-cloak>
 	<form data-members-form="subscribe" class="subscribe-form">
 	<div v-cloak class="form-group">
 		<input v-model="search" class="subscribe-email" type="search"> 
