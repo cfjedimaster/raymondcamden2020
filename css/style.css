@@ -1407,7 +1407,10 @@ a[href$="/rss/"] svg {
   margin-bottom: 1.66667em;
 }
 .post-thumbnail img {
-  width: 100%;
+  /* ray mod */
+  width: 80%;
+  display: block;
+  margin: auto;
 }
 
 /* only make post page headers smaller */

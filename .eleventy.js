@@ -61,6 +61,8 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addFilter('getByCategory', (posts,cat) => {
     let results = [];
 
+    // handle case issues I'm having
+    cat = cat.toLowerCase();
     for(let post of posts) {
       if(post.data.categories.indexOf(cat) >= 0) results.push(post);
     }
@@ -168,6 +170,8 @@ module.exports = function(eleventyConfig) {
 		for(let i=0;i<posts.length;i++) {
 			posts[i].data.permalink += '.html';
       posts[i].outputPath += '/index.html';
+      // fix cats here
+      posts[i].data.categories = posts[i].data.categories.map(c => c.toLowerCase())
 		}
 
 		return posts;

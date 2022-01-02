@@ -24,7 +24,7 @@ body_class: post-template
 				{% endcomment %}
 
 				{% for cat in categories %}
-					<a href="/categories/{{ cat | myEscape}}">{{cat}}</a>
+					<a href="/categories/{{ cat | downcase | myEscape}}">{{cat}}</a>
 				{% endfor %}
 				{% for tag in tags %}
 					<a href="/tags/{{ tag | myEscape}}">{{tag}}</a>
