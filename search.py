@@ -17,7 +17,7 @@ INPUT = "./_posts/**/*.md"
 
 def makeIndex(f):
 	result = []
-	for x,file in enumerate(f):
+	for file in f:
 		with open(file) as reader:
 			
 			content = reader.read()
