@@ -18,12 +18,16 @@ I started a blog. I feel like I have to struggle to learn new things and if I ca
 <!--
 Nothing planned currently. Invite me to speak at your event! 
 -->
+<p>
+<a href="http://mmcfug.org/">Enhancing your Document Super Powers with Adobe PDF Embed And Services</a><br/>
+Mid-Michigan ColdFusion Users Group<br/>
+Online, January 11, 2022
+</p>
 
 <p>
-<a href="https://cfsummit.vconfex.com/site/adobe-cold-fusion-summit-2021/1290">Taking Jamstack All the Way to Eleven - An introduction to Eleventy
-</a><br/>
-Adobe ColdFusion Summit 2021<br/>
-Online, December 7-8, 2021
+<a href="https://embed.emamo.com/event/developerweek-2022/s/pro-workshop-the-static-site-generator-that-goes-all-the-way-to-11-eleventy-WwLqMo">The Static Site Generator that Goes all the Way to 11 - Eleventy</a><br/>
+DeveloperWeek 2022<br/>
+Online, February 7, 2022
 </p>
 
 
@@ -34,6 +38,13 @@ Here are my past events, most recent first, in a nice scrollable list no one wil
 </p>
 
 <div style="height: 400px; overflow:scroll">
+
+<p>
+<a href="https://cfsummit.vconfex.com/site/adobe-cold-fusion-summit-2021/1290">Taking Jamstack All the Way to Eleven - An introduction to Eleventy</a><br/>
+Adobe ColdFusion Summit 2021<br/>
+Online, December 7-8, 2021
+</p>
+
 <p>
 <a href="https://2021.connect.tech/session?id=6222">A Beginner's Guide to Wrangling Asynchronicity in JavaScript</a> and <a href="https://2021.connect.tech/session?id=6219">Slice and Dice PDFs like a Pro</a><br/>
 connect.tech<br/>
