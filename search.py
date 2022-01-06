@@ -11,6 +11,7 @@ terms are:  "foo" or "moo zoo", such that a multi word term is a phrase essentia
 import sys
 import glob
 import datetime
+import frontmatter
 
 INPUT = "./_posts/**/*.md"
 
@@ -22,27 +23,13 @@ def makeIndex(f):
 			
 			content = reader.read()
 
-			# Get date from filename, could use fm, but its easier with the filename I think
-			parts = file.split("-")
-			year = parts[0].split('/').pop()
-			month = parts[1]
-			# I discovered some files have a time stamp in the day part:
-			# ./_posts/2021/05/24/2021-05-24T18:00:00-quick-netlify-tip-for-redirects.md
-			day = parts[2]
-			if day.find("T") >= -1:
-				dayParts = day.split("T")
-				day = dayParts[0]
-
-			postDate = datetime.date(int(year), int(month), int(day))
-
-			# get the url path which is filename minus the first parts
-			path = year + "/" + month + "/" + day + "/" + '-'.join(parts[3:])
-			path = path.replace(".md", "")
+			# to parse the yaml, we need to get just the front matter
+			data = frontmatter.loads(content)
 
 			result.append({
 				"content":content,
-				"date":postDate,
-				"path":path
+				"date":data["date"],
+				"path":data["permalink"]
 			})
 
 	return result
@@ -72,7 +59,7 @@ def main(terms):
 	files = glob.glob(INPUT, recursive=True)
 
 	# temp
-	# files = files[0:10]
+	# files = files[0:6]
 
 	# now we need to parse into an array of content with dates
 	print("Creating index of "+str(len(files)) +" files.")
@@ -86,8 +73,9 @@ def main(terms):
 	print("Found " + str(len(result)) + " results:")
 	for result in result:
 		# create url based on path
-		url = "https://www.raymondcamden.com/" + result["path"]
-		print(result["date"],url)
+		url = "https://www.raymondcamden.com" + result["path"]
+		# for printing the date, just need the part before T
+		print(result["date"].split("T")[0],"->",url)
 
 if len(sys.argv) == 1:
 	print("Usage: search.py A B C where you can have N search term arguments.")
@@ -95,6 +83,3 @@ if len(sys.argv) == 1:
 
 if __name__ == "__main__":
    main(sys.argv[1:])
-
-
-
