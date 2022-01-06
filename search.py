@@ -27,7 +27,7 @@ def makeIndex(f):
 			data = frontmatter.loads(content)
 
 			result.append({
-				"content":content,
+				"content":data.content,
 				"date":data["date"],
 				"path":data["permalink"]
 			})
