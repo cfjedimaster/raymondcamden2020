@@ -2,14 +2,8 @@ const xmlFiltersPlugin = require('eleventy-xml-plugin');
 const htmlmin = require("html-minifier");
 const fs = require('fs');
 
-// remove me
-const UpgradeHelper = require("@11ty/eleventy-upgrade-help");
-
 
 module.exports = function(eleventyConfig) {
-
-  //remove me
-  eleventyConfig.addPlugin(UpgradeHelper);
   
   eleventyConfig.addPlugin(xmlFiltersPlugin);
 
