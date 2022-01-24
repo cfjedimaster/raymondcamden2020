@@ -110,7 +110,7 @@ somewhat complete from 2013 and onward.
 
 <p class="bookList">
 <a href="https://www.amazon.com/gp/product/B08M3J514S/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=B08M3J514S&linkCode=as2&tag=raymondcamd06-20&linkId=0cf7abe7a5fc4e3f7d4566b6bdcf5553"><img src="https://static.raymondcamden.com/images/books/vuebook2020.jpg" title="Front-End Development Projects with Vue.js"></a>
-<a href="http://www.oreilly.com/programming/free/developing-serverless-applications.csp"><img src="https://static.raymondcamden.com/images/books/owbook_small.jpg" title="Developing Serverless Applications"></a>
+<a href="https://www.ibm.com/downloads/cas/AWPDV5AV"><img src="https://static.raymondcamden.com/images/books/owbook_small.jpg" title="Developing Serverless Applications"></a>
 <a href="https://www.amazon.com/gp/product/B06XHGH789/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=B06XHGH789&linkCode=as2&tag=raymondcamd06-20&linkId=f23f73d89dfe77d76a37e967d7e28cd0"><img src="https://static.raymondcamden.com/images/2017/3/ssglrg.jpg" title="The Book!"></a>
 <a href="https://www.amazon.com/gp/product/1491935111/ref=as_li_tl?ie=UTF8&tag=raymondcamd06-20&camp=1789&creative=9325&linkCode=as2&creativeASIN=1491935111&linkId=239944c4f3cbf1e35ce47f4eb857b2a7"><img src="https://static.raymondcamden.com/images/books/clientsidedatastorage.jpg" title="Client-Side Data Storage" ></a>
 <a href="https://www.amazon.com/gp/product/1633430065/ref=as_li_tl?ie=UTF8&tag=raymondcamd06-20&camp=1789&creative=9325&linkCode=as2&creativeASIN=1633430065&linkId=77fe8ca57d4789f895c2d1f7c20d8422"><img src="https://static.raymondcamden.com/images/books/cordova.png" title="Apache Cordova in Action" ></a>

@@ -25,6 +25,11 @@ DeveloperWeek 2022<br/>
 Online, February 7, 2022
 </p>
 
+<p>
+<a href="https://www.meetup.com/de-DE/jamstack_berlin/events/282051742/">Search and the Jamstack</a><br/>
+Jamstack_Berlin<br/>
+Online, February 28, 2022
+</p>
 
 <h3>My Past Events</h3>
 
