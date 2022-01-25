@@ -31,6 +31,16 @@ Jamstack_Berlin<br/>
 Online, February 28, 2022
 </p>
 
+
+<p>
+<a href="https://portal.adobe.com/widget/adobe/as22/sessions?search=S505">Dynamic Document Generation and Adobe Commerce</a><br/>
+Adobe Summit<br/>
+Online, March 16, 2022
+</p>
+
+
+
+
 <h3>My Past Events</h3>
 
 <p>
