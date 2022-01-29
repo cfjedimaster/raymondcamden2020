@@ -174,7 +174,9 @@ At the end, my data file returns an array of images. I can then use this back in
 
 As I said, instead of linking right to the image I'd normally link to a page that wrapped the bigger image, but again, I was focusing on the "get the images" part more.
 
-And that's it. Pretty simple with both Pipedream and Eleventy handling the more mundane parts. Let me know if this helps or if you end up using it anywhere. You can find the complete code here: <https://github.com/cfjedimaster/eleventy-demos/tree/master/eleventyGoogleAlbum>
+And that's it. Pretty simple with both Pipedream and Eleventy handling the more mundane parts. Let me know if this helps or if you end up using it anywhere. You can find the complete code here: <https://github.com/cfjedimaster/eleventy-demos/tree/master/eleventyGoogleAlbum> 
+
+One last note - the biggest issue with this particular demo is that it won't update automatically. I could modify the Pipedream workflow to be hard coded to one particular album and then use client-side JavaScript instead. Or - I could simply schedule a rebuild once a day or such. Also, I could setup a 'secret' URL the artist could bookmark to hit and then rebuild on demand when they need. There's multiple options you could use here to make this more seamless.
 
 Photo by <a href="https://unsplash.com/@filmlav?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Fernando Lavin</a> on <a href="https://unsplash.com/s/photos/photo-albums?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
   
