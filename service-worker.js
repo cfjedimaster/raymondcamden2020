@@ -1,8 +1,10 @@
 importScripts('https://storage.googleapis.com/workbox-cdn/releases/5.1.2/workbox-sw.js');
+workbox.setConfig({ debug: false });
 
 //import {registerRoute} from 'workbox-routing';
 const {registerRoute} = workbox.routing;
 const {NetworkFirst} = workbox.strategies;
+
 
 // cache the home page
 registerRoute(

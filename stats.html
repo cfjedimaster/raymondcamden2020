@@ -86,7 +86,7 @@ templateEngineOverride: false
             <td>Number of Posts</td>
         </tr>
         <tr v-for="cat in sortedCats">
-            <td>{{cat.name}}</td>
+            <td><a :href="'/categories/'+cat.link">{{cat.name}}</a></td>
             <td>{{cat.size | number}}</td>
         </tr>
     </table>
@@ -98,7 +98,7 @@ templateEngineOverride: false
             <td>Number of Posts</td>
         </tr>
         <tr v-for="tag in sortedTags">
-            <td>{{tag.name}}</td>
+            <td><a :href="'/tags/'+tag.link">{{tag.name}}</a></td>
             <td>{{tag.size | number}}</td>
         </tr>
     </table>
@@ -109,6 +109,7 @@ templateEngineOverride: false
 <script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/moment.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/vue"></script>
 <script>
+
 Vue.filter('number', s =>  {
   if(!window.Intl) return s;
   return new Intl.NumberFormat().format(s);
@@ -175,8 +176,14 @@ new Vue({
             Vue.set(this.years,year, this.years[year]+1);
         });
 
-        this.cats = res.postsPerCategory;
-        this.tags = res.postsPerTag;
+        this.cats = res.postsPerCategory.map(c => {
+            c.link = c.name.replace(/ /g, '+');
+            return c;
+        });
+        this.tags = res.postsPerTag.map(t => {
+            t.link = t.name.replace(/ /g, '+');
+            return t;
+        });;
 
         //generate 8 weeks of weeks
         let weekData = generateWeekData();
