@@ -13,7 +13,7 @@ Ok, first off, let me apologize if the title seems a bit SEO-spammy. I really wa
 
 Imagine an artist who uses Google Photo albums as a way to share examples of their work. They may create an album specifically for items they want to showcase. Or perhaps any site simply wants to include a gallery of images and wants to use Google Photos as the source. By taking what I learned in the previous Pipedream workflow, I was able to setup an Eleventy demo showing this in action.
 
-The demo may be found here: <https://eleventy-google-photos.netlify.app/>. Note that the front end of this is pretty minimal. I used a bit of CSS I found ((Pinterest style (Masonry) layout using pure CSS)[https://kulor.medium.com/pinterest-style-masonry-layout-using-pure-css-493c1206d01d]) and the thumbnails simply link to the regular image. Normally I'd have an HTML page per image so I could keep the site layout and such, but as the important bits was the data, I didn't worry too much. 
+The demo may be found here: <https://eleventy-google-photos.netlify.app/>. Note that the front end of this is pretty minimal. I used a bit of CSS I found ([Pinterest style (Masonry) layout using pure CSS](https://kulor.medium.com/pinterest-style-masonry-layout-using-pure-css-493c1206d01d)) and the thumbnails simply link to the regular image. Normally I'd have an HTML page per image so I could keep the site layout and such, but as the important bits was the data, I didn't worry too much. 
 
 So, how does it work?
 
