@@ -1,0 +1,39 @@
+---
+layout: page
+title: Blog Queue
+description: Blog Ideas
+body_class: page-template
+---
+
+<p>
+The following is a list of ideas I have for future blog content. It's driven by <a href="https://todo.microsoft.com/tasks/">Microsoft To-Do</a> and a 
+<a href="https://pipedream.com">Pipedream</a> workflow that turns the list into a public JSON endpoint. 
+</p>
+
+<div id="status"></div>
+
+<ul id="blogList">
+</ul>
+
+<script>
+const endpoint = 'https://enyqsjc7dfkrc5s.m.pipedream.net/';
+
+document.addEventListener('DOMContentLoaded', init, false);
+
+async function init() {
+	let status = document.querySelector('#status');
+	status.innerHTML = '<i>Loading the blog queue...</i>';
+	let blogList = document.querySelector('#blogList');
+
+	let blogIdeas = await (await fetch(endpoint)).json();
+
+	let s = blogIdeas.reduce((prev, cur) => {
+		let created = new Date(cur.created);
+		let date = `${created.getFullYear()}-${created.getMonth()+1}-${created.getDate()}`;
+		return prev + `<li>${cur.title} (added ${date})</li>`;
+	},'');
+
+	status.innerHTML = '';
+	blogList.innerHTML = s;
+}
+</script>
