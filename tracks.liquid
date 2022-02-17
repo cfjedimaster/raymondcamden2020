@@ -1,0 +1,62 @@
+---
+layout: page
+title: Recent Spotify Tracks
+description: My Recent Spotify Tracks
+body_class: page-template
+---
+
+<p>
+This is just an example of Netlify Graph. It's my most recent Spotify tracks.
+</p>
+
+<div id="app">
+<ul>
+	<li v-for="track in tracks">
+{% raw %}
+		<a :href="track.url">{{ track.name }}</a> by {{ track.artist }} at {{ track.played }}
+{% endraw %}
+	</li>
+</ul>
+</div>
+
+
+<script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/moment.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+<script>
+
+Vue.filter('date', s =>  {
+  if(!window.Intl) return s;
+  return new Intl.DateTimeFormat().format(s);
+});
+
+new Vue({
+	el:'#app',
+	data:{
+		tracks:[]
+	},
+	created:async function() {
+        let data = await fetch('/api/latestTracks');
+        let res = await data.json();
+
+        this.tracks = res.latestTracksData.me.spotify.recentlyPlayed.nodes.map(n => {
+			return {
+				name:n.track.name,
+				link:n.track.externalUrls["spotify"],
+				artist:n.track.artists.reduce((prev, cur) => { 
+					if(prev != '') return prev + ', ' + cur.name;
+					return cur.name
+				}, ''),
+				played:new Intl.DateTimeFormat('en-US', { dateStyle:'short', timeStyle:'long'}).format(new Date(n.playedAt))
+			}
+		});
+		console.log(this.tracks)
+        
+
+
+	},
+    computed:{
+    }
+});
+
+
+</script>
