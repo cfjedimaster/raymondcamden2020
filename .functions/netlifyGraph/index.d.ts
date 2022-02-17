@@ -66,6 +66,24 @@ externalUrls: {
   */
 spotify: string;
 };
+  /**
+  * The artists who performed the track. Each artist object includes a link in href to more detailed information about the artist.
+  */
+artists: Array<{
+  /**
+  * The name of the artist.
+  */
+name: string;
+  /**
+  * Known external URLs for this artist.
+  */
+externalUrls: {
+  /**
+  * The Spotify URL for the object.
+  */
+spotify: string;
+};
+}>;
 };
   /**
   * The date and time the track was played.
