@@ -54,23 +54,37 @@ track: {
   */
 name: string;
   /**
-  * The artists who performed the track. Each artist object includes a link in href to more detailed information about the artist.
-  */
-artists: Array<{
-  /**
-  * The name of the artist.
-  */
-name: string;
-}>;
-  /**
   * A URL to a 30 second preview (MP3 format) of the track.
   */
 previewUrl: string;
+  /**
+  * External URLs for this track.
+  */
+externalUrls: {
+  /**
+  * The Spotify URL for the object.
+  */
+spotify: string;
+};
 };
   /**
   * The date and time the track was played.
   */
 playedAt: string;
+  /**
+  * The context the track was played from.
+  */
+context: {
+  /**
+  * External URLs for this context.
+  */
+externalUrls: {
+  /**
+  * The Spotify URL for the object.
+  */
+spotify: string;
+};
+};
 }>;
 };
 };

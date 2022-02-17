@@ -57,12 +57,17 @@ const operationsDoc = `query latestTracks @netlify(id: """8e65d01a-4c80-4e38-a92
         nodes {
           track {
             name
-            artists {
-              name
-            }
             previewUrl
+            externalUrls {
+              spotify
+            }
           }
           playedAt
+          context {
+            externalUrls {
+              spotify
+            }
+          }
         }
       }
     }
