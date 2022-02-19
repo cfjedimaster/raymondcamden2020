@@ -2553,7 +2553,6 @@ body.hidden-scroll {
 /* Ray area */
 .author-box { background-color: #ddd; padding: 20px; }
 .author-info { font-size: 16px; line-height: 1.5; min-height: 85px; color: black; }
-.author-info a { text-decoration: none; }
 
 .webmentions-area { background-color: #ffffff;  padding-top: 40px;  }
 .webmentions-inner h3, .subscribe-inner h3 { margin-top: 10px; }
