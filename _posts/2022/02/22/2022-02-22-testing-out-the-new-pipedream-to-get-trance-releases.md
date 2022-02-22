@@ -22,7 +22,7 @@ The updates include
 That last bullet point is a bit vague, but basically, the experience of editing a workflow is incredibly enhanced in v2. My favorite change is that you can now run an individual step by itself, using previous results. What does that mean?
 
 Imagine a workflow with a few steps:
-img
+
 * Hit an API and get crap
 * Take the result and filter it
 * Take the new result and generate a nice string
