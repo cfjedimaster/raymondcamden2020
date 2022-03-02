@@ -20,25 +20,16 @@ Nothing planned currently. Invite me to speak at your event!
 -->
 
 <p>
-<a href="https://embed.emamo.com/event/developerweek-2022/s/pro-workshop-the-static-site-generator-that-goes-all-the-way-to-11-eleventy-WwLqMo">The Static Site Generator that Goes all the Way to 11 - Eleventy</a><br/>
-DeveloperWeek 2022<br/>
-Online, February 7, 2022
-</p>
-
-<p>
-<a href="https://www.meetup.com/de-DE/jamstack_berlin/events/282051742/">Search and the Jamstack</a><br/>
-Jamstack_Berlin<br/>
-Online, February 28, 2022
-</p>
-
-
-<p>
 <a href="https://portal.adobe.com/widget/adobe/as22/sessions?search=S505">Dynamic Document Generation and Adobe Commerce</a><br/>
 Adobe Summit<br/>
 Online, March 16, 2022
 </p>
 
-
+<p>
+<a href="https://devnexus.com/speakers/329">Peanut Butter Jamstack</a><br/>
+Devnexus<br/>
+Atlanta, GA, April 12-14, 2022
+</p>
 
 
 <h3>My Past Events</h3>
@@ -48,6 +39,20 @@ Here are my past events, most recent first, in a nice scrollable list no one wil
 </p>
 
 <div style="height: 400px; overflow:scroll">
+
+<p>
+<a href="https://www.meetup.com/de-DE/jamstack_berlin/events/282051742/">Search and the Jamstack</a><br/>
+Jamstack_Berlin<br/>
+Online, February 28, 2022
+</p>
+
+
+<p>
+<a href="https://embed.emamo.com/event/developerweek-2022/s/pro-workshop-the-static-site-generator-that-goes-all-the-way-to-11-eleventy-WwLqMo">The Static Site Generator that Goes all the Way to 11 - Eleventy</a><br/>
+DeveloperWeek 2022<br/>
+Online, February 7, 2022
+</p>
+
 <p>
 <a href="http://mmcfug.org/">Enhancing your Document Super Powers with Adobe PDF Embed And Services</a><br/>
 Mid-Michigan ColdFusion Users Group<br/>
