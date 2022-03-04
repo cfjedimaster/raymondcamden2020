@@ -11,7 +11,7 @@ description: A look at adding Algolia's Crawler product to a Jamstack site
 
 I've been using [Algolia](https://www.algolia.com) on my blog for a while now. It's an *excellent* search solution for the Jamstack and I absolutely recommend it, especially for sites where the size means [Lunr](https://lunrjs.com/) may not be appropriate. While I like Algolia a lot, I haven't really dug terribly deep into it. I went through multiple iterations of my implementation here to help deal with the size of my content and so forth, but outside of that, I kept the actual [search](/search) experience nice and simple. This week, I gave a talk at the [Jamstack_Berlin](https://www.meetup.com/de-DE/jamstack_berlin/events/282051742/) user group on search options for the Jamstack and that's got me thinking more about both Lunr and Algolia. One of the things I've wanted to play with for quite some time is their [Crawler](https://www.algolia.com/products/search-and-discovery/crawler/) product. While I didn't have time to research it before the presentation, I've had time to check it out and I thought I'd share my findings.
 
-Before I begin, note that this feature is not available on the free tier. I think that's totally fair as it's really powerful and flexible (as I hope you'll see below), but I just wanted to be sure my readers were aware. Honestly, it's a bit hard to tell from their [pricing page](https://www.algolia.com/pricing/) that Crawler isn't available for free, so please keep that in mind. 
+Before I begin, note that this feature is not available on the free tier. I think that's totally fair as it's really powerful and flexible (as I hope you'll see below), but I just wanted to be sure my readers were aware. Honestly, it's a bit hard to tell from their [pricing page](https://www.algolia.com/pricing/) that Crawler isn't available for free, so please keep that in mind. <strong>I missed this, but there is a free version of this for open source projects, one already being used by many projects. This is called DocSearch and you find out more here: <a href="https://docsearch.algolia.com/">https://docsearch.algolia.com/</a></strong>
 
 ## Getting Started
 
@@ -27,9 +27,9 @@ Doing so will take you - oddly - to this:
 <img data-src="https://static.raymondcamden.com/images/2022/03/alg1.jpg" alt="Crawler has a new home" class="lazyload imgborder imgcenter">
 </p>
 
-So... one of the weird things about Crawler is that it's not properly integrated into the main Algolia dashboard. As I said... weird. But honestly it's no big deal. I mainly bring it up so as prepare you for the odd jump. The UI for Crawler is all easy to use (and really well done), but looks a bit like a different design team worked on it. 
+So... one of the weird things about Crawler is that it's not properly integrated into the main Algolia dashboard. As I said... weird. But honestly it's no big deal. I mainly bring it up so as to prepare you for the odd jump. The UI for Crawler is all easy to use (and really well done), but looks a bit like a different design team worked on it. 
 
-I decided to test Crawler on an old site I had, [ColdFusion Cookbook](https://www.coldfusioncookbook.com/). I converted this site to Jamstack a while back, but more recently updated it to use [Eleventy](https://www.11ty.dev/). As part of that conversion, I removed the previous search engine (which I *think* was a Google Programmable Search ENgine) and decided I'd use the Algolia Crawler as a replacement. 
+I decided to test Crawler on an old site I had, [ColdFusion Cookbook](https://www.coldfusioncookbook.com/). I converted this site to Jamstack a while back but more recently updated it to use [Eleventy](https://www.11ty.dev/). As part of that conversion, I removed the previous search engine (which I *think* was a Google Programmable Search ENgine) and decided I'd use the Algolia Crawler as a replacement. 
 
 Once logged into the Crawler dashboard, you're presented with a list of your existing implementations. 
 
@@ -49,13 +49,13 @@ In the next step, they check for robots.txt and a sitemap URL. Notice how if you
 <img data-src="https://static.raymondcamden.com/images/2022/03/alg4.jpg" alt="Crawler prompting for robots and sitemap info" class="lazyload imgborder imgcenter">
 </p>
 
-After this step, you can start the process. In the screen shot below, note the limit of 100 URLs. I'll explain how we correct this later.
+After this step, you can start the process. In the screenshot below, note the limit of 100 URLs. I'll explain how we correct this later.
 
 <p>
 <img data-src="https://static.raymondcamden.com/images/2022/03/alg5.jpg" alt="Before the process starts" class="lazyload imgborder imgcenter">
 </p>
 
-I've mentioned before how while it was a bit jarring that the dashboard wasn't integrated with the rest of Algolia and the general theme didn't match, that I really liked how the Crawler admin was built. Below you can see an example of this. As the crawler starts working, you get live updates and even see sample data as it's ingested. 
+I've mentioned before how while it was a bit jarring that the dashboard wasn't integrated with the rest of Algolia and the general theme didn't match, I *really* liked how the Crawler admin was built. Below you can see an example of this. As the crawler starts working, you get live updates and even see sample data as it's ingested. 
 
 <p>
 <img data-src="https://static.raymondcamden.com/images/2022/03/alg6.jpg" alt="Live crawler status" class="lazyload imgborder imgcenter">
@@ -84,19 +84,19 @@ So, once the crawl is done, you end up with two new indexes. Remember this will 
 <img data-src="https://static.raymondcamden.com/images/2022/03/alg9.jpg" alt="List of Indexes" class="lazyload imgborder imgcenter">
 </p>
 
-Here's an example record from my index. This was all done by the crawler and while I could modify the behavior, I love that it seemed to correctly parse everything perfectly. For example, the `content` field has UI and stuff stripped away. Algolia knew - for the most part - to avoid non-essential content. I say "most part" as it did pick up a bit of text from the right hand side.
+Here's an example record from my index. This was all done by the crawler and while I could modify the behavior, I love that it seemed to correctly parse everything perfectly. For example, the `content` field has UI and stuff stripped away. Algolia knew - for the most part - to avoid non-essential content. I say "most part" as it did pick up a bit of text from the right-hand side.
 
 <p>
 <img data-src="https://static.raymondcamden.com/images/2022/03/alg10.jpg" alt="Example record" class="lazyload imgborder imgcenter">
 </p>
 
-At this point I was pretty happy and decided to look at fixing the cap of one hundred items. Back in the Crawler UI, you can do so via the "Editor" link, which pops open a JavaScript object:
+At this point, I was pretty happy and decided to look at fixing the cap of one hundred items. Back in the Crawler UI, you can do so via the "Editor" link, which pops open a JavaScript object:
 
 <p>
 <img data-src="https://static.raymondcamden.com/images/2022/03/alg11.jpg" alt="Configuration editor" class="lazyload imgborder imgcenter">
 </p>
 
-While on one hand I kinda worry about non-technical people having to edit here, I was really blown away by the level of configuration here. It's freaking amazing. From what I can see, I could absolutely correct the issue I saw with some of the nav being included in the content - I'd just need to modify the code a bit. Also, I simply changed `maxUrls` to be 200 to fix the cap of 100 entries. Also note, and it may be a bit hard to see in the screen shot, but the API key is blurred out in the editor automatically. I didn't do that for my screen shot. 
+While on one hand I kinda worry about non-technical people having to edit here, I was really blown away by the level of configuration here. It's freaking amazing. From what I can see, I could absolutely correct the issue I saw with some of the nav being included in the content - I'd just need to modify the code a bit. Also, I simply changed `maxUrls` to be 200 to fix the cap of 100 entries. It may be a bit hard to see in the screenshot, but the API key is blurred out in the editor automatically. I didn't do that for my screenshot. 
 
 As I know it's a bit hard to read, here's the code. Note that this is also where you supply a schedule:
 
