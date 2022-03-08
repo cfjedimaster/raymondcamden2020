@@ -2,7 +2,7 @@
 layout: post
 title: "Using friendlier URLs for a HarpJS Static Site"
 date: "2015-07-08T09:38:45+06:00"
-categories: [development,html5,"static sites"]
+categories: [development,html5,"jamstack"]
 tags: []
 banner_image: 
 permalink: /2015/07/08/using-friendlier-urls-for-a-harpjs-static-site

@@ -2,7 +2,7 @@
 layout: post
 title: "Integrating Google Analytics with Eleventy"
 date: "2020-05-21"
-categories: ["javascript","static sites"]
+categories: ["javascript","jamstack"]
 tags: ["eleventy"]
 banner_image: /images/banners/paper_graph.jpg
 permalink: /2020/05/21/integrating-google-analytics-with-eleventy

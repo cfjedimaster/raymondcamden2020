@@ -2,7 +2,7 @@
 layout: post
 title: "Adding an Email Subscription to Your Jamstack Site"
 date: "2021-05-01T18:00:00"
-categories: ["static sites","serverless"]
+categories: ["jamstack","serverless"]
 tags: ["eleventy"]
 banner_image: /images/banners/mail.jpg
 permalink: /2021/05/01/adding-an-email-subscription-to-your-jamstack-site

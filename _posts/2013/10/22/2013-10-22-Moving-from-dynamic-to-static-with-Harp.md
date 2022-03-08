@@ -2,7 +2,7 @@
 layout: post
 title: "Moving from dynamic to static with Harp"
 date: "2013-10-22T14:10:00+06:00"
-categories: [coldfusion,development,"static sites"]
+categories: [coldfusion,development,"jamstack"]
 tags: []
 banner_image: 
 permalink: /2013/10/22/Moving-from-dynamic-to-static-with-Harp

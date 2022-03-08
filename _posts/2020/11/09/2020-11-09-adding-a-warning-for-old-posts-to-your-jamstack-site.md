@@ -2,7 +2,7 @@
 layout: post
 title: "Adding a Warning for Old Posts to Your Jamstack Site"
 date: "2020-11-09"
-categories: ["static sites"]
+categories: ["jamstack"]
 tags: ["eleventy"]
 banner_image: /images/banners/egypt.jpg
 permalink: /2020/11/09/adding-a-warning-for-old-posts-to-your-jamstack-site

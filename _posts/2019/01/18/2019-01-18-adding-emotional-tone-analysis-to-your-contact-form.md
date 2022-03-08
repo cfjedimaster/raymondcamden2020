@@ -2,7 +2,7 @@
 layout: post
 title: "Adding Emotional Tone Analysis to Your Contact Form"
 date: "2019-01-18"
-categories: ["serverless","static sites"]
+categories: ["serverless","jamstack"]
 tags: ["javascript","watson"]
 banner_image: /images/banners/tear.jpg
 permalink: /2019/01/18/adding-emotional-tone-analysis-to-your-contact-form

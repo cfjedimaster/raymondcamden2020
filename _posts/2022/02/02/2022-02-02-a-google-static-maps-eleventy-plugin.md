@@ -2,7 +2,7 @@
 layout: post
 title: "A Google Static Maps Eleventy Plugin"
 date: "2022-02-02T18:00:00"
-categories: ["javascript","static sites"]
+categories: ["javascript","jamstack"]
 tags: ["eleventy"]
 banner_image: /images/banners/wood-map.jpg
 permalink: /2022/02/02/a-google-static-maps-eleventy-plugin

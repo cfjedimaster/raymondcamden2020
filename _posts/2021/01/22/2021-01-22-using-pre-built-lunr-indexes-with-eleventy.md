@@ -2,7 +2,7 @@
 layout: post
 title: "Using Pre-Built Lunr Indexes with Eleventy"
 date: "2021-01-22"
-categories: ["static sites"]
+categories: ["jamstack"]
 tags: ["eleventy"]
 banner_image: /images/banners/search.jpg
 permalink: /2021/01/22/using-pre-built-lunr-indexes-with-eleventy

@@ -2,7 +2,7 @@
 layout: post
 title: "Serverless JAMStack AndCats Demo"
 date: "2019-11-14"
-categories: ["javascript","static sites"]
+categories: ["javascript","jamstack"]
 tags: ["vuejs"]
 banner_image: /images/banners/lovecats.jpg
 permalink: /2019/11/14/serverless-jamstack-andcats-demo

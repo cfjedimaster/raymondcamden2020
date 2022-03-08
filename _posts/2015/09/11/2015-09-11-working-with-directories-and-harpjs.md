@@ -2,7 +2,7 @@
 layout: post
 title: "Working with Directories and HarpJS"
 date: "2015-09-11T20:22:23+06:00"
-categories: [development,"static sites"]
+categories: [development,"jamstack"]
 tags: [harpjs]
 banner_image: 
 permalink: /2015/09/11/working-with-directories-and-harpjs

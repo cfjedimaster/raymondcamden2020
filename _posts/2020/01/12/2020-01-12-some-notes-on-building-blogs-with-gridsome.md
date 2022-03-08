@@ -2,7 +2,7 @@
 layout: post
 title: "Some Notes on Building Blogs with Gridsome"
 date: "2020-01-12"
-categories: ["static sites"]
+categories: ["jamstack"]
 tags: ["gridsome"]
 banner_image: /images/banners/grid.jpg
 permalink: /2020/01/12/some-notes-on-building-blogs-with-gridsome

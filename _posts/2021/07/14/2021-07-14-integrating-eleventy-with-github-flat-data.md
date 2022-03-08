@@ -2,7 +2,7 @@
 layout: post
 title: "Integrating Eleventy with GitHub Flat Data"
 date: "2021-07-14T18:00:00"
-categories: ["javascript", "static sites"]
+categories: ["javascript", "jamstack"]
 tags: ["eleventy"]
 banner_image: /images/banners/tenniscourt.jpg
 permalink: /2021/07/14/integrating-eleventy-with-github-flat-data

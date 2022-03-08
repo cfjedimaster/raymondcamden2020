@@ -2,7 +2,7 @@
 layout: post
 title: "Using PDFs with the Jamstack - Building a Document Viewer"
 date: "2021-08-30T18:00:00"
-categories: ["static sites"]
+categories: ["jamstack"]
 tags: ["eleventy","pdf services","adobe"]
 banner_image: /images/banners/file-folders.jpg
 permalink: /2021/08/30/using-pdfs-with-the-jamstack-building-a-document-viewer

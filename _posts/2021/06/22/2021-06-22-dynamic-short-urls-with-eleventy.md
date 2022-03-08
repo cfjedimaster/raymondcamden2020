@@ -2,7 +2,7 @@
 layout: post
 title: "Dynamic Short URLs with Eleventy"
 date: "2021-06-22T18:00:00"
-categories: ["javascript","static sites"]
+categories: ["javascript","jamstack"]
 tags: ["eleventy"]
 banner_image: /images/banners/directions.jpg
 permalink: /2021/06/22/dynamic-short-urls-with-eleventy

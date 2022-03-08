@@ -2,7 +2,7 @@
 layout: post
 title: "Eleventy 1.0 - New Output Options"
 date: "2021-10-07T18:00:00"
-categories: ["static sites"]
+categories: ["jamstack"]
 tags: ["eleventy"]
 banner_image: /images/banners/allthewayto11.jpg
 permalink: /2021/10/07/eleventy-10-new-output-options

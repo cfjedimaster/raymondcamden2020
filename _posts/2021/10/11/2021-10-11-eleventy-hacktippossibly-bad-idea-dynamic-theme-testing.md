@@ -2,7 +2,7 @@
 layout: post
 title: "Eleventy Hack/Tip/Possibly Bad Idea - Dynamic Theme Testing"
 date: "2021-10-11T18:00:00"
-categories: ["static sites"]
+categories: ["jamstack"]
 tags: ["eleventy"]
 banner_image: /images/banners/mask.jpg
 permalink: /2021/10/11/eleventy-hacktippossibly-bad-idea-dynamic-theme-testing

@@ -2,7 +2,7 @@
 layout: post
 title: "Multiple Ways of API Integration in your JAMStack"
 date: "2019-07-25"
-categories: ["development","static sites"]
+categories: ["development","jamstack"]
 tags: []
 banner_image: /images/banners/maze.jpg
 permalink: /2019/07/25/multiple-ways-of-api-integration-in-your-jamstack

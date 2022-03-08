@@ -2,7 +2,7 @@
 layout: post
 title: "Adding Google Calendar to your JAMStack"
 date: "2019-11-18"
-categories: ["javascript","static sites"]
+categories: ["javascript","jamstack"]
 tags: ["eleventy"]
 banner_image: /images/banners/calendar.jpg
 permalink: /2019/11/18/adding-google-calendar-to-your-jamstack

@@ -2,7 +2,7 @@
 layout: post
 title: "Using the MailChimp API with Netlify Serverless Functions"
 date: "2019-05-29"
-categories: ["serverless","static sites"]
+categories: ["serverless","jamstack"]
 tags: ["javascript"]
 banner_image: /images/banners/dimsum.jpg
 permalink: /2019/05/29/using-the-mailchimp-api-with-netlify-serverless-functions

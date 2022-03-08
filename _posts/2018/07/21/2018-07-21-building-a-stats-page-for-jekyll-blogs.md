@@ -2,7 +2,7 @@
 layout: post
 title: "Building a Stats Page for Jekyll Blogs"
 date: "2018-07-21"
-categories: ["static sites"]
+categories: ["jamstack"]
 tags: ["vuejs","jekyll"]
 banner_image: /images/banners/stats.jpg
 permalink: /2018/07/21/building-a-stats-page-for-jekyll-blogs

@@ -2,7 +2,7 @@
 layout: post
 title: "How to Enable your Jamstack Site to have a \"Rain Day\""
 date: "2020-07-06"
-categories: ["static sites"]
+categories: ["jamstack"]
 tags: ["eleventy"]
 banner_image: /images/banners/farmers-market.jpg
 permalink: /2020/07/06/how-to-enable-your-jamstack-site-to-have-a-rain-day

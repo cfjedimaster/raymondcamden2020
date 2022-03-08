@@ -2,7 +2,7 @@
 layout: post
 title: "An Adobe PDF Embed Plugin for Eleventy"
 date: "2021-08-02T18:00:00"
-categories: ["javascript","static sites"]
+categories: ["javascript","jamstack"]
 tags: ["eleventy","adobe", "pdf services"]
 banner_image: /images/banners/papers.jpg
 permalink: /2021/08/02/an-adobe-pdf-embed-plugin-for-eleventy

@@ -2,7 +2,7 @@
 layout: post
 title: "RaymondCamden.com now powered by Eleventy!"
 date: "2020-02-27"
-categories: ["static sites"]
+categories: ["jamstack"]
 tags: ["eleventy"]
 banner_image: /images/banners/possum.jpg
 permalink: /2020/02/27/raymondcamdencom-now-powered-by-eleventy

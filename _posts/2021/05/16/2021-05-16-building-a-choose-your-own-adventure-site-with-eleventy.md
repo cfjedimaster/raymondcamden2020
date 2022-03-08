@@ -2,7 +2,7 @@
 layout: post
 title: "Building a Choose Your Own Adventure site with Eleventy"
 date: "2021-05-16T18:00:00"
-categories: ["static sites"]
+categories: ["jamstack"]
 tags: ["eleventy"]
 banner_image: /images/banners/cyoa2.jpg
 permalink: /2021/05/16/building-a-choose-your-own-adventure-site-with-eleventy

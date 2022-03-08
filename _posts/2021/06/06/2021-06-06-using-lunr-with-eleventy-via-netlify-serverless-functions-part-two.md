@@ -2,7 +2,7 @@
 layout: post
 title: "Using Lunr with Eleventy via Netlify Serverless Functions - Part Two"
 date: "2021-06-06T18:00:00"
-categories: ["javascript","static sites"]
+categories: ["javascript","jamstack"]
 tags: ["eleventy"]
 banner_image: /images/banners/search.jpg
 permalink: /2021/06/06/using-lunr-with-eleventy-via-netlify-serverless-functions-part-two

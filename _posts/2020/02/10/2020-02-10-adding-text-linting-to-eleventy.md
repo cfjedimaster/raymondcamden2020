@@ -2,7 +2,7 @@
 layout: post
 title: "Adding Text Linting to Eleventy"
 date: "2020-02-10"
-categories: ["static sites"]
+categories: ["jamstack"]
 tags: ["eleventy"]
 banner_image: /images/banners/newspaper.jpg
 permalink: /2020/02/10/adding-text-linting-to-eleventy

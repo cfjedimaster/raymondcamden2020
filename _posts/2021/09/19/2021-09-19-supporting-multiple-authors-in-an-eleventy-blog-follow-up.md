@@ -2,7 +2,7 @@
 layout: post
 title: "Supporting Multiple Authors in an Eleventy Blog - Follow-Up"
 date: "2021-09-19T18:00:00"
-categories: ["static sites"]
+categories: ["jamstack"]
 tags: ["eleventy"]
 banner_image: /images/banners/group-of-people.jpg
 permalink: /2021/09/19/supporting-multiple-authors-in-an-eleventy-blog-follow-up

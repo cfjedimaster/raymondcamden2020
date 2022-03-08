@@ -2,7 +2,7 @@
 layout: post
 title: "Adding Google Calendar to Your Jamstack - with Pipedream"
 date: "2020-12-08"
-categories: ["javascript","static sites"]
+categories: ["javascript","jamstack"]
 tags: ["eleventy","pipedream"]
 banner_image: /images/banners/calendar.jpg
 permalink: /2020/12/08/adding-google-calendar-to-your-jamstack-with-pipedream

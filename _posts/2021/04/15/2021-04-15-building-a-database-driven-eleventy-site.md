@@ -2,7 +2,7 @@
 layout: post
 title: "Building a Database Driven Eleventy Site"
 date: "2021-04-15"
-categories: ["static sites"]
+categories: ["jamstack"]
 tags: ["eleventy"]
 banner_image: /images/banners/database.jpg
 permalink: /2021/04/15/building-a-database-driven-eleventy-site

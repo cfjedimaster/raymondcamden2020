@@ -2,7 +2,7 @@
 layout: post
 title: "A Look at Zeit's Zero Config and Serverless Platform"
 date: "2019-09-06"
-categories: ["development","static sites","serverless"]
+categories: ["development","jamstack","serverless"]
 tags: []
 banner_image: /images/banners/zero.jpg
 permalink: /2019/09/06/a-look-at-zeits-zero-config-and-serverless-platform

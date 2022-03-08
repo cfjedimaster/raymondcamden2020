@@ -2,7 +2,7 @@
 layout: post
 title: "Selecting Random Posts in Eleventy"
 date: "2020-10-26"
-categories: ["static sites"]
+categories: ["jamstack"]
 tags: ["eleventy"]
 banner_image: /images/banners/random.jpg
 permalink: /2020/10/26/selecting-random-posts-in-eleventy

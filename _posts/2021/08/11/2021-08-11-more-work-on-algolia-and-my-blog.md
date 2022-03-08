@@ -2,7 +2,7 @@
 layout: post
 title: "More Work on Algolia and My Blog"
 date: "2021-08-11T18:00:00"
-categories: ["static sites"]
+categories: ["jamstack"]
 tags: ["eleventy"]
 banner_image: /images/banners/construction-bw.jpg
 permalink: /2021/08/11/more-work-on-algolia-and-my-blog

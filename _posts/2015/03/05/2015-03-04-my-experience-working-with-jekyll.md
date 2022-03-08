@@ -2,7 +2,7 @@
 layout: post
 title: "My experience working with Jekyll"
 date: "2015-03-05T09:56:11+06:00"
-categories: [development,"static sites"]
+categories: [development,"jamstack"]
 tags: []
 banner_image: 
 permalink: /2015/03/05/my-experience-working-with-jekyll

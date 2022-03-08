@@ -2,7 +2,7 @@
 layout: post
 title: "An Early Look at Netlify Scheduled Functions"
 date: "2022-02-04T18:00:00"
-categories: ["static sites","serverless"]
+categories: ["jamstack","serverless"]
 tags: []
 banner_image: /images/banners/watch.jpg
 permalink: /2022/02/04/an-early-look-at-netlify-scheduled-functions

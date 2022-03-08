@@ -2,7 +2,7 @@
 layout: post
 title: "Quick Note on CFLib"
 date: "2017-09-21T07:02:00-07:00"
-categories: [coldfusion,"static sites"]
+categories: [coldfusion,"jamstack"]
 tags: []
 banner_image: 
 permalink: /2017/09/21/quick-note-on-cflib

@@ -2,7 +2,7 @@
 layout: post
 title: "Testing Netlify's Proxy Support for API Hiding"
 date: "2020-06-10"
-categories: ["serverless","static sites"]
+categories: ["serverless","jamstack"]
 tags: []
 banner_image: /images/banners/shadow.jpg
 permalink: /2020/06/10/testing-netlifys-proxy-support-for-api-hiding

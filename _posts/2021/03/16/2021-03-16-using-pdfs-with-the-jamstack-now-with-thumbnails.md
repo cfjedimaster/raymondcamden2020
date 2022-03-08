@@ -2,7 +2,7 @@
 layout: post
 title: "Using PDFs with the Jamstack - Now with Thumbnails"
 date: "2021-03-16"
-categories: ["javascript","development","static sites"]
+categories: ["javascript","development","jamstack"]
 tags: ["adobe","pdf services","eleventy"]
 banner_image: /images/banners/papers.jpg
 permalink: /2021/03/16/using-pdfs-with-the-jamstack-now-with-thumbnails

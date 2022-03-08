@@ -2,7 +2,7 @@
 layout: post
 title: "Quick Tip on Using Vue with Eleventy"
 date: "2020-04-03"
-categories: ["javascript","static sites"]
+categories: ["javascript","jamstack"]
 tags: ["vuejs","eleventy"]
 banner_image: /images/banners/tip.jpg
 permalink: /2020/04/03/quick-tip-on-using-vue-with-eleventy

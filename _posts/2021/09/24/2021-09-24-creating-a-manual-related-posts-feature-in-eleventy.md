@@ -2,7 +2,7 @@
 layout: post
 title: "Creating a (Manual) Related Posts Feature in Eleventy"
 date: "2021-09-24T18:00:00"
-categories: ["static sites"]
+categories: ["jamstack"]
 tags: ["eleventy"]
 banner_image: /images/banners/chains.jpg
 permalink: /2021/09/24/creating-a-manual-related-posts-feature-in-eleventy

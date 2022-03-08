@@ -2,7 +2,7 @@
 layout: post
 title: "How I Write Content Here..."
 date: "2021-03-24"
-categories: ["development","static sites"]
+categories: ["development","jamstack"]
 tags: ["eleventy"]
 banner_image: /images/banners/writing.jpg
 permalink: /2021/03/24/how-i-write-content-here

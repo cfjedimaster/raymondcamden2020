@@ -2,7 +2,7 @@
 layout: post
 title: "Enhancing Your Netlify Build Notifications"
 date: "2020-05-29"
-categories: ["serverless","static sites"]
+categories: ["serverless","jamstack"]
 tags: []
 banner_image: /images/banners/mail.jpg
 permalink: /2020/05/29/enhancing-your-netlify-build-notifications

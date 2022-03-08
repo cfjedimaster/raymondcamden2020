@@ -2,7 +2,7 @@
 layout: post
 title: "Integrating Navigation Search with Lunr and Eleventy"
 date: "2021-02-22"
-categories: ["JavaScript","Static Sites"]
+categories: ["JavaScript","jamstack"]
 tags: ["eleventy"]
 banner_image: /images/banners/search.jpg
 permalink: /2021/02/22/integrating-navigation-search-with-lunr-and-eleventy

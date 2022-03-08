@@ -2,7 +2,7 @@
 layout: post
 title: "Adding Search to your Eleventy Static Site with Lunr"
 date: "2019-10-20"
-categories: ["javascript","static sites"]
+categories: ["javascript","jamstack"]
 tags: ["vuejs", "eleventy"]
 banner_image: /images/banners/search.jpg
 permalink: /2019/10/20/adding-search-to-your-eleventy-static-site-with-lunr

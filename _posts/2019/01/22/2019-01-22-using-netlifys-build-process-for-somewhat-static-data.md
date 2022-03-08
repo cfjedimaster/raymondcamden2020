@@ -2,7 +2,7 @@
 layout: post
 title: "Using Netlify's Build Process for Somewhat Static Data"
 date: "2019-01-22"
-categories: ["static sites"]
+categories: ["jamstack"]
 tags: ["javascript"]
 banner_image: /images/banners/build.jpg
 permalink: /2019/01/22/using-netlifys-build-process-for-somewhat-static-data

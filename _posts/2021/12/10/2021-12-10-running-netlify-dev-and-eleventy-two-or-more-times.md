@@ -2,7 +2,7 @@
 layout: post
 title: "Running Netlify Dev and Eleventy Two or More Times At Once"
 date: "2021-12-10T18:00:00"
-categories: ["static sites"]
+categories: ["jamstack"]
 tags: ["eleventy"]
 banner_image: /images/banners/port_cranes.jpg
 permalink: /2021/12/10/running-netlify-dev-and-eleventy-two-or-more-times

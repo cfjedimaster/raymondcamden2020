@@ -2,7 +2,7 @@
 layout: post
 title: "Sending SMS Messages for Form Data with RingCentral and Netlify"
 date: "2020-02-25"
-categories: ["static sites","javascript"]
+categories: ["jamstack","javascript"]
 tags: []
 banner_image: /images/banners/oldpayphone.jpg
 permalink: /2020/02/25/sending-sms-messages-for-form-data-with-ringcentral-and-netlify

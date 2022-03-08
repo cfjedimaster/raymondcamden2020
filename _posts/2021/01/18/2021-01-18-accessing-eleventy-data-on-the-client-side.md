@@ -2,7 +2,7 @@
 layout: post
 title: "Accessing Eleventy Data on the Client Side"
 date: "2021-01-18"
-categories: ["static sites"]
+categories: ["jamstack"]
 tags: ["eleventy"]
 banner_image: /images/banners/space.jpg
 permalink: /2021/01/18/accessing-eleventy-data-on-the-client-side

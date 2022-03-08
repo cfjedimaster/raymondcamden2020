@@ -2,7 +2,7 @@
 layout: post
 title: "Using Liquid Blocks in Eleventy Layouts"
 date: "2021-08-19T18:00:00"
-categories: ["static sites"]
+categories: ["jamstack"]
 tags: ["eleventy"]
 banner_image: /images/banners/blocks.jpg
 permalink: /2021/08/19/using-liquid-blocks-in-eleventy-layouts

@@ -2,7 +2,7 @@
 layout: post
 title: "Using a Google Photos Album in your Eleventy Site with Pipedream"
 date: "2022-01-28T18:00:00"
-categories: ["javascript","static sites"]
+categories: ["javascript","jamstack"]
 tags: ["pipedream","eleventy"]
 banner_image: /images/banners/photos.jpg
 permalink: /2022/01/28/using-a-google-photos-album-in-your-eleventy-site-with-pipedream

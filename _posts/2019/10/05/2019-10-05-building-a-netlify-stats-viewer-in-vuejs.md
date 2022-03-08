@@ -2,7 +2,7 @@
 layout: post
 title: "Building a Netlify Stats Viewer in Vue.js"
 date: "2019-10-05"
-categories: ["javascript", "static sites"]
+categories: ["javascript", "jamstack"]
 tags: ["vuejs"]
 banner_image: /images/banners/clouds.jpg
 permalink: /2019/10/05/building-a-netlify-stats-viewer-in-vuejs

@@ -2,7 +2,7 @@
 layout: post
 title: "Hiding Future Content with Eleventy"
 date: "2020-08-07"
-categories: ["static sites"]
+categories: ["jamstack"]
 tags: ["eleventy"]
 banner_image: /images/banners/foggy-bank.jpg
 permalink: /2020/08/07/hiding-future-content-with-eleventy

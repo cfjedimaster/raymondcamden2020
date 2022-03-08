@@ -2,7 +2,7 @@
 layout: post
 title: "Another Netlify Analytics Hack - Stats Per URL"
 date: "2020-10-08"
-categories: ["static sites"]
+categories: ["jamstack"]
 tags: ["javascript"]
 banner_image: /images/banners/roses.jpg
 permalink: /2020/10/08/another-netlify-analytics-hack-stats-per-url

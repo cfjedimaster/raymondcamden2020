@@ -2,7 +2,7 @@
 layout: post
 title: "The Jamstack Book - Early Access Release"
 date: "2020-11-12"
-categories: ["static sites"]
+categories: ["jamstack"]
 tags: ["eleventy"]
 banner_image: /images/banners/books.jpg
 permalink: /2020/11/12/the-jamstack-book-early-access-release

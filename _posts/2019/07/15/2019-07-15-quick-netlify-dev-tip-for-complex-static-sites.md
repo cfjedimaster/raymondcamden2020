@@ -2,7 +2,7 @@
 layout: post
 title: "Quick Netlify Dev Tip for Complex Static Sites"
 date: "2019-07-15"
-categories: ["development","static sites"]
+categories: ["development","jamstack"]
 tags: []
 banner_image: /images/banners/tip.jpg
 permalink: /2019/07/15/quick-netlify-dev-tip-for-complex-static-sites

@@ -2,7 +2,7 @@
 layout: post
 title: "Adding PDF Output Support to Eleventy"
 date: "2021-10-13T18:00:00"
-categories: ["static sites"]
+categories: ["jamstack"]
 tags: ["eleventy","adobe","pdf services"]
 banner_image: /images/banners/transformers.jpg
 permalink: /2021/10/13/adding-pdf-output-supports-to-eleventy

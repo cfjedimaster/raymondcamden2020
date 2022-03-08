@@ -2,7 +2,7 @@
 layout: post
 title: "Using PDFs with the Jamstack - Adding Search with Text Extraction"
 date: "2021-06-18T18:00:00"
-categories: ["javascript","development","static sites"]
+categories: ["javascript","development","jamstack"]
 tags: ["eleventy","pdf services","adobe"]
 banner_image: /images/banners/search.jpg
 permalink: /2021/06/18/using-pdfs-with-the-jamstack-adding-search-with-text-extraction

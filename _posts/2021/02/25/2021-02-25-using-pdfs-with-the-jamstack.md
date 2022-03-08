@@ -2,7 +2,7 @@
 layout: post
 title: "Using PDFs with the Jamstack"
 date: "2021-02-25"
-categories: ["development","javascript","static sites"]
+categories: ["development","javascript","jamstack"]
 tags: ["eleventy","adobe","pdf services"]
 banner_image: /images/banners/papers.jpg
 permalink: /2021/02/25/using-pdfs-with-the-jamstack

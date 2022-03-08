@@ -2,7 +2,7 @@
 layout: post
 title: "Page Level URL Fetching with Eleventy"
 date: "2021-07-30T18:00:00"
-categories: ["javascript","static sites"]
+categories: ["javascript","jamstack"]
 tags: ["eleventy"]
 banner_image: /images/banners/plank-bridge.jpg
 permalink: /2021/07/30/page-level-url-fetching-with-eleventy

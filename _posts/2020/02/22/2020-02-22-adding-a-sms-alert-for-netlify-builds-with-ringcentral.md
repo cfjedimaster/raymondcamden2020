@@ -2,7 +2,7 @@
 layout: post
 title: "Adding a SMS Alert for Netlify Builds with RingCentral"
 date: "2020-02-22"
-categories: ["static sites","javascript"]
+categories: ["jamstack","javascript"]
 tags: []
 banner_image: /images/banners/oldpayphone.jpg
 permalink: /2020/02/22/adding-a-sms-alert-for-netlify-builds-with-ringcentral

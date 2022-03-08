@@ -2,7 +2,7 @@
 layout: post
 title: "Quick Netlify Tip for Redirects"
 date: "2021-05-24T18:00:00"
-categories: ["static sites"]
+categories: ["jamstack"]
 tags: []
 banner_image: /images/banners/this-way.jpg
 permalink: /2021/05/24/quick-netlify-tip-for-redirects

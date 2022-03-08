@@ -2,7 +2,7 @@
 layout: post
 title: "Creating an Additive Capture Shortcode in Eleventy"
 date: "2021-07-12T18:00:00"
-categories: ["javascript", "static sites"]
+categories: ["javascript", "jamstack"]
 tags: ["eleventy"]
 banner_image: /images/banners/capture.jpg
 permalink: /2021/07/12/creating-an-additive-capture-shortcode-in-eleventy

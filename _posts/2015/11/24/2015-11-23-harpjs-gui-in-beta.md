@@ -2,7 +2,7 @@
 layout: post
 title: "HarpJS GUI in Beta"
 date: "2015-11-24T09:06:45+06:00"
-categories: [development,"static sites"]
+categories: [development,"jamstack"]
 tags: []
 banner_image: 
 permalink: /2015/11/24/harpjs-gui-in-beta

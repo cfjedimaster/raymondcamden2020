@@ -2,7 +2,7 @@
 layout: post
 title: "Building a Simple Image Gallery with Eleventy"
 date: "2021-04-07"
-categories: ["static sites"]
+categories: ["jamstack"]
 tags: ["eleventy"]
 banner_image: /images/banners/image-gallery.jpg
 permalink: /2021/04/07/building-a-simple-image-gallery-with-eleventy

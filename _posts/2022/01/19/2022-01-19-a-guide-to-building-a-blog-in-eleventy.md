@@ -2,7 +2,7 @@
 layout: post
 title: "A Guide to Building a Blog in Eleventy"
 date: "2022-01-19T18:00:00"
-categories: ["static sites"]
+categories: ["jamstack"]
 tags: ["eleventy"]
 banner_image: /images/banners/pen_paper.jpg
 permalink: /2022/01/19/a-guide-to-building-a-blog-in-eleventy

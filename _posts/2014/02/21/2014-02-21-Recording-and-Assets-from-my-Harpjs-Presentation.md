@@ -2,7 +2,7 @@
 layout: post
 title: "Recording and Assets from my Harp.js Presentation"
 date: "2014-02-21T14:02:00+06:00"
-categories: [development,"static sites"]
+categories: [development,"jamstack"]
 tags: []
 banner_image: 
 permalink: /2014/02/21/Recording-and-Assets-from-my-Harpjs-Presentation

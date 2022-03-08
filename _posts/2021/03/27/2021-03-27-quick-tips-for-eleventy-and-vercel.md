@@ -2,7 +2,7 @@
 layout: post
 title: "Quick Tips for Eleventy and Vercel"
 date: "2021-03-27"
-categories: ["static sites"]
+categories: ["jamstack"]
 tags: ["eleventy"]
 banner_image: /images/banners/tip.jpg
 permalink: /2021/03/27/quick-tips-for-eleventy-and-vercel

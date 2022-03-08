@@ -2,7 +2,7 @@
 layout: post
 title: "Lame, client-side 404 handling with Amazon S3"
 date: "2015-01-17T09:18:30+06:00"
-categories: [javascript,"static sites"]
+categories: [javascript,"jamstack"]
 tags: []
 banner_image: 
 permalink: /2015/01/17/lame-client-side-404-handling-with-amazon-s3

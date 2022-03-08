@@ -2,7 +2,7 @@
 layout: post
 title: "Adding QR Codes to Your Jamstack Site"
 date: "2022-02-11T18:00:00"
-categories: ["javascript","static sites"]
+categories: ["javascript","jamstack"]
 tags: ["eleventy"]
 banner_image: /images/banners/qrcodes.jpg
 permalink: /2022/02/11/adding-qr-codes-to-your-jamstack-site

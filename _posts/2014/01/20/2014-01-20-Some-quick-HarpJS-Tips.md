@@ -2,7 +2,7 @@
 layout: post
 title: "Some quick HarpJS Tips"
 date: "2014-01-20T17:01:00+06:00"
-categories: [development,html5,javascript,"static sites"]
+categories: [development,html5,javascript,"jamstack"]
 tags: []
 banner_image: 
 permalink: /2014/01/20/Some-quick-HarpJS-Tips

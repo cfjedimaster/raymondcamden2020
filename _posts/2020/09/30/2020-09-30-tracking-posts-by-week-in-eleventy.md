@@ -2,7 +2,7 @@
 layout: post
 title: "Tracking Posts by Week in Eleventy"
 date: "2020-09-30"
-categories: ["static sites"]
+categories: ["jamstack"]
 tags: ["eleventy"]
 banner_image: /images/banners/cal_socks.jpg
 permalink: /2020/09/30/tracking-posts-by-week-in-eleventy

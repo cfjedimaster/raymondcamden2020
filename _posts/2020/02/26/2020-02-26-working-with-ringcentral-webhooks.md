@@ -2,7 +2,7 @@
 layout: post
 title: "Working with RingCentral Webhooks"
 date: "2020-02-26"
-categories: ["static sites","javascript"]
+categories: ["jamstack","javascript"]
 tags: []
 banner_image: /images/banners/keys.jpg
 permalink: /2020/02/26/working-with-ringcentral-webhooks
