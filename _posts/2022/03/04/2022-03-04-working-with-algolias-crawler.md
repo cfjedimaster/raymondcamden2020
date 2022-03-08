@@ -29,7 +29,7 @@ Doing so will take you - oddly - to this:
 
 So... one of the weird things about Crawler is that it's not properly integrated into the main Algolia dashboard. As I said... weird. But honestly it's no big deal. I mainly bring it up so as to prepare you for the odd jump. The UI for Crawler is all easy to use (and really well done), but looks a bit like a different design team worked on it. 
 
-I decided to test Crawler on an old site I had, [ColdFusion Cookbook](https://www.coldfusioncookbook.com/). I converted this site to Jamstack a while back but more recently updated it to use [Eleventy](https://www.11ty.dev/). As part of that conversion, I removed the previous search engine (which I *think* was a Google Programmable Search ENgine) and decided I'd use the Algolia Crawler as a replacement. 
+I decided to test Crawler on an old site I had, [ColdFusion Cookbook](https://www.coldfusioncookbook.com/). I converted this site to Jamstack a while back but more recently updated it to use [Eleventy](https://www.11ty.dev/). As part of that conversion, I removed the previous search engine (which I *think* was a Google Programmable Search Engine) and decided I'd use the Algolia Crawler as a replacement. 
 
 Once logged into the Crawler dashboard, you're presented with a list of your existing implementations. 
 

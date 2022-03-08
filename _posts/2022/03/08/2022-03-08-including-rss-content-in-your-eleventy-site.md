@@ -4,7 +4,7 @@ title: "Including RSS Content in your Eleventy Site"
 date: "2022-03-08T18:00:00"
 categories: ["jamstack"]
 tags: ["eleventy"]
-banner_image: /images/banners/welcome2018.jpg
+banner_image: /images/banners/newspapers.jpg
 permalink: /2022/03/08/including-rss-content-in-your-eleventy-site
 description: A quick example of using RSS content for an Eleventy page.
 ---
