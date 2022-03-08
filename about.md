@@ -89,6 +89,16 @@ somewhat complete from 2013 and onward.
 <li><a href="http://net.tutsplus.com/tutorials/javascript-ajax/introduction-to-express/">Introduction to Express</a> for Nettuts+</li>
 </ul>
 
+<h3>Recent Articles on Medium</h3>
+
+Here is my most recent set of articles on Medium. For a full list, see my [profile](https://medium.com/@cfjedimaster).
+
+<ul>
+{% for article in medium %}
+<li><a href="{{ article.link }}">{{ article.title }}</a></li>
+{% endfor %}
+</ul>
+
 <h3>My Videos/Courses</h3>
 <ul>
 <li><a href="https://www.safaribooksonline.com/live-training/courses/getting-up-to-speed-with-vuejs/0636920182153/">Getting Up to Speed with Vue.js</a></li>
