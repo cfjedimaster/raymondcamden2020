@@ -9,7 +9,7 @@ permalink: /2022/03/08/including-rss-content-in-your-eleventy-site
 description: A quick example of using RSS content for an Eleventy page.
 ---
 
-Before I begin, this post is *not* about generating an RSS page with Eleventy. If you need to do that, check the [plugin](https://www.11ty.dev/docs/plugins/rss/) that makes it (mostly) trivial to do. This post is about *consuming* RSS for your Eleventy site. I've got a page here ([About](/about)) where I track my external articles and books. At work we use Medium to host our [blog](https://medium.com/adobetech) and I've been publishing there as part of my job. I was curious how I could get that content on my About page as well.
+Before I begin, this post is *not* about generating an RSS page with Eleventy. If you need to do that, check the [plugin](https://www.11ty.dev/docs/plugins/rss/) that makes it (mostly) trivial to do. This post is about *consuming* RSS for your Eleventy site. I've got a page here ([About](/about)) where I track my external articles and books. At work, we use Medium to host our [blog](https://medium.com/adobetech) and I've been publishing there as part of my job. I was curious how I could get that content on my About page as well.
 
 First off, Medium publishes an RSS feed for every profile and publication. You can find details on [their documentation](https://help.medium.com/hc/en-us/articles/214874118-Using-RSS-feeds-of-profiles-publications-and-topics), but for simple users like me, it's a simple matter of going from:
 
@@ -59,9 +59,9 @@ I thought about adding the article date too, but decided to keep it simple. Here
 <img data-src="https://static.raymondcamden.com/images/2022/03/rss.jpg" alt="RSS output" class="lazyload imgborder imgcenter">
 </p>
 
-And that's all there is to it. As a reminder, you can find the entire source code for this blog up in a [public repo](https://github.com/cfjedimaster/raymondcamden2020) if you want to see it in context. If having the most up to date version of the feed is important, you've got a few options.
+And that's all there is to it. As a reminder, you can find the entire source code for this blog up in a [public repo](https://github.com/cfjedimaster/raymondcamden2020) if you want to see it in context. If having the most up-to-date version of the feed is important, you've got a few options.
 
-The simplest is to just schedule a build roughly along the schedule that makes sense for the content you are ingesting. So if a feed updates about once a day, you could schedule a build once a day.
+The simplest is to just schedule a build roughly along with the schedule that makes sense for the content you are ingesting. So if a feed updates about once a day, you could schedule a build once a day.
 
 The other option is to track the RSS feed with Pipedream. One of their sample workflows demonstrates this: [New Item in Feed from RSS API](https://pipedream.com/apps/rss/triggers/new-item-in-feed)
 
