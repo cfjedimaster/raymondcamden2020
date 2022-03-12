@@ -26,6 +26,12 @@ Online, March 16, 2022
 </p>
 
 <p>
+<a href="https://11tymeetup.dev/events/ep-7-structuring-11ty-projects-and-rendering-rss-content/">Rendering RSS Content</a><br/>
+Eleventy Meetup<br/>
+Online, March 28, 2022
+</p>
+
+<p>
 <a href="https://devnexus.com/speakers/329">Peanut Butter Jamstack</a><br/>
 Devnexus<br/>
 Atlanta, GA, April 12-14, 2022
