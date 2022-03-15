@@ -37,6 +37,12 @@ Devnexus<br/>
 Atlanta, GA, April 12-14, 2022
 </p>
 
+<p>
+<a href="https://www.javascriptandfriends.com/">An Overview of Client-Side Data Storage</a><br/>
+JavaScript &amp; Friends<br/>
+Columbus, OH, July 29, 2022
+</p>
+
 
 <h3>My Past Events</h3>
 
