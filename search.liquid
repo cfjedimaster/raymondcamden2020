@@ -74,6 +74,13 @@ const app = new Vue({
 	created() {
 		this.client = algoliasearch('WFABFE7Z9Q', 'd1c88c3f98648a69f11cdd9d5a87de08');
 		this.index = this.client.initIndex('raymondcamden');
+		// support url param search
+		let qp = new URLSearchParams(window.location.search);
+		let search = qp.get('search');
+		if(search) {
+			this.search = search;
+			this.doSearch();
+		}
 	},
 	methods: {
 		async doSearch() {
@@ -88,7 +95,7 @@ const app = new Vue({
 				hitsPerPage: 50,
 				clickAnalytics:true
 			});
-			console.log('results', resultsRaw);
+			//console.log('results', resultsRaw);
 
 			let options = { year: 'numeric', month: 'long', day: 'numeric' };
 			let formatter = new Intl.DateTimeFormat('en-US',options);
@@ -102,7 +109,6 @@ const app = new Vue({
 			this.queryID = resultsRaw.queryID;
 		},
 		track(url,id, pos) {			
-			console.log('track', url, id, pos);
 			aa('clickedObjectIDsAfterSearch', {
 				eventName: 'click_on_search_page',
 				index: 'raymondcamden',

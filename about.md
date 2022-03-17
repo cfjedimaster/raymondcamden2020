@@ -21,6 +21,7 @@ I have not done a great job of tracking my various articles on other web sites, 
 somewhat complete from 2013 and onward.
 
 <ul>
+<li><a href="https://verpex.com/blog/website-tips/exploring-alternatives-to-google-analytics">Exploring Alternatives to Google Analytics</a></li>
 <li><a href="https://serialized.io/blog/gentle-introduction-serialized-event-sourcing/">A (Hopefully) Gentle Introduction to Serialized and Event Sourcing</a> for Serialized.io</li>
 <li><a href="https://verpex.com/blog/website-tips/jamstack-vs-wordpress-my-journey">Jamstack vs. WordPress: My Journey</a> for Verpex</li>
 <li><a href="https://snipcart.com/blog/jamstack-hosting-netlify-alternatives">Jamstack Hosting Solutions: Challengers to the Throne</a> for Snipcart</li>
