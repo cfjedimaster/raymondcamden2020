@@ -2,7 +2,7 @@
 layout: post
 title: "Speaking at Eleventy Meetup Next Week"
 date: "2022-03-24T18:00:00"
-categories: ["static sites"]
+categories: ["jamstack"]
 tags: ["eleventy"]
 banner_image: /images/banners/publicspeaking.jpg
 permalink: /2022/03/24/speaking-at-eleventy-meetup-next-week
