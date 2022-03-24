@@ -2,7 +2,7 @@
 layout: post
 title: "I've switched RaymondCamden.com to Netlify"
 date: "2016-10-10T08:06:00-07:00"
-categories: "jamstack"]
+categories: ["jamstack"]
 tags: []
 banner_image: 
 permalink: /2016/10/10/ive-switched-raymondcamdencom-to-netlify
