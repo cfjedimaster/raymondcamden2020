@@ -2,7 +2,7 @@
 layout: post
 title: "Speaking on Static Sites at Ortus Developer Week"
 date: "2016-11-11T12:41:00-07:00"
-categories: [development,static sites]
+categories: [development,jamstack]
 tags: []
 banner_image: 
 permalink: /2016/11/11/speaking-on-static-sites-at-ortus-developer-week
