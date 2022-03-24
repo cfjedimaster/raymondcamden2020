@@ -2,7 +2,7 @@
 layout: post
 title: "My Blog Tech Stack"
 date: "2016-08-05T08:34:00-07:00"
-categories: [static sites]
+categories: ["jamstack"]
 tags: []
 banner_image: /images/banners/blog_stack.jpg
 permalink: /2016/08/05/my-blog-tech-stack

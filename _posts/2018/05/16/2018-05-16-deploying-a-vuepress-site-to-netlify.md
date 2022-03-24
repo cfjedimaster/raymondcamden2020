@@ -2,7 +2,7 @@
 layout: post
 title: "Deploying a VuePress Site to Netlify"
 date: "2018-05-16"
-categories: [static sites]
+categories: ["jamstack"]
 tags: [vuejs]
 banner_image: /images/banners/travel.jpg
 permalink: /2018/05/16/deploying-a-vuepress-site-to-netlify

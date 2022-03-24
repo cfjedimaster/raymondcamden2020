@@ -2,7 +2,7 @@
 layout: post
 title: "Installing Jekyll on Windows"
 date: "2018-02-12"
-categories: [static sites]
+categories: ["jamstack"]
 tags: []
 banner_image: /images/banners/windowsjekyll2.jpg
 permalink: /2018/02/12/installing-jekyll-on-windows

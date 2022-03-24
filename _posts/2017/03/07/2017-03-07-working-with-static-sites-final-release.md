@@ -2,7 +2,7 @@
 layout: post
 title: "Working with Static Sites - Final Release!"
 date: "2017-03-07T09:40:00-07:00"
-categories: [static sites]
+categories: ["jamstack"]
 tags: []
 banner_image: 
 permalink: /2017/03/07/working-with-static-sites-final-release

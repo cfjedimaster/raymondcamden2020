@@ -2,7 +2,7 @@
 layout: post
 title: "Excellent overview of Static Sites"
 date: "2016-08-04T11:11:00-07:00"
-categories: [static sites]
+categories: ["jamstack"]
 tags: []
 banner_image: 
 permalink: /2016/08/04/excellent-overview-of-static-sites
