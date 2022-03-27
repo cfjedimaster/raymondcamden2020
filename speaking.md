@@ -20,12 +20,6 @@ Nothing planned currently. Invite me to speak at your event!
 -->
 
 <p>
-<a href="https://portal.adobe.com/widget/adobe/as22/sessions?search=S505">Dynamic Document Generation and Adobe Commerce</a><br/>
-Adobe Summit<br/>
-Online, March 16, 2022
-</p>
-
-<p>
 <a href="https://11tymeetup.dev/events/ep-7-structuring-11ty-projects-and-rendering-rss-content/">Rendering RSS Content</a><br/>
 Eleventy Meetup<br/>
 Online, March 28, 2022
@@ -51,6 +45,12 @@ Here are my past events, most recent first, in a nice scrollable list no one wil
 </p>
 
 <div style="height: 400px; overflow:scroll">
+
+<p>
+<a href="https://portal.adobe.com/widget/adobe/as22/sessions?search=S505">Dynamic Document Generation and Adobe Commerce</a><br/>
+Adobe Summit<br/>
+Online, March 16, 2022
+</p>
 
 <p>
 <a href="https://www.meetup.com/de-DE/jamstack_berlin/events/282051742/">Search and the Jamstack</a><br/>
