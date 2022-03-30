@@ -17,11 +17,11 @@ Being a stat junkie, I've been checking my [profile page](https://dzone.com/user
 <img data-src="https://static.raymondcamden.com/images/2022/03/dzone1.jpg" alt="Picture of DZone Profile" class="lazyload imgborder imgcenter">
 </p>
 
-I was curious if I could get those stats in a purely data form so I could sort by page views. Like any good web dev, I opened up my devtools, switched to the Network tab, filtered to Fetch/XHR, and was able to see the endpoint they use to fetch the data:
+I was curious if I could get those stats in purely data form so I could sort by page views. Like any good web dev, I opened up my devtools, switched to the Network tab, filtered to Fetch/XHR, and was able to see the endpoint they use to fetch the data:
 
 <https://dzone.com/services/widget/article-listV2/list?author=201258&page=1&portal=all&sort=newest>
 
-Looking at that URL, the author value matches what I see in the URL of my profile, https://dzone.com/users/201258/cfjedimaster.html. The result of the end point looks like so - minus the actual article data:
+Looking at that URL, the author value matches what I see in the URL of my profile, https://dzone.com/users/201258/cfjedimaster.html. The result of the endpoint looks like so - minus the actual article data:
 
 ```json
 {
@@ -29,7 +29,7 @@ Looking at that URL, the author value matches what I see in the URL of my profil
   "result": {
     "data": {
       "nodes": [
-		// articles here
+        // articles here
       ],
       "sort": "newest"
     }
@@ -42,50 +42,50 @@ Each page of data contains up to twenty article objects in `nodes`. Here's an ex
 
 ```json
 {
-	"id": 479591,
-	"title": "Multiple File Upload is Easy in HTML5",
-	"imageUrl": null,
-	"authors": [
-		{
-			"id": 201258,
-			"name": "cfjedimaster",
-			"realName": "Raymond Camden",
-			"aboutAuthor": "Raymond Camden is a Senior Developer Evangelist for Adobe. He works on the Document Services APIs to build powerful (and typically cat-related) PDF demos. He is the author of multiple books on web development and has been actively blogging and presenting for almost twenty years. Raymond can be reached at his blog (www.raymondcamden.com), @raymondcamden on Twitter, or via email at raymondcamden@gmail.com.",
-			"url": "/users/201258/cfjedimaster.html",
-			"avatar": "//dz2cdn2.dzone.com/storage/user-avatar/15770409-thumb.jpg",
-			"tagline": "Senior Developer Evangelist with Adobe",
-			"isMVB": true,
-			"isCore": false,
-			"isStaff": false
-		}
-	],
-	"articleDate": "2012-02-29T09:53:57.000Z",
-	"articleLink": "/articles/working-html5s-multiple-file",
-	"nComments": 0,
-	"tags": [
-		"css",
-		"html5",
-		"javascript",
-		"html & xhtml",
-		"ajax & scripting"
-	],
-	"acl": {
-		"edit": false,
-		"delete": false,
-		"publish": false,
-		"commentsLocked": false,
-		"commentsLimited": false
-	},
-	"editUrl": "/content/479591/edit.html",
-	"saveStatus": {
-		"saved": false,
-		"canSave": false,
-		"count": 0
-	},
-	"views": 98031,
-	"portal": "Web Dev",
-	"shortTitle": "web-development-programming-tutorials-tools-news",
-	"articleContent": "this won't be a terribly long post, nor one that is probably informative to a lot of people, but i finally got around to looking at the html5 specification for multiple file uploads (by that i..."
+    "id": 479591,
+    "title": "Multiple File Upload is Easy in HTML5",
+    "imageUrl": null,
+    "authors": [
+        {
+            "id": 201258,
+            "name": "cfjedimaster",
+            "realName": "Raymond Camden",
+            "aboutAuthor": "Raymond Camden is a Senior Developer Evangelist for Adobe. He works on the Document Services APIs to build powerful (and typically cat-related) PDF demos. He is the author of multiple books on web development and has been actively blogging and presenting for almost twenty years. Raymond can be reached at his blog (www.raymondcamden.com), @raymondcamden on Twitter, or via email at raymondcamden@gmail.com.",
+            "url": "/users/201258/cfjedimaster.html",
+            "avatar": "//dz2cdn2.dzone.com/storage/user-avatar/15770409-thumb.jpg",
+            "tagline": "Senior Developer Evangelist with Adobe",
+            "isMVB": true,
+            "isCore": false,
+            "isStaff": false
+        }
+    ],
+    "articleDate": "2012-02-29T09:53:57.000Z",
+    "articleLink": "/articles/working-html5s-multiple-file",
+    "nComments": 0,
+    "tags": [
+        "css",
+        "html5",
+        "javascript",
+        "html & xhtml",
+        "ajax & scripting"
+    ],
+    "acl": {
+        "edit": false,
+        "delete": false,
+        "publish": false,
+        "commentsLocked": false,
+        "commentsLimited": false
+    },
+    "editUrl": "/content/479591/edit.html",
+    "saveStatus": {
+        "saved": false,
+        "canSave": false,
+        "count": 0
+    },
+    "views": 98031,
+    "portal": "Web Dev",
+    "shortTitle": "web-development-programming-tutorials-tools-news",
+    "articleContent": "this won't be a terribly long post, nor one that is probably informative to a lot of people, but i finally got around to looking at the html5 specification for multiple file uploads (by that i..."
 }
 ```
 
@@ -134,7 +134,7 @@ I do two manipulations to the result. First I sort by views. Then I turn the `ar
 <img data-src="https://static.raymondcamden.com/images/2022/03/dzone2.jpg" alt="Screenshot of stats" class="lazyload imgborder imgcenter">
 </p>
 
-That's only the first bit. I've got 368 articles on DZone so it takes about 10 seconds or so for the script to run. If you want to see a slightly nicer version of this, and adapt it for your own DZone profile, I've got a CodePen below. Just edit the `authorId` value to match yours.
+That's only the first bit. I've got 368 articles on DZone so it takes about 10 seconds or so for the script to run. If you want to see a slightly nicer version of this and adapt it for your own DZone profile, I've got a CodePen below. Just edit the `authorId` value to match yours.
 
 <p class="codepen" data-height="500" data-theme-id="dark" data-default-tab="result" data-slug-hash="PoEKaoE" data-preview="true" data-user="cfjedimaster" style="height: 500px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
   <span>See the Pen <a href="https://codepen.io/cfjedimaster/pen/PoEKaoE">
@@ -143,4 +143,4 @@ That's only the first bit. I've got 368 articles on DZone so it takes about 10 s
 </p>
 <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
 
-Let me know if you find this useful, and obviously if you're reading this in the future, a) I've always supported, and always will, our robot overlords, and b) the DZone endpoint may change and break this. Use with caution.
+Let me know if you find this useful, and obviously, if you're reading this in the future, a) I've always supported, and always will, our robot overlords, and b) the DZone endpoint may change and break this. Use with caution.
