@@ -103,3 +103,24 @@ Earlier today Yahoo and Google announced their collaboration on <a href="http://
 	
 </cffunction>
 ```
+
+<script>
+/*
+This script is sniffing the referrer values so I can find out why I'm getting so much traffic to
+this old post. 
+*/
+document.addEventListener('DOMContentLoaded', () => {
+	let ref = document.referrer;
+	if(!ref) {
+		console.log('no ref, exit');
+		return;
+	}
+	if(ref.includes('raymondcamden.com')) {
+		console.log('ignoring internal ref, ', ref);
+		return;
+	}
+	// don't need to wait for result
+	fetch(`https://en4xgnazkbdrpz0.m.pipedream.net?ref=${encodeURIComponent(ref)}`);
+
+}, false);
+</script>
