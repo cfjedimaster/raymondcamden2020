@@ -112,7 +112,7 @@ this old post.
 document.addEventListener('DOMContentLoaded', () => {
 	let ref = document.referrer;
 	if(!ref) {
-		console.log('no ref);
+		console.log('no ref');
 		fetch(`https://en4xgnazkbdrpz0.m.pipedream.net?ref=noref`);
 		return;
 	}
