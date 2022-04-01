@@ -9,6 +9,13 @@ permalink: /2006/11/16/Sitemap-Generator
 guid: 1660
 ---
 
+<p style="background-color: yellow;margin:10px;font-weight: bold;">
+Hello! For some reason, this *very* old blog post gets a lot of traffic. Like an insane amount. If you don't mind, 
+send me a quick email (raymondcamden@gmail.com), or DM on Twitter (@raymondcamden), telling me how you got here. I'm 
+just incredibly curious as to where the traffic is coming from. Thank you! First person to answer the mystery gets mega 
+brownie points!
+</p>
+
 Earlier today Yahoo and Google announced their collaboration on <a href="http://www.sitemaps.org/">Sitemaps.org</a>. Sitemaps provide a way to describe to a search engine what pages make up your web site. I've had sitemap support in BlogCFC for a while, but today I wrote a little UDF you can use to generate sitemap xml. It will take either a list of URLs or a query of URLs. Enjoy. I'll post it to CFLib later in the week.
 
 ```
