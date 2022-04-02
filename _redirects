@@ -155,3 +155,5 @@ admin/index.php /
 /ads.txt https://srv.adstxtmanager.com/14551/raymondcamden.com 301
 
 /.well-known/* /
+
+/categories/static+sites /categories/jamstack
