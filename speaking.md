@@ -26,6 +26,12 @@ Atlanta, GA, April 12-14, 2022
 </p>
 
 <p>
+<a href="https://www.meetup.com/Tucson-Adobe-User-Group/events/285005013/">Introduction to PDF Embed API with Adobe Evangelist Raymond Camden</a><br/>
+Tucson Adobe User Group<br/>
+Online, May 12, 2022
+</p>
+
+<p>
 <a href="https://www.javascriptandfriends.com/">An Overview of Client-Side Data Storage</a><br/>
 JavaScript &amp; Friends<br/>
 Columbus, OH, July 29, 2022
