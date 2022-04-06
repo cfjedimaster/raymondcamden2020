@@ -3,7 +3,7 @@ layout: post
 title: "Review: Make 7 Apps With Vue 2"
 date: "2022-01-16T18:00:00"
 categories: ["javascript","books"]
-tags: ["vuesjs"]
+tags: ["vuejs"]
 banner_image: /images/banners/book.jpg
 permalink: /2022/01/16/review-make-7-apps-with-vue-2
 description: A review of "Make 7 Apps with Vue 2" by Jennifer Bland
