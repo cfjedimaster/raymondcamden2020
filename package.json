@@ -18,13 +18,16 @@
   },
   "homepage": "https://github.com/cfjedimaster/raymondcamden2020#readme",
   "dependencies": {
+    "-": "^0.0.1",
     "@11ty/eleventy": "^1.0.0",
     "@google-analytics/data": "^2.8.0",
     "algolia-indexing": "^1.0.1",
     "algoliasearch": "^4.2.0",
     "eleventy-plugin-pdfembed": "^1.0.1",
     "eleventy-xml-plugin": "^0.1.0",
+    "g": "^2.0.1",
     "html-minifier": "^4.0.0",
+    "netlify-cli": "^9.16.5",
     "node-fetch": "^2.6.0",
     "rss-parser": "^3.12.0",
     "sendgrid": "^5.2.3"
