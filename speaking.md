@@ -19,11 +19,6 @@ I started a blog. I feel like I have to struggle to learn new things and if I ca
 Nothing planned currently. Invite me to speak at your event! 
 -->
 
-<p>
-<a href="https://devnexus.com/speakers/329">Peanut Butter Jamstack</a><br/>
-Devnexus<br/>
-Atlanta, GA, April 12-14, 2022
-</p>
 
 <p>
 <a href="https://www.meetup.com/Tucson-Adobe-User-Group/events/285005013/">Introduction to PDF Embed API with Adobe Evangelist Raymond Camden</a><br/>
@@ -45,6 +40,11 @@ Here are my past events, most recent first, in a nice scrollable list no one wil
 </p>
 
 <div style="height: 400px; overflow:scroll">
+<p>
+<a href="https://devnexus.com/speakers/329">Peanut Butter Jamstack</a><br/>
+Devnexus<br/>
+Atlanta, GA, April 12-14, 2022
+</p>
 
 <p>
 <a href="https://11tymeetup.dev/events/ep-7-structuring-11ty-projects-and-rendering-rss-content/">Rendering RSS Content</a><br/>
