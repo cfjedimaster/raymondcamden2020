@@ -4,7 +4,7 @@ title: "The Jamstack Book - Final Release!"
 date: "2022-04-21T18:00:00"
 categories: ["jamstack"]
 tags: []
-banner_image: /images/banners/welcome2018.jpg
+banner_image: /images/banners/books.jpg
 permalink: /2022/04/21/the-jamstack-book-final-release
 description: Announcing the final release of the Jamstack book!
 ---
