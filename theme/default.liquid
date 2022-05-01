@@ -8,7 +8,7 @@ body_class: home-template
 
     <title>{% if renderData.title %}{{ renderData.title | titlecase }}{% elsif title %}{{ title }}{% else %}{{ site.title }}{% endif %}</title> 
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
+    <meta name="generator" content="{{ eleventy.generator }}">
 	<link href="https://fonts.googleapis.com/css?family=Crimson+Text:400,400i,600,600i%7CKarla:400,400i,700,700i" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="/css/style.css" />
 
