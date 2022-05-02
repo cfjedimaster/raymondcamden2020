@@ -14,6 +14,10 @@ const cats = [
 {"name":"Mehatable", "age":5, "breed":"calico", "gender":"female"},
 {"name":"Scorpia", "age":6, "breed":"long hair", "gender":"female"},
 {"name":"Zoomies", "age":1, "breed":"fat", "gender":"male"},
+{"name":"Zues", "age":5, "breed":"long hair", "gender":"male"},
+{"name":"Lord Kittybottom", "age":9, "breed":"calico", "gender":"male"},
+{"name":"Princess Furball", "age":5, "breed":"calico", "gender":"female"},
+{"name":"Delerium", "age":4, "breed":"fat", "gender":"female"}
 ];
 
 exports.handler = async (event, context) => {
