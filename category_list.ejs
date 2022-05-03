@@ -9,6 +9,14 @@ title: Categories List
 	cats =collections.categories.sort();
     
 	function titleCase(str) {
+		/*
+		Some hacks - sorry not sorry, this repeats a bit from .eleventy.js/fixcattag
+		*/
+		if(str.toLowerCase() === 'javascript') return 'JavaScript';
+		if(str.toLowerCase() === 'coldfusion') return 'ColdFusion';
+		if(str.toLowerCase() === 'jquery') return 'jQuery';
+		if(str.toLowerCase() === 'pdf services') return 'PDF Services';
+
 		return str.replace(
 		/\w\S*/g,
 		function(txt) {
