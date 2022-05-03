@@ -11,7 +11,7 @@ description: Building a sortable, paged, dynamic table in Alpine.js
 
 A few months back, I realized that one of my most popular blog posts ([Building Table Sorting and Pagination in Vue.js](https://www.raymondcamden.com/2018/02/08/building-table-sorting-and-pagination-in-vuejs)) would be an excellent opportunity to update for a more plain (or vanilla if you will) JavaScript version. That post ([Building Table Sorting and Pagination in JavaScript](https://www.raymondcamden.com/2022/03/14/building-table-sorting-and-pagination-in-javascript/)) was pretty fun to write. As much as I enjoyed using Vue over the past few years, I find myself more and more trying to rely less on external frameworks and sticking to simpler methods of getting things done. That being said... I am also **really** intrigued by [Alpine.js](https://alpinejs.dev/). 
 
-Alpine is lightweight (2 methods, 6 properties, and 15 attributes you sprinkle in your HTML) and considers itself the "jQuery for the modern web". I was introduced to Alpine by an old friend from the ColdFusion community, [Luis Majano](https://twitter.com/lmajano) and decided about five minutes into his presentation that I wanted to learn more. 
+Alpine is lightweight (2 methods, 6 properties, and 15 attributes you sprinkle in your HTML) and considers itself the "jQuery for the modern web". I was introduced to Alpine by an old friend from the ColdFusion community, [Luis Majano](https://twitter.com/lmajano), and decided about five minutes into his presentation that I wanted to learn more. 
 
 
 As part of that journey, I thought an update to the "table sorting and paging" code would be an excellent way to get some practice writing Alpine code. It should be obvious, but I'm new at this so please do not consider it the best example of Alpine, although honestly Alpine is so simple I feel (mostly) confident I did this right. That being said - reach out with improvements and comments. 
@@ -72,7 +72,7 @@ In the first version, I'm just going to load the data and render it in a table. 
 
 In the code above, the `x-data` line is the most important as it binds the table to Alpine data. Alpine lets you define code right inside the attribute, but I find that a bit messy. It's possible... I just don't like it. 
 
-Next note the two template tags. The first will show or hide the loading table row based on whether or not my data has loaded. Next I loop over my data (you'll see this defined in a bit) to render the various cat properties. There's two big differences here between Alpine and Vue. In Alpine, your IF/FOR constructs must be on a template tag. Secondly, you don't use mustache style interpolation for values, but instead use either `x-text` or `x-html`. 
+Next note the two template tags. The first will show or hide the loading table row based on whether or not my data has loaded. Next, I loop over my data (you'll see this defined in a bit) to render the various cat properties. There are two big differences here between Alpine and Vue. In Alpine, your IF/FOR constructs must be on a template tag. Secondly, you don't use mustache style interpolation for values, but instead, use either `x-text` or `x-html`. 
 
 Now for the JavaScript:
 
@@ -90,7 +90,7 @@ document.addEventListener('alpine:init', () => {
 
 In this relatively simple example, I only have one piece of data, a `cats` array, and I use `init` to automatically fetch my data and store it. 
 
-As a quick aside, before I share the CodePen below, one of the things I struggled with was a 'chicken and egg' problem around the document event (`alpine:init`) and Alpine being loaded via the CodePen JavaScript settings. You'll notice that I actually use a script tag in the HTML (I didn't share that above) to get around this issue. Before that I kept having issues with Alpine being unable to 'find' `catData` and it was just plain annoying. Anyway, here's the complete demo:
+As a quick aside, before I share the CodePen below, one of the things I struggled with was a 'chicken and egg' problem around the document event (`alpine:init`) and Alpine being loaded via the CodePen JavaScript settings. You'll notice that I use a script tag in the HTML (I didn't share that above) to get around this issue. Before that I kept having issues with Alpine being unable to 'find' `catData` and it was just plain annoying. Anyway, here's the complete demo:
 
 <p class="codepen" data-height="500" data-default-tab="html,result" data-slug-hash="YzePpKP" data-user="cfjedimaster" style="height: 500px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
   <span>See the Pen <a href="https://codepen.io/cfjedimaster/pen/YzePpKP">
@@ -105,10 +105,10 @@ For the next version, let's add sorting. Sorting will be enabled by clicking on 
 ```html
 <thead>
 <tr>
-	<th @click="sort('name')">Name</th>
-	<th @click="sort('age')">Age</th>
-	<th @click="sort('breed')">Breed</th>
-	<th @click="sort('gender')">Gender</th>
+  <th @click="sort('name')">Name</th>
+  <th @click="sort('age')">Age</th>
+  <th @click="sort('breed')">Breed</th>
+  <th @click="sort('gender')">Gender</th>
 </tr>
 </thead>
 ```
@@ -215,7 +215,7 @@ document.addEventListener('alpine:init', () => {
 });
 ```
 
-So first off, `nextPage` and `previousPage` handle moving the user back and forth among the pages of data. The really important bit is `pagedCats`. It handles figuring out what 'slice' of the data should be returned. It also has to handle the data not being there yet. I didn't think I needed that as I thought `init` would fire before any read to data, but without it I got an error. Hence me returning a simple empty array if my cats aren't in yet.
+So first off, `nextPage` and `previousPage` handle moving the user back and forth among the pages of data. The really important bit is `pagedCats`. It handles figuring out what 'slice' of the data should be returned. It also has to handle the data not being there yet. I didn't think I needed that as I thought `init` would fire before any read to data, but without it, I got an error. Hence me returning a simple empty array if my cats aren't in yet.
 
 Now, I mentioned in part two I had forgotten something and I take care of it here. Notice this bit in `init`:
 
@@ -244,4 +244,4 @@ Here's the complete demo:
 
 ## Wrap Up
 
-Alright, so I've now done the same thing in [Vue](https://www.raymondcamden.com/2018/02/08/building-table-sorting-and-pagination-in-vuejs), [vanilla (i.e. no framework) JavaScript](https://www.raymondcamden.com/2022/03/14/building-table-sorting-and-pagination-in-javascript/) and Alpine. It is definitely not difficult, or a lot of work, to build this without a framework, and I'd probably use that option for a simple thing like enhancing a table. That being said, looking at both Vue and Alpine, I really liked building it in Alpine and appreciated not having to handle the DOM updates myself. With Alpine being so much lighter and simpler than Vue, in a case like this I'd definitely pick Alpine. As always, let me know what *you* think!
+Alright, so I've now done the same thing in [Vue](https://www.raymondcamden.com/2018/02/08/building-table-sorting-and-pagination-in-vuejs), [vanilla (i.e. no framework) JavaScript](https://www.raymondcamden.com/2022/03/14/building-table-sorting-and-pagination-in-javascript/) and Alpine. It is not difficult, or a lot of work, to build this without a framework, and I'd probably use that option for a simple thing like enhancing a table. That being said, looking at both Vue and Alpine, I really liked building it in Alpine and appreciated not having to handle the DOM updates myself. With Alpine being so much lighter and simpler than Vue, in a case like this, I'd pick Alpine. As always, let me know what *you* think!
