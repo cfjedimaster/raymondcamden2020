@@ -3,7 +3,7 @@ layout: post
 title: "Links For You"
 date: "2022-05-01T18:00:00"
 categories: ["misc"]
-tags: []
+tags: ["links4you"]
 banner_image: /images/banners/links.jpg
 permalink: /2022/05/01/links-for-you
 description: A few links for your Sunday...
