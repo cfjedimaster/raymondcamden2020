@@ -9,6 +9,8 @@ permalink: /2022/01/26/accessing-google-photos-with-pipedream
 description: How to use Pipedream's service to interact with your Google Photos
 ---
 
+**Edit: On May 19, 2022, I discovered an issue with my caching logic. Specifically, the URLs returned by getting a list of photos are only available for *one* hour. So I edited my cache to be 1 hour, not 6. I've tweaked the text around that area of the blog post as well.**
+
 Our family has had a Google Nest Hub in our kitchen for a year or two now. All of us use it every day for the most part. We'll use it for music, weather forecasts, and basic information queries. When not in use though it's got one of my favorite features - a digital photo album. I set mine up to continuously rotate photos from one of my Google Photos albums. Seeing the pictures always makes me smile and I was curious if I could bring that experience to the web. Obviously I could just open my browser to the [Google Photos](https://photos.google.com) website, but I really wanted something like the hardware - a random picture. Here's how I ended up building it using one of my favorite workflow services, [Pipedream](https://pipedream.com).
 
 I began by creating a HTTP triggered workflow. I went into this process not knowing exactly how the Google Photos API would work, but I had hoped I could stream the bits back in the request allowing me to do something simple like, `<img src="pipedream url">`. 
@@ -156,15 +158,15 @@ async (event, steps, auths) => {
 }
 ```
 
-Next, in my step to get photos, I added a 6 hour cache. Honestly I probably only add a photo to this album a few times a month, but I figured 6 hours was ok.
+Next, in my step to get photos, I added a one hour cache. Honestly I probably only add a photo to this album a few times a month, but one hour is the max allowed by Google for using the URLs.
 
 ```js
 async (event, steps, auths) => {
 
 	/*
-	Fetch photos once every six hours
+	Fetch photos once every one hour
 	*/
-	let cacheDuration = 6 * 60 * 60 * 1000;
+	let cacheDuration = 1 * 60 * 60 * 1000;
 	let now = Date.now();
 
 	if($checkpoint && $checkpoint.photoCacheTime && (now - $checkpoint.photoCacheTime < cacheDuration) && $checkpoint.photoCache) return $checkpoint.photoCache;
