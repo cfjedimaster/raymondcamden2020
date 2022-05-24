@@ -26,9 +26,9 @@ Online, May 25, 2022
 </p>
 
 <p>
-<a href="https://hopin.com/events/creative-cloud-partner-days-2022/registration">TBD</a><br/>
+<a href="https://hopin.com/events/creative-cloud-partner-days-2022/registration">Become a Document Superhero using Adobe PDF Services and Adobe Acrobat SIgn</a><br/>
 Creative Cloud Digital Partner Days<br/>
-Online, May 25, 2022
+Online, June 28, 2022
 </p>
 
 <p>
