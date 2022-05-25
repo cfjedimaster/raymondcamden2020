@@ -3,7 +3,7 @@
 	"lang": "en",
 	"name": "Raymond Camden",
 	"scope": "/",
-	"display": "browser",
+	"display": "standalone",
 	"start_url": "https://www.raymondcamden.com/",
 	"short_name": "Raymond Camden",
 	"theme_color": "transparent",
@@ -17,6 +17,10 @@
 		{
 			"src": "https://www.raymondcamden.com/favicon.ico",
 			"sizes": "48x48 32x32 16x16"
-		}
+		},
+		{
+			"src": "https://www.raymondcamden.com/favicon.png",
+			"sizes": "144x144"
+		},
 	]
 }

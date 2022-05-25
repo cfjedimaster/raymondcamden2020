@@ -13,6 +13,7 @@ module.exports = function(eleventyConfig) {
 	eleventyConfig.addPassthroughCopy("fonts");
 	eleventyConfig.addPassthroughCopy("./manifest.json");
 	eleventyConfig.addPassthroughCopy("./favicon.ico");
+	eleventyConfig.addPassthroughCopy("./favicon.png");
 	eleventyConfig.addPassthroughCopy("./robots.txt");
 	eleventyConfig.addPassthroughCopy("./ads.txt");
 	eleventyConfig.addPassthroughCopy("./_redirects");
