@@ -2,7 +2,7 @@
 layout: post
 title: "Improved Utility Actions with Pipedream"
 date: "2022-05-10T18:00:00"
-categories: ["severless"]
+categories: ["serverless"]
 tags: ["pipedream"]
 banner_image: /images/banners/utilities.jpg
 permalink: /2022/05/10/improved-utility-actions-with-pipedream
