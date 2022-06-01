@@ -26,17 +26,16 @@ Online, May 25, 2022
 </p>
 
 <p>
-<a href="https://hopin.com/events/creative-cloud-partner-days-2022/registration">Become a Document Superhero using Adobe PDF Services and Adobe Acrobat SIgn</a><br/>
+<a href="https://hopin.com/events/creative-cloud-partner-days-2022/registration">Become a Document Superhero using Adobe PDF Services and Adobe Acrobat Sign</a><br/>
 Creative Cloud Digital Partner Days<br/>
 Online, June 28, 2022
 </p>
 
 <p>
-<a href="https://www.javascriptandfriends.com/">An Overview of Client-Side Data Storage</a><br/>
-JavaScript &amp; Friends<br/>
-Columbus, OH, July 29, 2022
+<a href="https://that.us/activities/0xjqK7HWH9jB3CMjiprv">Peanut Butter Jamstack</a> and <a href="https://that.us/activities/ROoWjm8L9aEI1Aa6fiaX">A Beginner's Guide to Wrangling Asynchronicity in JavaScript</a><br/>
+THAT Conference<br/>
+Wisconsin Dells, WI, July 26-27, 2022
 </p>
-
 
 <h3>My Past Events</h3>
 
