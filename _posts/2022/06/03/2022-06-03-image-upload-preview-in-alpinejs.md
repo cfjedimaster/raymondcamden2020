@@ -15,37 +15,37 @@ Alpine.js is *very* similar to Vue so a lot of what follows is very close to the
 
 ```html
 <form x-data="imgPreview" x-cloak>
-	<label for="imgSelect">Select an Image:</label>
-	<input type="file" id="imgSelect" accept="image/*" x-ref="myFile" @change="previewFile">
-	<template x-if="imgsrc">
-		<p>
-		<img :src="imgsrc" class="imgPreview">
-		</p>
-	</template>
+    <label for="imgSelect">Select an Image:</label>
+    <input type="file" id="imgSelect" accept="image/*" x-ref="myFile" @change="previewFile">
+    <template x-if="imgsrc">
+        <p>
+        <img :src="imgsrc" class="imgPreview">
+        </p>
+    </template>
 </form>
 ```
 
-On top, the `x-data` directive maps the form to the JavaScript I'll show in a bit. I've then got a label and my input field. Note the use of `accept` to restrict the user to image files. (And as always, don't forget you can't trust stuff like this. Your code handling the upload will need to verify that an image was really uploaded.) The input field uses `@change` to specify a method to run when the value changes, `previewFile`. Also note the `x-ref`. Later on my code will need to directly access the DOM item and this is the Alpine way of doing it. 
+On top, the `x-data` directive maps the form to the JavaScript I'll show in a bit. I've then got a label and my input field. Note the use of `accept` to restrict the user to image files. (And as always, don't forget you can't trust stuff like this. Your code handling the upload will need to verify that an image was really uploaded.) The input field uses `@change` to specify a method to run when the value changes, `previewFile`. Also, note the `x-ref`. Later on, my code will need to directly access the DOM item and this is the Alpine way of doing it. 
 
-The second block handles the preview. I wrap it in a `x-if` so that the preview is only there when a value is present. That value, `imgsrc`, is bound to the image tag. Now let's look at the JavaScript:
+The second block handles the preview. I wrap it in an `x-if` so that the preview is only there when a value is present. That value, `imgsrc`, is bound to the image tag. Now let's look at the JavaScript:
 
 ```js
 document.addEventListener('alpine:init', () => {
   Alpine.data('imgPreview', () => ({
     imgsrc:null,
-	previewFile() {
-		let file = this.$refs.myFile.files[0];
-		if(!file || file.type.indexOf('image/') === -1) return;
-		this.imgsrc = null;
-		let reader = new FileReader();
+    previewFile() {
+        let file = this.$refs.myFile.files[0];
+        if(!file || file.type.indexOf('image/') === -1) return;
+        this.imgsrc = null;
+        let reader = new FileReader();
 
-		reader.onload = e => {
-			this.imgsrc = e.target.result;
-		}
+        reader.onload = e => {
+            this.imgsrc = e.target.result;
+        }
 
-		reader.readAsDataURL(file);
-	
-	}
+        reader.readAsDataURL(file);
+    
+    }
   }))
 });
 ```
@@ -56,8 +56,8 @@ The final part is a bit of CSS to ensure the image stays relatively small:
 
 ```css
 img.imgPreview {
-	max-width: 250px;
-	max-height: 250px;
+    max-width: 250px;
+    max-height: 250px;
 }
 ```
 
@@ -69,6 +69,3 @@ Want to give it a try? Check out the CodePen below:
   on <a href="https://codepen.io">CodePen</a>.</span>
 </p>
 <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
-
-
-
