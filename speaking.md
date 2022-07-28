@@ -20,21 +20,15 @@ Nothing planned currently. Invite me to speak at your event!
 -->
 
 <p>
-<a href="https://adobe-coldfusion-devweek-2022.attendease.com/">Enhance Your Web Pages with Alpine.js</a><br/>
-Adobe ColdFusion Developer Week 2022<br/>
-Online, July 18-22, 2022
-</p>
-
-<p>
-<a href="https://that.us/activities/0xjqK7HWH9jB3CMjiprv">Peanut Butter Jamstack</a> and <a href="https://that.us/activities/ROoWjm8L9aEI1Aa6fiaX">A Beginner's Guide to Wrangling Asynchronicity in JavaScript</a><br/>
-THAT Conference<br/>
-Wisconsin Dells, WI, July 26-27, 2022
-</p>
-
-<p>
 <a href="https://www.intothebox.org/">Extending PDF Capabilities With Adobe Document Services</a><br/>
 Into the Box - Pre Conference<br/>
 Online, August 29(ish - tbd), 2022
+</p>
+
+<p>
+<a href="https://events.geekle.us/js/">A Beginner's Guide to Wrangling Asynchronicity in JavaScript</a><br/>
+Into the Box - Pre Conference<br/>
+Online, September 27-28, 2022
 </p>
 
 <h3>My Past Events</h3>
@@ -44,6 +38,20 @@ Here are my past events, most recent first, in a nice scrollable list no one wil
 </p>
 
 <div style="height: 400px; overflow:scroll">
+
+<p>
+<a href="https://that.us/activities/0xjqK7HWH9jB3CMjiprv">Peanut Butter Jamstack</a> and <a href="https://that.us/activities/ROoWjm8L9aEI1Aa6fiaX">A Beginner's Guide to Wrangling Asynchronicity in JavaScript</a><br/>
+THAT Conference<br/>
+Wisconsin Dells, WI, July 26-27, 2022
+</p>
+
+
+<p>
+<a href="https://adobe-coldfusion-devweek-2022.attendease.com/">Enhance Your Web Pages with Alpine.js</a><br/>
+Adobe ColdFusion Developer Week 2022<br/>
+Online, July 18-22, 2022
+</p>
+
 <p>
 <a href="https://hopin.com/events/creative-cloud-partner-days-2022/registration">Become a Document Superhero using Adobe PDF Services and Adobe Acrobat Sign</a><br/>
 Creative Cloud Digital Partner Days<br/>
