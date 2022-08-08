@@ -27,7 +27,7 @@ Online, August 29(ish - tbd), 2022
 
 <p>
 <a href="https://events.geekle.us/js/">A Beginner's Guide to Wrangling Asynchronicity in JavaScript</a><br/>
-Into the Box - Pre Conference<br/>
+JavaScript Global Conference<br/>
 Online, September 27-28, 2022
 </p>
 
