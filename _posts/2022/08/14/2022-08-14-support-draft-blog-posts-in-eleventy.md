@@ -116,7 +116,7 @@ page: /posts/alpha/, title alpha, tags: posts<br/>
 page: false, title beta, tags: <br/>
 ```
 
-So yeah, my non-draft post was correctly tagged but didn't show up in the collection. I'm not sure what to think about that and possibly it's a bug (after publishing this I'll file), but I took another approach. 
+So yeah, my non-draft post was correctly tagged but didn't show up in the collection. I'm not sure what to think about that and possibly it's a bug (after publishing this I'll file - update - I filed it [here](https://github.com/11ty/eleventy/issues/2529)), but I took another approach. 
 
 In `.eleventy.js`, I added a custom collection:
 
