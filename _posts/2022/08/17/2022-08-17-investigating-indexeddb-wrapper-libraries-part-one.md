@@ -9,11 +9,11 @@ permalink: /2022/08/17/investigating-indexeddb-wrapper-libraries-part-one
 description: Looking into easier ways to work with IndexedDB for client-side storage.
 ---
 
-Many years ago, in fact during my first stint at Adobe, I got pretty deep into client-side storage mechanisms for the web. At the time, "HTML5" was the buzzword and a lot of people were talking about improved capabilities for the web, but it seemed to me that a lot of the talk was focused around more visual components like Canvas. For me, I got more excited about things like new form fields and storage. I spent a lot of time digging into various ways of storing data, I even [wrote a book](https://www.amazon.com/gp/product/1491935111/ref=as_li_tl?ie=UTF8&tag=raymondcamd06-20&camp=1789&creative=9325&linkCode=as2&creativeASIN=1491935111&linkId=239944c4f3cbf1e35ce47f4eb857b2a7) on the topic. But after spending a lot of time digging into it I moved on to other topics. 
+Many years ago, in fact, during my first stint at Adobe, I got pretty deep into client-side storage mechanisms for the web. At the time, "HTML5" was the buzzword and a lot of people were talking about improved capabilities for the web, but it seemed to me that a lot of the talk was focused on more visual components like Canvas. For me, I got more excited about things like new form fields and storage. I spent a lot of time digging into various ways of storing data, I even [wrote a book](https://www.amazon.com/gp/product/1491935111/ref=as_li_tl?ie=UTF8&tag=raymondcamd06-20&camp=1789&creative=9325&linkCode=as2&creativeASIN=1491935111&linkId=239944c4f3cbf1e35ce47f4eb857b2a7) on the topic. But after spending a lot of time digging into it I moved on to other topics. 
 
-Now - many years later - it's on my mind again, specifically IndexedDB. When I first got deep into the topic, I focused on using it as is, just the raw API, and didn't really dig into helper libraries. I thought it would be a good time to look into some of the options out there and see which fit best for my development. IndexedDB isn't necessarily hard to use, but it's a bit complex and requires a bit of planning. When compared to LocalStage it's *much* more difficult, but still absolutely usable with some practice. However it can certainly be simpler with a nice utility library. 
+Now - many years later - it's on my mind again, specifically IndexedDB. When I first got deep into the topic, I focused on using it as is, just the raw API, and didn't dig into helper libraries. I thought it would be a good time to look into some of the options out there and see which fit best for my development. IndexedDB isn't necessarily hard to use, but it's a bit complex and requires a bit of planning. When compared to LocalStage it's *much* more difficult, but still absolutely usable with some practice. However, it can certainly be simpler with a nice utility library. 
 
-As I've already covered *how* to use IndexedDB here in the past I won't go into it again, but I'll use this opportunity to link to the *best* resource for learning anything web related, the mdn web doc. Their [IndexedDB](https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API) docs are great and go deep into the concepts and APIs. 
+As I've already covered *how* to use IndexedDB here in the past I won't go into it again, but I'll use this opportunity to link to the *best* resource for learning anything web related, the mdn web docs. Their [IndexedDB](https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API) docs are great and go deep into the concepts and APIs. 
 
 For this first blog post, I'm going to demonstrate a simple application that uses IndexedDB without any helper libraries at all. It's a simple "Contacts" application (see my [earlier post](https://www.raymondcamden.com/2022/08/11/building-a-web-based-badge-scanner) for something similar) that stores a list of people, including a first name, last name, and email property. The interface lists contacts and provides a form to the right. The form on the right can be used for creating new contacts or editing existing ones.
 
@@ -25,36 +25,36 @@ I'll share the complete code for the application at the end, and I'm going to sk
 
 ## Initialize the Database
 
-Any use of IndexedDB requires opening a connection to a database and handling initial object store creation. To further complicate matters, IndexedDB supports versioning and you're only allowed to make changes to a database on a version changing. I handle all of this in one function:
+Any use of IndexedDB requires opening a connection to a database and handling initial object store creation. To further complicate matters, IndexedDB supports versioning and you're only allowed to make changes to a database on a version change. I handle all of this in one function:
 
 ```js
 async function initDb() {
-	return new Promise((resolve, reject) => {
-		
-		let request = indexedDB.open('contacts', 1);
+    return new Promise((resolve, reject) => {
+        
+        let request = indexedDB.open('contacts', 1);
 
-		request.onerror = event => {
-			alert('Error Event, check console');
-			console.error(event);
-		}
-		
-		request.onupgradeneeded = event => {
-			console.log('idb onupgradeneeded firing');
+        request.onerror = event => {
+            alert('Error Event, check console');
+            console.error(event);
+        }
+        
+        request.onupgradeneeded = event => {
+            console.log('idb onupgradeneeded firing');
 
-			let db = event.target.result;
+            let db = event.target.result;
 
-			let objectStore = db.createObjectStore('contacts', { keyPath: 'id', autoIncrement:true });
-			objectStore.createIndex('lastname', 'lastname', { unique: false });
-		};
-		
-		request.onsuccess = event => {
-			resolve(event.target.result);
-		};
-	});
+            let objectStore = db.createObjectStore('contacts', { keyPath: 'id', autoIncrement:true });
+            objectStore.createIndex('lastname', 'lastname', { unique: false });
+        };
+        
+        request.onsuccess = event => {
+            resolve(event.target.result);
+        };
+    });
 }
 ```
 
-You'll notice I'm returning a promise so I can use it easier. I open the database, listen for an `onupgradeneeded` event, which will fire the first time the user hits the page, and set up the object store. For my contacts, I want an auto incrementing key named `id`. Not *too* bad, but outside of this function I can just do:
+You'll notice I'm returning a promise so I can use it easier. I open the database, listen for an `onupgradeneeded` event, which will fire the first time the user hits the page, and set up the object store. For my contacts, I want an auto-incrementing key named `id`. Not *too* bad, but outside of this function I can just do:
 
 ```js
 db = await initDb();
@@ -68,29 +68,29 @@ I love async/await like I love a good cookie.
 
 Now let's look at the various CRUD (Create/Read/Update/Delete) functions.
 
-## Get All Conctacts
+## Get All Contacts
 
 Getting all my contacts so I can render them in a table isn't too difficult since there's a `getAll()` API for IndexedDB.
 
 ```js
 async function getContacts() {
-	return new Promise((resolve, reject) => {
-		let transaction = db.transaction(['contacts'], 'readonly');
-		
-		transaction.onerror = event => {
-			reject(event);
-		};
-		
-		let store = transaction.objectStore('contacts');
-		store.getAll().onsuccess = event => {
-			resolve(event.target.result);
-		};
-	
-	});
+    return new Promise((resolve, reject) => {
+        let transaction = db.transaction(['contacts'], 'readonly');
+        
+        transaction.onerror = event => {
+            reject(event);
+        };
+        
+        let store = transaction.objectStore('contacts');
+        store.getAll().onsuccess = event => {
+            resolve(event.target.result);
+        };
+    
+    });
 }
 ```
 
-Back in the calling code I can just do: 
+Back in the calling code, I can just do: 
 
 ```js
 let contacts = await getContacts();
@@ -100,23 +100,23 @@ The result is simple JavaScript objects in an array, so it's not difficult to us
 
 ## Get One Contact
 
-Getting one contact requires a primary key. In my case I used the `id` property so once I know that, I can use `get(key)` to fetch the record. Here's that function:
+Getting one contact requires a primary key. In my case, I used the `id` property so once I know that, I can use `get(key)` to fetch the record. Here's that function:
 
 ```js
 async function getContact(key) {
-	return new Promise((resolve, reject) => {
-		let transaction = db.transaction(['contacts'], 'readonly');
-		
-		transaction.onerror = event => {
-			reject(event);
-		};
-		
-		let store = transaction.objectStore('contacts');
-		store.get(key).onsuccess = event => {
-			resolve(event.target.result);
-		};
-	
-	});
+    return new Promise((resolve, reject) => {
+        let transaction = db.transaction(['contacts'], 'readonly');
+        
+        transaction.onerror = event => {
+            reject(event);
+        };
+        
+        let store = transaction.objectStore('contacts');
+        store.get(key).onsuccess = event => {
+            resolve(event.target.result);
+        };
+    
+    });
 }
 ```
 
@@ -132,21 +132,21 @@ One way IndexedDB is a bit simple however is with storing records. While there's
 
 ```js
 async function persistContact(contact) {
-	return new Promise((resolve, reject) => {
-		
-		let transaction = db.transaction(['contacts'], 'readwrite');
-		transaction.oncomplete = event => {
-			resolve();
-		};
-		
-		transaction.onerror = event => {
-			reject(event);
-		};
-		
-		let store = transaction.objectStore('contacts');
-		store.put(contact);
-		
-	});
+    return new Promise((resolve, reject) => {
+        
+        let transaction = db.transaction(['contacts'], 'readwrite');
+        transaction.oncomplete = event => {
+            resolve();
+        };
+        
+        transaction.onerror = event => {
+            reject(event);
+        };
+        
+        let store = transaction.objectStore('contacts');
+        store.put(contact);
+        
+    });
 }
 ```
 
@@ -162,28 +162,28 @@ For the last and final CRUD method we need, I set up a delete method. This requi
 
 ```js
 async function removeContact(key) {
-	return new Promise((resolve, reject) => {
-		let transaction = db.transaction(['contacts'], 'readwrite');
+    return new Promise((resolve, reject) => {
+        let transaction = db.transaction(['contacts'], 'readwrite');
 
-		transaction.oncomplete = event => {
-			resolve();
-		};
-		
-		transaction.onerror = event => {
-			reject(event);
-		};
-		
-		let store = transaction.objectStore('contacts');
-		store.delete(key);
-		
-	});
+        transaction.oncomplete = event => {
+            resolve();
+        };
+        
+        transaction.onerror = event => {
+            reject(event);
+        };
+        
+        let store = transaction.objectStore('contacts');
+        store.delete(key);
+        
+    });
 }
 ```
 
 And here is the code using it:
 
 ```js
-await removeContact(key);	
+await removeContact(key);   
 ```
 
 ## The Whole Enchilada
