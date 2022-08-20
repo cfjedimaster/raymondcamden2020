@@ -210,6 +210,10 @@ module.exports = function(eleventyConfig) {
     return getCommentText(e,old);
   });
 
+  eleventyConfig.addGlobalData("isLocal", () => {
+    return process.env.ISLOCAL?true:false;
+  });
+
   // Testing new layout
   /*
   let includes = '_includes';
