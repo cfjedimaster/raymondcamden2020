@@ -8,7 +8,7 @@ body_class: home-template
 
     <title>{% if renderData.title %}{{ renderData.title | titlecase }}{% elsif title %}{{ title }}{% else %}{{ site.title }}{% endif %}</title> 
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self' https://fonts.googleapis.com https://img.buymeacoffee.com; script-src 'self' https://cpwebassets.codepen.io https://static.cloudflareinsights.com https://cloudflareinsights.com https://code.jquery.com https://www.googletagmanager.com 'unsafe-inline'; object-src 'none'; style-src https: 'self' 'unsafe-inline'; img-src 'self' https:;font-src https://fonts.gstatic.com; connect-src https: ws://localhost:8888 http://localhost:8888; frame-src https:">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' https://fonts.googleapis.com https://img.buymeacoffee.com; script-src 'self' https: 'unsafe-inline'; object-src 'none'; style-src https: 'self' 'unsafe-inline'; img-src 'self' https:;font-src https://fonts.gstatic.com; connect-src https: ws://localhost:8888 http://localhost:8888; frame-src https:">
     <meta name="generator" content="{{ eleventy.generator }}">
 	<link href="https://fonts.googleapis.com/css?family=Crimson+Text:400,400i,600,600i%7CKarla:400,400i,700,700i" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="/css/style.css" />
