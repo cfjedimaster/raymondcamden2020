@@ -21,6 +21,7 @@ I have not done a great job of tracking my various articles on other web sites, 
 somewhat complete from 2013 and onward.
 
 <ul>
+<li><a href="https://verpex.com/blog/website-tips/markdown-guide">Markdown Guide</a> for Verpex</li>
 <li><a href="https://verpex.com/blog/website-tips/digging-into-alpine-js">Digging into Alpine.js</a> for Verpex</li>
 <li><a href="https://verpex.com/blog/website-tips/top-six-things-to-avoid-in-your-website">Top Six Things to Avoid in Your Website</a> for Verpex</li>
 <li><a href="https://verpex.com/blog/website-tips/exploring-alternatives-to-google-analytics">Exploring Alternatives to Google Analytics</a> for Verpex</li>
