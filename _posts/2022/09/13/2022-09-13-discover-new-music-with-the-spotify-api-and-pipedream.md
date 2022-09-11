@@ -98,7 +98,7 @@ The important bit is the `params` block where I access the earlier steps. The re
 <img data-src="https://static.raymondcamden.com/images/2022/09/music4.jpg" alt="Result of API call" class="lazyload imgborder imgcenter">
 </p>
 
-All we need to do now is get a random track from that step. While building this, [Zalman Lew](https://twitter.com/zalmanlew) on the Pipedream Slack let me know there's actually a Pipedream step built in that lets you point to an array of data and have a random one returned. So while I could have done it in a few lines of Python, I went with the built-in step:
+All we need to do now is get a random track from that step. While building this, [Zalman Lew](https://twitter.com/zalmanlew) on the Pipedream Slack let me know there's actually a Pipedream step built in that lets you point to an array of data and have a random one returned. (You can find it in Helpers, named "Random Item from List".) So while I could have done it in a few lines of Python, I went with the built-in step:
 
 <p>
 <img data-src="https://static.raymondcamden.com/images/2022/09/music5.jpg" alt="" class="lazyload imgborder imgcenter">
