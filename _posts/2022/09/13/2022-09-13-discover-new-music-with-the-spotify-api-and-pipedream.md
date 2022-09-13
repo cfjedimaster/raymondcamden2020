@@ -139,7 +139,7 @@ def handler(pd: "pipedream"):
 
 Spotify's API returns *a lot* of information about the track, but I figured the title, artists, and album cover was enough. With my HTML string complete, I then just added a built-in Pipedream "send the account owner an email" step, and as always, I used the HTML value for the text value, and as I always say, don't do this in production, but for my testing, it worked fine. 
 
-Unfortunately, you still can't publicly share Pipedream V2 workflows, but if you want to see more of the workflow, feel free to reach out directly. Let me know if you've got any questions!
+Unfortunately, you still can't publicly share Pipedream V2 workflows, but if you want to see more of the workflow, feel free to reach out directly. Let me know if you've got any questions! *Edit:* Dylan Pierce of Pipedream was able to make a sharable version of my workflow - so if you want, you can grab it here: https://pipedream.com/new?h=tch_ORVfyO
 
 Photo by <a href="https://unsplash.com/@adkorte?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Adrian Korte</a> on <a href="https://unsplash.com/s/photos/music?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
   
