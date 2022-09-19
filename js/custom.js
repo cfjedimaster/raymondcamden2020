@@ -166,7 +166,9 @@ async function doWebMentions() {
     let retweets = mentions.filter(m => m['wm-property'] === 'repost-of');
     console.log('RTs', retweets.length);
 
-    let replies = mentions.filter(m => ['in-reply-to','mention-of'].indexOf(m['wm-property']) >= 0).sort((a, b) => {
+    let replies = mentions.filter(m => ['in-reply-to','mention-of'].indexOf(m['wm-property']) >= 0)
+    .filter(m => m.author.name !== '')
+    .sort((a, b) => {
         let aDate = new Date(a.published);
         let bDate = new Date(b.published);
         if(aDate.getTime() < bDate.getTime()) return -1;
