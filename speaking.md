@@ -19,15 +19,16 @@ I started a blog. I feel like I have to struggle to learn new things and if I ca
 Nothing planned currently. Invite me to speak at your event! 
 -->
 <p>
-<a href="https://cfsummit.adobeevents.com/attendease/networking/experience/dca5a3d0-cb4e-447a-818f-0cfebc4f3e22/0915d7ca-fb41-48a6-ad07-9ee17b2b06cf">Mining Electronic Documents for Fun and Profit (and other business critical needs)</a><br/>
-ColdFusion Summit 2022<br/>
-Las Vegas, NV, October 3-4, 2022
-</p>
-
-<p>
 <a href="https://events.geekle.us/js/">A Beginner's Guide to Wrangling Asynchronicity in JavaScript</a><br/>
 JavaScript Global Conference<br/>
 Online, September 27-28, 2022
+</p>
+
+
+<p>
+<a href="https://cfsummit.adobeevents.com/attendease/networking/experience/dca5a3d0-cb4e-447a-818f-0cfebc4f3e22/0915d7ca-fb41-48a6-ad07-9ee17b2b06cf">Mining Electronic Documents for Fun and Profit (and other business critical needs)</a><br/>
+ColdFusion Summit 2022<br/>
+Las Vegas, NV, October 3-4, 2022
 </p>
 
 <p>
