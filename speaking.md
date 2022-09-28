@@ -18,11 +18,6 @@ I started a blog. I feel like I have to struggle to learn new things and if I ca
 <!--
 Nothing planned currently. Invite me to speak at your event! 
 -->
-<p>
-<a href="https://events.geekle.us/js/">A Beginner's Guide to Wrangling Asynchronicity in JavaScript</a><br/>
-JavaScript Global Conference<br/>
-Online, September 27-28, 2022
-</p>
 
 
 <p>
@@ -44,6 +39,12 @@ Here are my past events, most recent first, in a nice scrollable list no one wil
 </p>
 
 <div style="height: 400px; overflow:scroll">
+<p>
+<a href="https://events.geekle.us/js/">A Beginner's Guide to Wrangling Asynchronicity in JavaScript</a><br/>
+JavaScript Global Conference<br/>
+Online, September 27-28, 2022
+</p>
+
 <p>
 <a href="https://www.intothebox.org/">Extending PDF Capabilities With Adobe Document Services</a><br/>
 Into the Box - Pre Conference<br/>
