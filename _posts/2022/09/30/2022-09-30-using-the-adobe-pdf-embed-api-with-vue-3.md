@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Using the Adobe PDF EMbed API with Vue 3"
+title: "Using the Adobe PDF Embed API with Vue 3"
 date: "2022-09-30T18:00:00"
 categories: ["development"]
 tags: ["adobe","pdf services","vuejs"]
