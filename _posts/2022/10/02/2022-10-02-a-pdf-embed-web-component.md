@@ -18,7 +18,6 @@ Until today. When randomly, this popped back into my head, and I wondered - can 
 Let me share the code, and then I'll show it in action. Here's the entire component:
 
 ```js
-Beautify…
 import {
     v4 as uuidv4
 } from 'https://jspm.dev/uuid';
