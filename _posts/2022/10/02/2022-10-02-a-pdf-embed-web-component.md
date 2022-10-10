@@ -126,6 +126,8 @@ If you want to see the component or possibly even make some edits, you can find 
 
 <https://github.com/cfjedimaster/webdemos/blob/master/webcomponents/pdfembed.js>
 
+**Edit on 10/10/2022: New location: <https://github.com/cfjedimaster/webcomponents/tree/main/pdfembed>**
+
 I also put it up on CodePen here:
 
 <p class="codepen" data-height="700" data-default-tab="result" data-slug-hash="wvjjEWR" data-user="cfjedimaster" style="height: 700px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
