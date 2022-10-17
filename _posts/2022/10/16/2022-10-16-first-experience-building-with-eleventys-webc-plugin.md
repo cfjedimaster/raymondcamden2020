@@ -198,5 +198,7 @@ You'll notice a lot of white space in the output above. While you can fix that w
 
 Want to see it yourself? I decided to give it a try on Glitch, a service I discovered a month or so ago. You can browse a live, working Eleventy site on their service here: <https://glitch.com/edit/#!/placeholder-demo>. You can view the running version here: <https://placeholder-demo.glitch.me/> Give it a shot and let me know what you think. 
 
+**Edit on 10/17 at 1:13PM:** Just a quick note. I got an email from Rian Murnen who pointed out I could help limit the whitespace using Liquid dashes: <https://shopify.github.io/liquid/basics/whitespace/>. I made this tweak on a fork of the Glitch here: <https://glitch.com/edit/#!/screeching-stitch-field> You can *absolutely* see the difference. I could probably shrink the whitespace more but this was a great quick change. Thanks, Rian!
+
 Photo by <a href="https://unsplash.com/@mateusz_feliksik?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Mateusz Feliksik</a> on <a href="https://unsplash.com/s/photos/orange-juice?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
   
