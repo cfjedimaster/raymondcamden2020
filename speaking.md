@@ -20,13 +20,6 @@ Nothing planned currently. Invite me to speak at your event!
 -->
 
 <p>
-<a href="https://www.eventbrite.com/e/document-services-apis-and-you-tickets-428587234957">Document Services APIs and You</a><br/>
-CFUG Tech Talk<br/>
-Online, October 20, 2022
-</p>
-
-
-<p>
 <a href="https://www.devfestbr.com/">A Beginner's Guide to Wrangling Asynchronicity in JavaScript</a><br>
 DevFest Baton Rouge<br/>
 Baton Rouge, LA, October 29, 2022
@@ -39,6 +32,12 @@ Here are my past events, most recent first, in a nice scrollable list no one wil
 </p>
 
 <div style="height: 400px; overflow:scroll">
+<p>
+<a href="https://www.eventbrite.com/e/document-services-apis-and-you-tickets-428587234957">Document Services APIs and You</a><br/>
+CFUG Tech Talk<br/>
+Online, October 20, 2022
+</p>
+
 <p>
 <a href="https://cfsummit.adobeevents.com/attendease/networking/experience/dca5a3d0-cb4e-447a-818f-0cfebc4f3e22/0915d7ca-fb41-48a6-ad07-9ee17b2b06cf">Mining Electronic Documents for Fun and Profit (and other business critical needs)</a><br/>
 ColdFusion Summit 2022<br/>
