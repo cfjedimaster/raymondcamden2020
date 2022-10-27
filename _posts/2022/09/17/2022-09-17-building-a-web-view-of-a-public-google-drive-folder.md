@@ -3,7 +3,7 @@ layout: post
 title: "Building a Web View of a Public Google Drive Folder"
 date: "2022-09-17T18:00:00"
 categories: ["javascript"]
-tags: ["pipedream","alpine"]
+tags: ["pipedream","alpinejs"]
 banner_image: /images/banners/files.jpg
 permalink: /2022/09/17/building-a-web-view-of-a-public-google-drive-folder
 description: How I used Pipedream and Alpine to build a web-based front end to a Google Drive Folder
