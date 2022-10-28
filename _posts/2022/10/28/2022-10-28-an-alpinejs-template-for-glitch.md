@@ -57,6 +57,22 @@ document.addEventListener('alpine:init', () => {
 
 When I write Alpine, I don't like including code in the HTML, so I do everything inside an `alpine:init` block. I also almost always use the `init` method, so I've got an empty one there. 
 
+Finally, and I forgot this part when I published the blog post a few minutes ago, I added an `.eslintrc.json` file so that the Glitch editor wouldn't complain about the `Alpine` global:
+
+```json
+{
+  "globals": {
+    "Apline": "readonly"
+  },
+  "parserOptions": {
+    "ecmaVersion": "latest"
+  },
+  "env": {
+    "es6": true
+  }
+}
+```
+
 Cool. So how do you use this? You could copy and paste, but Glitch makes this easier. Click `New Project` in the upper right-hand UI:
 
 <p>
