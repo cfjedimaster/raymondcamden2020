@@ -34,7 +34,27 @@ body_class: post-template
 
         {% if banner_image %}
 		<div class="post-thumbnail">
+			{% comment %}
 			<img src="{{ "https://static.raymondcamden.com" | append: banner_image }}" alt="{% if banner_image_alt %}{{ banner_image_alt }}{% else %}{{ title | my_xml_escape}}{% endif %}">
+			{% endcomment %}
+			{% comment %}
+			
+			<img
+				sizes="(max-width: 650px) 100px, 650px"
+				srcset="{{ banner }} 650w, 
+				https://res.cloudinary.com/raymondcamden/image/fetch/c_fit,w_200/{{ banner }} 100w"
+				src="{{ banner }}"
+				alt="{% if banner_image_alt %}{{ banner_image_alt }}{% else %}{{ title | my_xml_escape}}{% endif %}"
+			/>
+			{% endcomment %}
+
+			{% assign banner = "https://static.raymondcamden.com" | append: banner_image %}
+			<picture>
+				<source media="(max-width: 799px)" srcset="https://res.cloudinary.com/raymondcamden/image/fetch/c_fit,w_300/{{ banner }}">
+				<source media="(max-width: 800px)" srcset="{{ banner }}">
+				<img src="{{banner}}" alt="{% if banner_image_alt %}{{ banner_image_alt }}{% else %}{{ title | my_xml_escape}}{% endif %}">
+			</picture>
+			
 		</div>
 		{% endif %}
 

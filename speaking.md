@@ -20,10 +20,11 @@ Nothing planned currently. Invite me to speak at your event!
 -->
 
 <p>
-<a href="https://www.devfestbr.com/">A Beginner's Guide to Wrangling Asynchronicity in JavaScript</a><br>
-DevFest Baton Rouge<br/>
-Baton Rouge, LA, October 29, 2022
+<a href="https://2022.connect.tech/session?id=356006">Mining Electronic Documents for Fun and Profit (and other business critical needs)</a><br>
+Connect.Tech<br/>
+Atlanta, GA, November 8-9, 2022
 </p>
+
 
 <h3>My Past Events</h3>
 
@@ -32,6 +33,13 @@ Here are my past events, most recent first, in a nice scrollable list no one wil
 </p>
 
 <div style="height: 400px; overflow:scroll">
+
+<p>
+<a href="https://www.devfestbr.com/">A Beginner's Guide to Wrangling Asynchronicity in JavaScript</a><br>
+DevFest Baton Rouge<br/>
+Baton Rouge, LA, October 29, 2022
+</p>
+
 <p>
 <a href="https://www.eventbrite.com/e/document-services-apis-and-you-tickets-428587234957">Document Services APIs and You</a><br/>
 CFUG Tech Talk<br/>
