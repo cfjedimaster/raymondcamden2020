@@ -1,0 +1,24 @@
+---
+layout: page
+title: All Posts
+description: Every.... single post. Ever
+body_class: page-template
+---
+
+{% assign thisYear = "now" | date: "%Y" %}
+{% assign posts = collections.posts | reverse %}
+
+{% for year in (2003..thisYear) reversed %}
+
+	<details>
+		<summary>{{year}}</summary>
+		<h3>Posts for {{ year }}</h3>
+		{% for post in posts %}
+			{% assign postYear = post.date | date: "%Y" | plus: 0%}
+			{% if postYear == year %}
+				<a href="{{ post.url }}">{{ post.data.title }}</a><br/>
+			{% endif %}
+
+		{% endfor %}
+	</details>
+{% endfor %}
