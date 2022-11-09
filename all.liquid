@@ -7,8 +7,10 @@ body_class: page-template
 
 {% assign thisYear = "now" | date: "%Y" %}
 {% assign posts = collections.posts | reverse %}
+{% assign firstPost = collections.posts | first %}
+{% assign firstYear = firstPost.date | date: "%Y" %}
 
-{% for year in (2003..thisYear) reversed %}
+{% for year in (firstYear..thisYear) reversed %}
 
 	<details>
 		<summary>{{year}}</summary>
@@ -16,7 +18,7 @@ body_class: page-template
 		{% for post in posts %}
 			{% assign postYear = post.date | date: "%Y" | plus: 0%}
 			{% if postYear == year %}
-				<a href="{{ post.url }}">{{ post.data.title }}</a><br/>
+				<a href="{{ post.url }}">{{ post.data.title }}</a> ({{ post.date | date: "%m/%d/%Y" }})<br/>
 			{% endif %}
 		{% endfor %}
 	</details>
