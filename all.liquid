@@ -5,8 +5,9 @@ description: Every.... single post. Ever
 body_class: page-template
 ---
 
-{% assign thisYear = "now" | date: "%Y" %}
 {% assign posts = collections.posts | reverse %}
+
+{% assign thisYear = "now" | date: "%Y" %}
 {% assign firstPost = collections.posts | first %}
 {% assign firstYear = firstPost.date | date: "%Y" %}
 
@@ -16,7 +17,7 @@ body_class: page-template
 		<summary>{{year}}</summary>
 		<h3>Posts for {{ year }}</h3>
 		{% for post in posts %}
-			{% assign postYear = post.date | date: "%Y" | plus: 0%}
+			{% assign postYear = post.date | date: "%Y" | plus: 0 %}
 			{% if postYear == year %}
 				<a href="{{ post.url }}">{{ post.data.title }}</a> ({{ post.date | date: "%m/%d/%Y" }})<br/>
 			{% endif %}
