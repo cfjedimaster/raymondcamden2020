@@ -4,7 +4,7 @@ title: "Some Options for Timing Pages in Eleventy"
 date: "2022-11-14T18:00:00"
 categories: ["jamstack"]
 tags: ["eleventy"]
-banner_image: /images/banners/welcome2018.jpg
+banner_image: /images/banners/finish-line.jpg
 permalink: /2022/11/14/some-options-for-timing-pages-in-eleventy
 description: Some experiments timing slow pages with Eleventy
 ---
@@ -207,3 +207,6 @@ I do want to point out that there is a reported bug with this plugin and the lat
 ## Final Thoughts
 
 So, I did all of this and I still didn't bother improving my `all` page. Honestly, I just wanted to learn what my options are, and one thing Eleventy has been *really* consistent about is providing multiple ways to solve problems. This is truly why I love the project!
+
+Photo by <a href="https://unsplash.com/es/@rockthechaos?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Kolleen  Gladden</a> on <a href="https://unsplash.com/s/photos/performance?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+  
