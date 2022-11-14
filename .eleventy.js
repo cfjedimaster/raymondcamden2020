@@ -1,7 +1,7 @@
 const xmlFiltersPlugin = require('eleventy-xml-plugin');
 const htmlmin = require("html-minifier");
 const fs = require('fs');
-
+const directoryOutputPlugin = require('@11ty/eleventy-plugin-directory-output');
 
 module.exports = function(eleventyConfig) {
   
@@ -19,6 +19,9 @@ module.exports = function(eleventyConfig) {
 	eleventyConfig.addPassthroughCopy("./*.png");
 	eleventyConfig.addPassthroughCopy("./service-worker.js");
 
+  eleventyConfig.setQuietMode(true);
+  eleventyConfig.addPlugin(directoryOutputPlugin);
+  
 	//reference: https://github.com/11ty/eleventy/issues/179#issuecomment-413119342
 	eleventyConfig.addShortcode('excerpt', post => extractExcerpt(post));
 

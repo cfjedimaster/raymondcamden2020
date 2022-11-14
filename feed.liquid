@@ -26,10 +26,13 @@ permalink: /feed.xml
                 <content type="html">
 				{% if post.templateContent contains '<!--more-->' %}
                         {{ post.content | split:'<!--more-->' | first | my_xml_escape }}
-                    {% else %}
-						{% capture content %}{% excerpt post %}{% endcapture %}
+                {% else %}
+                        {{ post.templateContent | my_xml_escape }}
+                        {% comment %}
+    					{% capture content %}{% excerpt post %}{% endcapture %}
                         {{ content | my_xml_escape }}
-                    {% endif %}
+                        {% endcomment %}
+                {% endif %}
 				</content>
 
                 {% for tag in post.data.tags %}

@@ -20,6 +20,7 @@
   "dependencies": {
     "-": "^0.0.1",
     "@11ty/eleventy": "2.0.0-canary.16",
+    "@11ty/eleventy-plugin-directory-output": "^1.0.1",
     "@google-analytics/data": "^2.8.0",
     "algolia-indexing": "^1.0.1",
     "algoliasearch": "^4.2.0",
