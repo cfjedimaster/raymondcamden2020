@@ -9,6 +9,6 @@ pagination:
         - categories
 permalink: "tags/{{ tag | myEscape }}/"
 layout: tag
-renderData:
-    title: "{{ tag }}"
+eleventyComputed:
+    title: "{{ tag | titlecase}}"
 ---

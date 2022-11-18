@@ -5,6 +5,6 @@ pagination:
     alias: cat
 permalink: "categories/{{ cat | myEscape }}/"
 layout: category
-renderData:
-    title: "{{ cat }}"
+eleventyComputed:
+    title: "{{ cat | titlecase }}"
 ---
