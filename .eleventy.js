@@ -19,6 +19,8 @@ module.exports = function(eleventyConfig) {
 	eleventyConfig.addPassthroughCopy("./*.png");
 	eleventyConfig.addPassthroughCopy("./service-worker.js");
 
+  eleventyConfig.setServerPassthroughCopyBehavior("copy");
+  
   eleventyConfig.setQuietMode(true);
   eleventyConfig.addPlugin(directoryOutputPlugin);
   
