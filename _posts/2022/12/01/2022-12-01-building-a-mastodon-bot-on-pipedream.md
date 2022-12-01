@@ -134,13 +134,13 @@ Much like Twitter, to create a toot with an image, you first upload the image an
 import Mastodon from 'mastodon-api'
 import fs from 'fs'
 
-const M = new Mastodon({
-  access_token: process.env.CAT_BOT_MASTODON,
-  api_url: 'https://botsin.space/api/v1/', 
-})
-
 export default defineComponent({
   async run({ steps, $ }) {
+
+      const M = new Mastodon({
+        access_token: process.env.CAT_BOT_MASTODON,
+        api_url: 'https://botsin.space/api/v1/', 
+      });
 
       let resp = await M.post('media', { file: fs.createReadStream('/tmp/cat.jpg') });
 
@@ -161,4 +161,4 @@ While not the best pic, it's got Star Wars too, so here's a sample:
 
 <iframe src="https://botsin.space/@superjoycat/109439745302574877/embed" class="mastodon-embed" style="max-width: 100%; border: 0; display:block;margin:auto;margin-bottom:15px" width="400" allowfullscreen="allowfullscreen"></iframe><script src="https://botsin.space/embed.js" async="async"></script>
 
-You can create a copy of my workflow here: <https://pipedream.com/new?h=tch_mD7f8Q>
+You can create a copy of my workflow here: <https://pipedream.com/new?h=tch_O4Rf94>
