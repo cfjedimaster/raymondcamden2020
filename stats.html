@@ -61,6 +61,7 @@ table tr td:first-child {
         </tr>
     </table>
 
+    <!--
     <h3>Post Views for Items in RSS</h3>
     <table>
         <tr>
@@ -72,6 +73,8 @@ table tr td:first-child {
             <td>{{post.views}}</td>
         </tr>
     </table>
+    -->
+    
     <h3>Posts Per Year</h3>
     <table>
         <tr>
@@ -218,6 +221,7 @@ new Vue({
         } else this.buildStatus = buildData.state;
 
         // new rss thing
+        /*
         let rss = await (await fetch('/jsonfeed/index.json')).json();
         for(item of rss.items) {
             let url = item.id.replace('https://','');
@@ -228,6 +232,7 @@ new Vue({
                 views
             })
         }
+        */
 
 	},
     computed:{
