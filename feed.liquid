@@ -2,7 +2,7 @@
 permalink: /feed.xml
 ---
 {% assign posts = collections.posts | reverse %}<?xml version="1.0" encoding="UTF-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom">
+<feed xmlns="https://www.w3.org/2005/Atom">
     <title>{{ site.title | xml_escape }}</title>
     <link href="{{ "/feed.xml" | prepend: site.url }}" rel="self" type="application/atom+xml"></link>
     <link href="{{ site.url }}/" rel="alternate" type="text/html"></link>
