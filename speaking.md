@@ -15,7 +15,15 @@ I started a blog. I feel like I have to struggle to learn new things and if I ca
 
 <h3>My Next Events</h3>
 
+<!--
 Nothing planned currently. Invite me to speak at your event! 
+-->
+<p>
+<a href="https://cfe.dev/events/the-jam-2023/">Web Components the Eleventy Way</a><br>
+The Jam.dev 2023<br/>
+Online, January 25-26, 2023
+</p>
+
 
 <h3>My Past Events</h3>
 
