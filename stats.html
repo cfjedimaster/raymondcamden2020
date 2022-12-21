@@ -11,6 +11,10 @@ table tr td:first-child {
     min-width: 300px;
 }
 
+select.cattagYear {
+    width: 100px;
+    float: right;
+}
 </style>
 
 <div id="app" v-cloak="" markdown="0">
@@ -111,6 +115,21 @@ table tr td:first-child {
         </tr>
     </table>
 
+    <h3>Combined Categories/Tags Stats Per Year</h3>
+    <select v-if="cattagYears" v-model="selectedCatTagYear" class="cattagYear">
+        <option v-for="year in cattagYears" :value="year">{{ year }}</option>
+    </select>
+    <table v-if="selectedCatTagYear">
+        <tr>
+            <td>Category/Tag</td>
+            <td>Number of Posts</td>
+        </tr>
+
+        <tr v-for="item in sortedCatTagStats">
+            <td>{{item.name}}</td>
+            <td>{{item.size | number}}</td>
+        </tr>
+    </table>
 </div>
 
 
@@ -123,9 +142,10 @@ Vue.filter('number', s =>  {
   return new Intl.NumberFormat().format(s);
 });
 
+
 Vue.filter('date', s =>  {
   if(!window.Intl) return s;
-  return new Intl.DateTimeFormat().format(s);
+  return new Intl.DateTimeFormat('en-US', { dateStyle:'short'}).format(s);
 });
 
 new Vue({
@@ -151,9 +171,13 @@ new Vue({
         buildStatus:'',
         buildPublished:false,
         buildTime:'',
-        postViewsRSS:[]
+        postViewsRSS:[],
+        catTagYearData:null,
+        selectedCatTagYear:null,
+        cattagYears:[]
 	},
 	created:async function() {
+
         let data = await fetch('/stats.json');
         let res = await data.json();
 
@@ -161,14 +185,14 @@ new Vue({
         
         this.firstPost = {
             title:res.firstPost.title,
-            date:res.firstPost.published,
+            date:this.$options.filters.date(new Date(res.firstPost.published)),
             url:res.firstPost.url,
             age:moment(res.firstPost.published).fromNow()
         };
 
         this.lastPost = {
             title:res.lastPost.title,
-            date:res.lastPost.published,
+            date:this.$options.filters.date(new Date(res.lastPost.published)),
             url:res.lastPost.url,
             age:moment(res.lastPost.published).fromNow()
         };
@@ -220,6 +244,12 @@ new Vue({
             this.buildPublished = true;
         } else this.buildStatus = buildData.state;
 
+        for(let y in res.yearCatTagStats) {
+            this.cattagYears.push(y);
+        }
+
+        this.catTagYearData = res.yearCatTagStats;
+
         // new rss thing
         /*
         let rss = await (await fetch('/jsonfeed/index.json')).json();
@@ -252,6 +282,19 @@ new Vue({
         },
         sortedYears:function() {
             return Object.keys(this.years).sort();
+        },
+        sortedCatTagStats() {
+            let stats = this.catTagYearData[this.selectedCatTagYear];
+            // convert object of keys to an array
+            let result = [];
+            for(let key in stats) {
+                result.push({name:key, size: stats[key]});
+            }
+
+            return result.sort((a,b) => {
+                if(a.name < b.name) return -1;
+                if(a.name > b.name) return 1;            
+            });
         }
     }
 });

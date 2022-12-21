@@ -11,21 +11,36 @@ permalink: /stats.json
 	tags = {};
 	firstPost = null;
 	lastPost = null;
+	yearCatTagStats = {};
 
 	for(post of collections.posts) {
 		let postWords = post.templateContent.split(' ').length;
 		totalWords += postWords;
 		//todo, format
 		dateOb.push(post.date);
+
+		/*
+		begin handling of yearCatTagStats
+		*/
+		let year = Number(post.date.getFullYear());
+		if(!yearCatTagStats[year]) yearCatTagStats[year] = {};
+
 		for(let cat of post.data.categories) {
 			cat = cat.toLowerCase();
 			if(!cats[cat]) cats[cat] = 0;
 			cats[cat]++;
+
+			if(!yearCatTagStats[year][cat]) yearCatTagStats[year][cat] = 0;
+			yearCatTagStats[year][cat]++;
 		}
 		for(let tag of post.data.tags) {
 			tag = tag.toLowerCase();
 			if(!tags[tag]) tags[tag] = 0;
 			tags[tag]++;
+
+			if(!yearCatTagStats[year][tag]) yearCatTagStats[year][tag] = 0;
+			yearCatTagStats[year][tag]++;
+
 		}
 
 		if(!firstPost) firstPost = post;
@@ -83,6 +98,7 @@ permalink: /stats.json
 			{ "name": "<%= tag %>" , "size": <%= tags[tag] %> }
 		<% } %>
 	],
-	"dates":"<%= dateOb.join(',') %>"
+	"dates":"<%= dateOb.join(',') %>",
+	"yearCatTagStats": <%- JSON.stringify(yearCatTagStats) %>
 
 }
