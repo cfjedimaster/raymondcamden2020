@@ -11,7 +11,7 @@ description: A look at using Cloudinary's remote image feature to add responsive
 
 In case you can't tell, I've been enjoying playing around with [Cloudinary](https://cloudinary.com) these last few weeks. As part of my research, I recently looked around in the docs for things I wanted to dig deeper into. One of the features I thought was fascinating was Cloudinary's [remote image](https://cloudinary.com/documentation/fetch_remote_images) support. What does that mean?
 
-In the examples I've shown so far, I've made use of Cloudinary's media library to store my files. That works well enough and has an API to let you automatate working with it, but what if you have existing images you don't want to move? Cloudinary lets you support them by simply including them in the URL request to their server! 
+In the examples I've shown so far, I've made use of Cloudinary's media library to store my files. That works well enough and has an API to let you automate working with it, but what if you have existing images you don't want to move? Cloudinary lets you support them by simply including them in the URL request to their server! 
 
 So for example, the picture of me in the upper left side of the blog (wow was I skinnier then) may be found at this URL:
 
@@ -19,16 +19,16 @@ https://www.raymondcamden.com/images/avatar2.jpg
 
 This same image, with no transformations, may be found here:
 
-https://res.cloudinary.com/demo/image/fetch/https://www.raymondcamden.com/images/avatar2.jpg
+https://res.cloudinary.com/raymondcamden/image/fetch/https://www.raymondcamden.com/images/avatar2.jpg
 
 Except that now it's cached and served via Cloudinary CDNs. I can also apply transformations just like any other Cloudinary asset. So if I want to apply sepia (of course I do), I'd just use:
 
-https://res.cloudinary.com/demo/image/fetch/e_sepia/https://www.raymondcamden.com/images/avatar2.jpg
+https://res.cloudinary.com/raymondcamden/image/fetch/e_sepia/https://www.raymondcamden.com/images/avatar2.jpg
 
 And it would render as:
 
 <p>
-<img data-src="https://res.cloudinary.com/demo/image/fetch/e_sepia/https://www.raymondcamden.com/images/avatar2.jpg" alt="" class="lazyload imgborder imgcenter">
+<img data-src="https://res.cloudinary.com/raymondcamden/image/fetch/e_sepia/https://www.raymondcamden.com/images/avatar2.jpg" alt="" class="lazyload imgborder imgcenter">
 </p>
 
 Cool! So let's see if we can use this to add a bit of responsiveness to my blog. Let me preface this by saying that I've been "adjacently" familiar with responsive design for years. By that I mean, I know the very high level basics, I recognize it in code when I see it, but I haven't actually built sites with it myself. For this blog post, I used the excellent article from MDN, [Responsive Images](https://developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images). I want to be clear that what I did was just a test (although it is deployed right now!) and it could most likely be done better. Basically, blame my ignorance, not Cloudinary. 
