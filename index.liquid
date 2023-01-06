@@ -71,57 +71,13 @@ layout: default
             </div><!-- .post-content -->
         </article><!-- .post -->
         {% endfor %}
+
+        <p>
+        Want more stories? You can find a complete list of my content <a href="/all">here</a>, or pop over 
+        to my <a href="/search">search</a> page to find what you're looking for.
+        </p>
+
 	</div>
 
+    
 </main>
-{% comment %}
-            {% for post in posts limit:10 %}
-            <article class="post">
-                <header class="entry-header"> 
-                    <div class="entry-header-wrap">
-                        {% if post.data.banner_image %}
-                        <a href="{{post.url}}" class="post-thumbnail">
-                            <img 
-                            {% if forloop.first %}
-                            src="{{ "https://static.raymondcamden.com" | append: post.data.banner_image }}"
-                            {% else %}
-                            class="lazyload" data-src="{{ "https://static.raymondcamden.com" | append: post.data.banner_image }}" 
-                            {% endif %}
-                            
-                            alt="{% if post.data.banner_image_alt %}{{ post.data.banner_image_alt }}{% else %}{{ post.data.title }} {% endif %}" width="900"></a>
-                        {% endif %}
-                        <h2 class="entry-title"><a href="{{ post.url }}" rel="bookmark" title="Permanent Link to {{ post.url }}">{{post.data.title}}</a></h2>
-                    </div><!-- .entry-header-wrap -->
-                    <div class="entry-meta">
-                        by <span class="post-author">{{ site.author_name }}</span> on <time class="published" datetime="{{ post.date | date: "%Y-%m-%d" }}">{{ post.date | date: "%B %e, %Y" }}</time>
-                    </div><!-- .entry-meta -->
-                </header><!-- .entry-header -->
-                <div class="entry-content">
-                    {% if post.templateContent contains '<!--more-->' %}
-                        {{ post.content | split:'<!--more-->' | first }}
-                    {% else %}
-                        {% excerpt post %}
-                    {% endif %}
-                    <p class="read-more"><a href="{{ post.url }}" class="more-link" title="read more">read more</a></p>
-                </div><!-- .entry-content -->
-
-            </article><!-- .post -->
-            {% endfor %}
-            {% if paginator.total_pages > 1 %}
-            <nav class="pagination">
-                <h2 class="screen-reader-text">Posts navigation</h2>
-                {% if paginator.previous_page %}
-                <a href="{{ paginator.previous_page_path | prepend: site.baseurl }}" class="newer-posts fa-chevron-left square fill-horizontal"><span class="screen-reader-text">Newer Posts</span></a>
-                {% endif %}
-                <span class="page-number">Page {{ paginator.page }} of {{ paginator.total_pages }}</span>
-                {% if paginator.next_page %}
-                <a href="{{ paginator.next_page_path | prepend: site.baseurl }}" class="older-posts fa-chevron-right square fill-horizontal"><span class="screen-reader-text">Older Posts</span></a>
-                {% endif %}
-            </nav><!-- .pagination -->
-            {% endif %}
-        </main><!-- .site-main -->
-        {% include 'sidebar' %}
-    </div><!-- .inner -->
-</div><!-- .site-content -->
-
-{% endcomment %}
