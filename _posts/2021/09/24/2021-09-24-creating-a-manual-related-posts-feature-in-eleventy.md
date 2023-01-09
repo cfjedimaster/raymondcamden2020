@@ -58,7 +58,7 @@ layout: layout
 {% endraw %}
 ```
 
-THe top portion is the basic layout and the `if` at the bottom is where the magic happens. If a post has related items, I need to get the 'real' objects so I can link to them. I do that via a filter called `getRelated`. Eleventy filters don't have access to collections so I need to pass it as a second argument. Remember that in a filter, the item *before* the filter name is the first argument. The result of this filter is a list of regular page objects so I can link out as usual.
+The top portion is the basic layout and the `if` at the bottom is where the magic happens. If a post has related items, I need to get the 'real' objects so I can link to them. I do that via a filter called `getRelated`. Eleventy filters don't have access to collections so I need to pass it as a second argument. Remember that in a filter, the item *before* the filter name is the first argument. The result of this filter is a list of regular page objects so I can link out as usual.
 
 Here's the filter in my `.eleventy.js` file:
 
