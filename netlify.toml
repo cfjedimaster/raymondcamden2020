@@ -12,3 +12,8 @@
   for = "/.well-known/webfinger"
   [headers.values]
     content-type="application/jrd+json; charset=UTF-8"
+
+[[headers]]
+  for = "/sitemap.xml"
+  [headers.values]
+    content-type="text/xml; charset=UTF-8"
