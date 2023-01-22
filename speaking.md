@@ -18,11 +18,6 @@ I started a blog. I feel like I have to struggle to learn new things and if I ca
 <!--
 Nothing planned currently. Invite me to speak at your event! 
 -->
-<p>
-<a href="https://mmcfug.org/">Introduction to Alpine.js</a><br>
-Mid-Michigan ColdFusion Uses Group<br/>
-Online, January 10
-</p>
 
 <p>
 <a href="https://cfe.dev/events/the-jam-2023/">Web Components the Eleventy Way</a><br>
@@ -40,6 +35,12 @@ Here are my past events, most recent first, in a nice scrollable list no one wil
 <div style="height: 400px; overflow:scroll">
 
 <p>
+<p>
+<a href="https://mmcfug.org/">Introduction to Alpine.js</a><br>
+Mid-Michigan ColdFusion Uses Group<br/>
+Online, January 10
+</p>
+
 <a href="https://cfsummit-online.meetus.adobeevents.com/">Mining Electronic Documents for Fun and Profit (and other business critical needs)</a><br>
 Adobe ColdFusion Summit Online<br/>
 Online, December 7, 2022
