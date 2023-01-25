@@ -94,7 +94,7 @@ Guess what? Posting simple text to Twitter has been supported in Pipedream for a
 
 I mentioned earlier that all of the above took roughly ten minutes, and that's absolutely true. I think most of that was googling for the Mastodon docs and as I had not used them before, it took me a minute or two to find what I needed. If you want to try this out yourself, you can create a copy of my workflow here:
 
-<https://pipedream.com/new?h=tch_3xxfnA>
+<https://pipedream.com/new?h=tch_3Z6f7V>
 
 Note - if you like this, but don't want to post to Twitter (or Mastodon), you can simply delete, or disable, the relevant step. Enjoy!
 
