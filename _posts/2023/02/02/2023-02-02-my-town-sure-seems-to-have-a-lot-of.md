@@ -175,7 +175,7 @@ service.nearbySearch({
 The radius value is in meters and 1609 is roughly equal to a mile. Here's a screen shot of in action:
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2023/02/maps1.jpp" alt="Results of demo showing 3 results" class="lazyload imgborder imgcenter">
+<img data-src="https://static.raymondcamden.com/images/2023/02/maps1.jpg" alt="Results of demo showing 3 results" class="lazyload imgborder imgcenter">
 </p>
 
 I'm sharing a picture and not embedding CodePen because geolocation is blocked when embedding the CodePen. I checked, and as far as I know there's no workaround, so for now, you'll need to click a link, sorry about that: <https://codepen.io/cfjedimaster/pen/MWBZJWZ>
