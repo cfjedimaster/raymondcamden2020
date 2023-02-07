@@ -33,7 +33,7 @@ let height = getRandomInt(200,600);
 </template>
 ```
 
-The component uses EJS to generate a random width and height, and then outputs it using the PlaceKitten image holder service. Not terribly useful, but it's cats, and cats always server a purpose. If we add this to a page:
+The component uses EJS to generate a random width and height and then outputs it using the PlaceKitten image holder service. Not terribly useful, but it's cats, and cats always serve a purpose. If we add this to a page:
 
 ```html
 <h2>Cats</h2>
