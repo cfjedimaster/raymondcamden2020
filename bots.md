@@ -34,6 +34,11 @@ most recent toot at the time I built the site. Just click on the username to fol
     line-height: 1.35em;
 }
 
+.toot-blockquote a:hover {
+    color: #6a512c;
+    text-decoration: underline;
+}
+
 .toot-footer {
     margin-top: 1rem;
     display: flex;
