@@ -16,13 +16,14 @@ I started a blog. I feel like I have to struggle to learn new things and if I ca
 <h3>My Next Events</h3>
 
 <p>
-I've got two more sessions booked, but not documented yet. Coming soon!
+<a href="https://reg.adobe.com/flow/adobe/as23/sessions/page/catalog/session/1661982238829001DliT">Automate E-commerce Document Generation and Signing at Scale</a><br>
+Adobe Summit 2023<br/>
+Las Vegas, March 19-23, 2023
 </p>
 
 <!--
 Nothing planned currently. Invite me to speak at your event! 
 -->
-
 
 <h3>My Past Events</h3>
 

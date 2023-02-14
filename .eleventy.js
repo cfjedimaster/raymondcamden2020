@@ -25,6 +25,9 @@ module.exports = function(eleventyConfig) {
 	//reference: https://github.com/11ty/eleventy/issues/179#issuecomment-413119342
 	eleventyConfig.addShortcode('excerpt', post => extractExcerpt(post));
 
+  eleventyConfig.addAsyncShortcode("stoot",require("./assets/utils/stoot.js"));
+  eleventyConfig.addAsyncShortcode("lasttoot",require("./assets/utils/lasttoot.js"));
+
   let titlePostCache = {};
   eleventyConfig.addFilter('toTitle', (p, posts) => {
     if(titlePostCache[p]) return titlePostCache[p];

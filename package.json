@@ -20,6 +20,7 @@
   "dependencies": {
     "-": "^0.0.1",
     "@11ty/eleventy": "^2.0.0",
+    "@11ty/eleventy-fetch": "^3.0.0",
     "@11ty/eleventy-plugin-directory-output": "^1.0.1",
     "algolia-indexing": "^1.0.1",
     "algoliasearch": "^4.2.0",
@@ -28,6 +29,8 @@
     "eleventy-xml-plugin": "^0.1.0",
     "g": "^2.0.1",
     "html-minifier": "^4.0.0",
+    "luxon": "^3.2.1",
+    "md5": "^2.3.0",
     "netlify-cli": "^9.16.7",
     "node-fetch": "^2.6.0",
     "rss-parser": "^3.12.0",
