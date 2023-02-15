@@ -2,7 +2,7 @@
 layout: post
 title: "Lessons Learned in Twenty Years of Blogging"
 date: "2023-02-12T18:00:00"
-categories: ["Uncategorized"]
+categories: ["misc"]
 tags: []
 banner_image: /images/banners/welcome2018.jpg
 permalink: /2023/02/12/lessons-learned-in-twenty-years-of-blogging
