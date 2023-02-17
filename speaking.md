@@ -16,7 +16,7 @@ I started a blog. I feel like I have to struggle to learn new things and if I ca
 <h3>My Next Events</h3>
 
 <p>
-<a href="https://reg.adobe.com/flow/adobe/as23/sessions/page/catalog/session/1661982238829001DliT">Automate E-commerce Document Generation and Signing at Scale</a><br>
+<a href="https://reg.adobe.com/flow/adobe/as23/sessions/page/catalog/session/1661982238829001DliT">Make Documents Work Harder: Better Viewing, Better Insights</a><br>
 Adobe Summit 2023<br/>
 Las Vegas, March 19-23, 2023
 </p>
