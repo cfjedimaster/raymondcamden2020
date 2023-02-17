@@ -2601,3 +2601,65 @@ div.comment_header {
   margin-bottom: 5px;
   background-color: yellow;
 }
+
+.toot-header {
+    display: flex;
+}
+
+.toot-header .toot-profile {
+    margin-right: .5em;
+    margin-bottom: 1em;
+    flex-shrink: 0;
+}
+
+.toot-header .toot-author {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.toot-blockquote p {
+    margin-top: 0;
+    margin-bottom: 1em;
+    line-height: 1.35em;
+}
+
+.toot-blockquote a:hover {
+    color: #6a512c;
+    text-decoration: underline;
+}
+
+.toot-footer {
+    margin-top: 1rem;
+    display: flex;
+    align-items: center;
+    font-size: 0.875rem;
+}
+
+blockquote.toot-blockquote:before {
+	content: none;
+}
+
+blockquote.toot-blockquote {
+    border: 2px solid #e5e7eb;
+    color: hsl(0, 0%, 100%);
+    background: #1d1d1d;
+	width: 85%;
+	font-size: 1rem;
+
+    margin-right: 0;
+    margin-left: 0;
+    padding-left: 1.5em;
+	padding-right: 1.5em;
+	padding-bottom: 1em;
+	line-height: 1;
+	text-align: left;
+
+    font-family: "Karla", sans-serif;
+}
+
+.toot-profile img {
+    border-radius: 9999px;
+    width: 48px;
+    height: auto;
+}
