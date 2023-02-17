@@ -37,7 +37,7 @@ In this toot, Šime Vidas is sharing a new value available to the `hidden` attri
 
 In this [post](https://reverentgeek.com/configure-eleventy-to-host-a-custom-mastodon-alias/) by the awesome [David Neal](https://reverentgeek.com/), he describes how to create an alias for your Mastodon account with Eleventy and Netlify. I used this myself to create the alias `@raymondcamden@raymondcamden.com` for my "real" account `@raymondcamden@mastodon.social`. It took all of five minutes and honestly it's a really cool trick!
 
-As an aside, David does [commissioned](https://reverentgeek.com/shop/) art work. Here's one he did for me: 
+As an aside, David does [commissioned](https://reverentgeek.com/shop/) artwork. Here's one he did for me: 
 
 <p>
 <img data-src="https://static.raymondcamden.com/images/2023/02/rayhead.jpg" alt="My head" class="lazyload imgborder imgcenter">
