@@ -9,7 +9,7 @@ permalink: /2023/02/15/building-a-mastodon-bot-listing-page-in-eleventy
 description: How I built a page to show off my Mastodon bots.
 ---
 
-Chalk this up for yet another thing most folks probably won't need, but it was fun to build so I figured I'd share. I've had a lot of fun building bots for Mastodon. If you're curious about the process, you can read about my experience here: ("Building a Mastodon Bot on Pipedream")[https://www.raymondcamden.com/2022/12/01/building-a-mastodon-bot-on-pipedream]. It occurred to me that it might be cool to build a page on my blog that shows off the bots I've built. It also occurred to me that it's 100% possible I'd build a bot and forget about it. 
+Chalk this up for yet another thing most folks probably won't need, but it was fun to build so I figured I'd share. I've had a lot of fun building bots for Mastodon. If you're curious about the process, you can read about my experience here: ["Building a Mastodon Bot on Pipedream"](https://www.raymondcamden.com/2022/12/01/building-a-mastodon-bot-on-pipedream). It occurred to me that it might be cool to build a page on my blog that shows off the bots I've built. It also occurred to me that it's 100% possible I'd build a bot and forget about it. 
 
 So with that in mind, I built a page that does just that. For each of my bots, it displays their last post. You can see this in action here: <https://www.raymondcamden.com/bots>. Here's how I built it.
 
