@@ -19,7 +19,7 @@ I began by looking at the Mastodon embed code written by Bryce Wray, ["Static em
 {% raw %}{% stoot "mastodon.social", "108241788606585248" %}{% endraw %}
 ```
 
-Simple enough, right? And in theory that could have been enough. All I'd need to do is go to my bots, find one toot, and get the ID. But I thought it would be cool to embed the *last* toot they did, or at least the last toot at time of building. To enable that, I created another shortcode, `lasttoot`. It works like so in the template:
+Simple enough, right? And in theory that could have been enough. All I'd need to do is go to my bots, find one toot, and get the ID. But I thought it would be cool to embed the *last* toot they did or at least the last toot at the time of building. To enable that, I created another shortcode, `lasttoot`. It works like so in the template:
 
 ```js
 {% raw %}{% capture "lasttoot_rcb" %}
@@ -45,7 +45,7 @@ module.exports = async (instance, user) => {
 }
 ```
 
-Pretty simple, right? All Mastodon user's have an RSS feed of their activity. I used an RSS Parser to bring it in, get the most recent toot, and get the GUID value. That value looks like this (line breaks added for readability):
+Pretty simple, right? All Mastodon users have an RSS feed of their activity. I used an RSS Parser to bring it in, get the most recent toot, and get the GUID value. That value looks like this (line breaks added for readability):
 
 ```xml
 <guid isPermaLink="true">
@@ -53,7 +53,7 @@ Pretty simple, right? All Mastodon user's have an RSS feed of their activity. I 
 </guid>
 ```
 
-As all I need is the ID, I do the split/pop calls to grab it. By the way, I wrote this code, and was satisfied with it, but then thought, do I really need an RSS parser? The RSS feed type won't change, maybe I could just use vanilla JavaScript. I did some searching, found solutions using DOMParser, and gave it a shot. It's then when I discovered that it was a *client-side* JavaScript solution, not server-side. Sigh. I also then remembered I was using `rss-parser` elsewhere on my site so I wasn't really hurting anything by using it again. 
+As all I need is the ID, I do the split/pop calls to grab it. By the way, I wrote this code and was satisfied with it, but then thought, do I really need an RSS parser? The RSS feed type won't change, maybe I could just use vanilla JavaScript. I did some searching, found solutions using DOMParser, and gave it a shot. It was then I discovered that it was a *client-side* JavaScript solution, not server-side. Sigh. I also then remembered I was using `rss-parser` elsewhere on my site so I wasn't really hurting anything by using it again. 
 
 To render my bots, I just repeated a bunch of calls to both shortcodes:
 
