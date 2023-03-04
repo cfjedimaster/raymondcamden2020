@@ -13,7 +13,7 @@ Good morning readers! I'm writing this in a hotel room in Tuscaloosa where my wi
 
 ## Taking Eleventy into the Spiderverse with eleventy-fetch
 
-Here's a great [post](https://box464.com/posts/eleventy-fetch-marvel/) post by Jeff Sikes where he describes how he made use of the [Marvel API](https://developer.marvel.com/) in an Eleventy site. That's mixing two of my favorite things, Marvel and Eleventy! I really wish Marvel would continue working on their API. The last update was nearly a decade ago, but on the other hand, I'm happy they just didn't shut it down. 
+Here's a great [post](https://box464.com/posts/eleventy-fetch-marvel/) by Jeff Sikes where he describes how he made use of the [Marvel API](https://developer.marvel.com/) in an Eleventy site. That's mixing two of my favorite things, Marvel and Eleventy! I really wish Marvel would continue working on their API. The last update was nearly a decade ago, but on the other hand, I'm happy they just didn't shut it down. 
 
 ## Eleventy Collection Schemas
 
