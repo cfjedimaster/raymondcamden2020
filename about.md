@@ -124,6 +124,7 @@ Here is my most recent set of articles on Medium. For a full list, see my [profi
 </style>
 
 <p class="bookList">
+<a href="https://amzn.to/3Jch1Uz"><img src="https://static.raymondcamden.com/images/books/vue3.jpg" alt="Frontend Development with Vue 3" title="Frontend Development with Vue 3"></a>
 <a href="https://amzn.to/3KdsT64"><img src="https://static.raymondcamden.com/images/2022/04/book.jpg" title="The Jamstack Book"></a>
 <a href="https://www.amazon.com/gp/product/B08M3J514S/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=B08M3J514S&linkCode=as2&tag=raymondcamd06-20&linkId=0cf7abe7a5fc4e3f7d4566b6bdcf5553"><img src="https://static.raymondcamden.com/images/books/vuebook2020.jpg" title="Front-End Development Projects with Vue.js"></a>
 <a href="https://www.ibm.com/downloads/cas/AWPDV5AV"><img src="https://static.raymondcamden.com/images/books/owbook_small.jpg" title="Developing Serverless Applications"></a>
