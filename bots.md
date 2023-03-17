@@ -11,6 +11,9 @@ I built this page to help me actually remember what I've built. For each of the 
 most recent toot at the time I built the site. Just click on the username to follow or see more.
 </p>
 
+{% capture "lasttoot_rac" %}
+{% lasttoot "botsin.space", "randomalbumcover" %}
+{% endcapture %}
 
 {% capture "lasttoot_rcb" %}
 {% lasttoot "botsin.space", "randomcomicbook" %}
